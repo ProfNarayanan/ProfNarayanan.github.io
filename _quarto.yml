@@ -20,8 +20,8 @@ website:
         href: Bio/index.qmd
       - text: "Research"
         href: Research/index.qmd
-    #  - text: "Teaching"
-    #    href: Teaching/index.qmd
+      - text: "Teaching"
+        href: Teaching/index.qmd
     #  - text: "CV"
     #    href: cv/index.qmd
     
