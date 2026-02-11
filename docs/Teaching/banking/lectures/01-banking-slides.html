@@ -185,7 +185,7 @@ Rajesh Narayanan
 <p><strong>Part 3: How Banks Create Liquidity</strong></p>
 <ul>
 <li>The banking contract and optimal liquidity provision</li>
-<li>Asset management of liquidity (<span class="math inline">\(\tau &gt; 0\)</span>)</li>
+<li>Asset management of liquidity</li>
 <li>Why banking dominates autarky</li>
 </ul>
 <p><strong>Part 4: Can Markets Replicate Banking?</strong></p>
@@ -306,7 +306,7 @@ Rajesh Narayanan
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>The Delegated Monitoring Problem</strong></p>
+<p><strong>Why is this Valuable?</strong></p>
 </div>
 <div class="callout-content">
 <p>Individual savers lack the expertise, scale, and incentives to monitor borrowers effectively. Banks solve this by <strong>delegating</strong> the monitoring function to a specialized intermediary.</p>
@@ -324,7 +324,7 @@ Rajesh Narayanan
 <ol type="1">
 <li><p><strong>Redeemable on demand at par</strong>: You can withdraw $100 any time and get exactly $100</p></li>
 <li><p><strong>Accepted for payments</strong>: Deposits can be transferred to pay for goods and services</p></li>
-<li><p><strong>Stable value</strong>: Unlike equity or bonds, deposits don’t fluctuate in nominal value</p></li>
+<li><p><strong>Stable value</strong>: Unlike equity or bonds, deposits don’t fluctuate in nominal value (information insensitive debt)</p></li>
 </ol>
 </div>
 <div class="fragment">
@@ -335,22 +335,6 @@ Rajesh Narayanan
 <i class="callout-icon"></i>
 </div>
 <p><strong>Why Is This Valuable?</strong></p>
-</div>
-<div class="callout-content">
-<p>Depositors value <strong>liquidity</strong> (access funds when needed), <strong>safety</strong> (predictable nominal value), and <strong>convenience</strong> (easy transactions).</p>
-<p>Banks create these features by transforming illiquid loans into liquid deposits.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Liquidity Insurance and Liquidity Creation</strong></p>
 </div>
 <div class="callout-content">
 <p>Individual savers face uncertain liquidity needs but cannot efficiently self-insure. Banks solve this by <strong>pooling</strong> liquidity risk across many depositors and providing <strong>liquidity insurance</strong> — offering liquid deposits backed by illiquid assets. This is <strong>liquidity creation</strong>: banks create more liquidity than exists in the underlying assets.</p>
@@ -441,8 +425,8 @@ Rajesh Narayanan
 </div>
 </div>
 </section>
-<section id="organization-of-this-course" class="slide level2 smaller" data-number="2.7">
-<h2><span class="header-section-number">2.7</span> Organization of This Course</h2>
+<section id="organization" class="slide level2 smaller" data-number="2.7">
+<h2><span class="header-section-number">2.7</span> Organization</h2>
 <p>We have seen that banks create value on <strong>both sides</strong> of the balance sheet:</p>
 <ul>
 <li><strong>Asset side</strong>: Delegated monitoring of borrowers</li>
@@ -614,11 +598,11 @@ R &gt; r_1 \cdot r_2 = r_2
 </div>
 <div class="callout-content">
 <ul>
-<li><strong>Impatient</strong> (probability <span class="math inline">\(t\)</span>): Want to consume at <span class="math inline">\(t=1\)</span>
+<li><strong>Impatient</strong> (probability <span class="math inline">\(\pi\)</span>): Want to consume at <span class="math inline">\(t=1\)</span>
 <ul>
 <li>Utility: <span class="math inline">\(u(c_1)\)</span></li>
 </ul></li>
-<li><strong>Patient</strong> (probability <span class="math inline">\(1-t\)</span>): Want to consume at <span class="math inline">\(t=2\)</span>
+<li><strong>Patient</strong> (probability <span class="math inline">\(1-\pi\)</span>): Want to consume at <span class="math inline">\(t=2\)</span>
 <ul>
 <li>Utility: <span class="math inline">\(u(c_2)\)</span></li>
 </ul></li>
@@ -629,7 +613,7 @@ R &gt; r_1 \cdot r_2 = r_2
 </div>
 <div class="fragment">
 <p><strong>Expected utility at <span class="math inline">\(t=0\)</span></strong>: <span class="math display">\[
-EU = t \cdot u(c_1) + (1-t) \cdot u(c_2)
+EU = \pi \cdot u(c_1) + (1-\pi) \cdot u(c_2)
 \]</span></p>
 <p>where <span class="math inline">\(u(\cdot)\)</span> is increasing (<span class="math inline">\(u' &gt; 0\)</span>), strictly concave (<span class="math inline">\(u'' &lt; 0\)</span>), with Inada conditions.</p>
 </div>
@@ -659,7 +643,7 @@ EU = t \cdot u(c_1) + (1-t) \cdot u(c_2)
 <p><strong>Assumption 2: No Aggregate Uncertainty</strong></p>
 </div>
 <div class="callout-content">
-<p>Exactly fraction <span class="math inline">\(t\)</span> of consumers will be impatient. The only uncertainty is <strong>who</strong> will be impatient, not <strong>how many</strong>.</p>
+<p>Exactly fraction <span class="math inline">\(\pi\)</span> of consumers will be impatient. The only uncertainty is <strong>who</strong> will be impatient, not <strong>how many</strong>.</p>
 </div>
 </div>
 </div>
@@ -691,14 +675,14 @@ EU = t \cdot u(c_1) + (1-t) \cdot u(c_2)
 <section id="comparing-liquid-and-illiquid-assets" class="slide level2 smaller" data-number="3.6">
 <h2><span class="header-section-number">3.6</span> Comparing Liquid and Illiquid Assets</h2>
 <p><strong>Diamond’s numerical example</strong> (Diamond 2007):</p>
-<p>Let <span class="math inline">\(t = 1/4\)</span>, <span class="math inline">\(R = 2\)</span>, <span class="math inline">\(U(c) = 1 - 1/c\)</span></p>
+<p>Let <span class="math inline">\(\pi = 1/4\)</span>, <span class="math inline">\(R = 2\)</span>, <span class="math inline">\(U(c) = 1 - 1/c\)</span></p>
 <div class="fragment">
 <p><strong>Strategy 1: Invest entirely in the illiquid asset</strong></p>
 <ul>
-<li>If impatient (<span class="math inline">\(t=1\)</span>): must liquidate early, get <span class="math inline">\(c_1 = 0\)</span> (nothing)</li>
-<li>If patient (<span class="math inline">\(t=2\)</span>): get <span class="math inline">\(c_2 = R = 2\)</span></li>
+<li>If impatient (consume at <span class="math inline">\(t=1\)</span>): must liquidate early, get <span class="math inline">\(c_1 = 0\)</span> (nothing)</li>
+<li>If patient (consume at <span class="math inline">\(t=2\)</span>): get <span class="math inline">\(c_2 = R = 2\)</span></li>
 </ul>
-<p><span class="math display">\[EU(\text{illiquid}) = \tfrac{1}{4}\left(1 - \tfrac{1}{0^+}\right) + \tfrac{3}{4}\left(1 - \tfrac{1}{2}\right) = 0.375\]</span></p>
+<p><span class="math display">\[EU(\text{illiquid}) = \tfrac{1}{4}\underbrace{\left(1 - \tfrac{1}{0}\right)}_{-\infty} + \tfrac{3}{4}\left(1 - \tfrac{1}{2}\right) = -\infty\]</span></p>
 </div>
 <div class="fragment">
 <p><strong>Strategy 2: Invest entirely in the liquid asset</strong></p>
@@ -709,13 +693,13 @@ EU = t \cdot u(c_1) + (1-t) \cdot u(c_2)
 <p><span class="math display">\[EU(\text{liquid}) = \tfrac{1}{4}(1-1) + \tfrac{3}{4}(1-1) = 0\]</span></p>
 </div>
 <div class="fragment">
-<p>The illiquid asset dominates! But we can do better with a <strong>mixed</strong> portfolio.</p>
+<p>Neither pure strategy works well! We need a <strong>mixed</strong> portfolio.</p>
 </div>
 </section>
 <section id="diamonds-example-the-role-of-risk-aversion" class="slide level2 smaller" data-number="3.7">
 <h2><span class="header-section-number">3.7</span> Diamond’s Example: The Role of Risk Aversion</h2>
 <p><strong>Optimal individual portfolio</strong>: split between liquid and illiquid</p>
-<p>With <span class="math inline">\(t = 1/4\)</span>, <span class="math inline">\(R = 2\)</span>, <span class="math inline">\(U(c) = 1 - 1/c\)</span>:</p>
+<p>With <span class="math inline">\(\pi = 1/4\)</span>, <span class="math inline">\(R = 2\)</span>, <span class="math inline">\(U(c) = 1 - 1/c\)</span>:</p>
 <div class="fragment">
 <p><strong>Risk-neutral comparison</strong> (expected payoff):</p>
 <ul>
@@ -766,12 +750,12 @@ EU = t \cdot u(c_1) + (1-t) \cdot u(c_2)
 </div>
 <div class="fragment">
 <p><strong>Consumer’s problem at <span class="math inline">\(t=0\)</span></strong>: <span class="math display">\[
-\max_{x, y} \quad t \cdot u(x) + (1-t) \cdot u(x r_2 + y R) \quad \text{s.t.} \quad x + y = 1
+\max_{x, y} \quad \pi \cdot u(x) + (1-\pi) \cdot u(x r_2 + y R) \quad \text{s.t.} \quad x + y = 1
 \]</span></p>
 </div>
 <div class="fragment">
 <p><strong>First-order condition</strong>: <span class="math display">\[
-t \cdot u'(c_1^A) = (1-t) \cdot R \cdot u'(c_2^A)
+\pi \cdot u'(c_1^A) = (1-\pi) \cdot R \cdot u'(c_2^A)
 \]</span></p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -805,14 +789,14 @@ t \cdot u'(c_1^A) = (1-t) \cdot R \cdot u'(c_2^A)
 <ol type="1">
 <li><strong>Depositors make deposits at <span class="math inline">\(t=0\)</span></strong>: Each deposits 1 unit</li>
 <li><strong>Bank chooses investment portfolio</strong></li>
-<li><strong>At <span class="math inline">\(t=1\)</span></strong>: Fraction <span class="math inline">\(t\)</span> withdraw and get <span class="math inline">\(r_1\)</span></li>
-<li><strong>At <span class="math inline">\(t=2\)</span></strong>: Fraction <span class="math inline">\((1-t)\)</span> withdraw and get <span class="math inline">\(r_2\)</span></li>
+<li><strong>At <span class="math inline">\(t=1\)</span></strong>: Fraction <span class="math inline">\(\pi\)</span> withdraw and get <span class="math inline">\(r_1\)</span></li>
+<li><strong>At <span class="math inline">\(t=2\)</span></strong>: Fraction <span class="math inline">\((1-\pi)\)</span> withdraw and get <span class="math inline">\(r_2\)</span></li>
 </ol>
 </div>
 <div class="fragment">
 <p><strong>Budget constraint</strong> (with both constraints binding):</p>
 <p><span class="math display">\[
-r_2 = \frac{(1 - t \cdot r_1) R}{1-t}
+r_2 = \frac{(1 - \pi \cdot r_1) R}{1-\pi}
 \]</span></p>
 </div>
 <div class="fragment">
@@ -825,7 +809,7 @@ r_2 = \frac{(1 - t \cdot r_1) R}{1-t}
 <p><strong>Diamond’s 100-Investor Example</strong></p>
 </div>
 <div class="callout-content">
-<p>With 100 investors, <span class="math inline">\(t = 1/4\)</span>: exactly 25 withdraw at <span class="math inline">\(t=1\)</span>, 75 wait until <span class="math inline">\(t=2\)</span>.</p>
+<p>With 100 investors, <span class="math inline">\(\pi = 1/4\)</span>: exactly 25 withdraw at <span class="math inline">\(t=1\)</span>, 75 wait until <span class="math inline">\(t=2\)</span>.</p>
 <p>Bank invests <span class="math inline">\(25 r_1\)</span> in liquid assets, rest in illiquid. Patient depositors get: <span class="math display">\[r_2 = \frac{(1 - \tfrac{1}{4} r_1) \cdot R}{3/4} = \frac{(4 - r_1) R}{3}\]</span></p>
 </div>
 </div>
@@ -835,7 +819,7 @@ r_2 = \frac{(1 - t \cdot r_1) R}{1-t}
 <section id="the-optimal-amount-of-liquidity" class="slide level2 smaller scrollable" data-number="4.2">
 <h2><span class="header-section-number">4.2</span> The Optimal Amount of Liquidity</h2>
 <p>The bank maximizes expected utility: <span class="math display">\[
-\max_{r_1, r_2} \quad t \cdot u(r_1) + (1-t) \cdot u(r_2) \quad \text{s.t.} \quad (1 - t \cdot r_1)R = (1-t) r_2
+\max_{r_1, r_2} \quad \pi \cdot u(r_1) + (1-\pi) \cdot u(r_2) \quad \text{s.t.} \quad (1 - \pi \cdot r_1)R = (1-\pi) r_2
 \]</span></p>
 <div class="fragment">
 <p><strong>First-order condition:</strong> <span class="math display">\[
@@ -861,7 +845,7 @@ u'(r_1) = R \cdot u'(r_2)
 <div class="fragment">
 <p><strong>Solving:</strong> From <span class="math inline">\(u'(r_1) = R \cdot u'(r_2)\)</span> and the budget constraint:</p>
 <p><span class="math display">\[
-(1-t) r_2 = (1 - t \cdot r_1) R
+(1-\pi) r_2 = (1 - \pi \cdot r_1) R
 \]</span></p>
 <p>These two equations pin down <span class="math inline">\((r_1^*, r_2^*)\)</span>.</p>
 </div>
@@ -891,13 +875,13 @@ u'(r_1^*) = R \cdot u'(r_2^*)
 <li><p><strong>Full insurance</strong>: The bank equalizes the <strong>marginal utility per unit of real resources</strong> across states</p></li>
 <li><p><strong>Comparison to autarky</strong>:</p>
 <ul>
-<li>Autarky: <span class="math inline">\(\dfrac{u'(c_1^A)}{u'(c_2^A)} = \dfrac{(1-t)R}{t}\)</span></li>
+<li>Autarky: <span class="math inline">\(\dfrac{u'(c_1^A)}{u'(c_2^A)} = \dfrac{(1-\pi)R}{\pi}\)</span></li>
 <li>Banking: <span class="math inline">\(\dfrac{u'(r_1^*)}{u'(r_2^*)} = R\)</span></li>
 </ul></li>
 </ol>
 </div>
 <div class="fragment">
-<p>Since <span class="math inline">\(\frac{(1-t)R}{t} &gt; R\)</span> (when <span class="math inline">\(t &lt; 1\)</span>), autarky has <strong>too large a gap</strong> in marginal utility. The bank narrows this gap through cross-subsidization.</p>
+<p>Since <span class="math inline">\(\frac{(1-\pi)R}{\pi} &gt; R\)</span> (when <span class="math inline">\(\pi &lt; 1\)</span>), autarky has <strong>too large a gap</strong> in marginal utility. The bank narrows this gap through cross-subsidization.</p>
 </div>
 </section>
 <section id="why-banking-dominates-autarky" class="slide level2 smaller" data-number="4.4">
@@ -916,7 +900,7 @@ u'(r_1^*) = R \cdot u'(r_2^*)
 <ul>
 <li>Bank pools liquidity risk across many consumers</li>
 <li>Law of large numbers <span class="math inline">\(\to\)</span> predictable withdrawals</li>
-<li>Bank holds just enough liquid reserves (<span class="math inline">\(x = t \cdot r_1\)</span>)</li>
+<li>Bank holds just enough liquid reserves (<span class="math inline">\(x = \pi \cdot r_1\)</span>)</li>
 <li>Invests rest in high-return assets</li>
 </ul>
 </div></div>
@@ -930,7 +914,7 @@ u'(r_1^*) = R \cdot u'(r_2^*)
 <p><strong>Diamond (2007)</strong></p>
 </div>
 <div class="callout-content">
-<p>“Each investor needs <strong>all or none</strong> of the liquidity from their investment. But the bank knows that only fraction <span class="math inline">\(t\)</span> will need liquidity. This is the fundamental source of the bank’s advantage.”</p>
+<p>“Each investor needs <strong>all or none</strong> of the liquidity from their investment. But the bank knows that only fraction <span class="math inline">\(\pi\)</span> will need liquidity. This is the fundamental source of the bank’s advantage.”</p>
 </div>
 </div>
 </div>
@@ -947,10 +931,10 @@ u'(r_1^*) = R \cdot u'(r_2^*)
 <p><strong>Bank’s asset management:</strong></p>
 <p>When <span class="math inline">\(\tau &gt; 0\)</span>, the bank holds:</p>
 <ul>
-<li><span class="math inline">\(t \cdot r_1\)</span> in the short-term (liquid) asset</li>
-<li><span class="math inline">\(1 - t \cdot r_1\)</span> in the long-term (illiquid) asset</li>
+<li><span class="math inline">\(\pi \cdot r_1\)</span> in the short-term (liquid) asset</li>
+<li><span class="math inline">\(1 - \pi \cdot r_1\)</span> in the long-term (illiquid) asset</li>
 </ul>
-<p>Only fraction <span class="math inline">\(t\)</span> withdraw early, so the bank needs exactly <span class="math inline">\(t \cdot r_1\)</span> in liquid reserves.</p>
+<p>Only fraction <span class="math inline">\(\pi\)</span> withdraw early, so the bank needs exactly <span class="math inline">\(\pi \cdot r_1\)</span> in liquid reserves.</p>
 </div>
 <div class="fragment">
 <p><strong>Individual’s opportunity with early liquidation:</strong></p>
@@ -958,11 +942,11 @@ u'(r_1^*) = R \cdot u'(r_2^*)
 r_2^{\text{individual}} = r_1 + (1-r_1) \cdot \frac{R - \tau}{\tau} = 1 + \frac{(1-r_1)(R-1)}{\tau}
 \]</span></p>
 <p>But the bank offers: <span class="math display">\[
-r_2^{\text{bank}} = \frac{(1 - t \cdot r_1) R}{1-t}
+r_2^{\text{bank}} = \frac{(1 - \pi \cdot r_1) R}{1-\pi}
 \]</span></p>
 </div>
 <div class="fragment">
-<p><strong>Example</strong>: <span class="math inline">\(t = 1/4\)</span>, <span class="math inline">\(\tau = 1/2\)</span>, <span class="math inline">\(R = 2\)</span></p>
+<p><strong>Example</strong>: <span class="math inline">\(\pi = 1/4\)</span>, <span class="math inline">\(\tau = 1/2\)</span>, <span class="math inline">\(R = 2\)</span></p>
 <p>With <span class="math inline">\(r_1 = 1.28\)</span> (optimal bank contract):</p>
 <ul>
 <li>Individual: <span class="math inline">\(r_2^{\text{indiv}} = 1 + \frac{(1-1.28)(2-1)}{0.5} = 1 - 0.56 = 0.44\)</span> — <strong>terrible!</strong></li>
@@ -980,7 +964,7 @@ r_2^{\text{bank}} = \frac{(1 - t \cdot r_1) R}{1-t}
 </div>
 <div class="callout-content">
 <p>The individual who sets aside <span class="math inline">\(r_1 &gt; 1\)</span> for early consumption must <strong>over-invest</strong> in liquid assets. If patient, they have excess liquidity and insufficient long-term investment.</p>
-<p>The bank exploits the fact that only fraction <span class="math inline">\(t\)</span> actually withdraw early — it holds far less in liquid reserves than any individual would need.</p>
+<p>The bank exploits the fact that only fraction <span class="math inline">\(\pi\)</span> actually withdraw early — it holds far less in liquid reserves than any individual would need.</p>
 </div>
 </div>
 </div>
@@ -1046,11 +1030,11 @@ u'(c_1^A) &gt; u'(c_2^A)
 </div>
 <div class="fragment">
 <p>Substituting into the budget constraint: <span class="math display">\[
-r_1^* = \frac{R}{(1-t) R^{1/\gamma} + t R}
+r_1^* = \frac{R}{(1-\pi) R^{1/\gamma} + \pi R}
 \]</span></p>
 </div>
 <div class="fragment">
-<p>For <span class="math inline">\(r_1^* &gt; 1\)</span>: <span class="math inline">\(R &gt; (1-t) R^{1/\gamma} + t R\)</span>, which simplifies to <span class="math inline">\(R &gt; R^{1/\gamma}\)</span>, i.e., <span class="math inline">\(R^{(\gamma-1)/\gamma} &gt; 1\)</span>.</p>
+<p>For <span class="math inline">\(r_1^* &gt; 1\)</span>: <span class="math inline">\(R &gt; (1-\pi) R^{1/\gamma} + \pi R\)</span>, which simplifies to <span class="math inline">\(R &gt; R^{1/\gamma}\)</span>, i.e., <span class="math inline">\(R^{(\gamma-1)/\gamma} &gt; 1\)</span>.</p>
 <p>Since <span class="math inline">\(R &gt; 1\)</span>, this holds <strong>iff</strong> <span class="math inline">\(\gamma &gt; 1\)</span>.</p>
 </div>
 <div class="fragment">
@@ -1066,10 +1050,10 @@ r_1^* = \frac{R}{(1-t) R^{1/\gamma} + t R}
 <h2><span class="header-section-number">4.8</span> Graphical Interpretation</h2>
 <p>Consider the <span class="math inline">\((c_1, c_2)\)</span> space:</p>
 <p><strong>Budget constraint</strong> (resource feasibility): <span class="math display">\[
-t \cdot c_1 + (1-t) \cdot c_2/R = 1
+\pi \cdot c_1 + (1-\pi) \cdot c_2/R = 1
 \]</span></p>
 <div class="fragment">
-<p><strong>Indifference curves</strong>: <span class="math inline">\(t \cdot u(c_1) + (1-t) \cdot u(c_2) = \bar{U}\)</span></p>
+<p><strong>Indifference curves</strong>: <span class="math inline">\(\pi \cdot u(c_1) + (1-\pi) \cdot u(c_2) = \bar{U}\)</span></p>
 <p><strong>Optimum</strong>: Highest indifference curve tangent to budget constraint</p>
 <div style="margin: 20px 0;">
   <svg width="450" height="380" viewbox="0 0 450 380" style="margin: 0 auto; display: block;">
@@ -1450,8 +1434,8 @@ t \cdot c_1 + (1-t) \cdot c_2/R = 1
 <p><strong>Impatient types</strong> sell all <span class="math inline">\(t=2\)</span> claims at price <span class="math inline">\(p\)</span>: <span class="math display">\[c_1^M = x + p(1-x)R\]</span></p>
 <p><strong>Patient types</strong> buy <span class="math inline">\(t=2\)</span> claims: <span class="math display">\[c_2^M = \frac{x}{p} + (1-x)R\]</span></p>
 <div class="fragment">
-<p><strong>Market clearing</strong> gives <span class="math inline">\(p = \frac{(1-t) x}{t (1-x) R}\)</span>, and consumption: <span class="math display">\[
-c_1^M = \frac{x}{t}, \qquad c_2^M = \frac{(1-x)R}{1-t}
+<p><strong>Market clearing</strong> gives <span class="math inline">\(p = \frac{(1-\pi) x}{\pi (1-x) R}\)</span>, and consumption: <span class="math display">\[
+c_1^M = \frac{x}{\pi}, \qquad c_2^M = \frac{(1-x)R}{1-\pi}
 \]</span></p>
 </div>
 <div class="fragment">
@@ -1686,7 +1670,7 @@ U^{\text{Autarky}} &lt; U^{\text{Market}} &lt; U^{\text{DD}}
 <li><p><strong>Banks as liquidity providers</strong>: Banks exist to insure depositors against idiosyncratic liquidity shocks</p></li>
 <li><p><strong>Risk aversion drives demand</strong>: Without concave utility, there is no demand for liquidity insurance (Diamond 2007)</p></li>
 <li><p><strong>Optimal contract</strong>: <span class="math inline">\(u'(r_1^*) = R \cdot u'(r_2^*)\)</span> — marginal utility of early consumption equals marginal cost of liquidity</p></li>
-<li><p><strong>Banks dominate autarky</strong>: Individual needs all-or-nothing liquidity; bank knows fraction <span class="math inline">\(t\)</span> will need it</p></li>
+<li><p><strong>Banks dominate autarky</strong>: Individual needs all-or-nothing liquidity; bank knows fraction <span class="math inline">\(\pi\)</span> will need it</p></li>
 <li><p><strong>Markets cannot replicate banking</strong>: Tradable claims unravel the insurance (Jacklin 1987)</p></li>
 <li><p><strong>Trading restrictions are essential</strong>: Illiquidity of deposits is a feature, not a bug — but it creates fragility</p></li>
 </ol>
