@@ -1,0 +1,24 @@
+---
+title: "Doctoral - Banking"
+collection: teaching
+type: "Graduate course"
+permalink: /teaching/2025-spring-banking
+venue: "Louisiana State University, E.J. Ourso College of Business"
+date: 2025-01-15
+location: "Baton Rouge, LA"
+---
+
+## FIN 7650: Banking — Theory and Evidence
+
+Doctoral-level course covering the theory and empirics of banking, including the Diamond-Dybvig model, bank runs, liquidity creation, and delegated monitoring.
+
+### Course Notes (Book)
+[View Complete Course Notes](/teaching/banking/notes/index.html)
+
+### Lecture Slides
+
+- [Lecture 1: Banking Fundamentals](/teaching/banking/lectures/01-banking-slides.html)
+  - What banks do and why banks exist
+  - The Diamond-Dybvig model
+  - Liquidity creation and empirical evidence
+  - Market replication (Jacklin 1987)
