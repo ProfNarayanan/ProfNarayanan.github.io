@@ -32,364 +32,364 @@
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html",
     "href": "Notes/01_chapter1_what_is_a_bank.html",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "",
     "text": "2 Overview",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#learning-objectives",
     "href": "Notes/01_chapter1_what_is_a_bank.html#learning-objectives",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "2.1 Learning Objectives",
     "text": "2.1 Learning Objectives\nBy the end of this chapter, you should be able to:\n\nExplain the fundamental economic problem that banks solve\nArticulate the key features of the Diamond-Dybvig model of banking\nDerive the optimal deposit contract in the Diamond-Dybvig framework\nUnderstand the trade-off between liquidity provision and efficient investment\nExplain the role of financial intermediation in managing liquidity risk\nUnderstand the concept of asset management of liquidity and why individuals cannot replicate it",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#roadmap",
     "href": "Notes/01_chapter1_what_is_a_bank.html#roadmap",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "2.2 Roadmap",
-    "text": "2.2 Roadmap\nPart 1: What Is a Bank?\n\nStylized balance sheet\nFunctions of banking\nThe two sides of banking\n\nPart 2: The Demand for Liquidity\n\nWhy risk aversion creates a demand for liquidity\nThe Diamond-Dybvig model setup\nComparing liquid and illiquid assets: A numerical example\nBenchmark: Autarky\n\nPart 3: How Banks Create Liquidity\n\nThe banking contract and the 100-investor example\nThe optimal amount of liquidity\nWhy banking dominates autarky\nAsset management of liquidity\nThe role of risk aversion and the term structure\n\nPart 4: Can Markets Replicate Banking?\n\nJacklin’s critique: Trading and restrictions\nThe incentive compatibility constraint\nResponse and modern applications\n\nPart 5: Preview and Summary\n\nPreview: The dark side of banking\nKey takeaways",
+    "text": "2.2 Roadmap\nWhat Is a Bank?\n\nStylized balance sheet\nFunctions of banking\nThe two sides of banking\n\nThe Demand for Liquidity\n\nWhy risk aversion creates a demand for liquidity\nThe Diamond-Dybvig model setup\nComparing liquid and illiquid assets: A numerical example\nBenchmark: Autarky\n\nHow Banks Create Liquidity\n\nThe banking contract and the 100-investor example\nThe optimal amount of liquidity\nWhy banking dominates autarky\nAsset management of liquidity\nThe role of risk aversion and the term structure\n\nCan Markets Replicate Banking?\n\nJacklin’s critique: Trading and restrictions\nThe incentive compatibility constraint\nResponse and modern applications\n\nPreview and Summary\n\nPreview: The dark side of banking\nKey takeaways",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#a-boring-definition",
     "href": "Notes/01_chapter1_what_is_a_bank.html#a-boring-definition",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.1 A Boring Definition",
     "text": "3.1 A Boring Definition\n\n\n\n\n\n\nNoteDefinition: Bank\n\n\n\nA bank is a financial institution that intermediates funds between savers and borrowers.\n\n\nThis definition, while accurate, doesn’t tell us much about:\n\nWhy banks are useful\nHow they create value\nWhat makes them special\n\nTo understand these questions, we need to look at what banks actually do.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#the-stylized-bank-balance-sheet",
     "href": "Notes/01_chapter1_what_is_a_bank.html#the-stylized-bank-balance-sheet",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.2 The Stylized Bank Balance Sheet",
     "text": "3.2 The Stylized Bank Balance Sheet\nBanks perform valuable activities on both sides of their balance sheet:\n\n\nAssets (Uses of Funds)\n\nLoans to borrowers\nSecurities (bonds, treasuries)\nCash reserves\n\n\nLiabilities (Sources of Funds)\n\nDeposits (money-like claims)\nEquity capital\n\n\n\n\n  BANK BALANCE SHEET\n  \n    ASSETS\n    LIABILITIES\n  \n  \n    \n      Loans\n      Securities\n    \n    \n      Deposits\n      Capital\n    \n  \n\n\n\n\n\n\n\nTipKey Insight (Doug Diamond)\n\n\n\nBanks create value through their activities on both sides of the balance sheet, not just one.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#what-banks-do-the-asset-side",
     "href": "Notes/01_chapter1_what_is_a_bank.html#what-banks-do-the-asset-side",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.3 What Banks Do: The Asset Side",
     "text": "3.3 What Banks Do: The Asset Side\nMonitoring and screening borrowers\nBanks specialize in evaluating creditworthiness and monitoring loan performance.\nWhy is this valuable?\n\nInformation production: Banks invest in acquiring information about borrowers\n\nCredit history\nBusiness fundamentals\nCharacter and reputation\n\nEconomies of scale: Fixed costs of monitoring spread over many loans\nExpertise: Banks develop specialized knowledge about industries and credit risk\n\n\n\n\n\n\n\nImportantThe Delegated Monitoring Problem\n\n\n\nIndividual savers lack the expertise, scale, and incentives to monitor borrowers effectively. Banks solve this by delegating the monitoring function to a specialized intermediary.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#what-banks-do-the-liability-side",
     "href": "Notes/01_chapter1_what_is_a_bank.html#what-banks-do-the-liability-side",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.4 What Banks Do: The Liability Side",
     "text": "3.4 What Banks Do: The Liability Side\nCreating money-like deposits\nBanks offer deposit accounts that function as a medium of exchange and store of value.\nKey features of deposits:\n\nRedeemable on demand at par: You can withdraw $100 any time and get exactly $100\nAccepted for payments: Deposits can be transferred to pay for goods and services\nStable value: Unlike equity or bonds, deposits don’t fluctuate in nominal value\n\n\n\n\n\n\n\nNoteWhy Is This Valuable?\n\n\n\nDepositors value:\n\nLiquidity: Ability to access funds when needed\nSafety: Predictable nominal value\nConvenience: Easy to use for transactions\n\nBanks create these features by transforming illiquid loans into liquid deposits.\n\n\n\n\n\n\n\n\nImportantLiquidity Insurance and Liquidity Creation\n\n\n\nIndividual savers face uncertain liquidity needs but cannot efficiently self-insure. Banks solve this by pooling liquidity risk across many depositors and providing liquidity insurance — offering liquid deposits backed by illiquid assets. This is liquidity creation: banks create more liquidity than exists in the underlying assets.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#the-social-value-of-banks",
     "href": "Notes/01_chapter1_what_is_a_bank.html#the-social-value-of-banks",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.5 The Social Value of Banks",
     "text": "3.5 The Social Value of Banks\nEverything we’ve described so far — monitoring borrowers, creating liquid deposits — generates real social value:\n\nBorrowers get funding they couldn’t access directly from savers\nSavers get safe, liquid claims backed by productive investments\nThe economy channels savings into productive projects more efficiently\n\nHow? Through maturity transformation:\n\nAssets: Long-term, illiquid loans (e.g., 30-year mortgages)\nLiabilities: Short-term, liquid deposits (redeemable on demand)\n\n\n\n\n\n\n\nNoteBut there is a catch\n\n\n\nThe very feature that makes deposits valuable — redeemable on demand — means the bank must always be ready to pay out. Yet its assets are locked up in long-term loans. This mismatch is the source of banking’s fragility.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/01_chapter1_what_is_a_bank.html#the-central-tension-value-vs.-fragility",
     "href": "Notes/01_chapter1_what_is_a_bank.html#the-central-tension-value-vs.-fragility",
-    "title": "1  Chapter 1: What Is a Bank?",
+    "title": "1  What Is a Bank?",
     "section": "3.6 The Central Tension: Value vs. Fragility",
     "text": "3.6 The Central Tension: Value vs. Fragility\nMaturity transformation is how banks create value. It is also how they become fragile.\n\n\nThe value it creates\n\nSavers get liquidity\nBorrowers get long-term funding\nBanks earn the spread\n\nExample: - Bank makes 10-year mortgage at 6% - Funds with deposits paying 2% - Spread = 4%\n\nThe fragility it creates\n\nAssets are locked in long-term loans\nDeposits are redeemable any time\nIf too many depositors withdraw at once, the bank cannot pay\n\nThe worst case: - Bank must sell illiquid assets at fire-sale prices - Losses can wipe out equity - Bank fails\n\n\n\n\n\n\n\n\nImportantCentral Question\n\n\n\nMaturity transformation is socially valuable but inherently fragile. Why do banks engage in it? What problem are they solving that makes the risk worthwhile?\n\n\n\n\n\n\n\n\nNoteOrganization of This Book\n\n\n\nWe have seen that banks create value on both sides of the balance sheet: - Asset side: Delegated monitoring of borrowers - Liability side: Liquidity creation and insurance\nIn this chapter, we focus on the liability side — how banks create liquidity and provide insurance against uncertain liquidity needs. This is the Diamond-Dybvig model.\nIn the next chapter, we’ll examine the fragility this creates (bank runs), and then in later chapters, we’ll return to the asset side to study delegated monitoring in detail.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1: What Is a Bank?</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What Is a Bank?</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html",
     "href": "Notes/02_chapter2_liquidity_creation.html",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "",
-    "text": "3 Part 2: The Demand for Liquidity",
+    "text": "3 The Demand for Liquidity",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#why-is-there-a-demand-for-liquidity",
     "href": "Notes/02_chapter2_liquidity_creation.html#why-is-there-a-demand-for-liquidity",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "3.1 Why Is There a Demand for Liquidity?",
     "text": "3.1 Why Is There a Demand for Liquidity?\nInvestors face fundamental uncertainty about when they will need to consume. Some will need funds soon; others can wait. The problem is that the most productive investments are illiquid — they lose value when liquidated early.\n\n\n\n\n\n\nNoteDiamond’s Framing\n\n\n\nAs Diamond (2007) puts it: “An illiquid asset is one where proceeds from liquidation are less than the present value of future payoffs.” The gap between what an asset is worth if held to maturity versus what you can recover if forced to sell early — that gap is the essence of illiquidity.\n\n\nWhy does this create a demand for liquidity?\nMany financial institutions intermediate between savers and borrowers:\n\nInvestment banks: Underwrite securities\nMutual funds: Pool investments\nPension funds: Manage retirement savings\n\nWhat makes banks special?\nBanks combine:\n\nIlliquid, long-term assets (loans)\nLiquid, short-term liabilities (deposits)\n\nThis combination is essential to their function, not accidental. The reason lies in the consumer’s problem: investors don’t know when they will need to consume, so they value the ability to access funds early without sacrificing too much return. This is the demand for liquidity, and it is what banks exist to serve.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#the-model-setup",
     "href": "Notes/02_chapter2_liquidity_creation.html#the-model-setup",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "3.2 The Model Setup",
     "text": "3.2 The Model Setup\n\n3.2.1 Timeline\nThree periods: \\(t = 0, 1, 2\\)\n\n\n3.2.2 Investment Technology\nTwo investment technologies available:\n\n\nShort-term (liquid) investment\n\nInvest 1 at \\(t=0\\)\nReturns \\(r_1 = 1\\) at \\(t=1\\)\nCan be rolled over: 1 at \\(t=1\\) → \\(r_2\\) at \\(t=2\\)\n\nAssumption: \\(r_1 = 1\\) (normalization)\n\nLong-term (illiquid) investment\n\nInvest 1 at \\(t=0\\)\nReturns \\(R &gt; 1\\) at \\(t=2\\)\nReturns 0 at \\(t=1\\) (not productive if liquidated early)\n\nAlternatively: Can liquidate at \\(t=1\\) for \\(\\ell &lt; 1\\)\n\n\nKey relationship: Long-term investment dominates for patient investors: \\[\nR &gt; r_1 \\cdot r_2 = r_2\n\\]\n\n  \n    \n    \n    time\n\n    \n    \n    t=0\n\n    \n    t=1\n\n    \n    t=2\n\n    \n    Short-term:\n    \n    Invest 1\n    Get r₁=1\n    \n    Reinvest\n    Get r₂\n\n    \n    Long-term:\n    \n    Invest 1\n    Get R\n    (or liquidate for ℓ &lt; 1)\n\n    \n      \n        \n      \n      \n        \n      \n      \n        \n      \n    \n  \n\n\n\n\n\n\n\nNoteIntuition\n\n\n\n\nIf you know you won’t need money at \\(t=1\\): Invest in long-term (get \\(R &gt; r_2\\))\nIf you might need money at \\(t=1\\): Face a dilemma\n\nShort-term: Safe but low return\nLong-term: High return but can’t access at \\(t=1\\)\n\n\n\n\n\n\n3.2.3 Consumer Preferences\nEx ante identical consumers\nEach consumer has initial wealth = 1 at \\(t=0\\)\nUncertainty about consumption timing:\nAt \\(t=1\\), consumers learn their type:\n\n\n\n\n\n\nNoteConsumer Types\n\n\n\n\nImpatient (probability \\(\\lambda\\)): Want to consume at \\(t=1\\)\n\nUtility: \\(u(c_1)\\)\n\nPatient (probability \\(1-\\lambda\\)): Want to consume at \\(t=2\\)\n\nUtility: \\(u(c_2)\\)\n\n\n\n\nPreferences: \\[\nU = \\begin{cases}\nu(c_1) & \\text{if impatient (prob. } \\lambda) \\\\\nu(c_2) & \\text{if patient (prob. } 1-\\lambda)\n\\end{cases}\n\\]\nwhere \\(u(\\cdot)\\) is:\n\nIncreasing: \\(u' &gt; 0\\) (more consumption is better)\nStrictly concave: \\(u'' &lt; 0\\) (diminishing marginal utility)\nInada conditions: \\(u'(0) = \\infty\\), \\(u'(\\infty) = 0\\)\n\nExpected utility: \\[\nEU = \\lambda \\, u(c_1) + (1-\\lambda) \\, u(c_2)\n\\]\n\n\n3.2.4 Key Assumptions\n\n\n\n\n\n\nNoteAssumption 1: Ex Ante Homogeneity\n\n\n\nAll consumers are identical at \\(t=0\\). They don’t know whether they’ll be impatient or patient.\n\n\n\n\n\n\n\n\nNoteAssumption 2: No Aggregate Uncertainty\n\n\n\nExactly fraction \\(\\lambda\\) of consumers will be impatient. The only uncertainty is who will be impatient, not how many.\n\n\n\n\n\n\n\n\nNoteAssumption 3: Types Are Private Information\n\n\n\nAt \\(t=1\\), each consumer learns their type, but the bank cannot observe it directly.\n\n\nWhy these assumptions matter:\n\nEx ante homogeneity: Everyone faces the same problem — symmetric treatment\nNo aggregate uncertainty: Bank can perfectly predict total withdrawals\nPrivate information: Bank must offer self-selecting contracts",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#comparing-liquid-and-illiquid-assets",
     "href": "Notes/02_chapter2_liquidity_creation.html#comparing-liquid-and-illiquid-assets",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "3.3 Comparing Liquid and Illiquid Assets",
     "text": "3.3 Comparing Liquid and Illiquid Assets\nTo see why liquidity matters, consider Diamond’s (2007) numerical example. Suppose:\n\nProbability of being impatient: \\(\\lambda = 1/4\\)\nLong-term return: \\(R = 2\\)\nUtility function: \\(u(c) = 1 - 1/c\\) (equivalent to CRRA with \\(\\gamma = 2\\))\n\n\n3.3.1 The Illiquid Asset\nAn investor who holds only the illiquid asset gets:\n\n\\(r_1 = 1\\) if forced to liquidate at \\(t=1\\) (the asset returns its investment cost, no more)\n\\(R = 2\\) if held to maturity at \\(t=2\\)\n\nExpected utility: \\[\nEU_{\\text{illiquid}} = \\frac{1}{4} \\, u(1) + \\frac{3}{4} \\, u(2) = \\frac{1}{4}(1 - 1) + \\frac{3}{4}\\left(1 - \\frac{1}{2}\\right) = 0 + \\frac{3}{8} = 0.375\n\\]\n\n\n3.3.2 A More Liquid Asset\nNow consider a more liquid asset that offers \\(r_1 = 1.28\\) at \\(t=1\\) and \\(r_2 = 1.813\\) at \\(t=2\\). Expected utility: \\[\nEU_{\\text{liquid}} = \\frac{1}{4}\\, u(1.28) + \\frac{3}{4}\\, u(1.813) = \\frac{1}{4}\\left(1 - \\frac{1}{1.28}\\right) + \\frac{3}{4}\\left(1 - \\frac{1}{1.813}\\right)\n\\] \\[\n= \\frac{1}{4}(0.21875) + \\frac{3}{4}(0.44845) = 0.0547 + 0.3363 = 0.391\n\\]\n\n\n\n\n\n\nImportantRisk Aversion Creates the Demand for Liquidity\n\n\n\nThe more liquid asset gives higher expected utility (\\(0.391 &gt; 0.375\\)) even though a risk-neutral investor would prefer the illiquid asset:\n\nExpected payoff of the liquid asset: \\(\\frac{1}{4}(1.28) + \\frac{3}{4}(1.813) = 1.68\\)\nExpected payoff of the illiquid asset: \\(\\frac{1}{4}(1) + \\frac{3}{4}(2) = 1.75\\)\n\nSince \\(1.68 &lt; 1.75\\), a risk-neutral investor would choose the illiquid asset. It is risk aversion — the concavity of \\(u\\) — that makes the liquid asset more attractive. The smoother payoff profile is worth the sacrifice in expected return.\nThis is the key insight: risk aversion creates the demand for liquidity.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#benchmark-autarky",
     "href": "Notes/02_chapter2_liquidity_creation.html#benchmark-autarky",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "3.4 Benchmark: Autarky",
     "text": "3.4 Benchmark: Autarky\nWithout a bank, each investor holds assets directly. This is the autarky benchmark.\nEach consumer individually chooses investment portfolio: \\((x, y)\\)\n\n\\(x\\): Amount in short-term (liquid) asset\n\\(y\\): Amount in long-term (illiquid) asset\nBudget constraint: \\(x + y = 1\\)\n\nPayoffs:\n\nIf impatient: Consume \\(c_1 = x \\cdot r_1 = x\\) at \\(t=1\\)\nIf patient: Consume \\(c_2 = x \\cdot r_2 + y \\cdot R\\) at \\(t=2\\)\n\nConsumer’s problem at \\(t=0\\): \\[\n\\max_{x, y} \\quad \\lambda u(x) + (1-\\lambda) u(x r_2 + y R)\n\\] \\[\n\\text{s.t.} \\quad x + y = 1\n\\]\nFirst-order condition: \\[\n\\lambda u'(c_1^A) = (1-\\lambda) R \\cdot u'(c_2^A)\n\\]\nwhere \\(c_1^A = x\\) and \\(c_2^A = (1-x)R + x r_2\\)\n\n3.4.1 Autarky Solution: Interpretation\nThe autarky first-order condition: \\[\n\\frac{u'(c_1^A)}{u'(c_2^A)} = \\frac{(1-\\lambda) R}{\\lambda}\n\\]\nInterpretation:\n\n\nLeft side: Marginal rate of substitution\n\nWillingness to trade \\(t=1\\) consumption for \\(t=2\\) consumption\nHigh \\(c_1\\) → low \\(u'(c_1)\\) → low MRS\n\n\nRight side: Marginal rate of transformation\n\nTechnology for transforming \\(t=1\\) consumption into \\(t=2\\) consumption\nGiving up 1 unit at \\(t=1\\) allows investing in long-term asset\nReturns \\(R\\) at \\(t=2\\) with probability \\((1-\\lambda)\\)\n\n\n\n\n\n\n\n\n\nImportantThe Key Limitation of Autarky\n\n\n\nIn autarky, each consumer must hold both assets:\n\nLiquid asset: Insurance against being impatient\nIlliquid asset: To get high returns if patient\n\nThis is inefficient because impatient consumers waste the high returns from illiquid assets. Crucially, an individual investor needs all or none of his liquidity — he does not know in advance whether he will be impatient, so he cannot fine-tune his portfolio to match his realized type. The bank, by contrast, knows that exactly fraction \\(\\lambda\\) will need liquidity at date 1.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#the-banking-contract",
     "href": "Notes/02_chapter2_liquidity_creation.html#the-banking-contract",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.1 The Banking Contract",
     "text": "4.1 The Banking Contract\nA bank offers a deposit contract \\((c_1, c_2)\\) that specifies:\n\n\\(c_1\\): Consumption for depositors who withdraw at \\(t=1\\)\n\\(c_2\\): Consumption for depositors who withdraw at \\(t=2\\)\n\nKey features:\n\nDepositors make deposits at \\(t=0\\): Each deposits 1 unit\nBank chooses investment portfolio \\((x, y)\\):\n\n\\(x\\): Liquid short-term investment\n\\(y\\): Illiquid long-term investment\nBudget: \\(x + y = 1\\)\n\nAt \\(t=1\\):\n\nFraction \\(\\lambda\\) reveal they are impatient, withdraw and get \\(c_1\\)\nFraction \\((1-\\lambda)\\) wait\n\nAt \\(t=2\\):\n\nRemaining fraction \\((1-\\lambda)\\) withdraw and get \\(c_2\\)\n\n\n\n4.1.1 Diamond’s 100-Investor Example\nFollowing Diamond (2007), consider a bank with 100 depositors, \\(\\lambda = 1/4\\), and \\(R = 2\\). Suppose the bank offers \\(c_1 = 1.28\\):\n\nAt \\(t=1\\): 25 depositors withdraw, each getting 1.28\nTotal paid out: \\(25 \\times 1.28 = 32\\)\nThe bank must liquidate 32% of its portfolio (since the illiquid asset returns 1 per unit if liquidated at \\(t=1\\))\nRemaining assets: \\(100 - 32 = 68\\) units invested in the long-term asset\nAt \\(t=2\\): These 68 units mature, each worth \\(R = 2\\), yielding \\(68 \\times 2 = 136\\)\nPer remaining depositor: \\(136 / 75 = 1.813\\)\n\nSo the bank delivers \\((c_1, c_2) = (1.28, 1.813)\\) — exactly the “more liquid” payoff profile from our earlier comparison. This is liquidity creation: the bank offers depositors a more liquid claim than the underlying illiquid asset.\n\n\n4.1.2 The Budget Constraint\nFor the contract \\((c_1, c_2)\\) to be feasible, the bank must be able to meet withdrawals:\nDate 1 constraint (liquidity constraint):\nBank must have enough liquid funds to pay impatient depositors: \\[\n\\lambda c_1 \\leq x \\cdot r_1 = x\n\\]\nImpatient depositors (fraction \\(\\lambda\\)) each get \\(c_1\\), must come from liquid assets.\nDate 2 constraint (solvency constraint):\nAfter paying impatient depositors, remaining funds must cover patient depositors: \\[\n(1-\\lambda) c_2 \\leq (x - \\lambda c_1) \\cdot r_2 + y \\cdot R\n\\]\nCombined with budget constraint \\(x + y = 1\\), when both constraints bind and \\(r_1 = r_2 = 1\\), the budget constraint reduces to:\n\\[\n\\boxed{c_2 = \\frac{(1 - \\lambda c_1) R}{1 - \\lambda}}\n\\]\nThis is the bank’s feasibility frontier: every dollar of \\(c_1\\) promised to impatient depositors reduces the resources available for patient depositors, amplified by the forgone long-term return \\(R\\).",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#the-optimal-amount-of-liquidity",
     "href": "Notes/02_chapter2_liquidity_creation.html#the-optimal-amount-of-liquidity",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.2 The Optimal Amount of Liquidity",
     "text": "4.2 The Optimal Amount of Liquidity\nThe bank chooses \\((c_1, c_2, x)\\) to maximize expected consumer welfare:\n\\[\n\\max_{c_1, c_2, x} \\quad \\lambda u(c_1) + (1-\\lambda) u(c_2)\n\\]\nsubject to:\n\nBudget: \\(x + y = 1\\) (equivalently, \\(y = 1-x\\))\nLiquidity: \\(\\lambda c_1 \\leq x\\)\nSolvency: \\((1-\\lambda) c_2 \\leq (x - \\lambda c_1) r_2 + (1-x) R\\)\n\n\n4.2.1 Solving the Optimization\n\n\n\n\n\n\nTipKey Insight\n\n\n\nAt the optimum, both constraints must bind (hold with equality).\nWhy? If a constraint doesn’t bind, the bank could increase welfare by:\n\nIf liquidity constraint slack: Invest more in long-term asset (higher \\(R\\))\nIf solvency constraint slack: Increase \\(c_2\\) (higher utility)\n\n\n\nWith both constraints binding: \\[\n\\begin{aligned}\n\\lambda c_1 &= x \\\\\n(1-\\lambda) c_2 &= (x - \\lambda c_1) r_2 + (1-x) R\n\\end{aligned}\n\\]\nSubstituting the first into the second: \\[\n(1-\\lambda) c_2 = (1-x) R\n\\]\nFrom the first constraint: \\(x = \\lambda c_1\\)\nSubstituting into the second: \\[\n(1-\\lambda) c_2 = (1 - \\lambda c_1) R\n\\]\n\n\n4.2.2 The First-Order Condition\nSince both constraints bind, the problem reduces to a single-constraint optimization over \\((c_1, c_2)\\):\n\\[\n\\max_{c_1, c_2} \\quad \\lambda u(c_1) + (1-\\lambda) u(c_2) \\quad \\text{s.t.} \\quad (1-\\lambda c_1)R = (1-\\lambda)c_2\n\\]\nSetting up the Lagrangian with multiplier \\(\\nu\\): \\[\n\\mathcal{L} = \\lambda u(c_1) + (1-\\lambda) u(c_2) + \\nu[(1-\\lambda c_1)R - (1-\\lambda)c_2]\n\\]\nFirst-order conditions:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_1}: \\quad \\lambda u'(c_1) - \\nu \\lambda R = 0 \\implies u'(c_1) = \\nu R\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial c_2}: \\quad (1-\\lambda) u'(c_2) - \\nu(1-\\lambda) = 0 \\implies \\nu = u'(c_2)\n\\]\nTaking the ratio: \\[\n\\frac{u'(c_1)}{u'(c_2)} = R\n\\]\n\n\n\n\n\n\nImportantProposition: Optimal Deposit Contract\n\n\n\nThe optimal banking contract satisfies: \\[\nu'(c_1^*) = R \\cdot u'(c_2^*)\n\\]\nInterpretation (Diamond, 2007): The marginal utility of consumption at date 1 must be in line with the marginal cost of providing liquidity. Since each unit of \\(c_1\\) costs the bank \\(R\\) units of forgone \\(t=2\\) output (because the liquid asset earns 1 while the long-term asset earns \\(R\\)), the optimum equates the marginal benefit of insurance with this marginal cost.\n\n\n\n\n4.2.3 Diamond’s Closed-Form Solution\nFor the utility function \\(u(c) = 1 - 1/c\\) (CRRA with \\(\\gamma = 2\\)), we have \\(u'(c) = 1/c^2\\). The FOC becomes: \\[\n\\frac{1}{c_1^2} = R \\cdot \\frac{1}{c_2^2} \\implies \\frac{c_2}{c_1} = \\sqrt{R}\n\\]\nSubstituting \\(c_2 = c_1 \\sqrt{R}\\) into the budget constraint \\(c_2 = \\frac{(1 - \\lambda c_1)R}{1-\\lambda}\\):\n\\[\nc_1 \\sqrt{R} = \\frac{(1 - \\lambda c_1)R}{1-\\lambda}\n\\]\nSolving for \\(c_1\\): \\[\nc_1^* = \\frac{\\sqrt{R}}{(1-\\lambda) + \\lambda \\sqrt{R}}\n\\]\nWith \\(\\lambda = 1/4\\) and \\(R = 2\\): \\[\nc_1^* = \\frac{\\sqrt{2}}{3/4 + (1/4)\\sqrt{2}} = \\frac{1.414}{0.75 + 0.354} = \\frac{1.414}{1.104} = 1.28\n\\]\nAnd: \\[\nc_2^* = c_1^* \\sqrt{R} = 1.28 \\times 1.414 = 1.813\n\\]\nThese are exactly the values from Diamond’s 100-investor example.\n\n\n4.2.4 The General CRRA Result\nMore generally, with CRRA utility \\(u(c) = \\frac{c^{1-\\gamma}}{1-\\gamma}\\), the optimality condition \\(u'(c_1^*) = R \\cdot u'(c_2^*)\\) gives: \\[\n(c_1^*)^{-\\gamma} = R \\cdot (c_2^*)^{-\\gamma} \\implies \\frac{c_2^*}{c_1^*} = R^{1/\\gamma}\n\\]\nSubstituting into the budget constraint \\((1-\\lambda)c_2 = (1-\\lambda c_1)R\\): \\[\nc_1^* = \\frac{R}{(1-\\lambda) R^{1/\\gamma} + \\lambda R}\n\\]",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#why-banking-dominates-autarky",
     "href": "Notes/02_chapter2_liquidity_creation.html#why-banking-dominates-autarky",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.3 Why Banking Dominates Autarky",
     "text": "4.3 Why Banking Dominates Autarky\nThe key differences:\n\n\nAutarky\n\nEach consumer faces full uncertainty\nMust self-insure by holding both assets\nImpatient types “waste” long-term investments\nTrade-off between liquidity and returns at individual level\n\n\nBanking\n\nBank pools liquidity risk across many consumers\nLaw of large numbers — predictable withdrawals\nBank holds just enough liquid reserves (\\(x = \\lambda c_1\\))\nInvests rest in high-return assets\nProvides full insurance against liquidity shocks\n\n\n\nComparison to autarky FOC:\n\nAutarky: \\(\\frac{u'(c_1^A)}{u'(c_2^A)} = \\frac{(1-\\lambda)R}{\\lambda}\\)\nBanking: \\(\\frac{u'(c_1^*)}{u'(c_2^*)} = R\\)\n\nSince \\(\\frac{(1-\\lambda)R}{\\lambda} &gt; R\\) (when \\(\\lambda &lt; 1\\)), we have: \\[\n\\frac{u'(c_1^A)}{u'(c_2^A)} &gt; \\frac{u'(c_1^*)}{u'(c_2^*)}\n\\]\nWhat does this mean? Autarky has too large a gap in marginal utility between the two types. Impatient depositors consume little (\\(c_1^A\\) low, marginal utility high), while patient depositors consume a lot (\\(c_2^A\\) high, marginal utility low). This means there are unexploited gains from redistribution — a dollar moved from patient to impatient types would increase total expected welfare.\nThe bank exploits exactly this gap. It raises \\(c_1\\) and lowers \\(c_2\\), narrowing the marginal utility ratio until it falls to \\(R\\) — the point where the insurance benefit (utility gained by impatient types) exactly equals the opportunity cost (forgone return \\(R\\) from diverting resources away from the long-term asset). At that point, no further redistribution can improve welfare.\n\n\n\n\n\n\nImportantDiamond’s Key Insight\n\n\n\n“An investor’s opportunity set without the bank is worse because an investor needs all or none of his liquidity, while the bank knows that a fraction \\(\\lambda\\) will need liquidity at date 1.”\n— Diamond (2007, p. 196)\nThe individual faces binary uncertainty (impatient or patient), but the bank faces only the known aggregate (exactly fraction \\(\\lambda\\)). This is what allows the cross-subsidy: the bank can promise more than any individual could achieve alone.\n\n\n\n4.3.1 Graphical Interpretation\nConsider the \\((c_1, c_2)\\) space:\nBudget constraint (resource feasibility): \\[\n\\lambda c_1 + (1-\\lambda) c_2 = \\text{max feasible resources}\n\\]\nIndifference curves: \\(\\lambda u(c_1) + (1-\\lambda) u(c_2) = \\bar{U}\\)\n\nHigher curves — higher welfare\nShape determined by \\(u(\\cdot)\\) and probabilities \\(\\lambda, 1-\\lambda\\)\n\nOptimum: Highest indifference curve tangent to budget constraint\n\n  \n    \n      \n        \n      \n    \n\n    \n    \n    c₁\n    \n    c₂\n\n    \n    \n    \n    Banking budget\n\n    \n    \n    \n    Autarky budget\n\n    \n    \n    \n    \n    \n    Ūᴵ\n\n    \n    \n    \n    Ūᴬ\n\n    \n    \n    Banking optimum\n\n    \n    \n    Autarky\n\n    \n    \n    c₁ = c₂\n\n    \n    \n    Higher welfare\n  \n\nBanking expands the budget constraint by efficiently allocating the long-term investment.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#asset-management-of-liquidity",
     "href": "Notes/02_chapter2_liquidity_creation.html#asset-management-of-liquidity",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.4 Asset Management of Liquidity",
     "text": "4.4 Asset Management of Liquidity\nDiamond (2007) introduces an important extension that further clarifies why banks dominate individual investors. Suppose that liquidating the long-term asset early is costly but not completely worthless: at \\(t=1\\), each unit of the long-term asset can be liquidated for \\((1 - \\tau)\\), where \\(\\tau &gt; 0\\) represents the liquidation cost.\n\n4.4.1 The Bank’s Strategy\nThe bank can hold a fraction \\(\\lambda c_1\\) in short-term assets (just enough to pay impatient depositors) and invest the rest, \\(1 - \\lambda c_1\\), in the long-term asset. Since the bank knows exactly fraction \\(\\lambda\\) will withdraw early, the bank never needs to liquidate the long-term asset. It achieves the same payoffs as before:\n\\[\nc_1^* = \\frac{\\sqrt{R}}{(1-\\lambda) + \\lambda\\sqrt{R}}, \\qquad c_2^* = c_1^* \\sqrt{R}\n\\]\nThe liquidation cost \\(\\tau\\) is irrelevant to the bank because it manages its portfolio so that early withdrawals are funded entirely from short-term assets.\n\n\n4.4.2 The Individual Investor’s Problem\nAn individual investor, by contrast, does not know whether she will be impatient or patient. If she invests fraction \\(\\alpha\\) in the short-term asset and \\((1-\\alpha)\\) in the long-term asset:\n\nIf impatient (realized at \\(t=1\\)): she gets \\(c_1 = \\alpha + (1-\\alpha)(1-\\tau)\\)\n\nShe liquidates her short-term holdings plus her long-term holdings at the penalty \\((1-\\tau)\\)\n\nIf patient (realized at \\(t=2\\)): she gets \\(c_2 = \\alpha + (1-\\alpha)R\\)\n\nShe rolls over her short-term asset and collects the long-term return\n\n\nEliminating \\(\\alpha\\) from these two equations gives the individual’s opportunity set: \\[\nc_2 = 1 + (1 - c_1)\\frac{R - 1}{\\tau}\n\\]\nThis is a linear tradeoff: for every unit increase in \\(c_1\\), the investor sacrifices \\((R-1)/\\tau\\) units of \\(c_2\\).\n\n\n4.4.3 Diamond’s Numerical Example\nWith \\(\\lambda = 1/4\\), \\(\\tau = 1/2\\), \\(R = 2\\):\nBank: offers \\(c_1^* = 1.28\\) and \\(c_2^* = 1.813\\) (same as the \\(\\tau = 0\\) case, since the bank avoids liquidation entirely).\nIndividual: Suppose she wants \\(c_1 = 0.9\\). Then: \\[\nc_2 = 1 + (1 - 0.9)\\frac{2 - 1}{0.5} = 1 + 0.1 \\times 2 = 1.2\n\\]\nIf she wants \\(c_1 = 1\\): \\(c_2 = 1 + 0 = 1\\) (everything in short-term).\nIf she wants \\(c_1 = 0.5\\) (all in long-term): \\(c_2 = 1 + 0.5 \\times 2 = 2\\), but \\(c_1 = 0.5\\) is very low.\n\n\n\n\n\n\nImportantWhy the Bank Dominates the Individual\n\n\n\nThe individual’s opportunity set is strictly dominated by the bank’s. The bank offers \\((1.28, 1.813)\\) while an individual choosing \\(c_1 = 0.9\\) can only achieve \\(c_2 = 1.2\\).\nThe reason is fundamental: the individual must choose a portfolio before knowing her type. If she turns out to be impatient, she must liquidate long-term assets at a loss. The bank, by contrast, knows the aggregate fraction \\(\\lambda\\) and can separate its short-term and long-term holdings perfectly.\nThis is what Diamond calls asset management of liquidity: the bank manages its asset portfolio to provide liquidity without incurring the liquidation penalty that an individual investor would face.\n\n\n\n\n\n\n\n\nNoteRelated Literature\n\n\n\nThe concept of asset management of liquidity connects to several important papers:\n\nBryant (1980): First showed that banks can provide liquidity insurance by pooling deposits\nJacklin (1987): Analyzed the role of trading restrictions in sustaining the banking contract\nHaubrich and King (1990): Explored asset management of liquidity in banking models with more general asset structures",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#what-drives-the-insurance-motive",
     "href": "Notes/02_chapter2_liquidity_creation.html#what-drives-the-insurance-motive",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.5 What Drives the Insurance Motive?",
     "text": "4.5 What Drives the Insurance Motive?\nBefore proceeding, let’s clarify what kind of “risk” we’re insuring against and what role risk aversion plays.\n\n\n\n\n\n\nNoteThe Nature of Uncertainty in DD\n\n\n\nThe Diamond-Dybvig model features timing uncertainty, not wealth uncertainty:\n\nAgents don’t know WHEN they’ll need to consume (early at \\(t=1\\) vs. late at \\(t=2\\))\nThis is different from traditional risk aversion over wealth lotteries\nEx ante (at \\(t=0\\)), each agent faces probability \\(\\lambda\\) of being impatient, probability \\(1-\\lambda\\) of being patient\nThis is closer to “state-contingent preferences” than classical risk aversion\n\n\n\nKey question: Why does this timing uncertainty create a demand for insurance?\nAnswer: Because of diminishing marginal utility (concave \\(u\\))\n\n4.5.1 The Role of Concavity\nThe concavity of utility (\\(u'' &lt; 0\\)) drives the desire for consumption smoothing across types.\nWith concave utility:\n\nHigh consumption — low marginal utility\nLow consumption — high marginal utility\nMoving consumption from high-marginal-utility state to low-marginal-utility state raises expected utility\n\nIn the DD context:\nStarting from autarky where impatient types consume less: \\[\nc_1^A &lt; c_2^A \\implies u'(c_1^A) &gt; u'(c_2^A)\n\\]\nInsurance improves welfare by:\n\nTransferring resources from patient types (who have low marginal utility) to impatient types (who have high marginal utility)\nThis is what the DD contract does: \\(c_1^* &gt; c_1^A\\) and \\(c_2^* &lt; c_2^A\\)\nThe transfer continues until marginal utilities are equalized (weighted by \\(R\\))\n\n\n\n\n\n\n\nImportantKey Insight\n\n\n\nRisk aversion (concave utility) is what creates the gains from insurance:\n\nWith risk-neutral utility (\\(u(c) = c\\)), autarky would be optimal\nHigher risk aversion — greater desire for consumption smoothing\nThe degree of risk aversion determines how much insurance is optimal\n\n\n\n\n\n4.5.2 Relative Risk Aversion and the Optimal Contract\nRelative risk aversion (RRA) measures the curvature of utility: \\[\n\\text{RRA}(c) = -\\frac{c \\cdot u''(c)}{u'(c)}\n\\]\nDifferent utility functions, different RRA:\n\n\nLog utility: \\(u(c) = \\ln(c)\\)\n\n\\(\\text{RRA} = 1\\) (constant)\nModerate risk aversion\nCommonly used baseline\n\nCRRA utility: \\(u(c) = \\frac{c^{1-\\gamma}}{1-\\gamma}\\)\n\n\\(\\text{RRA} = \\gamma\\) (constant)\n\\(\\gamma = 1\\): log utility\n\\(\\gamma &gt; 1\\): higher risk aversion\n\\(\\gamma &lt; 1\\): lower risk aversion\n\n\nHow RRA affects optimal contract:\nHigher RRA (\\(\\gamma\\)): - More desire for consumption smoothing - Optimal contract provides more insurance - Consumption levels \\(c_1^*\\) and \\(c_2^*\\) become more similar - Front-loading of consumption increases\nLower RRA: - Less desire for smoothing - Closer to autarky allocation - Greater consumption inequality across types\n\n\nImportant clarifications:\n\nRisk aversion drives insurance demand: Without concave utility, no gains from banking\nRRA determines insurance intensity: Higher RRA — more front-loading of consumption\nBut the mechanism is the same: All cases satisfy \\(\\frac{u'(c_1^*)}{u'(c_2^*)} = R\\)\nTiming vs. wealth uncertainty: This is about smoothing consumption across different timing needs, not insuring against wealth shocks\n\n\n\n4.5.3 DD Requires RRA &gt; 1\n\n\n\n\n\n\nImportantCritical Requirement\n\n\n\nFor banking to improve on autarky (i.e., \\(c_1^* &gt; 1\\)), we need RRA \\(&gt; 1\\).\n\n\nWhy \\(c_1^* &gt; 1\\) is the benchmark:\n\nIn autarky, each depositor has endowment of 1 and invests individually\nAn impatient depositor can get at most \\(c_1^A = 1\\) (by putting everything in the liquid asset)\nBut doing so sacrifices all long-term returns (\\(c_2^A = r_2\\), not \\(R\\))\nIn practice, autarky agents invest some in illiquid assets, so \\(c_1^A &lt; 1\\)\n\nIf the bank offers \\(c_1^* &gt; 1\\), impatient depositors get more than their entire endowment — something impossible in autarky. The bank achieves this by pooling: it knows exactly fraction \\(\\lambda\\) will be impatient, so it can cross-subsidize from patient depositors (who accept \\(c_2^* &lt; R\\)) to impatient ones.\nWhy does transferring resources from patient to impatient depositors improve welfare?\nIn autarky, patient depositors consume \\(R &gt; 1\\) while impatient depositors consume at most 1. Because utility is concave (diminishing marginal utility), an extra dollar is worth less to someone already consuming \\(R\\) than to someone consuming only 1. The patient depositor’s marginal utility is low; the impatient depositor’s marginal utility is high.\nSo when the bank takes a small amount from each patient depositor (reducing \\(c_2\\) slightly below \\(R\\)) and gives it to impatient depositors (raising \\(c_1\\) above 1), the utility gained by impatient types exceeds the utility lost by patient types. This is exactly what insurance does — it transfers resources from states where marginal utility is low to states where marginal utility is high.\nBut how can impatient depositors get \\(c_1^* &gt; 1\\) when each only deposited 1?\nThis is the power of pooling. An individual acting alone can never consume more than their endowment at \\(t=1\\). But the bank collects from everyone. With \\(\\lambda = 0.3\\) and 100 depositors, the bank knows exactly 30 will be impatient. It can pay each of them \\(c_1^* = 1.2\\) (costing \\(36\\) total) because the remaining 70 patient depositors don’t need funds until \\(t=2\\). The extra \\(0.2\\) per impatient depositor comes from the patient depositors’ share — they each accept slightly less than \\(R\\).\nAn individual faces binary uncertainty (impatient or patient), but the bank faces only the known aggregate (exactly fraction \\(\\lambda\\)). This is what allows the cross-subsidy: the bank can promise more than any individual could achieve alone.\nBut this only works when the gap in marginal utility is large enough to justify the cost. The long-term asset earns \\(R &gt; 1\\), so diverting resources to early consumption has a real opportunity cost. When RRA \\(&gt; 1\\), the curvature of utility is steep enough that the insurance benefit outweighs this cost. When RRA \\(\\leq 1\\), marginal utility doesn’t fall off fast enough — the gains from smoothing are too small relative to the forgone returns.\nProof (optional). With CRRA utility \\(u(c) = \\frac{c^{1-\\gamma}}{1-\\gamma}\\), the optimality condition \\(u'(c_1^*) = R \\cdot u'(c_2^*)\\) gives: \\[\n(c_1^*)^{-\\gamma} = R \\cdot (c_2^*)^{-\\gamma} \\implies \\frac{c_2^*}{c_1^*} = R^{1/\\gamma}\n\\]\nSubstituting into the budget constraint \\((1-\\lambda)c_2 = (1-\\lambda c_1)R\\): \\[\nc_1^* = \\frac{R}{(1-\\lambda) R^{1/\\gamma} + \\lambda R}\n\\]\nFor \\(c_1^* &gt; 1\\) (bank beats autarky), we need: \\[\nR &gt; (1-\\lambda) R^{1/\\gamma} + \\lambda R\n\\]\nSimplifying: \\[\n(1-\\lambda)R &gt; (1-\\lambda) R^{1/\\gamma} \\implies R &gt; R^{1/\\gamma} \\implies R^{(\\gamma-1)/\\gamma} &gt; 1\n\\]\nSince \\(R &gt; 1\\), this holds if and only if \\(\\frac{\\gamma - 1}{\\gamma} &gt; 0\\), i.e., \\(\\gamma &gt; 1\\).\nWhat happens at different RRA levels?\n\n\\(\\gamma &gt; 1\\) (RRA \\(&gt; 1\\)): \\(c_1^* &gt; 1\\) and \\(c_2^* &lt; R\\). The bank transfers resources from patient to impatient depositors — genuine insurance.\n\\(\\gamma = 1\\) (log utility): \\(c_1^* = 1\\) and \\(c_2^* = R\\). The optimal contract replicates autarky — banking adds no value.\n\\(\\gamma &lt; 1\\) (RRA \\(&lt; 1\\)): \\(c_1^* &lt; 1\\). The bank would make impatient depositors worse off than autarky — no one would deposit.\n\n\n\n\n\n\n\nTipIntuition\n\n\n\nWhy does RRA \\(&gt; 1\\) matter? It determines whether the insurance motive is strong enough to justify the cost of early liquidation.\n\nGiving impatient depositors \\(c_1^* &gt; 1\\) means the bank holds more in liquid (low-return) assets\nThe opportunity cost is \\(R &gt; 1\\) per unit diverted from the long-term asset\nWhen RRA \\(&gt; 1\\), the marginal utility gain from smoothing consumption outweighs this opportunity cost\nWhen RRA \\(\\leq 1\\), agents are not sufficiently averse to consumption variation — the cost of holding liquidity exceeds the insurance benefit",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#empirical-evidence-measuring-liquidity-creation",
     "href": "Notes/02_chapter2_liquidity_creation.html#empirical-evidence-measuring-liquidity-creation",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.6 Empirical Evidence: Measuring Liquidity Creation",
     "text": "4.6 Empirical Evidence: Measuring Liquidity Creation\nThe Diamond-Dybvig model provides a theoretical foundation for understanding liquidity creation, but how do we measure it empirically? Berger and Bouwman (2009) develop the first comprehensive measures of bank liquidity creation.\n\n4.6.1 The Challenge\nAlthough modern financial intermediation theory portrays liquidity creation as an essential role of banks, comprehensive empirical measures did not exist before this paper. The challenge is to quantify how banks transform illiquid assets into liquid liabilities across their entire balance sheet.\n\n\n4.6.2 What They Do\nBerger and Bouwman (2009) construct four measures of bank liquidity creation and apply them to data on virtually all U.S. banks from 1993 to 2003.\n\n\n\n\n\n\nNoteResearch Question\n\n\n\nHow much liquidity do banks actually create? How does liquidity creation vary across bank characteristics (size, ownership structure, type)? What is the relationship between bank capital and liquidity creation?\n\n\n\n\n4.6.3 How They Measure Liquidity Creation\nThe methodology follows a three-step process:\nStep 1: Classify each balance sheet item as liquid, semi-liquid, or illiquid\n\nFor assets: Classification based on the ease, cost, and time for banks to dispose of (sell or securitize) the asset\nFor liabilities and equity: Classification based on the ease, cost, and time for customers to obtain liquid funds from the bank\nOff-balance sheet items: Also classified by their liquidity characteristics\n\nStep 2: Assign weights to each category\nThe weighting scheme captures how each item contributes to liquidity creation:\n\n\n\nCategory\nAssets\nLiabilities & Equity\nOff-Balance Sheet\n\n\n\n\nIlliquid\n+0.5\n-0.5\n+0.5 (illiquid guarantees)\n\n\nSemi-liquid\n0\n0\n0\n\n\nLiquid\n-0.5\n+0.5\n-0.5 (liquid guarantees)\n\n\n\nIntuition: - Banks create liquidity by transforming illiquid assets (+0.5) into liquid liabilities (+0.5) - Holding liquid assets (-0.5) or issuing illiquid liabilities (-0.5) destroys liquidity - This captures the Diamond-Dybvig insight: liquidity creation comes from maturity transformation\nStep 3: Aggregate across all items\nTotal liquidity creation = Sum of (weight × dollar amount) across all balance sheet and off-balance sheet items\n\n\n4.6.4 The Four Measures\nBerger and Bouwman construct four measures:\n\nCAT FAT (Category, includes off-balance sheet):\n\nClassifies items by category (not maturity)\nIncludes off-balance sheet activities\nPreferred measure — captures both on- and off-balance sheet liquidity creation\n\nCAT NONFAT (Category, excludes off-balance sheet):\n\nClassifies items by category\nExcludes off-balance sheet activities\n\nMAT FAT (Maturity, includes off-balance sheet):\n\nClassifies items by maturity (short-term vs. long-term)\nIncludes off-balance sheet activities\n\nMAT NONFAT (Maturity, excludes off-balance sheet):\n\nClassifies items by maturity\nExcludes off-balance sheet activities\n\n\n\n\n\n\n\n\nTipWhy Category over Maturity?\n\n\n\nBerger and Bouwman argue that the category-based measure is preferred because for liquidity creation, banks’ ability to securitize or sell loans is more important than loan maturity. A 30-year mortgage may be illiquid by maturity but quite liquid if it can be easily securitized and sold.\n\n\n\n\n4.6.5 What They Find\n1. Liquidity creation is substantial and growing\n\nBank liquidity creation exceeded $2.8 trillion in 2003\nLiquidity creation increased every year from 1993 to 2003\nThis confirms that liquidity creation is a quantitatively important activity\n\n2. Large banks dominate liquidity creation\n\nLarge banks create the most liquidity in absolute terms\nBanks that are members of multibank holding companies create more liquidity\nRetail banks create more liquidity than wholesale banks\nRecently merged banks create more liquidity\n\n3. Capital and liquidity creation: Size matters\nThe relationship between bank capital and liquidity creation depends on bank size:\n\nLarge banks: Positive relationship — more capital → more liquidity creation\nSmall banks: Negative relationship — more capital → less liquidity creation\n\n\n\n\n\n\n\nImportantKey Insight\n\n\n\nThis differential effect by size suggests that capital requirements may have different impacts on liquidity creation for large vs. small banks. For large banks, capital provides a cushion that allows them to take on more liquidity risk. For small banks, capital crowds out liquid liabilities (deposits), reducing their ability to create liquidity.\n\n\n\n\n4.6.6 Connecting Theory to Evidence\nThe Berger-Bouwman measures operationalize the Diamond-Dybvig theory:\n\nTheory: Banks create liquidity by offering liquid deposits backed by illiquid loans\nMeasurement: Berger-Bouwman quantify this transformation with their weighting scheme\nEvidence: U.S. banks created $2.8 trillion of liquidity by 2003, confirming the empirical importance of the theoretical mechanism\n\nThis measurement framework has become the standard in the literature and is used in hundreds of subsequent studies of bank liquidity creation, financial crises, monetary policy, and regulation.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/02_chapter2_liquidity_creation.html#the-role-of-the-term-structure",
     "href": "Notes/02_chapter2_liquidity_creation.html#the-role-of-the-term-structure",
-    "title": "2  Chapter 2: Liquidity Creation",
+    "title": "2  Liquidity Creation",
     "section": "4.7 The Role of the Term Structure",
     "text": "4.7 The Role of the Term Structure\nThe Diamond-Dybvig model also provides insights into why we see different maturities of securities.\nKey observation: The model generates a natural term structure\n\nShort-term deposits: Liquid, redeemable at \\(t=1\\), pay \\(c_1\\)\nLong-term deposits: Illiquid, mature at \\(t=2\\), pay \\(c_2\\)\n\nReturns:\n\nReturn on short-term: \\(c_1 / 1 = c_1\\)\nReturn on long-term: \\(c_2 / 1 = c_2\\)\n\nSince \\(\\frac{u'(c_1^*)}{u'(c_2^*)} = R\\) and \\(u\\) is concave:\nIf \\(R &gt; 1\\), then \\(c_2^* &gt; c_1^*\\)\n\n\n\n\n\n\nNoteUpward-Sloping Term Structure\n\n\n\nLong-term deposits pay higher returns because:\n\nThey are less liquid (can’t withdraw early)\nThey fund the higher-return long-term investments\nPatient depositors are compensated for giving up liquidity\n\n\n\n\n4.7.1 Implications for Bank Liabilities\nThe model justifies the bank’s liability structure:\n\nDemand deposits:\n\nShort-term, liquid\nPayoff: \\(c_1\\) if withdrawn at \\(t=1\\)\nServes impatient depositors\n\nTime deposits / CDs:\n\nLonger maturity\nPayoff: \\(c_2\\) at \\(t=2\\)\nServes patient depositors\nHigher return compensates for illiquidity\n\n\nThe mix of maturities:\n\nFraction \\(\\lambda\\) of depositors optimally choose demand deposits\nFraction \\(1-\\lambda\\) optimally choose time deposits\nBank structures liabilities to match depositor preferences\n\n\n\n\n\n\n\nTipModern Banking\n\n\n\nIn practice, banks offer a menu of deposit products with different:\n\nMaturities (checking, savings, 1-year CD, 5-year CD)\nLiquidity (instant withdrawal vs. penalty for early withdrawal)\nReturns (lower for more liquid, higher for less liquid)\n\nThis menu allows depositors to self-select based on their liquidity needs.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2: Liquidity Creation</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Liquidity Creation</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html",
     "href": "Notes/03_chapter3_market_replication.html",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "",
-    "text": "4 Part 4: Can Markets Replicate Banking?",
+    "text": "4 Can Markets Replicate Banking?",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#jacklin-1987-trading-and-restrictions",
     "href": "Notes/03_chapter3_market_replication.html#jacklin-1987-trading-and-restrictions",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.1 Jacklin (1987): Trading and Restrictions",
     "text": "4.1 Jacklin (1987): Trading and Restrictions\n\n\n\n\n\n\nNoteJacklin (1987)\n\n\n\nJacklin, Charles J. (1987). “Demand Deposits, Trading Restrictions, and Risk Sharing.” In Contractual Arrangements for Intertemporal Trade, ed. E.C. Prescott and N. Wallace, University of Minnesota Press.\nMain question: What happens if agents can trade securities at \\(t=1\\), after types are revealed? Can markets replicate the DD banking contract?\n\n\nSo far we’ve compared two extremes:\n\n\nAutarky\n\nNo coordination\nEach agent self-insures\nInefficient allocation\n\n\nDD Banking Contract\n\nPerfect coordination\nOptimal insurance\nFirst-best allocation\n\n\n\nJacklin asks: what about an intermediate arrangement — markets open at \\(t=1\\) where agents can trade claims? Where does this fall relative to autarky and the DD optimum?\nPreview: Trading provides partial insurance — better than autarky but worse than the DD contract. And crucially, if trading is allowed alongside the DD contract, it unravels the bank’s insurance.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#market-equilibrium-with-trading",
     "href": "Notes/03_chapter3_market_replication.html#market-equilibrium-with-trading",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.2 Market Equilibrium with Trading",
     "text": "4.2 Market Equilibrium with Trading\nTimeline with trading:\n\n  \n    \n    \n    time\n\n    \n    \n    t=0\n\n    \n    t=1\n\n    \n    t=2\n\n    \n    Agents invest\n    in liquid & illiquid\n\n    \n    Types revealed\n    Markets open\n    Impatient types consume\n\n    \n    Patient types\n    consume\n\n    \n    \n    \n    \n    Trading at price p\n\n    \n      \n        \n      \n    \n  \n\nWhat can be traded?\n\nClaims to consumption at \\(t=2\\)\nImpatient types want to sell their \\(t=2\\) claims\nPatient types want to buy additional \\(t=2\\) claims\nAll trades must satisfy no-arbitrage pricing\n\nAt \\(t=1\\), let \\(p\\) be the price of consumption at \\(t=2\\) in terms of consumption at \\(t=1\\).\nNo-arbitrage bounds:\n\n\n\n\n\n\nImportantArbitrage-Free Pricing\n\n\n\nThe price \\(p\\) must satisfy: \\[\n\\frac{1}{R} \\leq p \\leq 1\n\\]\n\n\nRecall: \\(p\\) is the price you pay at \\(t=1\\) for a claim that pays 1 unit at \\(t=2\\).\nUpper bound: \\(p \\leq 1\\)\nThe liquid asset acts as a storage technology: 1 unit at \\(t=1\\) becomes 1 unit at \\(t=2\\) (it doesn’t grow, but it doesn’t shrink either). So why would you pay more than 1 today for a claim that delivers 1 tomorrow, when you can just hold onto your unit in the liquid asset and get the same 1 for free? No one would buy at \\(p &gt; 1\\). So \\(p \\leq 1\\).\nLower bound: \\(p \\geq \\frac{1}{R}\\)\nIf the price is too low, the implied return on buying a claim (\\(\\frac{1}{p}\\)) exceeds what the real economy can produce (\\(R\\)). That can’t persist in equilibrium. So \\(p \\geq \\frac{1}{R}\\).\nEquilibrium determination:\n\nImpatient agents supply \\(t=2\\) claims (want to consume at \\(t=1\\))\nPatient agents demand \\(t=2\\) claims (want to consume at \\(t=2\\))\nPrice \\(p\\) clears the market\n\n\n4.2.1 Deriving the Market Allocation\nSuppose each agent starts with the symmetric portfolio: - \\(x\\) in liquid assets - \\(y = 1-x\\) in illiquid assets\nAt \\(t=1\\):\nEach agent has: - Liquid resources: \\(x\\) units - Illiquid claims: \\((1-x) \\cdot R\\) units at \\(t=2\\)\nTrading behavior:\nImpatient types (fraction \\(\\lambda\\)):\n\nWant to consume everything at \\(t=1\\)\nSell all \\(t=2\\) claims at price \\(p\\)\nTotal consumption: \\(c_1^M = x + p(1-x)R\\)\n\nPatient types (fraction \\(1-\\lambda\\)):\n\nWant to consume everything at \\(t=2\\)\nBuy \\(t=2\\) claims from impatient types\nTotal consumption: \\(c_2^M = \\frac{x}{p} + (1-x)R\\)\n\n\n\n4.2.2 Market Clearing Condition\nSupply of \\(t=2\\) claims (from impatient types): \\[\n\\lambda \\cdot (1-x) R\n\\]\nDemand for \\(t=2\\) claims (from patient types):\nPatient types have \\(x\\) units at \\(t=1\\) to spend on buying claims: \\[\n(1-\\lambda) \\cdot \\frac{x}{p}\n\\]\nMarket clearing: \\[\n\\lambda (1-x) R = (1-\\lambda) \\frac{x}{p}\n\\]\nSolving for \\(p\\): \\[\np = \\frac{(1-\\lambda) x}{\\lambda (1-x) R}\n\\]\nConsumption levels:\n\\[\n\\begin{aligned}\nc_1^M &= x + p(1-x)R = x + \\frac{(1-\\lambda) x}{\\lambda} = \\frac{x}{\\lambda} \\\\\nc_2^M &= (1-x)R + \\frac{x}{p} = (1-x)R + \\frac{\\lambda (1-x) R}{1-\\lambda} = \\frac{(1-x)R}{1-\\lambda}\n\\end{aligned}\n\\]\n\n\n4.2.3 Optimal Portfolio Choice with Trading\nAnticipating the market equilibrium, agents at \\(t=0\\) choose \\(x\\) to maximize: \\[\n\\max_{x} \\quad \\lambda u(c_1^M) + (1-\\lambda) u(c_2^M) = \\lambda u\\left(\\frac{x}{\\lambda}\\right) + (1-\\lambda) u\\left(\\frac{(1-x)R}{1-\\lambda}\\right)\n\\]\nFirst-order condition: \\[\nu'\\left(\\frac{x}{\\lambda}\\right) = R \\cdot u'\\left(\\frac{(1-x)R}{1-\\lambda}\\right)\n\\]\nWhich simplifies to: \\[\n\\frac{u'(c_1^M)}{u'(c_2^M)} = R\n\\]\nThis is the same condition as the DD optimum! So why isn’t the market allocation identical to DD?",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#the-incentive-compatibility-constraint",
     "href": "Notes/03_chapter3_market_replication.html#the-incentive-compatibility-constraint",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.3 The Incentive Compatibility Constraint",
     "text": "4.3 The Incentive Compatibility Constraint\nThe market imposes an additional constraint that the DD bank does not face.\nIn DD without markets, a patient depositor has no reason to withdraw early — they don’t want to consume at \\(t=1\\), and there’s nothing else they can do with the money. So they wait and collect \\(c_2\\).\nWith open markets, a patient depositor now has a profitable alternative:\n\nPretend to be impatient — withdraw \\(c_1\\) from the bank at \\(t=1\\)\nTake that \\(c_1\\) and buy \\(t=2\\) claims on the market at price \\(p\\)\nReceive \\(\\frac{c_1}{p}\\) units of consumption at \\(t=2\\)\n\nIf \\(\\frac{c_1}{p} &gt; c_2\\), the patient depositor is better off pretending to be impatient. For the contract to survive, patient types must not gain from this deviation: \\[\nc_2 \\geq \\frac{c_1}{p} \\implies c_1 \\leq p \\cdot c_2\n\\]\nWith \\(p = \\frac{1}{R}\\), this becomes \\(c_1 \\leq \\frac{c_2}{R}\\).\nBut the DD optimum has \\(c_1^* &gt; \\frac{c_2^*}{R}\\) (front-loaded). This violates the constraint — if markets are open, patient depositors would withdraw early and reinvest, unraveling the DD contract.\nThe market is therefore constrained to allocations satisfying \\(c_1 = \\frac{c_2}{R}\\). Combined with the budget constraint, this pins down the equilibrium:\n\n\n\n\n\n\nImportantMarket Equilibrium\n\n\n\nThe IC constraint binds and pins down the allocation:\n\nIncentive compatibility: \\(c_1^M = \\frac{c_2^M}{R}\\) (no-arbitrage prevents front-loading)\nBudget constraint: \\(\\lambda c_1^M + (1-\\lambda) \\frac{c_2^M}{R} = 1\\)\n\nSubstituting (1) into (2): \\(\\lambda c_1^M + (1-\\lambda) c_1^M = 1\\), giving: \\[\nc_1^M = 1, \\qquad c_2^M = R\n\\]\n\n\nWhy is this “partial” insurance?\n\nIn autarky, each agent hedges individually by splitting between liquid and illiquid. Impatient types get only \\(c_1^A = x &lt; 1\\) (their liquid holdings), while their illiquid investment is wasted. Patient types get \\(c_2^A = x + (1-x)R\\).\nWith market trading, impatient types can now sell their illiquid claims at \\(t=1\\). This raises their consumption from \\(c_1^A &lt; 1\\) all the way to \\(c_1^M = 1\\) — a real improvement.\nBut the market cannot push \\(c_1\\) above 1, because that would require \\(c_1 &gt; c_2/R\\) (front-loading), which violates no-arbitrage. Patient depositors would mimic impatient ones and exploit the difference.\nThe DD bank breaks through this barrier by restricting trading: it offers \\(c_1^* &gt; 1\\), cross-subsidizing from patient to impatient depositors. This is full insurance.\n\nIn summary: \\(c_1^A &lt; 1 = c_1^M &lt; c_1^*\\). Markets get you to the no-arbitrage boundary; only the bank can go beyond it.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#jacklins-key-results",
     "href": "Notes/03_chapter3_market_replication.html#jacklins-key-results",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.4 Jacklin’s Key Results",
     "text": "4.4 Jacklin’s Key Results\n\n\n\n\n\n\nImportantProposition: Ranking of Allocations\n\n\n\n\\[\nU^{\\text{Autarky}} &lt; U^{\\text{Market}} &lt; U^{\\text{DD}}\n\\]\n\nAutarky — Markets: Trading lets impatient types sell illiquid claims, raising \\(c_1\\) from below 1 to exactly 1\nMarkets — DD: The bank breaks the no-arbitrage barrier, pushing \\(c_1\\) above 1 through cross-subsidization\nBut: DD requires trading restrictions — otherwise patient types exploit the front-loading and the contract unravels\n\n\n\nModern relevance:\n\nShadow banking: When deposits become tradable securities, we move from DD toward the market equilibrium\nMoney market funds: Redeemable shares are closer to the market solution than traditional banking\nNarrow banking proposals: Holding only liquid assets gives market-like outcomes but loses the insurance benefit",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#diamonds-response",
     "href": "Notes/03_chapter3_market_replication.html#diamonds-response",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.5 Diamond’s Response",
     "text": "4.5 Diamond’s Response\nDiamond, Douglas W. (1987). “Discussion of Jacklin’s Paper.” In Contractual Arrangements for Intertemporal Trade, ed. E.C. Prescott and N. Wallace, University of Minnesota Press.\nDiamond acknowledges Jacklin’s point but argues that trading restrictions are not an artificial limitation — they are exactly what makes banking valuable:\n\nThe demand deposit contract is deliberately designed to be illiquid\nThis illiquidity is what enables the insurance: it prevents patient depositors from exploiting the front-loading\nWithout this restriction, the bank collapses to the market outcome and loses its purpose",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#how-banks-restrict-trading-in-practice",
     "href": "Notes/03_chapter3_market_replication.html#how-banks-restrict-trading-in-practice",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.6 How Banks Restrict Trading in Practice",
     "text": "4.6 How Banks Restrict Trading in Practice\nBanks use several mechanisms to implement the DD contract:\n1. Non-Transferable Deposits\n\n\nTraditional bank deposits:\n\nDeposits are in your name only\nCannot sell to others\nCan only withdraw, not transfer\nPrevents secondary markets\n\n\nWhy this works:\n\nNo market price for deposits\nPatient types cannot profitably withdraw and resell\nThe illiquidity is a feature, not a bug\n\n\n\n2. Penalties for Early Withdrawal\nCertificates of Deposit (CDs) impose penalties that eliminate the arbitrage incentive.\nRecall the problem: if a secondary market exists, a patient depositor can withdraw \\(c_1^*\\) at \\(t=1\\) and buy \\(t=2\\) claims at price \\(p = \\frac{1}{R}\\), receiving \\(\\frac{c_1^*}{p} = c_1^* \\times R &gt; c_2^*\\) at \\(t=2\\) — strictly better than waiting. (Note: the return \\(R\\) comes from buying market claims, not from direct reinvestment — at \\(t=1\\), the only available asset is storage at \\(r_2\\).)\nThe bank sets an early withdrawal penalty equal to the arbitrage gain: \\[\n\\text{Penalty} = c_1^* \\times R - c_2^*\n\\]\nNow a patient depositor who withdraws early gets \\(c_1^*\\), reinvests to earn \\(c_1^* \\times R\\), but pays the penalty — netting exactly \\(c_2^*\\). Since this is the same as waiting, there is no incentive to deviate. Only truly impatient depositors — who need to consume at \\(t=1\\) and cannot reinvest — withdraw early.\n3. Monitoring and Verification\nPartial verification of liquidity needs:\n\nMedical emergencies, job loss — allowed\n“Frivolous” withdrawals — discouraged\nNot fully enforceable (private information) but helps\n\n\n\n\n\n\n\nTipThe Consensus\n\n\n\nJacklin is right about the mechanism:\n\nTrading restrictions are necessary for optimal insurance\nTradable deposits lead to market equilibrium, not DD optimum\n\nBut this creates a new problem:\n\nThe same restrictions that enable insurance also make banks fragile\nIf depositors lose confidence, coordination failures can occur\nThis leads to bank runs (Lecture 2)",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#application-the-2008-financial-crisis",
     "href": "Notes/03_chapter3_market_replication.html#application-the-2008-financial-crisis",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.7 Application: The 2008 Financial Crisis",
     "text": "4.7 Application: The 2008 Financial Crisis\nThe Jacklin critique became reality in 2008:\nTraditional banking: - Non-tradable deposits - Penalties for early withdrawal - FDIC insurance - Relatively stable\nShadow banking (money market funds, repo): - Tradable securities (can sell to others) - No penalties for redemption - No deposit insurance - Highly vulnerable\nWhat happened:\nSeptember 2008: Reserve Primary Fund “broke the buck” - Held Lehman Brothers debt - Net asset value fell below $1 - Massive withdrawals (run!) - Spread to other money market funds\nThe problem: Money market funds offered “bank-like” liquidity but with tradable shares\n\nWhen investors got nervous, they could sell shares to others\nNo penalties for redemption — everyone can exit simultaneously\nThis validated Jacklin’s concern about tradable deposits\nGovernment had to step in with emergency guarantees\n\n\n\n\n\n\n\nImportantThe Lesson\n\n\n\nThe 2008 crisis validated Jacklin’s insight:\nBank-like claims + Tradability = Fragility\nIf you want deposit-like insurance, you need deposit-like restrictions: - Non-tradability, OR - Penalties for early redemption, OR - Insurance/guarantees (covered in Lecture 2)\nYou can’t have full tradability and full insurance.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#modern-debate-narrow-banking",
     "href": "Notes/03_chapter3_market_replication.html#modern-debate-narrow-banking",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "4.8 Modern Debate: Narrow Banking",
     "text": "4.8 Modern Debate: Narrow Banking\nNarrow banking proposal: Banks hold only liquid, safe assets (Treasury bills)\nProponents argue: - Eliminates bank runs (assets perfectly liquid) - No need for deposit insurance - No systemic risk\nCritics respond (Diamond & Dybvig view):\n\n\nWhat we lose:\n\nLiquidity transformation\n\nNo maturity mismatch — no liquidity creation\nBack to market equilibrium\n\nCredit creation\n\nBanks can’t lend to businesses\nMonitoring function lost\n\nInsurance value\n\nWith only safe assets, no need for insurance\nBut also no value creation!\n\n\n\nThe tradeoff:\nNarrow banking is safe but: - Equivalent to everyone holding T-bills individually - No better than autarky with safe assets - Loses the whole point of banking!\nBottom line: The Jacklin debate shows why traditional banking (with restrictions) dominates both: - Pure markets (insufficient insurance) - Narrow banking (no liquidity creation)\n\n\n\n\n\n\n\n\nNoteKey Takeaway\n\n\n\nThe banking structure we observe — illiquid deposits funding illiquid loans — is not an accident:\n\nIt’s necessary for optimal insurance (DD result)\nIt requires trading restrictions (Jacklin insight)\nIt creates fragility that needs policy support (Diamond-Dybvig)\nBut alternatives (pure markets, narrow banking) are worse!",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#preview-the-dark-side-of-banking",
     "href": "Notes/03_chapter3_market_replication.html#preview-the-dark-side-of-banking",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "5.1 Preview: The Dark Side of Banking",
     "text": "5.1 Preview: The Dark Side of Banking\nWe have shown that banks create value by offering liquid deposits backed by illiquid assets. But the very trading restrictions that make this possible also create a vulnerability.\n\n\n\n\n\n\nWarningBank Runs: Multiple Equilibria\n\n\n\nThe Diamond-Dybvig model has two equilibria:\n\nGood equilibrium: Only impatient depositors withdraw at \\(t=1\\). The bank operates as designed, providing optimal insurance.\nBad equilibrium: All depositors attempt to withdraw at \\(t=1\\). The bank must liquidate long-term assets at a loss, and late withdrawers receive nothing. This is a self-fulfilling panic — it is rational to run if you believe others will run.\n\nAs Diamond (2007) notes, the bad equilibrium arises because of the sequential service constraint: the bank pays depositors in the order they arrive, and it cannot distinguish impatient from patient depositors.\n\n\nPossible solutions (to be studied in detail in Lecture 2):\n\nSuspension of convertibility: The bank stops paying after a certain number of withdrawals, eliminating the incentive to run\nDeposit insurance: A government guarantee removes the fear of being a late withdrawer\n\nThese solutions preserve the insurance benefits of banking while eliminating (or reducing) the fragility. We will analyze them formally in Lecture 2.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#key-takeaways",
     "href": "Notes/03_chapter3_market_replication.html#key-takeaways",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "5.2 Key Takeaways",
     "text": "5.2 Key Takeaways\n\n\n\n\n\n\nImportantMain Insights from Lecture 1\n\n\n\n\nBanks as liquidity providers: Banks exist to insure depositors against idiosyncratic liquidity shocks\nRisk aversion creates the demand for liquidity: Risk-neutral investors would prefer illiquid assets; it is the concavity of utility that makes liquidity valuable (Diamond’s numerical example: EU = 0.391 &gt; 0.375)\nMaturity transformation: Banks optimally engage in maturity mismatch because:\n\nDepositors face uncertain timing of consumption needs\nLaw of large numbers makes aggregate withdrawals predictable\nThis allows efficient investment in high-return illiquid assets\n\nThe optimal deposit contract: Satisfies \\(u'(c_1^*) = R \\cdot u'(c_2^*)\\) — marginal utility of early consumption equals marginal cost of liquidity\nAsset management of liquidity: The bank’s ability to manage its portfolio (holding short-term assets for predictable withdrawals, long-term assets for the rest) strictly dominates what any individual can achieve\nTrading restrictions are essential: Without them, markets unravel the banking contract (Jacklin, 1987)\nTerm structure: Different deposit maturities emerge naturally to serve depositors with different liquidity needs\n\n\n\nWhat we haven’t covered yet:\n\nWhat happens if depositors panic? — Bank runs (Lecture 2)\nWhat if aggregate liquidity demand is uncertain? — Aggregate liquidity shocks\nHow do banks monitor borrowers? — Asset side of banking\nWhat regulations are needed? — Banking regulation and policy",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   },
   {
     "objectID": "Notes/03_chapter3_market_replication.html#references",
     "href": "Notes/03_chapter3_market_replication.html#references",
-    "title": "3  Chapter 3: Market Replication and Bank Runs",
+    "title": "3  Market Replication and Bank Runs",
     "section": "5.3 References",
     "text": "5.3 References\n\n5.3.1 Primary Sources\n\nDiamond, D. W., & Dybvig, P. H. (1983). Bank runs, deposit insurance, and liquidity. Journal of Political Economy, 91(3), 401-419.\nDiamond, D. W. (2007). Banks and liquidity creation: A simple exposition of the Diamond-Dybvig model. Federal Reserve Bank of Richmond Economic Quarterly, 93(2), 189-200.\nJacklin, C. J. (1987). Demand deposits, trading restrictions, and risk sharing. In E. C. Prescott & N. Wallace (Eds.), Contractual Arrangements for Intertemporal Trade (pp. 26-47). University of Minnesota Press.\nDiamond, D. W. (1987). Discussion of Jacklin’s paper. In E. C. Prescott & N. Wallace (Eds.), Contractual Arrangements for Intertemporal Trade. University of Minnesota Press.\n\n\n\n5.3.2 Related Papers\n\nBerger, A. N., & Bouwman, C. H. S. (2009). Bank liquidity creation. Review of Financial Studies, 22(9), 3779-3837.\nBryant, J. (1980). A model of reserves, bank runs, and deposit insurance. Journal of Banking & Finance, 4(4), 335-344.\nDiamond, D. W. (1984). Financial intermediation and delegated monitoring. Review of Economic Studies, 51(3), 393-414.\nHaubrich, J. G., & King, R. G. (1990). Banking and insurance. Journal of Monetary Economics, 26(3), 361-386.\n\n\n\n5.3.3 Textbooks\n\nTirole, J. (2006). The Theory of Corporate Finance. Princeton University Press. Chapter 12.\nFreixas, X., & Rochet, J. C. (2008). Microeconomics of Banking (2nd ed.). MIT Press.",
     "crumbs": [
       "Part 1: Banking Fundamentals",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3: Market Replication and Bank Runs</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Market Replication and Bank Runs</span>"
     ]
   }
 ]
