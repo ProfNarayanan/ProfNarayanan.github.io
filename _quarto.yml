@@ -48,6 +48,10 @@ website:
 project:
   type: website
   output-dir: docs
+  resources:
+    - "Teaching/banking/notes/**"
+    - "Teaching/banking/lectures/01-banking-slides.html"
+    - "Teaching/banking/lectures/01_banking_fundamentals_lecture_files/**"
 
   preview: 
     port: 22222
