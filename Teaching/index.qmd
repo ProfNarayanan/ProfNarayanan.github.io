@@ -2,19 +2,6 @@
 title: "Teaching"
 ---
 
-## Doctoral - Banking
+## [Doctoral - Banking](banking/index.qmd)
 
-**FIN 7650: Banking — Theory and Evidence**
-
-Doctoral-level course covering the theory and empirics of banking, including the Diamond-Dybvig model, bank runs, liquidity creation, and delegated monitoring.
-
-### Course Notes (Book)
-[View Complete Course Notes](banking/notes/index.html)
-
-### Lecture Slides
-
-- [Lecture 1: Banking Fundamentals](banking/lectures/01-banking-slides.html)
-  - What banks do and why banks exist
-  - The Diamond-Dybvig model
-  - Liquidity creation and empirical evidence
-  - Market replication (Jacklin 1987)
+Doctoral-level course covering banking theory and evidence.

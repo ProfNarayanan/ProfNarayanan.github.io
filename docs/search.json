@@ -7,6 +7,27 @@
     "text": "Download current CV\n  \n\n\n  \n\n\nView the tutorial for this template (+ download link)"
   },
   {
+    "objectID": "Teaching/banking/index.html",
+    "href": "Teaching/banking/index.html",
+    "title": "FIN 7650: Banking — Theory and Evidence",
+    "section": "",
+    "text": "Doctoral-level course covering banking theory and evidence."
+  },
+  {
+    "objectID": "Teaching/banking/index.html#book",
+    "href": "Teaching/banking/index.html#book",
+    "title": "FIN 7650: Banking — Theory and Evidence",
+    "section": "Book",
+    "text": "Book\nCourse notes organized as a self-contained book with complete derivations and economic intuition."
+  },
+  {
+    "objectID": "Teaching/banking/index.html#lectures",
+    "href": "Teaching/banking/index.html#lectures",
+    "title": "FIN 7650: Banking — Theory and Evidence",
+    "section": "Lectures",
+    "text": "Lectures\nRevealJS slide decks for classroom presentation."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rajesh Narayanan",
@@ -53,13 +74,20 @@
     "href": "Teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "FIN 7650: Banking — Theory and Evidence\nDoctoral-level course covering the theory and empirics of banking, including the Diamond-Dybvig model, bank runs, liquidity creation, and delegated monitoring.\n\n\nView Complete Course Notes\n\n\n\n\nLecture 1: Banking Fundamentals\n\nWhat banks do and why banks exist\nThe Diamond-Dybvig model\nLiquidity creation and empirical evidence\nMarket replication (Jacklin 1987)"
+    "text": "Doctoral-level course covering banking theory and evidence."
   },
   {
     "objectID": "Teaching/index.html#doctoral---banking",
     "href": "Teaching/index.html#doctoral---banking",
     "title": "Teaching",
     "section": "",
-    "text": "FIN 7650: Banking — Theory and Evidence\nDoctoral-level course covering the theory and empirics of banking, including the Diamond-Dybvig model, bank runs, liquidity creation, and delegated monitoring.\n\n\nView Complete Course Notes\n\n\n\n\nLecture 1: Banking Fundamentals\n\nWhat banks do and why banks exist\nThe Diamond-Dybvig model\nLiquidity creation and empirical evidence\nMarket replication (Jacklin 1987)"
+    "text": "Doctoral-level course covering banking theory and evidence."
+  },
+  {
+    "objectID": "Teaching/banking/lectures/index.html",
+    "href": "Teaching/banking/lectures/index.html",
+    "title": "Lectures — Banking",
+    "section": "",
+    "text": "Lecture 1: Banking Fundamentals"
   }
 ]
