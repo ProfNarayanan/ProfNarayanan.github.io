@@ -4,7 +4,7 @@ title: "FIN 7650: Banking — Theory and Evidence"
 
 Doctoral-level course covering banking theory and evidence.
 
-## [Book](notes/index.html)
+## [Notes](notes/index.html)
 
 Course notes organized as a self-contained book with complete derivations and economic intuition.
 

@@ -7,7 +7,7 @@ website:
   image: img/my_image.jpg
   
   
-  favicon: img/favicon.png
+  # favicon: img/favicon.png
   
   # start of the navigation bar at the top of the website
   navbar:
