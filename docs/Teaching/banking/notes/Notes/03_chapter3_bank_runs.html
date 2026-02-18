@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../Notes/04_chapter4_empirical_evidence.html" rel="next">
 <link href="../Notes/02_chapter2_liquidity_creation.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -70,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -142,6 +172,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bank Runs</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/04_chapter4_empirical_evidence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Empirical Evidence on Bank Runs and Failures</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -149,8 +185,55 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-dark-side-of-liquidity-creation" id="toc-the-dark-side-of-liquidity-creation" class="nav-link active" data-scroll-target="#the-dark-side-of-liquidity-creation"><span class="header-section-number">3.1</span> The Dark Side of Liquidity Creation</a></li>
+  <li><a href="#multiple-equilibria-in-the-dd-model" id="toc-multiple-equilibria-in-the-dd-model" class="nav-link" data-scroll-target="#multiple-equilibria-in-the-dd-model"><span class="header-section-number">3.2</span> Multiple Equilibria in the DD Model</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-the-run-problem" id="toc-setting-up-the-run-problem" class="nav-link" data-scroll-target="#setting-up-the-run-problem"><span class="header-section-number">3.2.1</span> Setting Up the Run Problem</a></li>
+  <li><a href="#the-good-equilibrium" id="toc-the-good-equilibrium" class="nav-link" data-scroll-target="#the-good-equilibrium"><span class="header-section-number">3.2.2</span> The Good Equilibrium</a></li>
+  <li><a href="#the-bad-equilibrium-a-bank-run" id="toc-the-bad-equilibrium-a-bank-run" class="nav-link" data-scroll-target="#the-bad-equilibrium-a-bank-run"><span class="header-section-number">3.2.3</span> The Bad Equilibrium: A Bank Run</a></li>
+  <li><a href="#the-payoff-structure" id="toc-the-payoff-structure" class="nav-link" data-scroll-target="#the-payoff-structure"><span class="header-section-number">3.2.4</span> The Payoff Structure</a></li>
+  <li><a href="#strategic-complementarities" id="toc-strategic-complementarities" class="nav-link" data-scroll-target="#strategic-complementarities"><span class="header-section-number">3.2.5</span> Strategic Complementarities</a></li>
+  <li><a href="#the-tipping-point" id="toc-the-tipping-point" class="nav-link" data-scroll-target="#the-tipping-point"><span class="header-section-number">3.2.6</span> The Tipping Point</a></li>
+  <li><a href="#three-equilibria" id="toc-three-equilibria" class="nav-link" data-scroll-target="#three-equilibria"><span class="header-section-number">3.2.7</span> Three Equilibria</a></li>
+  <li><a href="#what-triggers-a-run" id="toc-what-triggers-a-run" class="nav-link" data-scroll-target="#what-triggers-a-run"><span class="header-section-number">3.2.8</span> What Triggers a Run?</a></li>
+  </ul></li>
+  <li><a href="#fundamental-vs.-panic-based-runs" id="toc-fundamental-vs.-panic-based-runs" class="nav-link" data-scroll-target="#fundamental-vs.-panic-based-runs"><span class="header-section-number">3.3</span> Fundamental vs.&nbsp;Panic-Based Runs</a>
+  <ul class="collapse">
+  <li><a href="#fundamental-based-runs" id="toc-fundamental-based-runs" class="nav-link" data-scroll-target="#fundamental-based-runs"><span class="header-section-number">3.3.1</span> Fundamental-Based Runs</a></li>
+  <li><a href="#reconciling-the-evidence" id="toc-reconciling-the-evidence" class="nav-link" data-scroll-target="#reconciling-the-evidence"><span class="header-section-number">3.3.2</span> Reconciling the Evidence</a></li>
+  </ul></li>
+  <li><a href="#the-global-games-approach-goldstein-and-pauzner-2005" id="toc-the-global-games-approach-goldstein-and-pauzner-2005" class="nav-link" data-scroll-target="#the-global-games-approach-goldstein-and-pauzner-2005"><span class="header-section-number">3.4</span> The Global Games Approach: Goldstein and Pauzner (2005)</a>
+  <ul class="collapse">
+  <li><a href="#the-problem-with-common-knowledge" id="toc-the-problem-with-common-knowledge" class="nav-link" data-scroll-target="#the-problem-with-common-knowledge"><span class="header-section-number">3.4.1</span> The Problem with Common Knowledge</a></li>
+  <li><a href="#model-setup" id="toc-model-setup" class="nav-link" data-scroll-target="#model-setup"><span class="header-section-number">3.4.2</span> Model Setup</a></li>
+  <li><a href="#how-uniqueness-emerges" id="toc-how-uniqueness-emerges" class="nav-link" data-scroll-target="#how-uniqueness-emerges"><span class="header-section-number">3.4.3</span> How Uniqueness Emerges</a></li>
+  <li><a href="#the-threshold-and-the-three-regions" id="toc-the-threshold-and-the-three-regions" class="nav-link" data-scroll-target="#the-threshold-and-the-three-regions"><span class="header-section-number">3.4.4</span> The Threshold and the Three Regions</a></li>
+  <li><a href="#the-key-comparative-static-liquidity-mismatch" id="toc-the-key-comparative-static-liquidity-mismatch" class="nav-link" data-scroll-target="#the-key-comparative-static-liquidity-mismatch"><span class="header-section-number">3.4.5</span> The Key Comparative Static: Liquidity Mismatch</a></li>
+  <li><a href="#detecting-panic-in-the-data" id="toc-detecting-panic-in-the-data" class="nav-link" data-scroll-target="#detecting-panic-in-the-data"><span class="header-section-number">3.4.6</span> Detecting Panic in the Data</a></li>
+  </ul></li>
+  <li><a href="#anti-run-policies" id="toc-anti-run-policies" class="nav-link" data-scroll-target="#anti-run-policies"><span class="header-section-number">3.5</span> Anti-Run Policies</a>
+  <ul class="collapse">
+  <li><a href="#the-policy-challenge" id="toc-the-policy-challenge" class="nav-link" data-scroll-target="#the-policy-challenge"><span class="header-section-number">3.5.1</span> The Policy Challenge</a></li>
+  <li><a href="#suspension-of-convertibility" id="toc-suspension-of-convertibility" class="nav-link" data-scroll-target="#suspension-of-convertibility"><span class="header-section-number">3.5.2</span> Suspension of Convertibility</a></li>
+  <li><a href="#deposit-insurance" id="toc-deposit-insurance" class="nav-link" data-scroll-target="#deposit-insurance"><span class="header-section-number">3.5.3</span> Deposit Insurance</a></li>
+  <li><a href="#lender-of-last-resort" id="toc-lender-of-last-resort" class="nav-link" data-scroll-target="#lender-of-last-resort"><span class="header-section-number">3.5.4</span> Lender of Last Resort</a></li>
+  <li><a href="#capital-requirements-and-transparency" id="toc-capital-requirements-and-transparency" class="nav-link" data-scroll-target="#capital-requirements-and-transparency"><span class="header-section-number">3.5.5</span> Capital Requirements and Transparency</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">3.6</span> Key Takeaways</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.7</span> References</a>
+  <ul class="collapse">
+  <li><a href="#primary-sources" id="toc-primary-sources" class="nav-link" data-scroll-target="#primary-sources"><span class="header-section-number">3.7.1</span> Primary Sources</a></li>
+  <li><a href="#fundamental-vs.-panic-based-runs-1" id="toc-fundamental-vs.-panic-based-runs-1" class="nav-link" data-scroll-target="#fundamental-vs.-panic-based-runs-1"><span class="header-section-number">3.7.2</span> Fundamental vs.&nbsp;Panic-Based Runs</a></li>
+  <li><a href="#global-games-and-bank-fragility" id="toc-global-games-and-bank-fragility" class="nav-link" data-scroll-target="#global-games-and-bank-fragility"><span class="header-section-number">3.7.3</span> Global Games and Bank Fragility</a></li>
+  <li><a href="#policy" id="toc-policy" class="nav-link" data-scroll-target="#policy"><span class="header-section-number">3.7.4</span> Policy</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -174,9 +257,696 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>This chapter is under development.</em></p>
+<section id="the-dark-side-of-liquidity-creation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-dark-side-of-liquidity-creation"><span class="header-section-number">3.1</span> The Dark Side of Liquidity Creation</h2>
+<p>In the previous chapter, we showed that banks create value by offering liquid deposits backed by illiquid assets. The optimal deposit contract <span class="math inline">\((c_1^*, c_2^*)\)</span> satisfies <span class="math inline">\(u'(c_1^*) = R \cdot u'(c_2^*)\)</span> and delivers higher expected utility than either autarky or market trading. We also showed that this contract requires <strong>trading restrictions</strong> to prevent patient depositors from exploiting the front-loading (Jacklin, 1987).</p>
+<p>But there is a darker consequence of these same features. The very structure that enables liquidity creation — liquid liabilities backed by illiquid assets — makes banks vulnerable to <strong>self-fulfilling panics</strong>. If depositors believe the bank will fail, their collective withdrawal can <em>cause</em> the bank to fail, even when the bank is fundamentally solvent.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The Central Paradox
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The same features that make banking valuable also make it fragile:</p>
+<ul>
+<li><strong>Liquid deposits</strong> mean depositors can withdraw at any time</li>
+<li><strong>Illiquid assets</strong> mean the bank cannot meet all withdrawals simultaneously</li>
+<li><strong>Sequential service</strong> means early withdrawers are paid in full while late withdrawers may get nothing</li>
+</ul>
+<p>This creates a <strong>coordination problem</strong> among depositors: each depositor’s optimal action depends on what they believe other depositors will do.</p>
+</div>
+</div>
+</section>
+<section id="multiple-equilibria-in-the-dd-model" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="multiple-equilibria-in-the-dd-model"><span class="header-section-number">3.2</span> Multiple Equilibria in the DD Model</h2>
+<section id="setting-up-the-run-problem" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="setting-up-the-run-problem"><span class="header-section-number">3.2.1</span> Setting Up the Run Problem</h3>
+<p>Recall the Diamond-Dybvig environment from the previous chapter:</p>
+<ul>
+<li>100 depositors, each depositing 1 at <span class="math inline">\(t=0\)</span></li>
+<li>Bank invests in the illiquid asset (<span class="math inline">\(r_1 = 1\)</span>, <span class="math inline">\(R = 2\)</span>)</li>
+<li>Fraction <span class="math inline">\(\lambda = 1/4\)</span> are impatient (25 depositors)</li>
+<li>Optimal contract: <span class="math inline">\(c_1^* = 1.28\)</span>, <span class="math inline">\(c_2^* = 1.813\)</span></li>
+<li>At <span class="math inline">\(t=1\)</span>, depositors <strong>simultaneously</strong> decide whether to withdraw</li>
+</ul>
+<p>The key question is: <strong>who withdraws at <span class="math inline">\(t=1\)</span>?</strong></p>
+<p>In the previous chapter, we simply assumed that only the 25 impatient depositors withdraw. But depositor types are <strong>private information</strong> — the bank cannot verify who is truly impatient. The contract offers every depositor the <em>option</em> to withdraw <span class="math inline">\(c_1^* = 1.28\)</span> at <span class="math inline">\(t=1\)</span> or wait for <span class="math inline">\(c_2^*\)</span> at <span class="math inline">\(t=2\)</span>. Patient depositors must <strong>choose</strong> whether to wait.</p>
+</section>
+<section id="the-good-equilibrium" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="the-good-equilibrium"><span class="header-section-number">3.2.2</span> The Good Equilibrium</h3>
+<p>Suppose all depositors expect that only impatient types will withdraw. Then:</p>
+<ul>
+<li>Fraction <span class="math inline">\(f = \lambda = 1/4\)</span> withdraw at <span class="math inline">\(t=1\)</span></li>
+<li>Total payout at <span class="math inline">\(t=1\)</span>: <span class="math inline">\(25 \times 1.28 = 32\)</span></li>
+<li>Assets liquidated: 32 (since each is worth 1 at <span class="math inline">\(t=1\)</span>)</li>
+<li>Remaining assets at <span class="math inline">\(t=2\)</span>: <span class="math inline">\((100 - 32) \times 2 = 136\)</span></li>
+<li>Per remaining depositor: <span class="math inline">\(136/75 = 1.813\)</span></li>
+</ul>
+<p>Since <span class="math inline">\(c_2^* = 1.813 &gt; 1.28 = c_1^*\)</span>, patient depositors prefer to wait. <strong>Their expectation is confirmed</strong> — this is a Nash equilibrium.</p>
+</section>
+<section id="the-bad-equilibrium-a-bank-run" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="the-bad-equilibrium-a-bank-run"><span class="header-section-number">3.2.3</span> The Bad Equilibrium: A Bank Run</h3>
+<p>Now suppose all depositors expect that <em>everyone</em> will withdraw at <span class="math inline">\(t=1\)</span>. What happens?</p>
+<p>If all 100 depositors attempt to withdraw <span class="math inline">\(c_1^* = 1.28\)</span>:</p>
+<ul>
+<li>Total demanded: <span class="math inline">\(100 \times 1.28 = 128\)</span></li>
+<li>Total assets available at <span class="math inline">\(t=1\)</span>: <span class="math inline">\(100\)</span> (each unit of the illiquid asset returns 1 if liquidated)</li>
+<li>The bank <strong>runs out of assets</strong> before paying everyone</li>
+</ul>
+<p>The bank can pay at most <span class="math inline">\(\lfloor 100/1.28 \rfloor = 78\)</span> depositors before exhausting its assets. Depositors 79 through 100 receive <strong>nothing</strong>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Self-Fulfilling Prophecy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If a patient depositor believes everyone else will withdraw, she faces a choice:</p>
+<ul>
+<li><strong>Withdraw now</strong>: Get <span class="math inline">\(c_1^* = 1.28\)</span> (if she arrives early enough)</li>
+<li><strong>Wait until <span class="math inline">\(t=2\)</span></strong>: Get <strong>nothing</strong> (the bank will be liquidated)</li>
+</ul>
+<p>Withdrawing is the rational choice. But when all patient depositors reason this way, the bank is indeed liquidated. <strong>The fear of a run causes the run.</strong></p>
+</div>
+</div>
+</section>
+<section id="the-payoff-structure" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="the-payoff-structure"><span class="header-section-number">3.2.4</span> The Payoff Structure</h3>
+<p>Following Diamond (2007) and Tirole (2006), let <span class="math inline">\(\hat{\lambda}\)</span> denote the fraction of depositors who actually withdraw at <span class="math inline">\(t=1\)</span>. This includes all impatient depositors plus any patient depositors who run, so <span class="math inline">\(\hat{\lambda} \geq \lambda\)</span>.</p>
+<p>We can write <span class="math inline">\(\hat{\lambda} = \lambda + (1 - \lambda)x\)</span>, where <span class="math inline">\(x\)</span> is the fraction of patient depositors who choose to withdraw.</p>
+<p><strong>Payoff to an early withdrawer:</strong></p>
+<p><span class="math display">\[
+\text{Early payoff} = \min\left(c_1^*, \frac{1}{\hat{\lambda}}\right)
+\]</span></p>
+<p>If <span class="math inline">\(\hat{\lambda} c_1^* \leq 1\)</span>, the bank can meet all withdrawal requests and each early withdrawer gets <span class="math inline">\(c_1^*\)</span>. If <span class="math inline">\(\hat{\lambda} c_1^* &gt; 1\)</span>, the bank runs out of assets and the last withdrawers get nothing. On average, each early withdrawer gets <span class="math inline">\(1/\hat{\lambda}\)</span>.</p>
+<p><strong>Payoff to a late withdrawer (waits until <span class="math inline">\(t=2\)</span>):</strong></p>
+<p><span class="math display">\[
+\text{Late payoff} = \max\left(\frac{(1 - \hat{\lambda} c_1^*)R}{1 - \hat{\lambda}}, \; 0\right)
+\]</span></p>
+<p>After paying the early withdrawers, the bank has <span class="math inline">\(1 - \hat{\lambda} c_1^*\)</span> units of the illiquid asset remaining. These mature at <span class="math inline">\(t=2\)</span> and are worth <span class="math inline">\(R\)</span> each. The <span class="math inline">\((1 - \hat{\lambda})\)</span> remaining depositors share the proceeds.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Diamond’s Numerical Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With <span class="math inline">\(c_1^* = 1.28\)</span>, <span class="math inline">\(R = 2\)</span>, and <span class="math inline">\(\lambda = 1/4\)</span>:</p>
+<ul>
+<li>If only impatient withdraw (<span class="math inline">\(\hat{\lambda} = 0.25\)</span>): Late payoff <span class="math inline">\(= \frac{(1 - 0.25 \times 1.28) \times 2}{1 - 0.25} = \frac{0.68 \times 2}{0.75} = 1.813\)</span></li>
+<li>If <span class="math inline">\(\hat{\lambda} = 0.5\)</span>: Late payoff <span class="math inline">\(= \frac{(1 - 0.5 \times 1.28) \times 2}{0.5} = \frac{0.36 \times 2}{0.5} = 1.44\)</span></li>
+<li>If <span class="math inline">\(\hat{\lambda} = 0.75\)</span>: Late payoff <span class="math inline">\(= \frac{(1 - 0.75 \times 1.28) \times 2}{0.25} = \frac{0.04 \times 2}{0.25} = 0.32\)</span></li>
+<li>If <span class="math inline">\(\hat{\lambda} \geq 1/c_1^* = 0.78125\)</span>: Late payoff <span class="math inline">\(= 0\)</span> (bank is insolvent)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="strategic-complementarities" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="strategic-complementarities"><span class="header-section-number">3.2.5</span> Strategic Complementarities</h3>
+<div style="margin: 20px 0;">
+  <svg width="540" height="380" viewbox="0 0 540 380" style="margin: 0 auto; display: block; font-family: serif;">
+    <defs>
+      <marker id="arrow-run" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="black"></path>
+      </marker>
+    </defs>
+
+    <!-- Axes -->
+    <line x1="80" y1="320" x2="500" y2="320" stroke="black" stroke-width="1.5" marker-end="url(#arrow-run)"></line>
+    <text x="508" y="325" font-size="13" font-style="italic">λ̂</text>
+    <line x1="80" y1="330" x2="80" y2="20" stroke="black" stroke-width="1.5" marker-end="url(#arrow-run)"></line>
+
+    <!-- Y-axis labels -->
+    <line x1="75" y1="40" x2="85" y2="40" stroke="black" stroke-width="1"></line>
+    <text x="70" y="44" font-size="12" text-anchor="end" font-style="italic">c₂*</text>
+    <line x1="75" y1="122" x2="85" y2="122" stroke="black" stroke-width="1"></line>
+    <text x="70" y="126" font-size="12" text-anchor="end" font-style="italic">c₁*</text>
+    <line x1="75" y1="166" x2="85" y2="166" stroke="black" stroke-width="1"></line>
+    <text x="70" y="170" font-size="12" text-anchor="end">1</text>
+    <text x="70" y="324" font-size="12" text-anchor="end">0</text>
+
+    <!-- X-axis labels -->
+    <text x="80" y="340" font-size="12" text-anchor="middle" font-style="italic">λ</text>
+    <line x1="140" y1="315" x2="140" y2="325" stroke="black" stroke-width="1"></line>
+    <text x="140" y="340" font-size="11" text-anchor="middle">λ*</text>
+    <line x1="363" y1="315" x2="363" y2="325" stroke="black" stroke-width="1"></line>
+    <text x="363" y="340" font-size="11" text-anchor="middle">1/c₁*</text>
+    <line x1="480" y1="315" x2="480" y2="325" stroke="black" stroke-width="1"></line>
+    <text x="480" y="340" font-size="12" text-anchor="middle">1</text>
+
+    <!-- Early withdrawer's payoff (blue) — flat at c1* then declining to 1 -->
+    <line x1="80" y1="122" x2="363" y2="122" stroke="blue" stroke-width="2.5"></line>
+    <line x1="363" y1="122" x2="480" y2="166" stroke="blue" stroke-width="2.5"></line>
+    <text x="330" y="112" font-size="11" text-anchor="end" fill="blue" font-weight="bold">Early withdrawer's payoff</text>
+
+    <!-- Late withdrawer's payoff (red) — concave w.r.t. origin: drops fast then slow -->
+    <polyline points="80,40 110,80 140,125 175,170 210,210 247,245 280,275 310,300 340,313 363,320" fill="none" stroke="red" stroke-width="2.5"></polyline>
+    <line x1="363" y1="320" x2="480" y2="320" stroke="red" stroke-width="2.5"></line>
+    <text x="120" y="260" font-size="11" fill="red" font-weight="bold">Late</text>
+    <text x="120" y="274" font-size="11" fill="red" font-weight="bold">withdrawer's</text>
+    <text x="120" y="288" font-size="11" fill="red" font-weight="bold">payoff</text>
+
+    <!-- Region labels -->
+    <text x="130" y="75" font-size="15" text-anchor="middle" font-weight="bold">No run</text>
+    <text x="360" y="250" font-size="15" text-anchor="middle" font-weight="bold">Run</text>
+
+    <!-- Good equilibrium (on y-axis at c2*) -->
+    <circle cx="80" cy="40" r="5" fill="green"></circle>
+    <text x="95" y="36" fill="green" font-size="10" font-weight="bold">Good eq.</text>
+
+    <!-- Unstable equilibrium where curves cross -->
+    <circle cx="140" cy="122" r="5" fill="orange"></circle>
+    <text x="155" y="118" fill="orange" font-size="10" font-weight="bold">Unstable eq.</text>
+
+    <!-- Run equilibrium at λ-hat = 1, payoff = 1 -->
+    <circle cx="480" cy="166" r="5" fill="red"></circle>
+    <text x="460" y="158" fill="red" font-size="10" font-weight="bold">Run eq.</text>
+
+    <!-- Dashed lines -->
+    <line x1="80" y1="166" x2="480" y2="166" stroke="gray" stroke-width="1" stroke-dasharray="4,3"></line>
+    <line x1="480" y1="166" x2="480" y2="320" stroke="gray" stroke-width="1" stroke-dasharray="4,3"></line>
+    <line x1="363" y1="122" x2="363" y2="320" stroke="gray" stroke-width="1" stroke-dasharray="4,3"></line>
+    <line x1="140" y1="122" x2="140" y2="320" stroke="gray" stroke-width="1" stroke-dasharray="4,3"></line>
+  </svg>
+</div>
+<p><strong>Figure</strong> (adapted from Tirole, 2006, Figure 12.2). The payoffs to early and late withdrawers as a function of <span class="math inline">\(\hat{\lambda}\)</span>, the fraction of depositors who withdraw at <span class="math inline">\(t=1\)</span>. The x-axis begins at <span class="math inline">\(\hat{\lambda} = \lambda\)</span> (only impatient depositors withdraw):</p>
+<ul>
+<li>The <strong>early withdrawer’s payoff</strong> is flat at <span class="math inline">\(c_1^*\)</span> as long as the bank remains solvent (<span class="math inline">\(\hat{\lambda} &lt; 1/c_1^*\)</span>), then declines to 1 at <span class="math inline">\(\hat{\lambda} = 1\)</span></li>
+<li>The <strong>late withdrawer’s payoff</strong> starts at <span class="math inline">\(c_2^*\)</span> when <span class="math inline">\(\hat{\lambda} = \lambda\)</span> and declines to zero at <span class="math inline">\(\hat{\lambda} = 1/c_1^*\)</span>, when the bank exhausts its assets paying early withdrawers</li>
+<li>In the <strong>“No run”</strong> region (left of the crossing), the late payoff exceeds <span class="math inline">\(c_1^*\)</span>, so patient depositors prefer to wait</li>
+<li>In the <strong>“Run”</strong> region (right of the crossing), the early payoff exceeds the late payoff, so patient depositors prefer to withdraw</li>
+<li>At <span class="math inline">\(\hat{\lambda} = 1\)</span> (dashed lines), every depositor withdraws and each receives 1 — the liquidation value of the assets</li>
+</ul>
+<p>The curves cross at the <strong>unstable equilibrium</strong> (<span class="math inline">\(\hat{\lambda}^* = 0.5625\)</span>). Any perturbation away from this point pushes toward either the good equilibrium (<span class="math inline">\(\hat{\lambda} = \lambda\)</span>) or the run equilibrium (<span class="math inline">\(\hat{\lambda} = 1\)</span>).</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Strategic Complementarities
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The game among depositors exhibits <strong>strategic complementarities</strong>: my incentive to run <em>increases</em> when more other depositors run. As <span class="math inline">\(\hat{\lambda}\)</span> rises:</p>
+<ol type="1">
+<li>The late withdrawer’s payoff falls (fewer assets remain)</li>
+<li>The early withdrawer’s payoff stays constant (first-come, first-served)</li>
+<li>At some point, withdrawing dominates waiting</li>
+</ol>
+<p>This is what makes the run self-fulfilling. Once enough depositors are expected to run, <em>every</em> depositor prefers to run.</p>
+</div>
+</div>
+</section>
+<section id="the-tipping-point" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="the-tipping-point"><span class="header-section-number">3.2.6</span> The Tipping Point</h3>
+<p>Following Diamond (2007), the tipping point occurs when the early and late payoffs are equal:</p>
+<p><span class="math display">\[
+c_1^* = \frac{(1 - \hat{\lambda} c_1^*)R}{1 - \hat{\lambda}}
+\]</span></p>
+<p>Solving for the critical <span class="math inline">\(\hat{\lambda}\)</span>:</p>
+<p><span class="math display">\[
+c_1^*(1 - \hat{\lambda}) = (1 - \hat{\lambda} c_1^*)R
+\]</span> <span class="math display">\[
+c_1^* - c_1^* \hat{\lambda} = R - \hat{\lambda} c_1^* R
+\]</span> <span class="math display">\[
+c_1^* - R = \hat{\lambda} c_1^* - \hat{\lambda} c_1^* R = \hat{\lambda} c_1^*(1 - R)
+\]</span> <span class="math display">\[
+\hat{\lambda}^* = \frac{R - c_1^*}{c_1^*(R - 1)}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Diamond’s Numerical Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With <span class="math inline">\(c_1^* = 1.28\)</span> and <span class="math inline">\(R = 2\)</span>:</p>
+<p><span class="math display">\[
+\hat{\lambda}^* = \frac{2 - 1.28}{1.28(2 - 1)} = \frac{0.72}{1.28} = 0.5625
+\]</span></p>
+<p>So if more than 56.25% of depositors are expected to withdraw, the run becomes self-fulfilling. Since only 25% are truly impatient, this means the run is triggered when more than roughly 42% of <em>patient</em> depositors decide to withdraw.</p>
+</div>
+</div>
+</section>
+<section id="three-equilibria" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="three-equilibria"><span class="header-section-number">3.2.7</span> Three Equilibria</h3>
+<p>The depositor game has exactly three equilibria:</p>
+<ol type="1">
+<li><p><strong>Good equilibrium</strong> (<span class="math inline">\(\hat{\lambda} = \lambda = 0.25\)</span>): Only impatient depositors withdraw. Patient depositors wait because <span class="math inline">\(c_2^* = 1.813 &gt; 1.28 = c_1^*\)</span>. This is the DD optimal allocation.</p></li>
+<li><p><strong>Unstable equilibrium</strong> (<span class="math inline">\(\hat{\lambda} = \hat{\lambda}^* = 0.5625\)</span>): Patient depositors are indifferent between withdrawing and waiting. Any perturbation pushes toward one of the stable equilibria.</p></li>
+<li><p><strong>Run equilibrium</strong> (<span class="math inline">\(\hat{\lambda} = 1\)</span>): All depositors withdraw. The bank is liquidated. Everyone gets less than in the good equilibrium.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why Two Stable Equilibria?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because moving away from a good equilibrium requires a <strong>large change in beliefs</strong>. Starting from the good equilibrium (<span class="math inline">\(\hat{\lambda} = 0.25\)</span>), a small increase in <span class="math inline">\(\hat{\lambda}\)</span> (say to 0.27) does not change the incentives — patient depositors still prefer to wait. It takes a <em>coordinated</em> shift in beliefs to push <span class="math inline">\(\hat{\lambda}\)</span> past the tipping point of 0.5625.</p>
+<p>This is why Diamond (2007) emphasizes that initiating a run requires “something that all (or nearly all) depositors see (and believe that others see)” — a newspaper story, a social media post, or even a long line at the bank.</p>
+</div>
+</div>
+</section>
+<section id="what-triggers-a-run" class="level3" data-number="3.2.8">
+<h3 data-number="3.2.8" class="anchored" data-anchor-id="what-triggers-a-run"><span class="header-section-number">3.2.8</span> What Triggers a Run?</h3>
+<p>The multiple equilibria result raises a natural question: what determines which equilibrium prevails?</p>
+<p>Diamond and Dybvig (1983) do not provide a theory of equilibrium selection. Instead, they note that runs can be triggered by <strong>publicly observable signals</strong> — anything that causes depositors to coordinate on the bad equilibrium:</p>
+<ul>
+<li><p><strong>Sunspots</strong>: Arbitrary events that serve as coordination devices. Even a completely irrelevant signal can trigger a run if depositors believe others will respond to it.</p></li>
+<li><p><strong>News about bank fundamentals</strong>: A newspaper report that the bank’s assets have declined in value. Even if depositors know the report is inaccurate, they may run if they believe <em>others</em> will run based on the report.</p></li>
+<li><p><strong>Observable queues</strong>: As Diamond (2007) notes, “it would make sense for a bank to have a large lobby (or fast bank tellers), because if a line to withdraw extended out to the street, passersby may conclude that a run is in progress.”</p></li>
+</ul>
+<p>The sunspot approach has been criticized as making the model “empirically vacuous and untestable” (Gorton, 1988) — if runs are driven by arbitrary signals, the model makes no predictions about when runs occur or which banks are vulnerable. This criticism points to a deeper question: are bank runs driven by <strong>coordination failure</strong> (as in DD) or by <strong>bad fundamentals</strong>? And can we distinguish the two empirically?</p>
+</section>
+</section>
+<section id="fundamental-vs.-panic-based-runs" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="fundamental-vs.-panic-based-runs"><span class="header-section-number">3.3</span> Fundamental vs.&nbsp;Panic-Based Runs</h2>
+<p>The DD model generates <strong>panic-based runs</strong> — runs that occur even though the bank is fundamentally solvent. But in practice, many runs appear to be triggered by genuine bad news about bank fundamentals. This has led to an important debate in the literature.</p>
+<section id="fundamental-based-runs" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="fundamental-based-runs"><span class="header-section-number">3.3.1</span> Fundamental-Based Runs</h3>
+<p>In the DD model, depositors have no information about the quality of the bank’s assets — runs are purely driven by coordination failure. An alternative class of models takes the opposite view: depositors run because they learn bad news about the bank’s fundamentals.</p>
+<p><strong>The basic idea</strong>: Suppose depositors receive a signal (public or private) about the return on the bank’s assets. If the signal indicates that the bank’s loans are performing poorly — say, because borrowers are defaulting or the economy is entering a recession — then each depositor rationally concludes that the bank may not be able to honor its obligations at <span class="math inline">\(t=2\)</span>. Withdrawing early is then the individually optimal response, <em>regardless of what other depositors do</em>.</p>
+<p><strong>Key models in this tradition</strong>:</p>
+<ul>
+<li><p><strong>Chari and Jagannathan (1988)</strong>: Some depositors observe a signal about the bank’s asset quality. Uninformed depositors observe the <em>length of the withdrawal queue</em> and try to infer the signal. A long queue could mean many depositors received bad news, or it could simply mean many depositors have legitimate liquidity needs. This inference problem can lead uninformed depositors to withdraw even when the bank is healthy — a run driven by information extraction rather than coordination failure.</p></li>
+<li><p><strong>Jacklin and Bhattacharya (1988)</strong>: Depositors receive private information about the return on the bank’s assets. Those with bad news withdraw early to avoid losses. The bank must liquidate assets to meet withdrawals, which can make it insolvent even if the bad news was only partially correct. Here, runs serve a disciplining function — they penalize banks that have made poor investment decisions.</p></li>
+<li><p><strong>Allen and Gale (1998)</strong>: Bank runs can be part of an <em>optimal</em> risk-sharing arrangement. When depositors observe that the economy is in a bad state, a run forces liquidation of bank assets, transferring resources from long-term projects to depositors who need them now. In their framework, runs are an efficient response to aggregate shocks, not a market failure.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Game-Theoretic Distinction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In a fundamental-based run, the dominant strategy for each depositor is to withdraw once bad news arrives. Even if a depositor knew for certain that no one else would withdraw, she would still prefer to withdraw because the bank’s assets are impaired. This is a <strong>dominant strategy equilibrium</strong> — beliefs about other depositors’ actions are irrelevant.</p>
+<p>In a panic-based run (DD), withdrawal is only optimal <em>if enough other depositors also withdraw</em>. The bank is fundamentally solvent, and a patient depositor who waits would receive <span class="math inline">\(c_2^* &gt; c_1^*\)</span> if others also wait. Running is only rational as a response to the belief that others will run. This is a <strong>coordination game</strong> with multiple equilibria.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Fundamental runs:</strong></p>
+<ul>
+<li>Bank is insolvent (or likely to be)</li>
+<li>Withdrawals are informationally driven</li>
+<li>Beliefs about other depositors are <strong>not</strong> important</li>
+<li>Runs may be efficient (prevent throwing good money after bad)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Panic-based runs (DD):</strong></p>
+<ul>
+<li>Bank is solvent but illiquid</li>
+<li>Withdrawals are driven by coordination failure</li>
+<li>Beliefs about other depositors <strong>are</strong> important</li>
+<li>Runs are inefficient (destroy viable institutions)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="reconciling-the-evidence" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="reconciling-the-evidence"><span class="header-section-number">3.3.2</span> Reconciling the Evidence</h3>
+<p>Gorton (1988) documented that historical U.S. bank run episodes were consistently preceded by deteriorating bank fundamentals. This was initially interpreted as evidence <em>against</em> the panic-based view.</p>
+<p>However, as Goldstein (2013) argues, this interpretation is incorrect:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Fundamentals and Panics Are Not Mutually Exclusive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A prerequisite for panic-based runs is <strong>weaker fundamentals</strong>. Strategic complementarities among depositors <em>amplify</em> the effect of bad news. The fact that runs are associated with bad fundamentals does not rule out the existence of panic-based dynamics — it is exactly what the theory predicts.</p>
+<p>The key question is not whether fundamentals matter, but whether <strong>coordination failure</strong> makes the response to fundamentals larger than it would be in the absence of strategic complementarities.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="the-global-games-approach-goldstein-and-pauzner-2005" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="the-global-games-approach-goldstein-and-pauzner-2005"><span class="header-section-number">3.4</span> The Global Games Approach: Goldstein and Pauzner (2005)</h2>
+<p>Goldstein and Pauzner (2005) provide an elegant resolution to both problems — the multiplicity of equilibria <em>and</em> the fundamentals-vs.-panic debate — by introducing <strong>incomplete information</strong> into the DD framework using the <strong>global games</strong> methodology (Carlsson and van Damme, 1993; Morris and Shin, 1998).</p>
+<section id="the-problem-with-common-knowledge" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="the-problem-with-common-knowledge"><span class="header-section-number">3.4.1</span> The Problem with Common Knowledge</h3>
+<p>In the standard DD model, depositors have <strong>common knowledge</strong> of the bank’s fundamentals. Everyone knows the bank is solvent, everyone knows that everyone knows, and so on. Under common knowledge, both the good and the bad equilibrium are sustainable, and the model cannot predict which one will prevail.</p>
+<p>This is not just a theoretical inconvenience. It means the DD model cannot answer basic questions: Which banks are more likely to experience runs? What bank characteristics make runs more likely? How does policy affect the probability of a run? The model has multiple equilibria and no mechanism to select among them.</p>
+</section>
+<section id="model-setup" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="model-setup"><span class="header-section-number">3.4.2</span> Model Setup</h3>
+<p>Goldstein and Pauzner embed the DD bank run game into an environment with <strong>uncertain fundamentals</strong>. The key elements:</p>
+<p><strong>Bank fundamentals <span class="math inline">\(\theta\)</span></strong>: The bank’s asset return is no longer a known constant <span class="math inline">\(R\)</span>. Instead, the return depends on a fundamental <span class="math inline">\(\theta\)</span> drawn from a continuous distribution on <span class="math inline">\([\theta_L, \theta_H]\)</span>. Higher <span class="math inline">\(\theta\)</span> means better asset quality.</p>
+<p><strong>The deposit contract</strong>: As in DD, the bank offers a demand deposit contract with <span class="math inline">\(c_1^*\)</span> to early withdrawers. The late withdrawer’s payoff depends on both the fraction who withdraw early (<span class="math inline">\(\hat{\lambda}\)</span>) and the realized fundamental:</p>
+<p><span class="math display">\[
+\text{Late payoff}(\hat{\lambda}, \theta) = \max\left(\frac{(1 - \hat{\lambda} c_1^*) R(\theta)}{1 - \hat{\lambda}}, \; 0\right)
+\]</span></p>
+<p><strong>Private signals</strong>: Each depositor <span class="math inline">\(i\)</span> observes a noisy private signal about the bank’s health:</p>
+<p><span class="math display">\[
+x_i = \theta + \epsilon_i
+\]</span></p>
+<p>where the <span class="math inline">\(\epsilon_i\)</span> are drawn independently from a distribution with small variance <span class="math inline">\(\sigma^2\)</span>. Each depositor knows her own signal but not those of others. Crucially, depositors do <strong>not</strong> have common knowledge of <span class="math inline">\(\theta\)</span>.</p>
+<p><strong>Dominance regions</strong>: There exist extreme values of fundamentals where behavior is pinned down regardless of others’ actions:</p>
+<ul>
+<li>For <span class="math inline">\(\theta &lt; \underline{\theta}\)</span>: The bank is <strong>insolvent</strong> even if only impatient depositors withdraw. Withdrawing is a <strong>dominant strategy</strong> for every depositor.</li>
+<li>For <span class="math inline">\(\theta &gt; \overline{\theta}\)</span>: The bank’s assets are so strong that waiting always dominates withdrawing, <strong>regardless</strong> of what others do.</li>
+</ul>
+<p>The interesting region is <span class="math inline">\(\theta \in [\underline{\theta}, \overline{\theta}]\)</span>, where the bank is solvent in the good equilibrium but would fail in a run — exactly the DD multiple-equilibria region.</p>
+</section>
+<section id="how-uniqueness-emerges" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="how-uniqueness-emerges"><span class="header-section-number">3.4.3</span> How Uniqueness Emerges</h3>
+<p>The key insight is that with private signals, the game is no longer one of common knowledge. Consider the reasoning of a depositor who observes signal <span class="math inline">\(x_i\)</span>:</p>
+<p><strong>Step 1: Dominance at the extremes.</strong> A depositor who receives a very low signal (near <span class="math inline">\(\theta_L\)</span>) knows the bank is almost certainly insolvent. She withdraws regardless of what others do. A depositor with a very high signal knows the bank is safe and waits.</p>
+<p><strong>Step 2: Iterated elimination.</strong> A depositor with a signal just above <span class="math inline">\(\underline{\theta}\)</span> knows that depositors with slightly lower signals will withdraw (by Step 1). She therefore expects <em>some</em> withdrawals. Given the strategic complementarities in the bank run game, this makes her more inclined to withdraw as well. So she also withdraws.</p>
+<p><strong>Step 3: Contagion propagates upward.</strong> A depositor with a signal slightly higher knows that the depositors in Step 2 will withdraw (because they expect the Step 1 depositors to withdraw). This further increases the expected number of withdrawals, making her even more inclined to withdraw. The reasoning cascades upward through the signal space.</p>
+<p><strong>Step 4: The cascade stops.</strong> At some critical signal <span class="math inline">\(x^*\)</span>, the reasoning stops — depositors above <span class="math inline">\(x^*\)</span> find it optimal to wait despite knowing that some others will withdraw. This pins down the <strong>unique threshold</strong>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The Role of Higher-Order Beliefs
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The key difference from DD is not the noise per se, but the destruction of <strong>common knowledge</strong>. In DD, depositors know the bank is solvent, they know that others know, they know that others know that others know, and so on. This infinite chain of mutual knowledge supports both equilibria.</p>
+<p>With private signals, this chain breaks. A depositor who receives a middling signal <span class="math inline">\(x_i\)</span> is uncertain whether other depositors received signals above or below the dominance threshold. She is uncertain about what others believe about what others believe. This <strong>higher-order uncertainty</strong> is what unravels the multiplicity and pins down a unique equilibrium.</p>
+</div>
+</div>
+</section>
+<section id="the-threshold-and-the-three-regions" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="the-threshold-and-the-three-regions"><span class="header-section-number">3.4.4</span> The Threshold and the Three Regions</h3>
+<p>In the limit as signals become precise (<span class="math inline">\(\sigma \to 0\)</span>), the threshold strategy implies that the bank’s fate is determined by a critical fundamental <span class="math inline">\(\theta^*\)</span> that lies <em>within</em> the intermediate region <span class="math inline">\([\underline{\theta}, \overline{\theta}]\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(\theta &gt; \theta^*\)</span>: The bank <strong>survives</strong> (no run)</li>
+<li>If <span class="math inline">\(\theta &lt; \theta^*\)</span>: The bank <strong>fails</strong> (run)</li>
+</ul>
+<p>The threshold <span class="math inline">\(\theta^*\)</span> thus splits the old DD multiple-equilibria region into two: a <strong>panic run region</strong> <span class="math inline">\([\underline{\theta}, \theta^*]\)</span> where coordination failure causes the bank to fail, and a <strong>no-run region</strong> <span class="math inline">\([\theta^*, \overline{\theta}]\)</span> where fundamentals are strong enough to sustain confidence. Together with the dominance regions, this gives three regions:</p>
+<div style="margin: 20px 0;">
+  <svg width="600" height="140" viewbox="0 0 600 140" style="margin: 0 auto; display: block;">
+    <defs>
+      <marker id="arrow-gp" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="black"></path>
+      </marker>
+    </defs>
+
+    <!-- Main axis -->
+    <line x1="40" y1="70" x2="560" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrow-gp)"></line>
+    <text x="570" y="75" font-size="12" font-style="italic">θ</text>
+    <text x="300" y="130" font-size="12" text-anchor="middle">Bank fundamental</text>
+
+    <!-- Theta underbar -->
+    <line x1="150" y1="60" x2="150" y2="80" stroke="black" stroke-width="2"></line>
+    <text x="150" y="100" font-size="12" text-anchor="middle" text-decoration="underline">θ</text>
+
+    <!-- Theta star -->
+    <line x1="360" y1="60" x2="360" y2="80" stroke="black" stroke-width="2"></line>
+    <text x="360" y="100" font-size="12" text-anchor="middle">θ*</text>
+
+    <!-- Insolvent region -->
+    <rect x="40" y="25" width="110" height="30" fill="#ff4444" fill-opacity="0.3" rx="3"></rect>
+    <text x="95" y="45" font-size="11" text-anchor="middle" fill="#cc0000" font-weight="bold">Insolvent</text>
+    <text x="95" y="15" font-size="10" text-anchor="middle">(fundamental run)</text>
+
+    <!-- Panic run region -->
+    <rect x="150" y="25" width="210" height="30" fill="#ff9900" fill-opacity="0.3" rx="3"></rect>
+    <text x="255" y="45" font-size="11" text-anchor="middle" fill="#cc6600" font-weight="bold">Panic run region</text>
+    <text x="255" y="15" font-size="10" text-anchor="middle">(solvent but fails)</text>
+
+    <!-- No run region -->
+    <rect x="360" y="25" width="190" height="30" fill="#44aa44" fill-opacity="0.3" rx="3"></rect>
+    <text x="455" y="45" font-size="11" text-anchor="middle" fill="#006600" font-weight="bold">No run</text>
+    <text x="455" y="15" font-size="10" text-anchor="middle">(survives)</text>
+  </svg>
+</div>
+<ol type="1">
+<li><p><strong><span class="math inline">\(\theta &lt; \underline{\theta}\)</span></strong> (Insolvent): The bank’s assets are so impaired that it cannot honor its obligations even if no patient depositor withdraws. Runs here are <strong>purely fundamental-based</strong> — they would occur regardless of coordination.</p></li>
+<li><p><strong><span class="math inline">\(\underline{\theta} &lt; \theta &lt; \theta^*\)</span></strong> (Panic run region): The bank is solvent — it could survive if depositors coordinated on the good equilibrium. But the private information structure prevents coordination, and the bank fails due to <strong>self-fulfilling withdrawals</strong>. These are panic-based runs triggered by weak (but not fatal) fundamentals.</p></li>
+<li><p><strong><span class="math inline">\(\theta &gt; \theta^*\)</span></strong> (No run): Fundamentals are strong enough that the bank survives despite the coordination problem. Patient depositors wait.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Fundamentals and Panics Coexist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The global games framework resolves the debate between the fundamental and panic views of bank runs. It shows that <strong>both forces operate simultaneously</strong>:</p>
+<ul>
+<li>Fundamentals matter because they determine which region the bank falls into</li>
+<li>Panic matters because in the intermediate region <span class="math inline">\([\underline{\theta}, \theta^*]\)</span>, the bank fails <em>only because</em> of coordination failure — it would survive if depositors could coordinate</li>
+</ul>
+<p>The probability of a run is <span class="math inline">\(\Pr(\theta &lt; \theta^*)\)</span>, which is well-defined and depends on the bank’s characteristics. This makes the model empirically testable.</p>
+</div>
+</div>
+</section>
+<section id="the-key-comparative-static-liquidity-mismatch" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="the-key-comparative-static-liquidity-mismatch"><span class="header-section-number">3.4.5</span> The Key Comparative Static: Liquidity Mismatch</h3>
+<p>The central result of Goldstein and Pauzner (2005) is a comparative static on the threshold <span class="math inline">\(\theta^*\)</span>:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Greater Liquidity Mismatch → Larger Panic Region
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Banks that offer more generous demand deposit contracts (higher <span class="math inline">\(c_1^*\)</span> relative to the liquidation value of assets) have a <strong>higher</strong> threshold <span class="math inline">\(\theta^*\)</span>. This means:</p>
+<ul>
+<li>The panic run region <span class="math inline">\([\underline{\theta}, \theta^*]\)</span> is <strong>wider</strong></li>
+<li>The probability of a run is <strong>higher</strong></li>
+<li>The bank is <strong>more fragile</strong></li>
+</ul>
+<p>Intuitively, when the bank promises more to early withdrawers, the remaining assets for late withdrawers are smaller if others withdraw. This strengthens the strategic complementarities among depositors: each depositor’s payoff from waiting is more sensitive to the actions of others. The stronger the complementarities, the larger the region where panic-based runs can occur.</p>
+</div>
+</div>
+<p>This generates a sharp, testable prediction: <strong>banks with greater liquidity mismatch should exhibit greater fragility</strong>, controlling for fundamentals. Specifically, the sensitivity of deposit outflows to bad performance should be <em>stronger</em> for banks that perform more liquidity transformation. This prediction is tested empirically by Chen, Goldstein, Huang, and Vashishtha (2022), which we discuss in the next chapter.</p>
+</section>
+<section id="detecting-panic-in-the-data" class="level3" data-number="3.4.6">
+<h3 data-number="3.4.6" class="anchored" data-anchor-id="detecting-panic-in-the-data"><span class="header-section-number">3.4.6</span> Detecting Panic in the Data</h3>
+<p>A central empirical challenge is that <strong>fundamental-based and panic-based runs look similar ex post</strong> — both involve large deposit outflows following bad news. The GP model suggests a way to distinguish them:</p>
+<ul>
+<li><p>If runs are <strong>purely fundamental-based</strong>, the response of deposits to bad performance should depend only on the <em>severity</em> of the bad news. The bank’s liability structure (how much liquidity it creates) should be irrelevant — depositors withdraw because assets are bad, not because they fear a coordination failure.</p></li>
+<li><p>If <strong>panic dynamics are present</strong>, the response should be <em>amplified</em> by liquidity mismatch. Banks with greater maturity transformation should exhibit a <em>stronger</em> sensitivity of outflows to the same fundamental shock, because the strategic complementarities are stronger.</p></li>
+</ul>
+<p>This is the identification strategy of Chen et al.&nbsp;(2022): they test whether the interaction between performance shocks and liquidity mismatch predicts deposit outflows. Finding that it does — and that the effect operates through <em>uninsured</em> deposits, not insured ones — provides evidence that the panic channel is empirically relevant.</p>
+</section>
+</section>
+<section id="anti-run-policies" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="anti-run-policies"><span class="header-section-number">3.5</span> Anti-Run Policies</h2>
+<p>Understanding whether runs are panic-based, fundamental-based, or (as the GP model suggests) both, is essential for designing the right policy response.</p>
+<section id="the-policy-challenge" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="the-policy-challenge"><span class="header-section-number">3.5.1</span> The Policy Challenge</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why the Nature of Runs Matters for Policy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The policy implications depend critically on <strong>what triggers the run</strong>:</p>
+<ul>
+<li><p><strong>If runs are purely panic-based</strong>: A credible announcement of government support is sufficient. Deposit insurance and lender-of-last-resort policies eliminate the bad equilibrium at no cost — off the equilibrium path, the guarantee is never invoked.</p></li>
+<li><p><strong>If runs are purely fundamental-based</strong>: Government support constitutes a <strong>bailout</strong> of a failing institution. Ex ante policies like capital requirements and supervisory oversight are more appropriate. Runs serve a disciplining function, and eliminating them may encourage excessive risk-taking.</p></li>
+<li><p><strong>If both forces operate</strong> (as in Goldstein-Pauzner): Policy must address <em>both</em> the panic region (through liquidity backstops) <em>and</em> the insolvency region (through prudential regulation). The optimal policy mix depends on the relative size of each region.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="suspension-of-convertibility" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="suspension-of-convertibility"><span class="header-section-number">3.5.2</span> Suspension of Convertibility</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Mechanism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Suppose the bank announces in advance: <strong>“We will suspend withdrawals once a fraction <span class="math inline">\(\lambda\)</span> of deposits have been withdrawn.”</strong></p>
+<p>Then patient depositors know that no matter how many people try to withdraw, the bank will always have enough assets to pay <span class="math inline">\(c_2^*\)</span> at <span class="math inline">\(t=2\)</span>:</p>
+<p><span class="math display">\[
+r_2(\lambda) = \frac{(1 - \lambda c_1^*)R}{1 - \lambda} = c_2^* &gt; c_1^*
+\]</span></p>
+<p>Since waiting always dominates withdrawing, no patient depositor runs. <strong>The run equilibrium is eliminated.</strong></p>
+<p>In this case, suspension is a <strong>threat that need not be carried out</strong> — the mere announcement prevents the run.</p>
+</div>
+</div>
+<p><strong>Historical practice</strong>: Before the establishment of deposit insurance, banks in the United States regularly suspended convertibility during panics (Gorton, 1985). Between 1814 and 1907, the American banking system suspended convertibility eight times (Tirole, 2006).</p>
+<p><strong>Limitations of suspension</strong>:</p>
+<ol type="1">
+<li><p><strong>Aggregate uncertainty</strong>: If the fraction of impatient depositors <span class="math inline">\(\lambda\)</span> fluctuates and cannot be observed, the bank cannot set the suspension threshold perfectly. Some truly impatient depositors may be prevented from withdrawing.</p></li>
+<li><p><strong>Moral hazard</strong>: Suspension can be exploited by poorly managed banks. A bank whose assets have genuinely declined in value might suspend convertibility to prevent legitimate withdrawals, shielding its management from market discipline (Tirole, 2006). This is the fundamental-run problem: suspension is effective against panic but can be abused to mask insolvency.</p></li>
+<li><p><strong>Political unpopularity</strong>: When suspension actually occurs, it is deeply unpopular with depositors who genuinely need their funds.</p></li>
+</ol>
+</section>
+<section id="deposit-insurance" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="deposit-insurance"><span class="header-section-number">3.5.3</span> Deposit Insurance</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Mechanism
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A government deposit insurance scheme promises to pay every depositor the contractually specified amount — <span class="math inline">\(c_1^*\)</span> for early withdrawers, <span class="math inline">\(c_2^*\)</span> for late withdrawers — regardless of how many depositors withdraw.</p>
+<p>If depositors believe the guarantee is credible, there is no reason to run. Each patient depositor knows she will receive <span class="math inline">\(c_2^* &gt; c_1^*\)</span> at <span class="math inline">\(t=2\)</span> no matter what. <strong>The run equilibrium is eliminated.</strong></p>
+</div>
+</div>
+<p><strong>Why the government?</strong> Diamond (2007) emphasizes that deposit insurance requires <strong>taxation authority</strong> — the ability to take resources without prior contracts. A private insurer might itself face a run (or would need to hold enough liquid assets to cover systemic events, which defeats the purpose of liquidity creation). The government can provide a credible guarantee against large losses “that are usually off the equilibrium path without holding reserves to back up their promise.”</p>
+<p><strong>Advantages over suspension</strong>:</p>
+<ol type="1">
+<li><strong>Handles aggregate uncertainty</strong>: Even if <span class="math inline">\(\lambda\)</span> is random, deposit insurance pays the correct amount to each type</li>
+<li><strong>No disruption</strong>: Depositors can always withdraw when genuinely needed</li>
+<li><strong>Commitment</strong>: A deposit insurance <em>law</em> commits the government, unlike discretionary suspension policies</li>
+</ol>
+<p><strong>Costs and trade-offs</strong>:</p>
+<ol type="1">
+<li><p><strong>Moral hazard</strong>: If deposits are fully insured, depositors have no incentive to monitor the bank’s risk-taking. Banks may take excessive risks, knowing that losses are borne by the insurance fund (Barth, Caprio, and Levine, 2006).</p></li>
+<li><p><strong>Fiscal cost</strong>: When a bank does fail, the insurance fund (and ultimately taxpayers) bears the loss.</p></li>
+<li><p><strong>Coverage limits</strong>: In practice, deposit insurance covers up to a limit (currently $250,000 in the U.S.). Uninsured deposits remain vulnerable to runs.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Deposit Insurance in Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The U.S. established the Federal Deposit Insurance Corporation (FDIC) in 1933, following the bank failures of the Great Depression. Key features:</p>
+<ul>
+<li><strong>Coverage limit</strong>: Currently $250,000 per depositor per institution</li>
+<li><strong>Funded by premiums</strong>: Banks pay risk-based premiums to the Deposit Insurance Fund</li>
+<li><strong>Resolution authority</strong>: The FDIC can close failing banks and pay insured depositors</li>
+</ul>
+<p>The existence of FDIC insurance has virtually eliminated retail bank runs in the U.S. However, runs on <em>uninsured</em> deposits remain a significant risk, as demonstrated by the 2023 failure of Silicon Valley Bank.</p>
+</div>
+</div>
+<p><strong>The global games perspective on deposit insurance</strong>: In the Goldstein-Pauzner framework, deposit insurance <strong>reduces <span class="math inline">\(\theta^*\)</span></strong> — it shrinks the panic region by weakening the strategic complementarities among depositors. Davila and Goldstein (2023) show that the optimal level of insurance balances the benefit of a smaller panic region against the moral hazard cost of insulating depositors from risk. Their key finding: <strong>as long as bank failures happen in equilibrium and public funds are costly, unlimited deposit insurance is not optimal</strong>.</p>
+</section>
+<section id="lender-of-last-resort" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="lender-of-last-resort"><span class="header-section-number">3.5.4</span> Lender of Last Resort</h3>
+<p>A third mechanism, emphasized by Tirole (2006), is a <strong>credit line</strong> with the central bank or another financial institution. If patient depositors know that the bank can borrow to meet withdrawal demands without liquidating long-term assets, there is no reason to run.</p>
+<p>This is the principle behind <strong>central bank discount window lending</strong>: the central bank stands ready to lend to solvent but illiquid banks against good collateral, providing liquidity during panics. The principle dates to Bagehot (1873), who argued that in a crisis, the central bank should “lend freely, at a high rate, on good collateral.”</p>
+<p><strong>Limitation</strong>: A credit line from a private institution can protect against a run on a single bank, but not against a systemic run on the entire banking sector. Only the central bank (with money creation authority) can provide liquidity in a system-wide crisis (Tirole, 2006).</p>
+<p><strong>The Bagehot boundary</strong>: The Bagehot principle — lend to <em>solvent but illiquid</em> banks — maps directly onto the GP framework. The central bank should provide liquidity to banks in the panic region (<span class="math inline">\(\underline{\theta} &lt; \theta &lt; \theta^*\)</span>), where the bank is solvent but failing due to coordination failure. It should <em>not</em> provide liquidity to banks in the insolvency region (<span class="math inline">\(\theta &lt; \underline{\theta}\)</span>), where the run reflects genuine asset impairment. The difficulty, of course, is distinguishing the two in real time.</p>
+</section>
+<section id="capital-requirements-and-transparency" class="level3" data-number="3.5.5">
+<h3 data-number="3.5.5" class="anchored" data-anchor-id="capital-requirements-and-transparency"><span class="header-section-number">3.5.5</span> Capital Requirements and Transparency</h3>
+<p>The global games framework also clarifies the role of other regulatory tools:</p>
+<ol type="1">
+<li><p><strong>Capital requirements</strong> improve the bank’s ability to absorb losses, effectively raising <span class="math inline">\(\underline{\theta}\)</span> (expanding the solvency region). They may also reduce <span class="math inline">\(\theta^*\)</span> by making the bank less leveraged and thus less fragile to coordination failures.</p></li>
+<li><p><strong>Transparency</strong> has ambiguous effects. Better information about bank fundamentals (smaller <span class="math inline">\(\sigma\)</span>) makes the threshold sharper but does not eliminate the panic region. In some cases, more precise <em>public</em> information can actually <em>increase</em> fragility by coordinating depositors on negative signals (Morris and Shin, 2002). Private signals, by contrast, reduce the scope for coordination and may reduce fragility.</p></li>
+</ol>
+</section>
+</section>
+<section id="key-takeaways" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">3.6</span> Key Takeaways</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Main Insights
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Bank runs are an inherent consequence of liquidity creation</strong>: The same maturity transformation that makes banking valuable also creates the possibility of self-fulfilling panics (Diamond and Dybvig, 1983)</p></li>
+<li><p><strong>Multiple equilibria</strong>: The DD model has a good equilibrium (only impatient depositors withdraw) and a bad equilibrium (everyone withdraws). The bad equilibrium is self-fulfilling because of <strong>strategic complementarities</strong> among depositors</p></li>
+<li><p><strong>The tipping point</strong>: Runs become self-fulfilling once expected withdrawals exceed a critical threshold. In Diamond’s numerical example, the threshold is <span class="math inline">\(\hat{\lambda}^* = 0.5625\)</span></p></li>
+<li><p><strong>Fundamental vs.&nbsp;panic-based runs</strong>: Fundamental runs are driven by bad news about bank assets (dominant strategy); panic runs are driven by coordination failure among depositors (multiple equilibria). In practice, both forces operate simultaneously</p></li>
+<li><p><strong>Global games resolution</strong>: Goldstein and Pauzner (2005) show that introducing private information into the DD model generates a <strong>unique equilibrium</strong> with a threshold <span class="math inline">\(\theta^*\)</span> that depends on liquidity mismatch. Banks with greater maturity transformation have a larger panic region and are more fragile. The model can be tested empirically by examining whether liquidity mismatch amplifies the sensitivity of deposit outflows to bad performance</p></li>
+<li><p><strong>Anti-run policies</strong> must address both panic and fundamentals:</p>
+<ul>
+<li><strong>Suspension of convertibility</strong>: Eliminates the run equilibrium but may be costly with aggregate uncertainty and can mask insolvency</li>
+<li><strong>Deposit insurance</strong>: Shrinks the panic region by weakening strategic complementarities; optimal coverage balances fragility reduction against moral hazard (Davila and Goldstein, 2023)</li>
+<li><strong>Lender of last resort</strong>: Effective for solvent-but-illiquid banks in the panic region; the Bagehot challenge is distinguishing illiquidity from insolvency in real time</li>
+<li><strong>Capital requirements</strong>: Expand the solvency region and may reduce fragility</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="references" class="level2 appendix" data-number="3.7">
+<h2 class="appendix anchored" data-number="3.7" data-anchor-id="references"><span class="header-section-number">3.7</span> References</h2>
+<section id="primary-sources" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="primary-sources"><span class="header-section-number">3.7.1</span> Primary Sources</h3>
+<ul>
+<li><p><strong>Diamond, D. W., &amp; Dybvig, P. H. (1983)</strong>. Bank runs, deposit insurance, and liquidity. <em>Journal of Political Economy</em>, 91(3), 401-419.</p></li>
+<li><p><strong>Diamond, D. W. (2007)</strong>. Banks and liquidity creation: A simple exposition of the Diamond-Dybvig model. <em>Federal Reserve Bank of Richmond Economic Quarterly</em>, 93(2), 189-200.</p></li>
+<li><p><strong>Tirole, J. (2006)</strong>. <em>The Theory of Corporate Finance</em>. Princeton University Press. Chapter 12.3.</p></li>
+</ul>
+</section>
+<section id="fundamental-vs.-panic-based-runs-1" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="fundamental-vs.-panic-based-runs-1"><span class="header-section-number">3.7.2</span> Fundamental vs.&nbsp;Panic-Based Runs</h3>
+<ul>
+<li><p><strong>Chari, V. V., &amp; Jagannathan, R. (1988)</strong>. Banking panics, information, and rational expectations equilibrium. <em>Journal of Finance</em>, 43(3), 749-761.</p></li>
+<li><p><strong>Jacklin, C. J., &amp; Bhattacharya, S. (1988)</strong>. Distinguishing panics and information-based bank runs: Welfare and policy implications. <em>Journal of Political Economy</em>, 96(3), 568-592.</p></li>
+<li><p><strong>Allen, F., &amp; Gale, D. (1998)</strong>. Optimal financial crises. <em>Journal of Finance</em>, 53(4), 1245-1284.</p></li>
+<li><p><strong>Gorton, G. (1988)</strong>. Banking panics and business cycles. <em>Oxford Economic Papers</em>, 40(4), 751-781.</p></li>
+</ul>
+</section>
+<section id="global-games-and-bank-fragility" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="global-games-and-bank-fragility"><span class="header-section-number">3.7.3</span> Global Games and Bank Fragility</h3>
+<ul>
+<li><p><strong>Goldstein, I., &amp; Pauzner, A. (2005)</strong>. Demand deposit contracts and the probability of bank runs. <em>Journal of Finance</em>, 60(3), 1293-1328.</p></li>
+<li><p><strong>Carlsson, H., &amp; van Damme, E. (1993)</strong>. Global games and equilibrium selection. <em>Econometrica</em>, 61(5), 989-1018.</p></li>
+<li><p><strong>Morris, S., &amp; Shin, H. S. (1998)</strong>. Unique equilibrium in a model of self-fulfilling currency attacks. <em>American Economic Review</em>, 88(3), 587-597.</p></li>
+<li><p><strong>Morris, S., &amp; Shin, H. S. (2002)</strong>. Social value of public information. <em>American Economic Review</em>, 92(5), 1521-1534.</p></li>
+<li><p><strong>Goldstein, I. (2013)</strong>. Empirical literature on financial crises: Fundamentals vs.&nbsp;panic. In <em>The Evidence and Impact of Financial Globalization</em> (ed.&nbsp;G. Caprio), pp.&nbsp;523-534. Academic Press.</p></li>
+<li><p><strong>Chen, Q., Goldstein, I., Huang, Z., &amp; Vashishtha, R. (2022)</strong>. Liquidity transformation and fragility in the US banking sector. <em>Journal of Finance</em>, 77(4), 2001-2057.</p></li>
+</ul>
+</section>
+<section id="policy" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="policy"><span class="header-section-number">3.7.4</span> Policy</h3>
+<ul>
+<li><p><strong>Bagehot, W. (1873)</strong>. <em>Lombard Street: A Description of the Money Market</em>. London: Henry S. King &amp; Co.</p></li>
+<li><p><strong>Gorton, G. (1985)</strong>. Bank suspension of convertibility. <em>Journal of Monetary Economics</em>, 15(2), 177-193.</p></li>
+<li><p><strong>Barth, J. R., Caprio, G., &amp; Levine, R. (2006)</strong>. <em>Rethinking Bank Regulation: Till Angels Govern</em>. Cambridge University Press.</p></li>
+<li><p><strong>Davila, E., &amp; Goldstein, I. (2023)</strong>. Optimal deposit insurance. <em>Journal of Political Economy</em>, 131(7), 1676-1730.</p></li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -585,6 +1355,9 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../Notes/04_chapter4_empirical_evidence.html" class="pagination-link" aria-label="Empirical Evidence on Bank Runs and Failures">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Empirical Evidence on Bank Runs and Failures</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
