@@ -1194,7 +1194,39 @@ s^* = \frac{(\theta_S S + C + F - D) \cdot D}{F \cdot D^U}
 </tbody>
 </table>
 <p>CLV’s thesis holds for the first definition. Drechsler et al.&nbsp;and Jiang et al.&nbsp;extend the analysis to the second: the run-fragile zone is wider than CLV recognized and self-fulfilling panics occur within it — but only on fundamentally weak banks, never randomly on unconditionally sound ones.</p>
-<p>The Jiang et al.&nbsp;and Drechsler et al.&nbsp;models share much in common — both feature <span class="math inline">\(F\)</span> and uninsured depositor runs. The key difference in emphasis is that Drechsler et al.&nbsp;focus on the <strong>risk management dilemma</strong> (hedging asset interest rate risk with <span class="math inline">\(F\)</span> creates run risk), while Jiang et al.&nbsp;focus on <strong>empirical measurement</strong> (marking to market the entire banking system and quantifying how many banks are vulnerable to solvency runs for different levels of depositor awareness <span class="math inline">\(s\)</span>).</p>
+<p>The Jiang et al.&nbsp;and Drechsler et al.&nbsp;models share the same basic premise — both say the deposit franchise <span class="math inline">\(F\)</span> is a conditional asset that exists only while depositors stay — but they differ in an institutionally important way: <strong>who runs and how much of <span class="math inline">\(F\)</span> is destroyed</strong>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Who runs</th>
+<th>Franchise destroyed</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Drechsler et al.</strong></td>
+<td>All runnable depositors treated as a single class</td>
+<td>Entire <span class="math inline">\(F\)</span></td>
+<td>Run closes bank → franchise gone completely</td>
+</tr>
+<tr class="even">
+<td><strong>Jiang et al.</strong></td>
+<td>Only <em>uninsured</em> depositors; insured depositors stay (FDIC guarantees)</td>
+<td>Fraction <span class="math inline">\(\frac{D^U}{D} \cdot F\)</span></td>
+<td>Partial destruction — franchise on insured deposits <span class="math inline">\(D^I\)</span> survives</td>
+</tr>
+</tbody>
+</table>
+<p>This is not a minor modeling detail. FDIC insurance immunizes a portion of the franchise from run risk: the franchise on insured deposits is safe because those depositors have no incentive to run regardless. Only the franchise on uninsured deposits — the <span class="math inline">\(D^U/D\)</span> fraction — is at risk. This is why Jiang et al.’s panic region width is <span class="math inline">\(\frac{D^U \cdot F}{D \cdot S}\)</span>, which shrinks toward zero as <span class="math inline">\(D^U \to 0\)</span>.</p>
+<p>The difference in emphasis follows from this institutional distinction. Drechsler et al.&nbsp;focus on the <strong>risk management dilemma</strong>: the franchise hedges interest rate risk (rising rates increase <span class="math inline">\(F\)</span>, offsetting MTM asset losses), but this hedge is illusory — it collapses if deposits run. The policy lesson is about treating <span class="math inline">\(F\)</span> as a contingent, not permanent, asset in bank risk management. Jiang et al.&nbsp;focus on <strong>empirical measurement and cross-sectional fragility</strong>: since only the uninsured deposit share <span class="math inline">\(D^U/D\)</span> matters, two banks with identical MTM losses can have very different run vulnerability depending purely on their liability composition. This is what allows them to mark to market the entire banking system and quantify fragility bank by bank.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1285,7 +1317,8 @@ s^* = \frac{(\theta_S S + C + F - D) \cdot D}{F \cdot D^U}
 </section>
 <section id="extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005" class="level3" data-number="4.3.3">
 <h3 data-number="4.3.3" class="anchored" data-anchor-id="extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005"><span class="header-section-number">4.3.3</span> Extension 3: Financial Fragility and the Run Threshold (Goldstein and Pauzner, 2005)</h3>
-<p>Extensions 1 and 2 introduced the deposit franchise <span class="math inline">\(F\)</span>, heterogeneous deposits (<span class="math inline">\(D^I\)</span>, <span class="math inline">\(D^U\)</span>), and the run threshold <span class="math inline">\(s^*\)</span>. But how does the <strong>width of the panic region</strong> relate to the <strong>likelihood of a run</strong>? Goldstein and Pauzner (2005) provide the formal link using global games theory.</p>
+<p>Extensions 1 and 2 introduced the deposit franchise <span class="math inline">\(F\)</span>, heterogeneous deposits (<span class="math inline">\(D^I\)</span>, <span class="math inline">\(D^U\)</span>), and the fragility index <span class="math inline">\(s^*\)</span>. But both extensions share the same limitation as CLV’s baseline framework: <strong>within the panic region, two pure-strategy equilibria coexist</strong> — a run equilibrium and a no-run equilibrium — and neither paper pins down which one occurs. Drechsler et al.&nbsp;characterize the four-region structure and its dependence on the deposit franchise; Jiang et al.&nbsp;characterize the panic region width as <span class="math inline">\(\frac{D^U F}{DS}\)</span> and the fragility index <span class="math inline">\(s^*\)</span>. But neither provides an equilibrium selection mechanism. For any bank inside the panic region, a run is possible but not inevitable — depositor beliefs determine the outcome, and both models leave this indeterminate.</p>
+<p>This is where Goldstein and Pauzner (2005) complete the framework. Their global games approach introduces private noisy signals that destroy the common knowledge sustaining multiple equilibria, pinning down a <strong>unique</strong> run threshold inside the panic region. G-P applies to all three frameworks: it tells us not just that a panic region exists and how wide it is, but <em>where within it</em> the run threshold falls — and how that threshold shifts as the panic region widens.</p>
 <p>Recall that in the CLV framework with global games, noisy private signals about <span class="math inline">\(\theta\)</span> pin down a unique run threshold <span class="math inline">\(\theta^*\)</span> inside the panic region:</p>
 <p><span class="math display">\[
 \theta^{Solvency} &lt; \theta^* &lt; \theta^{Liquidity}
