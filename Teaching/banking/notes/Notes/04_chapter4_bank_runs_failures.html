@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.21">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Bank Runs and Failures – Banking</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Notes/04_chapter4_supplement.html" rel="next">
+<link href="../Notes/03_chapter3_bank_runs.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-27c261d06b905028a18691de25d09dde.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Notes/01_chapter1_what_is_a_bank.html">Fundamentals of Banking</a></li><li class="breadcrumb-item"><a href="../Notes/04_chapter4_bank_runs_failures.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bank Runs and Failures</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Banking</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Fundamentals of Banking</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/01_chapter1_what_is_a_bank.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Economic Role of Banks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/02_chapter2_liquidity_creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Liquidity Creation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/03_chapter3_bank_runs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bank Runs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/04_chapter4_bank_runs_failures.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bank Runs and Failures</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/04_chapter4_supplement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bank Runs and Failures: Supplement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#part-1-historical-waves-of-bank-failures" id="toc-part-1-historical-waves-of-bank-failures" class="nav-link active" data-scroll-target="#part-1-historical-waves-of-bank-failures">Part 1: Historical Waves of Bank Failures</a>
+  <ul class="collapse">
+  <li><a href="#the-central-question-why-do-banks-fail" id="toc-the-central-question-why-do-banks-fail" class="nav-link" data-scroll-target="#the-central-question-why-do-banks-fail"><span class="header-section-number">4.1</span> The Central Question: Why Do Banks Fail?</a></li>
+  </ul></li>
+  <li><a href="#part-2-an-illustrative-framework" id="toc-part-2-an-illustrative-framework" class="nav-link" data-scroll-target="#part-2-an-illustrative-framework">Part 2: An Illustrative Framework</a>
+  <ul class="collapse">
+  <li><a href="#the-traditional-framework-liquidity-versus-solvency" id="toc-the-traditional-framework-liquidity-versus-solvency" class="nav-link" data-scroll-target="#the-traditional-framework-liquidity-versus-solvency"><span class="header-section-number">4.2</span> The Traditional Framework: Liquidity versus Solvency</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">4.2.1</span> Setup</a></li>
+  <li><a href="#the-depositors-decision" id="toc-the-depositors-decision" class="nav-link" data-scroll-target="#the-depositors-decision"><span class="header-section-number">4.2.2</span> The Depositor’s Decision</a></li>
+  <li><a href="#receivership-and-value-destruction" id="toc-receivership-and-value-destruction" class="nav-link" data-scroll-target="#receivership-and-value-destruction"><span class="header-section-number">4.2.3</span> Receivership and Value Destruction</a></li>
+  <li><a href="#three-regions-of-bank-health" id="toc-three-regions-of-bank-health" class="nav-link" data-scroll-target="#three-regions-of-bank-health"><span class="header-section-number">4.2.4</span> Three Regions of Bank Health</a></li>
+  <li><a href="#pinning-down-the-run-threshold" id="toc-pinning-down-the-run-threshold" class="nav-link" data-scroll-target="#pinning-down-the-run-threshold"><span class="header-section-number">4.2.5</span> Pinning Down the Run Threshold</a></li>
+  <li><a href="#testable-hypotheses" id="toc-testable-hypotheses" class="nav-link" data-scroll-target="#testable-hypotheses"><span class="header-section-number">4.2.6</span> Testable Hypotheses</a></li>
+  </ul></li>
+  <li><a href="#the-march-2023-banking-crisis-motivating-the-extensions" id="toc-the-march-2023-banking-crisis-motivating-the-extensions" class="nav-link" data-scroll-target="#the-march-2023-banking-crisis-motivating-the-extensions"><span class="header-section-number">4.3</span> The March 2023 Banking Crisis: Motivating the Extensions</a>
+  <ul class="collapse">
+  <li><a href="#extension-1-deposit-franchise-runs-drechsler-savov-schnabl-and-wang-2025" id="toc-extension-1-deposit-franchise-runs-drechsler-savov-schnabl-and-wang-2025" class="nav-link" data-scroll-target="#extension-1-deposit-franchise-runs-drechsler-savov-schnabl-and-wang-2025"><span class="header-section-number">4.3.1</span> Extension 1: Deposit Franchise Runs (Drechsler, Savov, Schnabl, and Wang, 2025)</a></li>
+  <li><a href="#extension-2-solvency-runs-with-liquid-assets-jiang-matvos-piskorski-and-seru-2024" id="toc-extension-2-solvency-runs-with-liquid-assets-jiang-matvos-piskorski-and-seru-2024" class="nav-link" data-scroll-target="#extension-2-solvency-runs-with-liquid-assets-jiang-matvos-piskorski-and-seru-2024"><span class="header-section-number">4.3.2</span> Extension 2: Solvency Runs with Liquid Assets (Jiang, Matvos, Piskorski, and Seru, 2024)</a></li>
+  <li><a href="#extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005" id="toc-extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005" class="nav-link" data-scroll-target="#extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005"><span class="header-section-number">4.3.3</span> Extension 3: Financial Fragility and the Run Threshold (Goldstein and Pauzner, 2005)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Notes/01_chapter1_what_is_a_bank.html">Fundamentals of Banking</a></li><li class="breadcrumb-item"><a href="../Notes/04_chapter4_bank_runs_failures.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bank Runs and Failures</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bank Runs and Failures</span></h1>
+<p class="subtitle lead">Solvency vs.&nbsp;Liquidity</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In the previous chapters, we showed that banks create value by transforming illiquid assets into liquid deposits, and that this same transformation makes them vulnerable to self-fulfilling runs. The Diamond-Dybvig model demonstrates that bank runs can constitute an equilibrium — but it leaves open a critical empirical question: <strong>do runs actually cause bank failures, or do banks fail because they are fundamentally insolvent?</strong></p>
+<section id="part-1-historical-waves-of-bank-failures" class="level1 unnumbered">
+<h1 class="unnumbered">Part 1: Historical Waves of Bank Failures</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CLV_2026_figure1.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Figure 1 (Correia, Luck, and Verner, 2026): Bank Failures, With and Without Runs, 1863–2024</figcaption>
+</figure>
+</div>
+<p><strong>Key takeaways from Figure 1:</strong></p>
+<ul>
+<li>The U.S. banking system has repeatedly experienced major waves of bank failures, with spikes during the Panic of 1893, the 1920s agricultural downturn, the Great Depression, and the Global Financial Crisis. Each crisis reignites the age-old debate about whether bank failures are driven by <strong>illiquidity or insolvency</strong>.</li>
+<li>Runs in failing banks were <strong>common before deposit insurance</strong>. The median failing bank lost 14% of its deposits before failure, and one-quarter of failures involved deposit outflows greater than 20%.</li>
+<li>Although the FDIC era has witnessed major waves of bank failure, <strong>failures involving runs have become much less common</strong>. After the founding of the FDIC, failing banks only lose around 2% of their deposits before failure.</li>
+<li>Deposit insurance has changed <strong>how</strong> banks fail. It reduces the scope for runs that impose discipline on insolvent banks. As a result, bank failures in the modern banking system are usually <strong>supervisory decisions</strong> rather than market-driven runs.</li>
+</ul>
+<section id="the-central-question-why-do-banks-fail" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="the-central-question-why-do-banks-fail"><span class="header-section-number">4.1</span> The Central Question: Why Do Banks Fail?</h2>
+<p>Figure 1 raises a fundamental question: <strong>are bank failures driven by illiquidity or insolvency?</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The Two Views
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>The Liquidity View:</strong> Bank failures stem from runs on otherwise solvent banks. Depositors collectively withdraw from fundamentally sound institutions, forcing costly fire sales that render the bank insolvent. This is the classic Diamond-Dybvig (1983) mechanism studied in Chapters 2 and 3.</p>
+<p><strong>The Solvency View:</strong> Bank failures primarily reflect poor fundamentals — asset losses, weak capitalization, and bad management — regardless of whether depositors run. Banks fail because their assets cannot fully repay their liabilities, not because of a coordination failure among depositors.</p>
+</div>
+</div>
+<p>This distinction is not merely academic. It has profound implications for financial stability policy:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>If failures are liquidity-driven:</strong></p>
+<ul>
+<li>Deposit insurance and public liquidity provision may suffice</li>
+<li>Central bank lending (lender of last resort) can prevent costly failures</li>
+<li>The focus should be on stopping panics</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>If failures are solvency-driven:</strong></p>
+<ul>
+<li>Policies must ensure banks are well capitalized</li>
+<li>Liquidity support alone cannot prevent failures</li>
+<li>The focus should be on restoring solvency after adverse shocks</li>
+<li>Capital requirements and supervision are paramount</li>
+</ul>
+</div>
+</div>
+<p>In this chapter, we synthesize the empirical evidence on this question, drawing primarily on the comprehensive review by Correia, Luck, and Verner (2026). Their conclusion is striking: <strong>bank failures — both with and without runs — are almost always related to poor fundamentals</strong>. Runs can accelerate the failure of already-weak banks, but they rarely cause the failure of fundamentally sound institutions.</p>
+<p>The key evidence is in Figure 2 below, which tracks four bank fundamentals in the five years before failure for all national banks from 1863 to 1934, separately for failures with a run (deposit outflows &gt;7.5%) and without a run:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CLV_2026_figure2.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption><strong>Figure 2:</strong> <em>Failing Banks Exhibit Deteriorating Fundamentals Irrespective of a Run.</em> Average bank financial ratios estimated from regressions with year fixed effects. Groups: failures with a run (red), failures without a run (blue/teal), surviving banks (yellow). Sample: national banks, 1863–1934. Source: Correia, Luck, and Verner (2026).</figcaption>
+</figure>
+</div>
+<p>Four findings stand out:</p>
+<ul>
+<li><strong>Profitability</strong> (panel a, surplus/equity) declines steadily for failing banks starting five years before failure. The gradual onset over years rules out a sudden panic as the primary trigger.</li>
+<li><strong>Asset quality</strong> (panel b, NPL/loans) deteriorates well before failure and accelerates sharply in the final two years — a direct signal of fundamental weakness building up.</li>
+<li><strong>Deposit reliance</strong> (panel d, deposits/assets) drifts gradually lower, consistent with depositors slowly reacting to weakness rather than a sudden run-driven cliff.</li>
+<li><strong>The crucial finding across all four panels</strong>: banks that fail <em>with</em> a run (red) look virtually identical to those that fail <em>without</em> a run (blue). Runs do not select healthier banks for failure — they strike already-weak ones.</li>
+</ul>
+<p>To formalize this distinction, we turn to an illustrative framework. The framework makes precise where CLV’s finding sits: in the historical evidence, failures clustered in the <em>fundamentally insolvent</em> zone, not in the <em>panic zone</em> where runs cause the failure of otherwise viable banks. We then extend the framework to incorporate deposit franchise value (Drechsler, Savov, Schnabl, and Wang, 2025) and solvency runs driven by mark-to-market losses (Jiang, Matvos, Piskorski, and Seru, 2024). These extensions raise a pointed challenge: <strong>features of modern banking — low deposit betas, high uninsured leverage, and liquid long-duration portfolios — may widen the panic zone substantially, making CLV’s historical conclusion less applicable today</strong>. We then turn to the full 160-year body of evidence and the policy implications.</p>
+</section>
+</section>
+<section id="part-2-an-illustrative-framework" class="level1 unnumbered">
+<h1 class="unnumbered">Part 2: An Illustrative Framework</h1>
+<section id="the-traditional-framework-liquidity-versus-solvency" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="the-traditional-framework-liquidity-versus-solvency"><span class="header-section-number">4.2</span> The Traditional Framework: Liquidity versus Solvency</h2>
+<p>We begin with a simple illustrative framework from Correia, Luck, and Verner (2026) that summarizes key themes from the theoretical literature on bank runs and failures (see, e.g., Diamond and Dybvig, 1983; Morris and Shin, 2003; Rochet and Vives, 2004; Goldstein and Pauzner, 2005). The framework distinguishes between fundamentally insolvent banks (that would have failed even absent a run) and banks whose failure was <em>caused</em> by a run (that would have survived absent sudden withdrawals).</p>
+<section id="setup" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">4.2.1</span> Setup</h3>
+<p>There are two dates <span class="math inline">\(t \in \{1, 2\}\)</span>. At <span class="math inline">\(t = 1\)</span>, a bank holds a mix of liquid risk-free cash <span class="math inline">\(C\)</span> and illiquid risky loans <span class="math inline">\(L\)</span>, financed by deposits <span class="math inline">\(D\)</span> and equity <span class="math inline">\(E\)</span>. Total initial assets are:</p>
+<p><span class="math display">\[
+A = C + L = D + E
+\]</span></p>
+<p>We assume that this initial capital structure is exogenous. Crucially, we assume that <span class="math inline">\(D &gt; C\)</span>, so the bank lacks the liquid funds to pay all depositors at once in the initial period. There is a continuum of risk-neutral depositors, each holding one unit of deposits. There is no discounting, deposits pay no interest, and the return on cash is zero.</p>
+<p>The gross return on loans is <span class="math inline">\(\theta\)</span>, a deterministic parameter observable to all depositors at <span class="math inline">\(t = 1\)</span>. Thus, at <span class="math inline">\(t = 2\)</span> the bank’s loan portfolio equals <span class="math inline">\(\theta L\)</span>.</p>
+</section>
+<section id="the-depositors-decision" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="the-depositors-decision"><span class="header-section-number">4.2.2</span> The Depositor’s Decision</h3>
+<p>The only decision in the model is each depositor <span class="math inline">\(i\)</span>’s choice at <span class="math inline">\(t = 1\)</span> to maintain or withdraw their funds after observing <span class="math inline">\(\theta\)</span>. This variable is <span class="math inline">\(d_i \in \{0, 1\}\)</span>, with <span class="math inline">\(d_i = 1\)</span> indicating withdrawal.</p>
+<p>The bank can only serve depositors using its cash holdings. The loan portfolio is illiquid at <span class="math inline">\(t = 1\)</span>. We assume <strong>sequential service</strong> of withdrawals: depositors who withdraw while the bank is liquid receive full repayment; those who withdraw when it is illiquid receive only a pro rata share in receivership.</p>
+<p>Denote the total amount of withdrawal requests in the initial period as <span class="math inline">\(w = \int d_i \, di\)</span>.</p>
+</section>
+<section id="receivership-and-value-destruction" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="receivership-and-value-destruction"><span class="header-section-number">4.2.3</span> Receivership and Value Destruction</h3>
+<p>The key friction is that if the bank runs out of cash in this period, <span class="math inline">\(w &gt; C\)</span>, the bank is placed into receivership. In receivership, the loan portfolio’s value is reduced to <span class="math inline">\((1 - \rho)\theta L\)</span>. The reduction in value <span class="math inline">\(\rho\)</span> captures the notion that the value of loans may be higher when held within the bank than outside of it, e.g., due to the inalienability of a banker’s human capital (Diamond, 1984; Hart and Moore, 1994; Diamond and Rajan, 2001).</p>
+</section>
+<section id="three-regions-of-bank-health" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="three-regions-of-bank-health"><span class="header-section-number">4.2.4</span> Three Regions of Bank Health</h3>
+<section id="region-1-fundamental-insolvency" class="level4" data-number="4.2.4.1">
+<h4 data-number="4.2.4.1" class="anchored" data-anchor-id="region-1-fundamental-insolvency"><span class="header-section-number">4.2.4.1</span> Region 1: Fundamental Insolvency</h4>
+<p>The bank is <strong>fundamentally insolvent</strong> when its assets cannot fully repay depositors, so it would default even without withdrawals. This occurs when:</p>
+<p><span class="math display">\[
+\theta L + C &lt; D \implies \theta &lt; \frac{D - C}{L}
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Definition: Solvency Threshold
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\theta^{Solvency} \equiv \frac{D - C}{L}
+\]</span></p>
+<p>When <span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>, the bank is fundamentally insolvent. It will be optimal for each depositor to withdraw even if others do not, as the sequential service constraint implies a chance of full repayment by arriving at the front of the queue. Thus, <strong>a bank run necessarily follows</strong> for <span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>.</p>
+</div>
+</div>
+</section>
+<section id="region-3-safe-from-runs" class="level4" data-number="4.2.4.2">
+<h4 data-number="4.2.4.2" class="anchored" data-anchor-id="region-3-safe-from-runs"><span class="header-section-number">4.2.4.2</span> Region 3: Safe from Runs</h4>
+<p>When is a bank run an equilibrium even if the bank is not fundamentally insolvent (<span class="math inline">\(\theta &gt; \theta^{Solvency}\)</span>)? Illiquidity occurs when withdrawal requests <span class="math inline">\(w\)</span> exceed available cash (<span class="math inline">\(w &gt; C\)</span>). If the bank becomes illiquid, its remaining liabilities are <span class="math inline">\(D - C\)</span>. The bank is then placed into receivership, and the value of the loan portfolio at <span class="math inline">\(t = 2\)</span> becomes <span class="math inline">\((1 - \rho)\theta L\)</span>.</p>
+<p>For a run <strong>not</strong> to be an equilibrium, the bank must have enough funds to pay all remaining liabilities at <span class="math inline">\(t = 2\)</span>. This is the case if <span class="math inline">\((1 - \rho)\theta L \geq D - C\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Definition: Liquidity Threshold
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\theta^{Liquidity} \equiv \frac{D - C}{(1 - \rho)L} &gt; \theta^{Solvency} = \frac{D - C}{L}
+\]</span></p>
+<p>When <span class="math inline">\(\theta &gt; \theta^{Liquidity}\)</span>, the bank can always meet its obligations even in the worst case (all depositors run and the loan portfolio suffers the receivership discount). In this region, <strong>no run can occur as an equilibrium</strong> because depositors know they will be repaid regardless.</p>
+</div>
+</div>
+</section>
+<section id="region-2-the-panic-region" class="level4" data-number="4.2.4.3">
+<h4 data-number="4.2.4.3" class="anchored" data-anchor-id="region-2-the-panic-region"><span class="header-section-number">4.2.4.3</span> Region 2: The Panic Region</h4>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The Panic Region: <span class="math inline">\(\theta^{Solvency} \leq \theta &lt; \theta^{Liquidity}\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For <span class="math inline">\(\theta\)</span> in this intermediate range, <strong>self-fulfilling runs constitute an equilibrium</strong>. If a bank fails with <span class="math inline">\(\theta\)</span> in this range, the panic run itself is the cause of failure, as the bank would have survived absent withdrawals. In contrast, for <span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>, the bank run is merely the consequence of imminent failure.</p>
+</div>
+</div>
+<p>The following diagram illustrates these three regions:</p>
+<div style="margin: 30px 0;">
+  <svg width="700" height="220" style="margin: 0 auto; display: block;">
+    <!-- Main axis -->
+    <line x1="50" y1="120" x2="650" y2="120" stroke="black" stroke-width="2"></line>
+    <text x="665" y="125" font-size="14" font-style="italic">θ</text>
+
+    <!-- Region 1: Insolvency (red) -->
+    <rect x="50" y="85" width="200" height="35" fill="#ffcccc" stroke="#cc0000" stroke-width="1"></rect>
+    <text x="150" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#cc0000">Always Fails</text>
+
+    <!-- Region 2: Panic region (orange) -->
+    <rect x="250" y="85" width="170" height="35" fill="#fff3cd" stroke="#ff9800" stroke-width="1"></rect>
+    <text x="335" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#e65100">Panic Region</text>
+
+    <!-- Region 3: Safe (green) -->
+    <rect x="420" y="85" width="230" height="35" fill="#d4edda" stroke="#28a745" stroke-width="1"></rect>
+    <text x="535" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#155724">Always Survives</text>
+
+    <!-- Threshold markers -->
+    <line x1="250" y1="80" x2="250" y2="140" stroke="#cc0000" stroke-width="2.5"></line>
+    <text x="250" y="165" font-size="13" text-anchor="middle" font-style="italic">θ<tspan font-size="9" baseline-shift="super">Solvency</tspan></text>
+
+    <line x1="420" y1="80" x2="420" y2="140" stroke="#ff9800" stroke-width="2.5"></line>
+    <text x="420" y="165" font-size="13" text-anchor="middle" font-style="italic">θ<tspan font-size="9" baseline-shift="super">Liquidity</tspan></text>
+
+    <!-- Global games threshold -->
+    <line x1="350" y1="80" x2="350" y2="140" stroke="#6a1b9a" stroke-width="2" stroke-dasharray="6,3"></line>
+    <text x="350" y="185" font-size="12" text-anchor="middle" font-style="italic" fill="#6a1b9a">θ*</text>
+    <text x="350" y="200" font-size="10" text-anchor="middle" fill="#6a1b9a">(global games)</text>
+
+    <!-- Labels below regions -->
+    <text x="150" y="55" font-size="10" text-anchor="middle" fill="#cc0000">Run is consequence</text>
+    <text x="150" y="68" font-size="10" text-anchor="middle" fill="#cc0000">of insolvency</text>
+    <text x="335" y="55" font-size="10" text-anchor="middle" fill="#e65100">Run is cause</text>
+    <text x="335" y="68" font-size="10" text-anchor="middle" fill="#e65100">of failure</text>
+    <text x="535" y="55" font-size="10" text-anchor="middle" fill="#155724">No run</text>
+    <text x="535" y="68" font-size="10" text-anchor="middle" fill="#155724">equilibrium</text>
+
+    <!-- Low θ and high θ labels -->
+    <text x="50" y="145" font-size="10" fill="gray">Low θ (weak)</text>
+    <text x="590" y="145" font-size="10" fill="gray">High θ (strong)</text>
+
+    <!-- Arrow for direction -->
+    <defs>
+      <marker id="arrow-theta" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="black"></path>
+      </marker>
+    </defs>
+  </svg>
+</div>
+</section>
+</section>
+<section id="pinning-down-the-run-threshold" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5" class="anchored" data-anchor-id="pinning-down-the-run-threshold"><span class="header-section-number">4.2.5</span> Pinning Down the Run Threshold</h3>
+<p>In the panic region <span class="math inline">\([\theta^{Solvency}, \theta^{Liquidity})\)</span>, there are two pure-strategy equilibria: one where a bank run occurs and one where there is no run. The literature provides two approaches to pin down the probability of failure.</p>
+<p><strong>Approach 1: Sunspot Equilibria.</strong> Depositors coordinate on a publicly observed random “sunspot” variable (Diamond and Dybvig, 1983; Cole and Kehoe, 2000; Peck and Shell, 2003). The probability of the sunspot could be constant (runs equally likely for all banks in this range) or perhaps more realistically, declining in <span class="math inline">\(\theta\)</span> — so runs are more likely in weaker banks (Ennis and Keister, 2003; Gertler and Kiyotaki, 2015).</p>
+<p><strong>Approach 2: Global Games.</strong> Relaxing the common knowledge assumption, each agent receives a slightly noisy private signal of <span class="math inline">\(\theta\)</span> (Morris and Shin, 1998, 2003; Rochet and Vives, 2004; Goldstein and Pauzner, 2005). This results in a unique threshold equilibrium where all agents withdraw when <span class="math inline">\(\theta\)</span> falls short of a cutoff:</p>
+<p><span class="math display">\[
+\theta^* \in (\theta^{Solvency}, \theta^{Liquidity})
+\]</span></p>
+<p>Importantly, this implies the occurrence of <em>panic runs</em> that cause the failure of banks that would have survived absent the run — when <span class="math inline">\(\theta \in (\theta^{Solvency}, \theta^*)\)</span>. The run threshold <span class="math inline">\(\theta^*\)</span> depends on parameters such as <span class="math inline">\(\rho\)</span> that do not affect fundamental solvency but do affect the degree of strategic complementarity among depositors.</p>
+</section>
+<section id="testable-hypotheses" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6" class="anchored" data-anchor-id="testable-hypotheses"><span class="header-section-number">4.2.6</span> Testable Hypotheses</h3>
+<p>We now derive empirical predictions from this illustrative framework.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Hypothesis 1: Weak Fundamentals and Failures
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Bank failures are more likely among banks with weak fundamentals (low <span class="math inline">\(\theta\)</span>).</em></p>
+<p>The first insight is that <span class="math inline">\(\theta\)</span> must be sufficiently low for a bank failure to occur. If <span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>, a run and failure are unavoidable. If fundamentals are very strong, <span class="math inline">\(\theta &gt; \theta^{Liquidity}\)</span>, the bank never fails.</p>
+<p>Note that since <span class="math inline">\(D - C = L - E\)</span>, both <span class="math inline">\(\theta^{Solvency}\)</span> and <span class="math inline">\(\theta^{Liquidity}\)</span> are decreasing in the capital ratio <span class="math inline">\(E/L\)</span>. Hence, <strong>higher capital ratios reduce the likelihood of both fundamental and run-triggered failures</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Hypothesis 2: Recovery Rates and Insolvency
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Recovery rates for depositors are increasing in bank fundamentals <span class="math inline">\(\theta\)</span> and are thus lower in fundamentally insolvent banks than in panic-induced failures.</em></p>
+<p>The pro rata share paid out to depositors in receivership is <span class="math inline">\((1 - \rho)\theta L / (D - C)\)</span>, which is increasing in <span class="math inline">\(\theta\)</span>. If <span class="math inline">\(\rho\)</span> is known, the recovery rate in receivership can allow one to infer information about <span class="math inline">\(\theta\)</span> and thus whether the bank was fundamentally insolvent.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Hypothesis 3: Interbank Liquidity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Interbank liquidity provision reduces the scope for runs to cause bank failures.</em></p>
+<p>Suppose at <span class="math inline">\(t = 1\)</span> the bank can raise additional cash <span class="math inline">\(Z\)</span> through wholesale or interbank funding, where <span class="math inline">\(Z \leq \lambda \theta L\)</span> and <span class="math inline">\(\lambda \in [1 - \rho, 1]\)</span> captures frictions in the interbank market. With a deep interbank market, the threshold for self-fulfilling runs becomes lower:</p>
+<p><span class="math display">\[
+\theta^{Liquidity, Interbank} \equiv \frac{D - C}{\lambda L} \leq \theta^{Liquidity}
+\]</span></p>
+<p>The range of fundamentals for which runs can cause insolvency is shrinking in the depth of the interbank market <span class="math inline">\(\lambda\)</span>. In the extreme case where <span class="math inline">\(\lambda = 1\)</span>, self-fulfilling runs never constitute an equilibrium.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Hypothesis 4: Sleepy Depositors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>If enough depositors are sleepy, banks can be insolvent but liquid, increasing the predictability of failure.</em></p>
+<p>Let <span class="math inline">\(\overline{D}\)</span> denote the depositors who never withdraw. If sufficiently many depositors are sleepy such that <span class="math inline">\(D - \overline{D} \leq C\)</span>, then the bank avoids receivership even if all run-prone depositors withdraw. Even if <span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>, the bank is not closed by a run at <span class="math inline">\(t = 1\)</span> and fails only in <span class="math inline">\(t = 2\)</span>. Bank failure at <span class="math inline">\(t = 2\)</span> is predictable in <span class="math inline">\(t = 1\)</span>.</p>
+<p>More generally, a larger mass of sleepy depositors weakens strategic complementarities among run-prone depositors and reduces the scope for self-fulfilling runs.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="the-march-2023-banking-crisis-motivating-the-extensions" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-march-2023-banking-crisis-motivating-the-extensions"><span class="header-section-number">4.3</span> The March 2023 Banking Crisis: Motivating the Extensions</h2>
+<p>The traditional CLV framework was developed to explain 160 years of U.S. bank failures, and the evidence (presented in Parts 3–7 below) overwhelmingly supports its central conclusion: bank failures are fundamentally about solvency. But the March 2023 banking turmoil — the failures of Silicon Valley Bank, Signature Bank, and First Republic Bank in rapid succession — revealed features of modern bank fragility that the traditional framework does not fully capture.</p>
+<p>Several observations from March 2023 motivate extensions to the baseline framework:</p>
+<ol type="1">
+<li><p><strong>Liquid assets, not illiquid loans.</strong> The banks that failed held large portfolios of Treasury bonds and agency MBS — perfectly liquid securities with no receivership discount (<span class="math inline">\(\rho \approx 0\)</span>). In the traditional framework, <span class="math inline">\(\rho = 0\)</span> eliminates the panic region entirely. Yet these banks clearly experienced self-fulfilling run dynamics.</p></li>
+<li><p><strong>Deposit franchise dependence.</strong> These banks paid deposit rates far below market rates, creating enormous intangible franchise values (<span class="math inline">\(F\)</span>). Their solvency on a going-concern basis depended on retaining this franchise — an asset that vanishes in a run. The traditional framework’s balance sheet (<span class="math inline">\(C + L = D + E\)</span>) does not account for this off-balance-sheet asset.</p></li>
+<li><p><strong>Systematic losses from monetary tightening.</strong> The Federal Reserve’s aggressive rate increases in 2022–2023 reduced the mark-to-market value of fixed-rate securities across the entire banking system. Unlike traditional idiosyncratic loan losses (low <span class="math inline">\(\theta\)</span> for a particular bank), these losses were <strong>systematic</strong> — all banks holding duration were affected simultaneously.</p></li>
+<li><p><strong>Uninsured deposit composition as the key differentiator.</strong> Many banks suffered similar mark-to-market losses, but only those with extreme uninsured deposit concentration faced run pressure. It was the <strong>composition</strong> of liabilities — not just the quality of assets — that determined which banks were vulnerable.</p></li>
+</ol>
+<p>These observations motivate four extensions to the traditional framework, each building on the CLV structure while introducing features specific to modern banking.</p>
+<section id="extension-1-deposit-franchise-runs-drechsler-savov-schnabl-and-wang-2025" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="extension-1-deposit-franchise-runs-drechsler-savov-schnabl-and-wang-2025"><span class="header-section-number">4.3.1</span> Extension 1: Deposit Franchise Runs (Drechsler, Savov, Schnabl, and Wang, 2025)</h3>
+<p>CLV’s empirical finding — that bank failures overwhelmingly reflect deteriorating fundamentals, with the panic zone rarely populated in practice — was established for a banking system where deposits were relatively homogeneous and banks’ going-concern value was modest. Modern banking has two features that change this calculus significantly: banks earn large rents from their deposit franchise, and a rising share of deposits is uninsured and therefore run-prone. Drechsler, Savov, Schnabl, and Wang (2025) show that these features <strong>widen the panic zone below <span class="math inline">\(\theta^{Solvency}\)</span></strong>, creating a new class of run-fragile banks that CLV’s framework does not capture.</p>
+<p>The illustrative framework above treats bank assets as consisting solely of cash <span class="math inline">\(C\)</span> and loans with observable return <span class="math inline">\(\theta\)</span>. In practice, however, banks possess another valuable asset that does not appear on the balance sheet: the <strong>deposit franchise</strong>. Drechsler, Savov, Schnabl, and Wang (2025) develop a model of <strong>deposit franchise runs</strong> that enriches the solvency-liquidity framework in an important way.</p>
+<section id="the-deposit-franchise-as-an-intangible-asset" class="level4" data-number="4.3.1.1">
+<h4 data-number="4.3.1.1" class="anchored" data-anchor-id="the-deposit-franchise-as-an-intangible-asset"><span class="header-section-number">4.3.1.1</span> The Deposit Franchise as an Intangible Asset</h4>
+<p>Banks typically pay deposit rates well below market interest rates. The net present value of this below-market funding — the stream of future profits from maintaining the deposit base — constitutes the <strong>deposit franchise value</strong> <span class="math inline">\(F\)</span>. This franchise value is an intangible going-concern asset: it exists only as long as the bank continues to operate and retain its deposits.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Definition: Deposit Franchise Value
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The deposit franchise value is approximately:</p>
+<p><span class="math display">\[
+F \approx \frac{(1 - \beta) \cdot r \cdot D^U}{\delta}
+\]</span></p>
+<p>where <span class="math inline">\(\beta\)</span> is the <strong>deposit beta</strong> (sensitivity of deposit rates to market rates), <span class="math inline">\(r\)</span> is the market interest rate, <span class="math inline">\(D^U\)</span> is uninsured deposits, and <span class="math inline">\(\delta\)</span> is a discount rate. The franchise value is larger when:</p>
+<ul>
+<li><strong>Deposit beta is low</strong> (<span class="math inline">\(\beta\)</span> small): the bank pays far below market rates</li>
+<li><strong>Uninsured deposits are large</strong> (<span class="math inline">\(D^U\)</span> large): more deposits generating below-market funding</li>
+<li><strong>Interest rates are high</strong> (<span class="math inline">\(r\)</span> large): wider spread between market rates and deposit rates</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="how-the-deposit-franchise-modifies-the-framework" class="level4" data-number="4.3.1.2">
+<h4 data-number="4.3.1.2" class="anchored" data-anchor-id="how-the-deposit-franchise-modifies-the-framework"><span class="header-section-number">4.3.1.2</span> How the Deposit Franchise Modifies the Framework</h4>
+<p>Incorporating the deposit franchise into our illustrative framework changes the bank’s value as follows:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Without franchise (CLV baseline):</strong></p>
+<ul>
+<li>No-run value: <span class="math inline">\(\theta L + C - D\)</span></li>
+<li>Run value: <span class="math inline">\((1-\rho)\theta L + C - D\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>With franchise (Drechsler et al.):</strong></p>
+<ul>
+<li>No-run value: <span class="math inline">\(\theta L + C + F - D\)</span></li>
+<li>Run value: <span class="math inline">\((1-\rho)\theta L + C - D\)</span></li>
+</ul>
+</div>
+</div>
+<p>The critical asymmetry is that <span class="math inline">\(F\)</span> is a <strong>conditional asset</strong>: worth <span class="math inline">\(F\)</span> when deposits stay, worth <strong>zero</strong> the instant they run. This changes the two zone boundaries asymmetrically:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 25%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Threshold</th>
+<th>Formula</th>
+<th>Effect of <span class="math inline">\(F\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\theta^{Solvency}\)</span> — lower boundary of run-fragile zone</td>
+<td><span class="math inline">\(\dfrac{D - C - \mathbf{F}}{L}\)</span></td>
+<td><strong>Shifts left</strong> by <span class="math inline">\(F/L\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\theta^{Liquidity}\)</span> — upper boundary of run-fragile zone</td>
+<td><span class="math inline">\(\dfrac{D - C}{(1-\rho)L}\)</span></td>
+<td><strong>Unchanged</strong> (<span class="math inline">\(F = 0\)</span> in a run)</td>
+</tr>
+</tbody>
+</table>
+<p>Because <span class="math inline">\(F\)</span> vanishes in the run state, the liquidation threshold is completely unaffected. The franchise therefore rescues some banks from “certain failure” into “conditionally viable” — but conditional on depositors <em>not</em> running. A bank with <span class="math inline">\(\theta^{Solvency}(F) \leq \theta &lt; \theta^{Solvency}\)</span> has:</p>
+<ul>
+<li>Positive going-concern equity: <span class="math inline">\(\theta L + C + F - D &gt; 0\)</span> ✓</li>
+<li>Negative run-state equity: <span class="math inline">\((1-\rho)\theta L + C - D &lt; 0\)</span> ✗</li>
+</ul>
+<p>It is solvent as a going concern and insolvent in liquidation at the same time. The lower boundary of the run-fragile zone shifts left; the upper boundary does not. The zone <strong>widens</strong>.</p>
+</section>
+<section id="four-regions-instead-of-three" class="level4" data-number="4.3.1.3">
+<h4 data-number="4.3.1.3" class="anchored" data-anchor-id="four-regions-instead-of-three"><span class="header-section-number">4.3.1.3</span> Four Regions Instead of Three</h4>
+<p>The deposit franchise extends CLV’s three regions to four by shifting the left boundary of the run-fragile zone:</p>
+<p><span class="math display">\[
+\theta^{Solvency}(F) &lt; \theta^{Solvency} &lt; \theta^{Liquidity}
+\]</span></p>
+<div style="margin: 30px 0;">
+  <svg width="750" height="240" style="margin: 0 auto; display: block;">
+    <!-- Main axis -->
+    <line x1="30" y1="120" x2="720" y2="120" stroke="black" stroke-width="2"></line>
+    <text x="730" y="125" font-size="14" font-style="italic">θ</text>
+
+    <!-- Region 1: Always fails (red) -->
+    <rect x="30" y="85" width="140" height="35" fill="#ffcccc" stroke="#cc0000" stroke-width="1"></rect>
+    <text x="100" y="107" font-size="11" text-anchor="middle" font-weight="bold" fill="#cc0000">Always Fails</text>
+
+    <!-- Region 2: Franchise-dependent (purple) -->
+    <rect x="170" y="85" width="160" height="35" fill="#e8daef" stroke="#6a1b9a" stroke-width="1"></rect>
+    <text x="250" y="100" font-size="10" text-anchor="middle" font-weight="bold" fill="#6a1b9a">Franchise-</text>
+    <text x="250" y="113" font-size="10" text-anchor="middle" font-weight="bold" fill="#6a1b9a">Dependent</text>
+
+    <!-- Region 3: Panic region (orange) -->
+    <rect x="330" y="85" width="160" height="35" fill="#fff3cd" stroke="#ff9800" stroke-width="1"></rect>
+    <text x="410" y="107" font-size="11" text-anchor="middle" font-weight="bold" fill="#e65100">Panic Region</text>
+
+    <!-- Region 4: Safe (green) -->
+    <rect x="490" y="85" width="230" height="35" fill="#d4edda" stroke="#28a745" stroke-width="1"></rect>
+    <text x="605" y="107" font-size="11" text-anchor="middle" font-weight="bold" fill="#155724">Always Survives</text>
+
+    <!-- Threshold markers -->
+    <line x1="170" y1="78" x2="170" y2="140" stroke="#6a1b9a" stroke-width="2.5"></line>
+    <text x="170" y="165" font-size="12" text-anchor="middle" font-style="italic" fill="#6a1b9a">θ<tspan font-size="8" baseline-shift="super">Solvency</tspan>(F)</text>
+
+    <line x1="330" y1="78" x2="330" y2="140" stroke="#cc0000" stroke-width="2.5"></line>
+    <text x="330" y="165" font-size="12" text-anchor="middle" font-style="italic">θ<tspan font-size="8" baseline-shift="super">Solvency</tspan></text>
+
+    <line x1="490" y1="78" x2="490" y2="140" stroke="#ff9800" stroke-width="2.5"></line>
+    <text x="490" y="165" font-size="12" text-anchor="middle" font-style="italic">θ<tspan font-size="8" baseline-shift="super">Liquidity</tspan></text>
+
+    <!-- Labels above regions -->
+    <text x="100" y="55" font-size="9" text-anchor="middle" fill="#cc0000">Insolvent even</text>
+    <text x="100" y="67" font-size="9" text-anchor="middle" fill="#cc0000">with franchise</text>
+
+    <text x="250" y="55" font-size="9" text-anchor="middle" fill="#6a1b9a">Book-value insolvent;</text>
+    <text x="250" y="67" font-size="9" text-anchor="middle" fill="#6a1b9a">cannot survive a run</text>
+
+    <text x="410" y="55" font-size="9" text-anchor="middle" fill="#e65100">Book-value solvent;</text>
+    <text x="410" y="67" font-size="9" text-anchor="middle" fill="#e65100">can't survive a run</text>
+
+    <text x="605" y="55" font-size="9" text-anchor="middle" fill="#155724">Solvent even</text>
+    <text x="605" y="67" font-size="9" text-anchor="middle" fill="#155724">in liquidation</text>
+
+    <!-- Low θ and high θ labels -->
+    <text x="30" y="145" font-size="10" fill="gray">Low θ</text>
+    <text x="670" y="145" font-size="10" fill="gray">High θ</text>
+  </svg>
+</div>
+<table class="table-striped caption-top table">
+<caption>Four Regions of Bank Health with Deposit Franchise Value</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 29%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Region</th>
+<th>Range</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Always fails</strong></td>
+<td><span class="math inline">\(\theta &lt; \theta^{Solvency}(F)\)</span></td>
+<td>Insolvent even including franchise value</td>
+</tr>
+<tr class="even">
+<td><strong>Franchise-dependent</strong></td>
+<td><span class="math inline">\(\theta^{Solvency}(F) \leq \theta &lt; \theta^{Solvency}\)</span></td>
+<td>Book-value insolvent; cannot survive a run</td>
+</tr>
+<tr class="odd">
+<td><strong>Panic zone</strong> (CLV)</td>
+<td><span class="math inline">\(\theta^{Solvency} \leq \theta &lt; \theta^{Liquidity}\)</span></td>
+<td>Book-value solvent; can’t survive a run</td>
+</tr>
+<tr class="even">
+<td><strong>Always survives</strong></td>
+<td><span class="math inline">\(\theta \geq \theta^{Liquidity}\)</span></td>
+<td>Solvent even in liquidation</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>franchise-dependent zone</strong> is the key contribution of Drechsler et al.&nbsp;(2025). Banks in this region appear solvent only because their deposit franchise value covers the gap between assets and liabilities. But this solvency is illusory — it is contingent on depositor confidence. Any shock that triggers withdrawals destroys the franchise and reveals the underlying book-value insolvency.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why Adding an Asset Can Widen the Run-Fragile Zone
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The student’s natural intuition is: <em>franchise value is an asset → it adds to equity → higher equity → safer bank → smaller panic region.</em> This is correct for <strong>unconditional</strong> assets, but wrong for a run-destroyable one. The contrast with regular capital makes the difference precise:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Going-concern equity</th>
+<th>Run-state equity</th>
+<th>Lower boundary <span class="math inline">\(\theta^{Solvency}\)</span></th>
+<th>Upper boundary <span class="math inline">\(\theta^{Liquidity}\)</span></th>
+<th>Run-fragile zone width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Regular capital <span class="math inline">\(\Delta C\)</span></strong></td>
+<td><span class="math inline">\(+\Delta C\)</span></td>
+<td><span class="math inline">\(+\Delta C\)</span></td>
+<td>Shifts left <span class="math inline">\(\Delta C/L\)</span></td>
+<td>Shifts left <span class="math inline">\(\Delta C/((1{-}\rho)L)\)</span></td>
+<td><strong>Unchanged</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Franchise <span class="math inline">\(F\)</span></strong></td>
+<td><span class="math inline">\(+F\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td>Shifts left <span class="math inline">\(F/L\)</span></td>
+<td><strong>Unchanged</strong></td>
+<td><strong>Widens by <span class="math inline">\(F/L\)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>Regular capital helps in both states, so both boundaries shift left together and the zone width is unchanged. The franchise helps only in the no-run state, so only the lower boundary moves — the upper boundary stays fixed because <span class="math inline">\(F\)</span> contributes nothing to liquidation value. The zone <strong>widens</strong>.</p>
+<p>The franchise-dependent zone is therefore best understood as a <strong>downward extension of the panic region</strong>. In both zones the same self-fulfilling logic applies: deposits staying → bank survives; deposits running → bank fails. The only difference is what covers the gap:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 43%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>What covers the gap</th>
+<th>What a run destroys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Panic zone</strong> (<span class="math inline">\(\theta^{Solvency} \leq \theta &lt; \theta^{Liquidity}\)</span>)</td>
+<td>Loan liquidation value</td>
+<td>Fire sale discount <span class="math inline">\(\rho\theta L\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Franchise-dependent zone</strong> (<span class="math inline">\(\theta^{Solvency}(F) \leq \theta &lt; \theta^{Solvency}\)</span>)</td>
+<td>Franchise value <span class="math inline">\(F\)</span></td>
+<td>The entire franchise</td>
+</tr>
+</tbody>
+</table>
+<p>Adding <span class="math inline">\(F\)</span> therefore <strong>widens the total run-fragile zone</strong> from <span class="math inline">\([\theta^{Solvency}, \theta^{Liquidity})\)</span> to <span class="math inline">\([\theta^{Solvency}(F), \theta^{Liquidity})\)</span>, an expansion of exactly <span class="math inline">\(F/L\)</span>:</p>
+<p><span class="math display">\[
+\underbrace{(\theta^{Liquidity} - \theta^{Solvency}(F))}_{\text{total run-fragile zone}} = \underbrace{(\theta^{Liquidity} - \theta^{Solvency})}_{\text{CLV panic region}} + \underbrace{\frac{F}{L}}_{\text{franchise extension}}
+\]</span></p>
+<p>A larger franchise → wider run-fragile zone → higher run threshold <span class="math inline">\(\theta^*\)</span> (Extension 3 below). The asset that protects the bank in normal times is precisely what expands its vulnerability to self-fulfilling runs.</p>
+</div>
+</div>
+</section>
+<section id="the-interest-rate-paradox" class="level4" data-number="4.3.1.4">
+<h4 data-number="4.3.1.4" class="anchored" data-anchor-id="the-interest-rate-paradox"><span class="header-section-number">4.3.1.4</span> The Interest Rate Paradox</h4>
+<p>The deposit franchise creates a natural <strong>interest rate hedge</strong>: when rates rise, asset values fall (mark-to-market losses on fixed-rate loans and securities) but the franchise value rises (wider spread between market rates and deposit rates). The bank’s total value may be stable even as <span class="math inline">\(\theta\)</span> declines.</p>
+<p>However, this hedge works <strong>only if deposits stay</strong>. If uninsured depositors run, the franchise is destroyed, and the bank is left with only its depreciated assets. This creates a paradox:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The Deposit Franchise Paradox
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Banks with the <strong>largest</strong> deposit franchise values are also the <strong>most fragile</strong>:</p>
+<ul>
+<li>A large <span class="math inline">\(F\)</span> shifts <span class="math inline">\(\theta^{Solvency}(F)\)</span> far below <span class="math inline">\(\theta^{Solvency}\)</span>, creating a wide franchise-dependent zone</li>
+<li>The bank appears healthy (because <span class="math inline">\(\theta &gt; \theta^{Solvency}(F)\)</span>) while being book-value insolvent (<span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span>)</li>
+<li>The gap between appearance and reality grows with the size of the franchise</li>
+<li>Since <span class="math inline">\(F\)</span> increases with interest rates, the franchise-dependent zone <strong>widens when rates rise</strong> — precisely when mark-to-market losses are largest</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="svb-through-the-franchise-lens" class="level4" data-number="4.3.1.5">
+<h4 data-number="4.3.1.5" class="anchored" data-anchor-id="svb-through-the-franchise-lens"><span class="header-section-number">4.3.1.5</span> SVB Through the Franchise Lens</h4>
+<p>Silicon Valley Bank is the canonical example of a deposit franchise run:</p>
+<ul>
+<li><strong>Low deposit beta</strong> (<span class="math inline">\(\beta \approx 0.15\)</span>): SVB paid far below market rates, creating an enormous franchise value</li>
+<li><strong>95%+ uninsured deposits</strong>: Nearly all of SVB’s franchise was <em>runnable</em></li>
+<li><strong>Long-duration assets</strong>: Heavy concentration in fixed-rate MBS and Treasuries</li>
+</ul>
+<p>When the Fed raised rates aggressively in 2022:</p>
+<ol type="1">
+<li>SVB’s asset values fell sharply (<span class="math inline">\(\theta\)</span> declined — over $15 billion in unrealized losses)</li>
+<li>SVB’s franchise value <span class="math inline">\(F\)</span> rose (wider deposit spread), offsetting the asset losses on paper</li>
+<li>SVB had positive <strong>reported (GAAP) book equity</strong> — it was not book-value insolvent in the traditional regulatory sense (<span class="math inline">\(\theta &gt; \theta^{Solvency}\)</span> on a GAAP basis). But once its liquid assets were marked to market, MTM losses (~$34B) exceeded book equity (~$16B), making it <strong>mark-to-market insolvent</strong> (<span class="math inline">\(\theta &lt; \theta^{Solvency}\)</span> on a comprehensive MTM basis)</li>
+<li>The March 2023 run destroyed the franchise, instantly revealing the insolvency</li>
+</ol>
+<p><strong>Contrast with Citigroup</strong>: Citigroup also had a large volume of uninsured deposits, but it paid close to market rates (high <span class="math inline">\(\beta\)</span>). This meant a <strong>small franchise value</strong> <span class="math inline">\(F\)</span>, and hence a narrow franchise-dependent zone. Citigroup was not exposed to a deposit franchise run because its solvency did not depend on an intangible franchise asset.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Synthesis: Deposit Franchise Runs and the CLV Framework
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Drechsler et al.&nbsp;(2025) framework reinforces CLV’s central thesis while adding an important nuance:</p>
+<ul>
+<li><strong>CLV’s conclusion holds</strong>: Bank failures are fundamentally about solvency. SVB’s failure was not a run on a sound bank — it was a bank whose solvency depended on retaining a fragile intangible asset.</li>
+<li><strong>The nuance</strong>: “Solvency” has layers. A bank can be franchise-value solvent but book-value insolvent. The run doesn’t cause failure of a <em>truly</em> solvent bank — it destroys the <em>illusion</em> of solvency created by the deposit franchise.</li>
+<li><strong>The policy implication</strong>: Banks should hold capital sufficient to cover the potential loss of their uninsured deposit franchise. Risk management requires treating the franchise as a <strong>contingent</strong> asset, not a permanent one. Drechsler et al.&nbsp;(2025) suggest that banks can protect themselves by purchasing interest rate options or by increasing capital buffers as rates rise — ensuring that solvency does not depend on an asset that vanishes in a run.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="extension-2-solvency-runs-with-liquid-assets-jiang-matvos-piskorski-and-seru-2024" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="extension-2-solvency-runs-with-liquid-assets-jiang-matvos-piskorski-and-seru-2024"><span class="header-section-number">4.3.2</span> Extension 2: Solvency Runs with Liquid Assets (Jiang, Matvos, Piskorski, and Seru, 2024)</h3>
+<p>The CLV framework identifies asset illiquidity — the receivership discount <span class="math inline">\(\rho &gt; 0\)</span> — as the source of the panic region. If assets were perfectly liquid (<span class="math inline">\(\rho = 0\)</span>), the two thresholds <span class="math inline">\(\theta^{Solvency}\)</span> and <span class="math inline">\(\theta^{Liquidity}\)</span> would coincide and the panic region would vanish.</p>
+<p>Jiang, Matvos, Piskorski, and Seru (2024) show that this conclusion is premature. A panic region can arise <strong>even when <span class="math inline">\(\rho = 0\)</span></strong> through a different mechanism: the <strong>partial destruction of the deposit franchise</strong> by uninsured depositor runs. To see this, we extend the CLV balance sheet and combine it with the deposit franchise <span class="math inline">\(F\)</span> introduced by Drechsler et al.</p>
+<section id="extending-the-balance-sheet" class="level4" data-number="4.3.2.1">
+<h4 data-number="4.3.2.1" class="anchored" data-anchor-id="extending-the-balance-sheet"><span class="header-section-number">4.3.2.1</span> Extending the Balance Sheet</h4>
+<p>In practice, banks hold both illiquid loans and liquid marketable securities. Extend the CLV balance sheet by adding liquid securities <span class="math inline">\(S\)</span> (e.g., Treasury bonds, agency MBS):</p>
+<p><span class="math display">\[
+C + S + L = D + E \qquad \text{where } D = D^I + D^U
+\]</span></p>
+<p>Here <span class="math inline">\(S\)</span> denotes liquid securities (e.g., Treasuries, agency MBS) at <strong>book value</strong> and deposits split into insured <span class="math inline">\(D^I\)</span> and uninsured <span class="math inline">\(D^U\)</span>.</p>
+<p><strong>Two key variables are defined at the outset and used throughout:</strong></p>
+<ul>
+<li><p><span class="math inline">\(\theta_S = r_0 / r_f\)</span>: the <strong>fundamental parameter for securities</strong> — the ratio of the bond’s coupon rate <span class="math inline">\(r_0\)</span> to the current market yield <span class="math inline">\(r_f\)</span>. This is the securities analog of <span class="math inline">\(\theta\)</span> (the loan return) in the CLV framework. When the Fed raises rates (<span class="math inline">\(r_f &gt; r_0\)</span>), <span class="math inline">\(\theta_S &lt; 1\)</span>.</p></li>
+<li><p><strong>MtM loss</strong> <span class="math inline">\(= (1 - \theta_S) S\)</span>: the <strong>mark-to-market (unrealized) loss</strong> on the securities portfolio. This is the variable directly observable in data — it is the gap between book value <span class="math inline">\(S\)</span> and market value <span class="math inline">\(\theta_S S\)</span>.</p></li>
+</ul>
+<p>These securities are <strong>perfectly liquid</strong>: they can always be sold at <span class="math inline">\(\theta_S S\)</span> with no receivership discount (<span class="math inline">\(\rho = 0\)</span> for <span class="math inline">\(S\)</span>). The illiquid loans <span class="math inline">\(L\)</span> still carry the CLV discount <span class="math inline">\(\rho\)</span>. The March 2023 episode illustrates both variables concretely: the Fed’s rate increases compressed <span class="math inline">\(\theta_S\)</span> across the system, generating MtM losses that depositors could observe in public filings.</p>
+</section>
+<section id="how-the-extended-balance-sheet-changes-the-framework" class="level4" data-number="4.3.2.2">
+<h4 data-number="4.3.2.2" class="anchored" data-anchor-id="how-the-extended-balance-sheet-changes-the-framework"><span class="header-section-number">4.3.2.2</span> How the Extended Balance Sheet Changes the Framework</h4>
+<p>With three asset classes, the deposit franchise <span class="math inline">\(F\)</span>, and heterogeneous deposits, the no-run and run values become:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>CLV baseline (<span class="math inline">\(C + L\)</span> only):</strong></p>
+<ul>
+<li>No-run value: <span class="math inline">\(\theta L + C - D\)</span></li>
+<li>Run value: <span class="math inline">\((1-\rho)\theta L + C - D\)</span></li>
+<li>Wedge: <span class="math inline">\(\rho\theta L\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Extended (<span class="math inline">\(C + S + L\)</span>, with <span class="math inline">\(F\)</span>):</strong></p>
+<ul>
+<li>No-run value: <span class="math inline">\(\theta_S S + \theta L + C + F - D\)</span></li>
+<li>Run value: <span class="math inline">\(\theta_S S + (1-\rho)\theta L + C + F - \frac{D^U}{D}F - D\)</span></li>
+<li>Wedge: <span class="math inline">\(\rho\theta L + \frac{D^U}{D}F\)</span></li>
+</ul>
+</div>
+</div>
+<p>A run now destroys value through <strong>two channels simultaneously</strong>:</p>
+<ol type="1">
+<li><strong>Fire sale of illiquid loans</strong> (<span class="math inline">\(\rho\theta L\)</span>): CLV’s original mechanism — loans sold in receivership lose value</li>
+<li><strong>Franchise destruction on uninsured deposits</strong> (<span class="math inline">\(\frac{D^U}{D}F\)</span>): The franchise is proportional to deposits. When uninsured depositors (a mass <span class="math inline">\(D^U\)</span>) withdraw, the franchise on their deposits — equal to a fraction <span class="math inline">\(D^U/D\)</span> of the total franchise <span class="math inline">\(F\)</span> — is destroyed</li>
+</ol>
+<p>Note the important difference from Drechsler et al.: there, a run destroys the <strong>entire</strong> franchise <span class="math inline">\(F\)</span>. Here, only the franchise on <em>uninsured</em> deposits is destroyed (<span class="math inline">\(\frac{D^U}{D} F \leq F\)</span>). The franchise on insured deposits <span class="math inline">\(D^I\)</span> is preserved, because insured depositors have no incentive to run. This partial destruction is what allows the framework to generate a panic region whose width depends on the uninsured deposit share.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Two Types of Banks, Two Sources of Fragility
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a <strong>traditional bank</strong> with primarily illiquid loans (<span class="math inline">\(S \approx 0\)</span>): CLV’s <span class="math inline">\(\rho\)</span> mechanism dominates. The panic region exists because fire sales destroy loan value.</p>
+<p>For a <strong>modern bank</strong> with heavy securities holdings (<span class="math inline">\(L \approx 0\)</span>): Jiang’s franchise mechanism dominates. Even with <span class="math inline">\(\rho = 0\)</span> (all assets liquid), a panic region exists because the run destroys the franchise on runnable deposits.</p>
+<p>For a bank with both <span class="math inline">\(S\)</span> and <span class="math inline">\(L\)</span>: both mechanisms operate simultaneously, and the total wedge <span class="math inline">\(\rho\theta L + \frac{D^U}{D}F\)</span> is <strong>larger</strong> than either alone.</p>
+</div>
+</div>
+</section>
+<section id="special-case-suppressing-loan-illiquidity-l-0" class="level4" data-number="4.3.2.3">
+<h4 data-number="4.3.2.3" class="anchored" data-anchor-id="special-case-suppressing-loan-illiquidity-l-0"><span class="header-section-number">4.3.2.3</span> Special Case: Suppressing Loan Illiquidity (<span class="math inline">\(L = 0\)</span>)</h4>
+<p>To isolate the Jiang mechanism, suppose the bank holds <strong>no illiquid loans</strong> — all earning assets are liquid securities. Setting <span class="math inline">\(L = 0\)</span>, the bank holds <span class="math inline">\(C + S = D + E\)</span>, the receivership discount <span class="math inline">\(\rho\)</span> plays no role, and CLV’s fire-sale channel is shut down entirely. Despite <span class="math inline">\(\rho = 0\)</span>, the three-region structure survives:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Solvency and Liquidity Thresholds (Jiang et al., 2024)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\theta_S^{Solvency} = \frac{D - C - F}{S}
+\]</span></p>
+<p>The bank is fundamentally insolvent (even including its franchise value) when <span class="math inline">\(\theta_S\)</span> falls below this threshold. Note this coincides with <span class="math inline">\(\theta^{Solvency}(F)\)</span> from the Drechsler et al.&nbsp;extension — both incorporate <span class="math inline">\(F\)</span> in the going-concern value.</p>
+<p><span class="math display">\[
+\theta_S^{Liquidity} = \theta_S^{Solvency} + \frac{D^U F}{D S}
+\]</span></p>
+<p>Above this threshold, the bank survives even if all uninsured depositors run. We call this the <strong>liquid run threshold</strong> — it plays the same role as <span class="math inline">\(\theta^{Liquidity}\)</span> in the CLV framework (the upper bound of the panic region), but it arises from <strong>franchise destruction alone</strong>, not fire sales (<span class="math inline">\(\rho = 0\)</span>).</p>
+</div>
+</div>
+<p>The <strong>width of the panic region</strong> is:</p>
+<p><span class="math display">\[
+\theta_S^{Liquidity} - \theta_S^{Solvency} = \frac{D^U \cdot F}{D \cdot S}
+\]</span></p>
+<p>This is increasing in uninsured deposits (<span class="math inline">\(D^U\)</span>) and the franchise value (<span class="math inline">\(F\)</span>), and decreasing in the size of the securities portfolio (<span class="math inline">\(S\)</span>). The panic region is wider when the bank has more runnable funding relative to its liquid assets.</p>
+<p>The following diagram illustrates these three regions. Compare with the CLV diagram above: the axis is now <span class="math inline">\(\theta_S\)</span> (mark-to-market return on securities) rather than <span class="math inline">\(\theta\)</span> (loan return), and the panic region is created by franchise destruction rather than asset illiquidity:</p>
+<div style="margin: 30px 0;">
+  <svg width="700" height="240" style="margin: 0 auto; display: block;">
+    <!-- Main axis -->
+    <line x1="50" y1="120" x2="650" y2="120" stroke="black" stroke-width="2"></line>
+    <text x="665" y="125" font-size="14" font-style="italic">θ<tspan font-size="9" baseline-shift="sub">S</tspan></text>
+
+    <!-- Region 1: Insolvency (red) -->
+    <rect x="50" y="85" width="200" height="35" fill="#ffcccc" stroke="#cc0000" stroke-width="1"></rect>
+    <text x="150" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#cc0000">Always Fails</text>
+
+    <!-- Region 2: Panic region (orange) -->
+    <rect x="250" y="85" width="190" height="35" fill="#fff3cd" stroke="#ff9800" stroke-width="1"></rect>
+    <text x="345" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#e65100">Panic Region</text>
+
+    <!-- Region 3: Safe (green) -->
+    <rect x="440" y="85" width="210" height="35" fill="#d4edda" stroke="#28a745" stroke-width="1"></rect>
+    <text x="545" y="107" font-size="12" text-anchor="middle" font-weight="bold" fill="#155724">Always Survives</text>
+
+    <!-- Threshold markers -->
+    <line x1="250" y1="78" x2="250" y2="140" stroke="#cc0000" stroke-width="2.5"></line>
+    <text x="250" y="163" font-size="12" text-anchor="middle" font-style="italic">θ<tspan font-size="8" baseline-shift="sub">S</tspan><tspan font-size="8" baseline-shift="super">Solvency</tspan></text>
+
+    <line x1="440" y1="78" x2="440" y2="140" stroke="#ff9800" stroke-width="2.5"></line>
+    <text x="440" y="163" font-size="12" text-anchor="middle" font-style="italic">θ<tspan font-size="8" baseline-shift="sub">S</tspan><tspan font-size="8" baseline-shift="super">Liquidity</tspan></text>
+    <text x="440" y="178" font-size="9" text-anchor="middle" fill="#e65100">(liquid run)</text>
+
+    <!-- s* threshold (dashed, analogous to θ* in CLV) -->
+    <line x1="360" y1="78" x2="360" y2="140" stroke="#6a1b9a" stroke-width="2" stroke-dasharray="6,3"></line>
+    <text x="360" y="183" font-size="12" text-anchor="middle" font-style="italic" fill="#6a1b9a">s = s*</text>
+    <text x="360" y="198" font-size="10" text-anchor="middle" fill="#6a1b9a">(threshold awareness)</text>
+
+    <!-- Labels above regions -->
+    <text x="150" y="55" font-size="10" text-anchor="middle" fill="#cc0000">Insolvent even</text>
+    <text x="150" y="68" font-size="10" text-anchor="middle" fill="#cc0000">with franchise F</text>
+    <text x="345" y="48" font-size="10" text-anchor="middle" fill="#e65100">Franchise destruction</text>
+    <text x="345" y="61" font-size="10" text-anchor="middle" fill="#e65100">causes failure</text>
+    <text x="345" y="74" font-size="9" text-anchor="middle" fill="#e65100">(width = D<tspan font-size="7" baseline-shift="super">U</tspan>F / DS)</text>
+    <text x="545" y="55" font-size="10" text-anchor="middle" fill="#155724">Survives run;</text>
+    <text x="545" y="68" font-size="10" text-anchor="middle" fill="#155724">ρ = 0, no fire sales</text>
+
+    <!-- Low θ_S and high θ_S labels -->
+    <text x="50" y="145" font-size="10" fill="gray">Low θ<tspan font-size="7" baseline-shift="sub">S</tspan> (rates up)</text>
+    <text x="578" y="145" font-size="10" fill="gray">High θ<tspan font-size="7" baseline-shift="sub">S</tspan> (rates down)</text>
+
+    <!-- Annotation: ρ = 0 -->
+    <text x="345" y="225" font-size="11" text-anchor="middle" fill="#555" font-style="italic">Assets fully liquid (ρ = 0) — panic region exists from franchise destruction alone</text>
+  </svg>
+</div>
+<table class="table-striped caption-top table">
+<caption>Three Regions with Liquid Assets and Deposit Franchise (Jiang et al., 2024)</caption>
+<colgroup>
+<col style="width: 28%">
+<col style="width: 39%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Region</th>
+<th>Condition</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Fundamental insolvency</strong></td>
+<td><span class="math inline">\(\theta_S &lt; \theta_S^{Solvency}\)</span></td>
+<td>Insolvent even with franchise; fails regardless</td>
+</tr>
+<tr class="even">
+<td><strong>Panic region</strong></td>
+<td><span class="math inline">\(\theta_S^{Solvency} \leq \theta_S &lt; \theta_S^{Liquidity}\)</span></td>
+<td>Solvent if deposits stay; run destroys enough franchise to cause failure</td>
+</tr>
+<tr class="odd">
+<td><strong>Safe</strong></td>
+<td><span class="math inline">\(\theta_S \geq \theta_S^{Liquidity}\)</span></td>
+<td>Survives even if all awake uninsured depositors withdraw</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What Creates the Panic Region?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In CLV, the panic region exists because <span class="math inline">\(\rho &gt; 0\)</span>: fire sales destroy asset value. In Jiang et al., the panic region exists even though <span class="math inline">\(\rho = 0\)</span>: what creates the wedge is the partial destruction of <span class="math inline">\(F\)</span>. The width depends entirely on the <strong>liability side</strong>:</p>
+<ul>
+<li><strong>Uninsured deposits</strong> <span class="math inline">\(D^U\)</span>: more uninsured funding → larger fraction of <span class="math inline">\(F\)</span> at risk</li>
+<li><strong>Franchise value</strong> <span class="math inline">\(F\)</span>: larger franchise → more value destroyed per dollar of deposits that leave</li>
+<li><strong>Securities portfolio</strong> <span class="math inline">\(S\)</span> (denominator): smaller liquid asset base → each dollar of franchise destruction hits harder</li>
+</ul>
+<p>This is a fundamentally different source of fragility: <strong>it is the liability structure, not the asset structure, that creates the scope for self-fulfilling runs</strong>.</p>
+</div>
+</div>
+</section>
+<section id="generalizing-to-partial-depositor-awareness-the-s-threshold" class="level4" data-number="4.3.2.4">
+<h4 data-number="4.3.2.4" class="anchored" data-anchor-id="generalizing-to-partial-depositor-awareness-the-s-threshold"><span class="header-section-number">4.3.2.4</span> Generalizing to Partial Depositor Awareness: The <span class="math inline">\(s^*\)</span> Threshold</h4>
+<p>The model above sets <span class="math inline">\(s = 1\)</span> — all uninsured depositors are potential runners. Jiang et al.&nbsp;generalize this by allowing a fraction <span class="math inline">\(s \in [0,1]\)</span> of uninsured depositors to be “awake” (monitoring the bank and prepared to withdraw) and <span class="math inline">\((1-s)\)</span> to be “sleepy” (staying regardless). With this generalization:</p>
+<ul>
+<li>The run-state franchise destruction is <span class="math inline">\(\frac{s D^U}{D} F\)</span> (only awake depositors leave)</li>
+<li>The panic region narrows to width <span class="math inline">\(\frac{s D^U F}{D S}\)</span></li>
+<li>The formulas above correspond to <span class="math inline">\(s = 1\)</span></li>
+</ul>
+<p>Global games then pin down a threshold <span class="math inline">\(s^*\)</span>: the minimum fraction of awake depositors that makes a self-fulfilling run possible. Setting run value equal to zero:</p>
+<p><span class="math display">\[
+s^* = \frac{(\theta_S S + C + F - D) \cdot D}{F \cdot D^U}
+\]</span></p>
+<p>If <span class="math inline">\(s \leq s^*\)</span>, the bank survives even if all awake depositors run. If <span class="math inline">\(s &gt; s^*\)</span>, a self-fulfilling solvency run is possible. The index <span class="math inline">\((1 - s^*)\)</span> measures bank fragility: lower <span class="math inline">\(s^*\)</span> means a smaller shock to depositor confidence can trigger a run. Banks with more uninsured leverage, lower capitalization, or larger MtM losses have lower <span class="math inline">\(s^*\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Numerical Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a bank with <span class="math inline">\(C = \$10\)</span>B in cash and <span class="math inline">\(S = \$90\)</span>B in Treasury bonds paying 3% coupons (<span class="math inline">\(L = 0\)</span>), funded by <span class="math inline">\(D^I = \$10\)</span>B in insured deposits, <span class="math inline">\(D^U = \$80\)</span>B in uninsured deposits, and <span class="math inline">\(E = \$10\)</span>B in equity.</p>
+<p>Now suppose interest rates rise from 3% to 4%, so <span class="math inline">\(\theta_S = 3/4 = 0.75\)</span>. The mark-to-market value of securities falls to <span class="math inline">\(\theta_S S = \$67.5\)</span>B — an unrealized loss of $22.5B.</p>
+<p>The bank appears deeply underwater on a book basis (assets $77.5B vs.&nbsp;liabilities $90B). But the rate increase also widens deposit spreads, pushing the franchise to <span class="math inline">\(F = \$22.5\)</span>B.</p>
+<p><strong>No-run value:</strong> <span class="math inline">\(\theta_S S + C + F - D = 67.5 + 10 + 22.5 - 90 = \$10\)</span>B (book equity preserved!)</p>
+<p>The franchise perfectly hedges the asset loss. But this hedge is <strong>fragile</strong>:</p>
+<p><strong>Run value (all uninsured depositors withdraw, <span class="math inline">\(s=1\)</span>):</strong> <span class="math display">\[\theta_S S + C + F - \frac{D^U}{D}F - D = 10 - \frac{80}{90} \times 22.5 = 10 - 20 = -\$10\text{B}\]</span></p>
+<p>The bank <strong>fails</strong> if all uninsured depositors run. The $20B franchise destroyed exceeds the $10B no-run equity buffer.</p>
+<p><strong>But the bank is even more fragile</strong>: applying the generalized (<span class="math inline">\(s &lt; 1\)</span>) formula, the minimum fraction of awake depositors that triggers failure is:</p>
+<p><span class="math display">\[s^* = \frac{10 \times 90}{22.5 \times 80} = 0.5\]</span></p>
+<p>Even if only <strong>half</strong> of uninsured depositors are awake and run, the bank fails. The franchise hedge collapses once <span class="math inline">\(s &gt; s^* = 0.5\)</span> — a striking illustration of how self-fulfilling runs can occur well below full depositor awareness.</p>
+</div>
+</div>
+</section>
+<section id="monetary-policy-and-systematic-fragility" class="level4" data-number="4.3.2.5">
+<h4 data-number="4.3.2.5" class="anchored" data-anchor-id="monetary-policy-and-systematic-fragility"><span class="header-section-number">4.3.2.5</span> Monetary Policy and Systematic Fragility</h4>
+<p>The Jiang et al.&nbsp;framework adds three insights that go beyond the CLV baseline:</p>
+<ol type="1">
+<li><strong>The decline in <span class="math inline">\(\theta_S\)</span> is systematic</strong>: Rising interest rates reduce <span class="math inline">\(\theta_S\)</span> for <em>all</em> banks holding fixed-rate securities, not just idiosyncratically weak banks. This makes bank fragility a <strong>monetary policy</strong> problem — the central bank’s rate decisions shift the entire banking system along the <span class="math inline">\(\theta_S\)</span> spectrum</li>
+<li><strong>The deposit franchise simultaneously stabilizes and destabilizes</strong>: Higher rates increase <span class="math inline">\(F\)</span> (stabilizing the no-run value) <em>and</em> increase the franchise at risk <span class="math inline">\(\frac{D^U}{D}F\)</span> (widening the panic region). The larger the franchise, the more a bank can lose if uninsured depositors flee</li>
+<li><strong>Uninsured leverage <span class="math inline">\(D^U\)</span> determines fragility</strong>: Two banks with identical <span class="math inline">\(\theta_S\)</span> can have very different run vulnerability depending on their deposit composition. Banks with higher <span class="math inline">\(D^U\)</span> have lower <span class="math inline">\(s^*\)</span> — a smaller fraction of awake depositors is needed to trigger a run</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Empirical Magnitude: How Many Banks Were Vulnerable?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Jiang et al.&nbsp;(2024) mark to market the entire U.S. banking system’s assets as of Q1 2023 and find:</p>
+<ul>
+<li><strong>Aggregate mark-to-market losses</strong>: approximately <strong>$2.2 trillion</strong> below book values — on the order of aggregate bank capital</li>
+<li><strong>Average asset value decline</strong>: approximately <strong>10%</strong> across all banks</li>
+<li><strong>2,315 banks</strong> (with $11 trillion in assets) had marked-to-market asset values below their total non-equity liabilities</li>
+<li>With <strong>all uninsured depositors withdrawing</strong> (<span class="math inline">\(s = 1\)</span>): 1,619 banks would have negative insured deposit coverage, with aggregate assets of $4.9 trillion and a shortfall to the FDIC deposit insurance fund of $300 billion</li>
+<li>With only <strong>half withdrawing</strong> (<span class="math inline">\(s = 0.5\)</span>): approximately <strong>186 banks</strong> (holding $300 billion in assets) would not have sufficient remaining assets to repay insured depositors</li>
+</ul>
+<p><strong>SVB was not an outlier on losses</strong>: 10% of banks had larger unrealized losses, and 10% had worse capitalization. What distinguished SVB was its <strong>extreme uninsured leverage</strong> (<span class="math inline">\(D^U\)</span> in the 99th percentile) — only 1% of banks had a higher share of uninsured deposits. Over 78% of SVB’s assets were funded by uninsured deposits. The combination of moderate losses (low <span class="math inline">\(\theta_S\)</span>) with extreme uninsured dependence (high <span class="math inline">\(D^U\)</span>) created its vulnerability.</p>
+</div>
+</div>
+</section>
+<section id="connecting-the-three-frameworks" class="level4" data-number="4.3.2.6">
+<h4 data-number="4.3.2.6" class="anchored" data-anchor-id="connecting-the-three-frameworks"><span class="header-section-number">4.3.2.6</span> Connecting the Three Frameworks</h4>
+<p>The CLV, Drechsler et al., and Jiang et al.&nbsp;frameworks are complementary perspectives on the same phenomenon:</p>
+<table class="table-striped caption-top table">
+<caption>Three Complementary Frameworks on Bank Fragility</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 28%">
+<col style="width: 32%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Framework</th>
+<th>Source of fragility</th>
+<th>What creates the panic region</th>
+<th>Key parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CLV (2026)</strong></td>
+<td>Weak fundamentals (<span class="math inline">\(\theta\)</span> low)</td>
+<td>Asset illiquidity (<span class="math inline">\(\rho &gt; 0\)</span>)</td>
+<td>Receivership discount <span class="math inline">\(\rho\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Drechsler et al.&nbsp;(2025)</strong></td>
+<td>Franchise dependence</td>
+<td>Total franchise destruction (<span class="math inline">\(F\)</span> lost in run)</td>
+<td>Deposit beta <span class="math inline">\(\beta\)</span>, uninsured deposits <span class="math inline">\(D^U\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Jiang et al.&nbsp;(2024)</strong></td>
+<td>MtM losses + uninsured leverage</td>
+<td>Partial franchise destruction (<span class="math inline">\(\frac{D^U}{D}F\)</span> lost in run)</td>
+<td>Uninsured leverage <span class="math inline">\(D^U/D\)</span>, franchise <span class="math inline">\(F\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Unified Interpretation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All three frameworks share a common architecture but make distinct contributions:</p>
+<ul>
+<li><strong>CLV</strong> establishes that fundamental asset quality (<span class="math inline">\(\theta\)</span>) is the primary driver of failure historically. Their empirical finding: actual bank failures cluster in the <em>always-fails</em> zone, not the panic zone — supporting the view that runs target already-insolvent banks, not sound ones.</li>
+<li><strong>Drechsler et al.</strong> show that apparent solvency can rest on a fragile intangible asset (<span class="math inline">\(F\)</span>) that the run itself destroys, widening the run-fragile zone below CLV’s <span class="math inline">\(\theta^{Solvency}\)</span>.</li>
+<li><strong>Jiang et al.</strong> show how monetary tightening simultaneously reduces asset quality (<span class="math inline">\(\theta_S\)</span> falls system-wide) while the franchise <span class="math inline">\(F\)</span> creates both a hedge and a new vulnerability — making bank fragility a systematic, policy-induced phenomenon.</li>
+</ul>
+<p><strong>An important qualification on CLV’s “solvency thesis”:</strong> these frameworks do <em>not</em> say runs are purely revelatory with no causal role. They say runs are <em>non-random</em> — only banks with weakened fundamentals are in the run-fragile zone. But <strong>within</strong> that zone, the run IS the proximate cause of failure: a bank with positive going-concern equity would have survived without a run. Two distinct senses of “solvency” must be kept apart:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 33%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Threshold</th>
+<th>Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unconditional solvency</strong></td>
+<td><span class="math inline">\(\theta \geq \theta^{Liquidity}\)</span>: survives even in forced liquidation</td>
+<td>Runs cannot cause failure — CLV’s “truly sound” bank</td>
+</tr>
+<tr class="even">
+<td><strong>Conditional solvency</strong></td>
+<td><span class="math inline">\(\theta^{Solvency}(F) \leq \theta &lt; \theta^{Liquidity}\)</span>: survives only if deposits stay</td>
+<td>Runs ARE the proximate cause of failure — self-fulfilling within this zone</td>
+</tr>
+</tbody>
+</table>
+<p>CLV’s thesis holds for the first definition. Drechsler et al.&nbsp;and Jiang et al.&nbsp;extend the analysis to the second: the run-fragile zone is wider than CLV recognized and self-fulfilling panics occur within it — but only on fundamentally weak banks, never randomly on unconditionally sound ones.</p>
+<p>The Jiang et al.&nbsp;and Drechsler et al.&nbsp;models share much in common — both feature <span class="math inline">\(F\)</span> and uninsured depositor runs. The key difference in emphasis is that Drechsler et al.&nbsp;focus on the <strong>risk management dilemma</strong> (hedging asset interest rate risk with <span class="math inline">\(F\)</span> creates run risk), while Jiang et al.&nbsp;focus on <strong>empirical measurement</strong> (marking to market the entire banking system and quantifying how many banks are vulnerable to solvency runs for different levels of depositor awareness <span class="math inline">\(s\)</span>).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Are These Fundamental Failures or Panics?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A natural question: if JMPS and Drechsler et al.&nbsp;center everything on solvency, does that make the 2023 bank failures <strong>fundamental runs</strong> rather than <strong>panics</strong>?</p>
+<p>No — they remain self-fulfilling. The key is that each vulnerable bank has <strong>two genuine equilibria</strong>:</p>
+<ul>
+<li><strong>No-run equilibrium</strong>: deposits stay → bank holds assets to maturity and earns franchise rents → survives (going-concern equity positive)</li>
+<li><strong>Run equilibrium</strong>: deposits leave → franchise destroyed and/or liquid assets sold at MTM prices → fails (run-state equity negative)</li>
+</ul>
+<p>A <strong>fundamental failure</strong> has only one equilibrium: the bank fails regardless of depositor behavior. Here, <strong>depositor beliefs determine the outcome</strong> — the run is the proximate cause of failure, even though weak fundamentals determine <em>which</em> banks are exposed. This is a self-fulfilling solvency run, not a pure fundamental collapse.</p>
+<p>This places JMPS and Drechsler et al.&nbsp;in the same tradition as <strong>Goldstein and Pauzner (2005)</strong>, which also features self-fulfilling runs on “solvent but weak” banks. The three-zone architecture is identical:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 46%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>Fundamentals</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Always fails</td>
+<td>Too weak: insolvent in all states</td>
+<td>Failure regardless of beliefs</td>
+</tr>
+<tr class="even">
+<td><strong>Panic zone</strong></td>
+<td><strong>Intermediate: viable going concern, insolvent if run</strong></td>
+<td><strong>Determined by depositor beliefs</strong></td>
+</tr>
+<tr class="odd">
+<td>Always survives</td>
+<td>Strong: solvent even in liquidation</td>
+<td>Survival regardless of beliefs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The critical difference from Goldstein-Pauzner</strong>: G-P’s panic zone arises from <strong>asset illiquidity</strong> — fire-sale discounts (<span class="math inline">\(\rho &gt; 0\)</span>) make forced liquidation costly, so a sound bank can fail if runs trigger fire sales. JMPS and Drechsler et al.&nbsp;generate the same three-zone structure with <strong>fully liquid assets</strong> (<span class="math inline">\(\rho = 0\)</span>) through different mechanisms — MTM losses on liquid securities (JMPS) and the contingent deposit franchise (Drechsler et al.). This is precisely why the 2023 banking stress was a puzzle from G-P’s perspective: liquid assets should have eliminated the panic zone, yet self-fulfilling runs still occurred.</p>
+<p>The correct taxonomy:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 36%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Framework</th>
+<th>Panic zone mechanism</th>
+<th>Solvent but weak means…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>G-P (2005)</td>
+<td>Asset illiquidity (<span class="math inline">\(\rho &gt; 0\)</span>)</td>
+<td>GAAP-solvent; fire-sale insolvent</td>
+</tr>
+<tr class="even">
+<td>Drechsler et al.</td>
+<td>Contingent franchise <span class="math inline">\(F\)</span></td>
+<td>Going-concern solvent; book-value insolvent</td>
+</tr>
+<tr class="odd">
+<td>JMPS (2024)</td>
+<td>MTM losses on liquid assets</td>
+<td>GAAP-solvent; MTM-insolvent</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="extension-3-financial-fragility-and-the-run-threshold-goldstein-and-pauzner-2005"><span class="header-section-number">4.3.3</span> Extension 3: Financial Fragility and the Run Threshold (Goldstein and Pauzner, 2005)</h3>
+<p>Extensions 1 and 2 introduced the deposit franchise <span class="math inline">\(F\)</span>, heterogeneous deposits (<span class="math inline">\(D^I\)</span>, <span class="math inline">\(D^U\)</span>), and the run threshold <span class="math inline">\(s^*\)</span>. But how does the <strong>width of the panic region</strong> relate to the <strong>likelihood of a run</strong>? Goldstein and Pauzner (2005) provide the formal link using global games theory.</p>
+<p>Recall that in the CLV framework with global games, noisy private signals about <span class="math inline">\(\theta\)</span> pin down a unique run threshold <span class="math inline">\(\theta^*\)</span> inside the panic region:</p>
+<p><span class="math display">\[
+\theta^{Solvency} &lt; \theta^* &lt; \theta^{Liquidity}
+\]</span></p>
+<p>Goldstein and Pauzner (2005) show that <span class="math inline">\(\theta^*\)</span> can be expressed as:</p>
+<p><span class="math display">\[
+\theta^* = \theta^{Solvency} + \alpha \cdot \underbrace{(\theta^{Liquidity} - \theta^{Solvency})}_{\text{width of panic region}}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha \in (0,1)\)</span> depends on the payoff structure. The run threshold is shifted <strong>upward</strong> by a fraction <span class="math inline">\(\alpha\)</span> of the panic region width. A wider panic region means a higher <span class="math inline">\(\theta^*\)</span> — runs are triggered at <strong>better</strong> fundamentals, making failure more likely for any given <span class="math inline">\(\theta\)</span>.</p>
+<p>Goldstein and Pauzner interpret the width of the panic region as a measure of <strong>financial fragility</strong> (or equivalently, the degree of <strong>liquidity creation</strong>). Greater financial fragility → wider panic region → higher <span class="math inline">\(\theta^*\)</span> → runs more likely. This is the formal sense in which banks that create more liquidity are more fragile.</p>
+<section id="applying-the-goldstein-pauzner-result-to-the-three-frameworks" class="level4" data-number="4.3.3.1">
+<h4 data-number="4.3.3.1" class="anchored" data-anchor-id="applying-the-goldstein-pauzner-result-to-the-three-frameworks"><span class="header-section-number">4.3.3.1</span> Applying the Goldstein-Pauzner Result to the Three Frameworks</h4>
+<p>In each framework, the panic region width depends on different parameters, and the run threshold inherits this dependence:</p>
+<p><strong>CLV (illiquid loans):</strong> The panic region width in <span class="math inline">\(\theta\)</span>-space is <span class="math inline">\(\frac{\rho(D-C)}{(1-\rho)L}\)</span>. Financial fragility is measured by <span class="math inline">\(\rho\)</span> — the degree of asset illiquidity. The run threshold is:</p>
+<p><span class="math display">\[
+\theta^* = \theta^{Solvency} + \alpha \cdot \frac{\rho(D-C)}{(1-\rho)L}
+\]</span></p>
+<p>Higher <span class="math inline">\(\rho\)</span> → wider panic region → higher <span class="math inline">\(\theta^*\)</span> → runs at better fundamentals.</p>
+<p><strong>Jiang (liquid securities, <span class="math inline">\(L = 0\)</span>):</strong> The panic region width in <span class="math inline">\(\theta_S\)</span>-space is <span class="math inline">\(\frac{sD^UF}{DS}\)</span>. Financial fragility is measured by <strong>uninsured leverage</strong> <span class="math inline">\(D^U/D\)</span> and the <strong>franchise value</strong> <span class="math inline">\(F\)</span>. The run threshold is:</p>
+<p><span class="math display">\[
+\theta_S^* = \theta_S^{Solvency} + \alpha \cdot \frac{sD^UF}{DS}
+\]</span></p>
+<p>Higher <span class="math inline">\(D^U/D\)</span> or higher <span class="math inline">\(F\)</span> → wider panic region → higher <span class="math inline">\(\theta_S^*\)</span> → runs triggered at better fundamentals.</p>
+<p><strong>General case (<span class="math inline">\(C + S + L\)</span>):</strong> The total wedge is <span class="math inline">\(\rho\theta L + \frac{sD^U}{D}F\)</span>. Both asset illiquidity <em>and</em> franchise destruction contribute to financial fragility. The run threshold in this generalized space reflects both sources.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The Goldstein-Pauzner Insight in the Extended Framework
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <strong>width of the panic region</strong> and the <strong>run threshold</strong> <span class="math inline">\(\theta^*\)</span> (or <span class="math inline">\(\theta_S^*\)</span>) are tightly linked: a wider panic region shifts the run threshold upward, making runs more likely for any given level of fundamentals. In the extended framework:</p>
+<table class="table-striped caption-top table">
+<caption>Financial Fragility, Panic Region Width, and the Run Threshold</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 26%">
+<col style="width: 38%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Framework</th>
+<th>Panic region width</th>
+<th>Financial fragility measure</th>
+<th>Run threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>CLV</strong></td>
+<td><span class="math inline">\(\frac{\rho(D-C)}{(1-\rho)L}\)</span></td>
+<td>Asset illiquidity <span class="math inline">\(\rho\)</span></td>
+<td><span class="math inline">\(\theta^* \uparrow\)</span> as <span class="math inline">\(\rho \uparrow\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>Jiang</strong> (<span class="math inline">\(L = 0\)</span>)</td>
+<td><span class="math inline">\(\frac{sD^UF}{DS}\)</span></td>
+<td>Uninsured leverage <span class="math inline">\(\frac{D^U}{D}\)</span></td>
+<td><span class="math inline">\(\theta_S^* \uparrow\)</span> as <span class="math inline">\(\frac{D^U}{D} \uparrow\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>General</strong></td>
+<td><span class="math inline">\(\rho\theta L + \frac{sD^U}{D}F\)</span></td>
+<td>Both <span class="math inline">\(\rho\)</span> and <span class="math inline">\(\frac{D^U}{D}\)</span></td>
+<td>Both raise <span class="math inline">\(\theta^*\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>This is the formal basis for Goldstein’s interpretation: <strong>uninsured deposits are a measure of financial fragility</strong> because they widen the panic region and raise the run threshold in fundamentals space. Banks with higher <span class="math inline">\(D^U/D\)</span> do not just have a wider <em>range</em> of <span class="math inline">\(\theta_S\)</span> values at which runs can occur — they have runs triggered at <em>better</em> fundamentals (<span class="math inline">\(\theta_S^*\)</span> is higher), making failure more likely for any given <span class="math inline">\(\theta_S\)</span>.</p>
+<p>For a given bank with fundamentals <span class="math inline">\(\theta_S\)</span>, there are two equivalent ways to ask whether a run occurs:</p>
+<ol type="1">
+<li><strong>In <span class="math inline">\(\theta_S\)</span>-space</strong>: Is <span class="math inline">\(\theta_S &lt; \theta_S^*\)</span>? (fundamentals below the run threshold?)</li>
+<li><strong>In <span class="math inline">\(s\)</span>-space</strong>: Is <span class="math inline">\(s &gt; s^*\)</span>? (enough depositors awake to sustain a run?)</li>
+</ol>
+<p>These are two faces of the same coin. But they point in <strong>opposite directions</strong> as fragility rises, which requires careful interpretation.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Three Equivalent Statements About Fragility
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider two banks, A and B, with identical fundamentals (<span class="math inline">\(\theta_S\)</span>) but Bank A has higher uninsured leverage (<span class="math inline">\(D^U_A &gt; D^U_B\)</span>). Higher <span class="math inline">\(D^U/D\)</span> affects the panic region, the run threshold in fundamentals space, and the run threshold in awareness space — but in ways that initially appear contradictory:</p>
+<table class="table-striped caption-top table">
+<caption>Three Equivalent Measures of Financial Fragility</caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 47%">
+<col style="width: 20%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Measure</th>
+<th>Effect of higher <span class="math inline">\(D^U/D\)</span></th>
+<th>Direction</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Panic region width <span class="math inline">\(\frac{sD^UF}{DS}\)</span></td>
+<td><strong>Wider</strong></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>More <span class="math inline">\(\theta_S\)</span> values lead to run failure</td>
+</tr>
+<tr class="even">
+<td>Run threshold <span class="math inline">\(\theta_S^*\)</span></td>
+<td><strong>Higher</strong></td>
+<td><span class="math inline">\(\uparrow\)</span></td>
+<td>Runs triggered at <em>better</em> (higher) fundamentals</td>
+</tr>
+<tr class="odd">
+<td>Run threshold <span class="math inline">\(s^*\)</span></td>
+<td><strong>Lower</strong></td>
+<td><span class="math inline">\(\downarrow\)</span></td>
+<td>Fewer awake depositors needed to trigger a run</td>
+</tr>
+<tr class="even">
+<td>MtM threshold MtM<span class="math inline">\(^*\)</span></td>
+<td><strong>Lower</strong></td>
+<td><span class="math inline">\(\downarrow\)</span></td>
+<td>Smaller losses suffice to trigger run pressure</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why does <span class="math inline">\(\theta_S^*\)</span> rise but <span class="math inline">\(s^*\)</span> fall?</strong> These are not contradictory — they measure fragility from two different angles:</p>
+<ul>
+<li><p>A <strong>higher <span class="math inline">\(\theta_S^*\)</span></strong> means Bank A faces runs over a <em>wider range of fundamentals</em>. Even when <span class="math inline">\(\theta_S\)</span> is relatively high (bank looks healthy), Bank A is still in its panic region while Bank B is not. More states of the world lead to failure.</p></li>
+<li><p>A <strong>lower <span class="math inline">\(s^*\)</span></strong> means Bank A requires <em>fewer awake depositors</em> to trigger a run. For any given level of <span class="math inline">\(\theta_S\)</span> inside the panic region, a smaller coordination shock suffices. The bank is more brittle.</p></li>
+</ul>
+<p><strong>The Goldstein-Pauzner comparative static</strong> (the “run threshold decreases in financial fragility”) refers specifically to the <span class="math inline">\(s^*\)</span> result: more fragile banks face run pressure with fewer awake depositors. This is the relevant comparison for empirical work — holding fundamentals constant across banks, which ones face run pressure first?</p>
+<p>Formally, <span class="math inline">\(s^*\)</span> is the ratio of no-run equity to financial fragility:</p>
+<p><span class="math display">\[
+s^* = \frac{\overbrace{(\theta_S S + C + F - D)}^{\text{no-run equity}} \cdot D}{\underbrace{D^U \cdot F}_{\text{financial fragility}}}
+\]</span></p>
+<p>Holding fundamentals fixed, <span class="math inline">\(s^*\)</span> is <strong>decreasing</strong> in every component of financial fragility:</p>
+<p><span class="math display">\[
+\frac{\partial s^*}{\partial D^U} &lt; 0, \qquad \frac{\partial s^*}{\partial F} &lt; 0, \qquad \frac{\partial s^*}{\partial (1-\beta)} &lt; 0
+\]</span></p>
+<p>The driving force is <strong>strategic complementarity</strong>: each depositor who withdraws reduces the bank’s run-state equity by <span class="math inline">\((D^U/D) \cdot F\)</span>, lowering the payoff to staying and inducing further withdrawals:</p>
+<p><span class="math display">\[
+\frac{\partial \, e_{run}}{\partial s} = -\frac{D^U}{D} \cdot F &lt; 0
+\]</span></p>
+<p>Stronger complementarities (higher <span class="math inline">\(D^U \cdot F / D\)</span>) → lower <span class="math inline">\(s^*\)</span> → run pressure at lower awareness levels. This is the sense in which <strong>extending the panic region</strong> (wider width) and <strong>lowering the run threshold</strong> (lower <span class="math inline">\(s^*\)</span>) are two descriptions of the same underlying fragility — one stated in fundamentals space, one in awareness space.</p>
+<p><strong>Empirical analog (Chen, Goldstein, Huang, and Vashishtha, 2022):</strong> In the regression framework, the MtM threshold at which a bank faces run pressure is decreasing in financial fragility:</p>
+<p><span class="math display">\[
+\text{MtM}^* = -\frac{\alpha + \beta_2 \cdot (D^U/D)}{\beta_1 + \beta_3 \cdot (D^U/D)}, \qquad \frac{\partial \, \text{MtM}^*}{\partial (D^U/D)} &lt; 0
+\]</span></p>
+<p>Banks with higher uninsured leverage face run pressure at <strong>smaller</strong> mark-to-market losses. This is the MtM-space analog of the <span class="math inline">\(s^*\)</span> result: holding fundamentals constant, more fragile banks tip into run pressure first. Chen et al.’s finding that higher CatFat amplifies run sensitivity is exactly this comparative static estimated from data.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Notes/03_chapter3_bank_runs.html" class="pagination-link" aria-label="Bank Runs">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bank Runs</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Notes/04_chapter4_supplement.html" class="pagination-link" aria-label="Bank Runs and Failures: Supplement">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bank Runs and Failures: Supplement</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

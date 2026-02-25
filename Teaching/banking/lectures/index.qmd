@@ -5,3 +5,4 @@ title: "Lectures — Banking"
 - [Lecture 1: Banking Fundamentals](01-banking-slides.html)
 - [Lecture 2: Liquidity Creation](02-liquidity-creation-slides.html)
 - [Lecture 3: Bank Runs](03-bank-runs-slides.html)
+- [Lecture 4: Bank Runs and Failures](04-bank-runs-failures-slides.html)
