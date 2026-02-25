@@ -918,6 +918,34 @@ Rajesh Narayanan
 <h1>Extension 3: Financial Fragility</h1>
 
 </section>
+<section id="why-g-p-is-still-needed" class="slide level2 smaller">
+<h2>Why G-P Is Still Needed</h2>
+<p>Extensions 1 and 2 characterize the panic region — its location, width, and determinants. But both face the <strong>same limitation as CLV’s baseline</strong>:</p>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Multiple Equilibria Remain</strong></p>
+</div>
+<div class="callout-content">
+<p>Within the panic region, <strong>two pure-strategy equilibria coexist</strong>:</p>
+<ul>
+<li>Run equilibrium: deposits leave → franchise destroyed → bank fails</li>
+<li>No-run equilibrium: deposits stay → bank survives</li>
+</ul>
+<p>Neither DSSW nor JMPS provides an equilibrium selection mechanism. For any bank inside the panic region, <strong>a run is possible but not inevitable</strong> — depositor beliefs determine the outcome, and both models leave this indeterminate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>G-P completes the framework by introducing <strong>private noisy signals</strong> that destroy the common knowledge sustaining multiple equilibria → unique run threshold <span class="math inline">\(\theta^*\)</span> inside the panic region.</p>
+<p>G-P tells us not just that a panic region exists and how wide it is, but <em>where within it</em> the run threshold falls.</p>
+</div>
+</section>
 <section id="the-goldstein-pauzner-link" class="slide level2 smaller">
 <h2>The Goldstein-Pauzner Link</h2>
 <p>Recall: global games pins down a unique run threshold <span class="math inline">\(\theta^*\)</span> inside the panic region.</p>
@@ -1017,6 +1045,63 @@ Rajesh Narayanan
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="dssw-vs.-jmps-a-key-institutional-distinction" class="slide level2 smaller">
+<h2>DSSW vs.&nbsp;JMPS: A Key Institutional Distinction</h2>
+<p>Both papers share the same basic premise: <strong><span class="math inline">\(F\)</span> exists only while depositors stay</strong>. But they differ in how much franchise is destroyed in a run.</p>
+<div class="fragment">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Who runs</th>
+<th>Franchise destroyed</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Drechsler et al.</strong></td>
+<td>All runnable depositors</td>
+<td>Entire <span class="math inline">\(F\)</span></td>
+<td>Run closes bank → franchise gone completely</td>
+</tr>
+<tr class="even">
+<td><strong>Jiang et al.</strong></td>
+<td>Only <em>uninsured</em> depositors</td>
+<td>Fraction <span class="math inline">\(\frac{D^U}{D} \cdot F\)</span></td>
+<td>FDIC guarantees insured deposits → they never run</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p>FDIC insurance <strong>immunizes</strong> the franchise on insured deposits from run risk. Only the <span class="math inline">\(D^U/D\)</span> fraction is at stake — which is why Jiang et al.’s panic region width <span class="math inline">\(\frac{D^U F}{DS}\)</span> shrinks toward zero as <span class="math inline">\(D^U \to 0\)</span>.</p>
+</div>
+<div class="fragment">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Different Emphases</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><strong>DSSW</strong>: Risk management dilemma — franchise hedges rates but the hedge collapses in a run; treat <span class="math inline">\(F\)</span> as contingent</li>
+<li><strong>JMPS</strong>: Empirical measurement — two banks with identical MTM losses can differ sharply in vulnerability based solely on <span class="math inline">\(D^U/D\)</span></li>
+</ul>
 </div>
 </div>
 </div>
