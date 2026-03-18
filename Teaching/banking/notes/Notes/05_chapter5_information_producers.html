@@ -199,8 +199,8 @@ window.Quarto = {
   <li><a href="#ex-ante-banks-as-information-producers" id="toc-ex-ante-banks-as-information-producers" class="nav-link" data-scroll-target="#ex-ante-banks-as-information-producers"><span class="header-section-number">5.2</span> Ex Ante: Banks as Information Producers</a>
   <ul class="collapse">
   <li><a href="#the-adverse-selection-problem" id="toc-the-adverse-selection-problem" class="nav-link" data-scroll-target="#the-adverse-selection-problem"><span class="header-section-number">5.2.1</span> The Adverse Selection Problem</a></li>
-  <li><a href="#banks-as-screeners-leland-and-pyle-1977" id="toc-banks-as-screeners-leland-and-pyle-1977" class="nav-link" data-scroll-target="#banks-as-screeners-leland-and-pyle-1977"><span class="header-section-number">5.2.2</span> Banks as Screeners: Leland and Pyle (1977)</a></li>
-  <li><a href="#banks-as-coalitions-of-screeners-ramakrishnan-and-thakor-1984" id="toc-banks-as-coalitions-of-screeners-ramakrishnan-and-thakor-1984" class="nav-link" data-scroll-target="#banks-as-coalitions-of-screeners-ramakrishnan-and-thakor-1984"><span class="header-section-number">5.2.3</span> Banks as Coalitions of Screeners: Ramakrishnan and Thakor (1984)</a></li>
+  <li><a href="#banks-as-certifiers-leland-and-pyle-1977" id="toc-banks-as-certifiers-leland-and-pyle-1977" class="nav-link" data-scroll-target="#banks-as-certifiers-leland-and-pyle-1977"><span class="header-section-number">5.2.2</span> Banks as Certifiers: Leland and Pyle (1977)</a></li>
+  <li><a href="#banks-as-information-aggregators-ramakrishnan-and-thakor-1984" id="toc-banks-as-information-aggregators-ramakrishnan-and-thakor-1984" class="nav-link" data-scroll-target="#banks-as-information-aggregators-ramakrishnan-and-thakor-1984"><span class="header-section-number">5.2.3</span> Banks as Information Aggregators: Ramakrishnan and Thakor (1984)</a></li>
   <li><a href="#relationship-banking-and-information-fama-1985" id="toc-relationship-banking-and-information-fama-1985" class="nav-link" data-scroll-target="#relationship-banking-and-information-fama-1985"><span class="header-section-number">5.2.4</span> Relationship Banking and Information: Fama (1985)</a></li>
   <li><a href="#diversification-the-unifying-principle" id="toc-diversification-the-unifying-principle" class="nav-link" data-scroll-target="#diversification-the-unifying-principle"><span class="header-section-number">5.2.5</span> Diversification: The Unifying Principle</a></li>
   </ul></li>
@@ -578,8 +578,8 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="banks-as-screeners-leland-and-pyle-1977" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="banks-as-screeners-leland-and-pyle-1977"><span class="header-section-number">5.2.2</span> Banks as Screeners: Leland and Pyle (1977)</h3>
+<section id="banks-as-certifiers-leland-and-pyle-1977" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="banks-as-certifiers-leland-and-pyle-1977"><span class="header-section-number">5.2.2</span> Banks as Certifiers: Leland and Pyle (1977)</h3>
 <p>If borrowers know their own type, can they credibly communicate it to lenders? <strong>Leland and Pyle (1977)</strong> show that <strong>equity retention</strong> by the entrepreneur serves as a quality signal. The key insight: retaining a larger share of one’s own project is costly because the entrepreneur bears undiversified idiosyncratic risk. This cost is <em>less burdensome</em> for entrepreneurs with genuinely high-quality projects — higher expected returns more than compensate for the risk borne. Low-quality entrepreneurs cannot profitably mimic high types without bearing costs that outweigh the benefit of a higher market valuation.</p>
 <p>In equilibrium, each entrepreneur type retains a distinct equity stake that is <strong>strictly increasing in project quality</strong>: better entrepreneurs hold more of their own projects (“skin in the game”). Observing the retention level reveals type, and lenders can price loans at the type-specific break-even rate <span class="math inline">\(f_\theta^* = r/p_\theta\)</span>. The signal is self-enforcing because of <strong>single-crossing</strong>: the marginal return to signaling higher quality is greater for genuinely high-quality borrowers, so no type wishes to mimic another.</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -601,28 +601,15 @@ window.Quarto = {
 <p><strong>1. Skin in the game</strong>: A bank that retains equity in its loan portfolio signals portfolio quality by exactly the Leland-Pyle mechanism. The bank’s retained equity <span class="math inline">\(e^*\)</span> signals mean portfolio quality <span class="math inline">\(\bar{\theta}\)</span>. Investors can observe the bank’s capital ratio (equity retained) and infer portfolio quality from it — providing the same certification function as individual equity retention, but at the portfolio level.</p>
 <p><strong>2. Diversification reduces signaling cost</strong>: The bank’s portfolio return is <span class="math inline">\(\bar{\theta} + \bar{\varepsilon}\)</span> where <span class="math inline">\(\bar{\varepsilon} = (1/n)\sum_{j=1}^n \varepsilon_j\)</span>. By the Law of Large Numbers:</p>
 <p><span class="math display">\[\text{Var}(\bar{\varepsilon}) = \frac{\sigma^2}{n} \to 0 \quad \text{as } n \to \infty\]</span></p>
-<p>Therefore the risk cost of signaling a given portfolio quality <span class="math inline">\(\bar{\theta}\)</span> by retaining equity <span class="math inline">\(e^*\)</span> is:</p>
+<p>Therefore the risk cost of signaling a given portfolio quality <span class="math inline">\(\bar{\theta}\)</span> by retaining equity <span class="math inline">\(e^*\)</span> is (where <span class="math inline">\(A &gt; 0\)</span> is the entrepreneur’s coefficient of absolute risk aversion):</p>
 <p><span class="math display">\[\frac{A}{2}(e^*)^2 \cdot \frac{\sigma^2}{n} \to 0\]</span></p>
 <p>The bank can certify portfolio quality at <strong>vanishing signaling cost</strong> as the portfolio grows — unlike an individual entrepreneur who always bears the full idiosyncratic risk <span class="math inline">\(\frac{A}{2}(e^*)^2\sigma^2\)</span>.</p>
 <p><strong>3. Specialization</strong>: Banks develop expertise in evaluating specific borrower types (agricultural loans, commercial real estate, consumer credit), reducing the information cost <span class="math inline">\(K\)</span> per loan through repeated screening of similar borrowers.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Connection to Diamond (1984)
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Law of Large Numbers argument here for <strong>screening cost</strong> exactly parallels Diamond’s LLN argument for <strong>monitoring cost</strong>: in both cases, diversification across many loans allows the bank to perform the information function at lower per-loan cost. In screening (Leland-Pyle), diversification reduces the risk cost of signaling quality. In monitoring (Diamond), diversification reduces the delegation cost of incentivizing the bank to monitor honestly. The bank’s value as an information intermediary rests on the same mathematical foundation in both the ex ante and ex post settings.</p>
-</div>
-</div>
 <hr>
 </section>
 </section>
-<section id="banks-as-coalitions-of-screeners-ramakrishnan-and-thakor-1984" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="banks-as-coalitions-of-screeners-ramakrishnan-and-thakor-1984"><span class="header-section-number">5.2.3</span> Banks as Coalitions of Screeners: Ramakrishnan and Thakor (1984)</h3>
+<section id="banks-as-information-aggregators-ramakrishnan-and-thakor-1984" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="banks-as-information-aggregators-ramakrishnan-and-thakor-1984"><span class="header-section-number">5.2.3</span> Banks as Information Aggregators: Ramakrishnan and Thakor (1984)</h3>
 <p><strong>Ramakrishnan and Thakor (1984)</strong> formalize how a bank aggregates the assessments of multiple specialists into a more informative collective signal. Each screener independently observes a noisy signal about project quality. Individually, each signal is imprecise. But when a bank pools the signals of many specialists — each with independent noise — the <strong>Law of Large Numbers</strong> drives the average estimation error to zero. The coalition’s estimate of portfolio quality becomes arbitrarily precise as the number of screened projects grows.</p>
 <p>This has a direct implication for funding costs. Investors who deposit with a large, diversified bank face minimal uncertainty about average loan quality. The bank’s deposits can therefore be priced close to the risk-free rate, because residual uncertainty about portfolio quality vanishes with scale. A small, undiversified lender cannot offer the same credibility.</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -636,19 +623,6 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>A coalition of <span class="math inline">\(n\)</span> specialized screeners certifies portfolio quality with precision increasing in <span class="math inline">\(n\)</span>. As <span class="math inline">\(n \to \infty\)</span>, the residual uncertainty about average loan quality vanishes and the coalition’s signal becomes exact. The bank’s ability to fund at low rates improves directly with portfolio size. Specialization (lower screening cost <span class="math inline">\(K\)</span> per loan from repeated expertise) and diversification (higher signal precision from pooling) are complements in information production.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The Same LLN Logic in Both Ex Ante Models
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The connection to Diamond (1984) is direct: whether the bank aggregates <strong>monitoring signals</strong> (Diamond 1984) or <strong>screening signals</strong> (Ramakrishnan-Thakor 1984), diversification across many borrowers is the key efficiency mechanism. In Diamond’s model, the LLN makes bank income nearly deterministic, reducing delegation cost to zero. In Ramakrishnan-Thakor, the LLN makes the portfolio quality estimate nearly precise, reducing the information premium demanded by investors. The bank’s institutional advantage — diversified loan portfolios — solves the information problem on both the asset side (ex ante screening and ex post monitoring) and the liability side (nearly riskless deposits).</p>
 </div>
 </div>
 <hr>
@@ -702,7 +676,7 @@ window.Quarto = {
 </section>
 <section id="diversification-the-unifying-principle" class="level3" data-number="5.2.5">
 <h3 data-number="5.2.5" class="anchored" data-anchor-id="diversification-the-unifying-principle"><span class="header-section-number">5.2.5</span> Diversification: The Unifying Principle</h3>
-<p>Both the ex ante and ex post approaches share a common foundation: <strong>diversification makes banks efficient information intermediaries</strong>. In each case, the Law of Large Numbers allows the bank to perform a costly information function at vanishing per-loan cost as the portfolio grows.</p>
+<p>The ex ante and ex post solutions developed above look different on the surface — signaling quality through equity retention versus monitoring borrowers to prevent misreporting — but they rest on exactly the same foundation: <strong>the Law of Large Numbers</strong>. In both cases, a bank that holds many independent loans can perform a costly information function at vanishing per-loan cost as the portfolio grows.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1874,8 +1848,8 @@ R_j \;=\; \underbrace{F \cdot \mathbf{1}(V_j \geq F)}_{\text{good state: borrowe
 <ol type="1">
 <li><p><strong>Two information problems</strong>: Banks solve two distinct asset-side information problems. Before lending (ex ante): adverse selection prevents lenders from distinguishing good from bad borrowers. After lending (ex post): moral hazard allows borrowers to misreport realized returns. Both problems, left unsolved, either destroy markets or generate costly inefficiencies.</p></li>
 <li><p><strong>Market exclusion (Stiglitz-Weiss 1981)</strong>: When lenders cannot observe borrower type, the pooling break-even face value exceeds the good borrower’s participation constraint. Good borrowers are excluded from credit markets entirely. Expected lender return <span class="math inline">\(\Pi(f)\)</span> is non-monotone: the discrete drop at <span class="math inline">\(f = y_G\)</span> (where good types exit) makes pooling unprofitable. The lender breaks even only by lending to bad types at <span class="math inline">\(f_B^* = 2.625\)</span>.</p></li>
-<li><p><strong>Signaling by equity retention (Leland-Pyle 1977)</strong>: Entrepreneurs signal project quality by retaining equity, increasing in <span class="math inline">\(\theta\)</span> (single-crossing). The signal is credible because retaining undiversified equity is costly for low-quality projects but less so for high-quality ones. Banks exploit diversification to certify portfolio quality at vanishing cost as <span class="math inline">\(n \to \infty\)</span>: <span class="math inline">\(\text{Var}(\bar{\varepsilon}) = \sigma^2/n \to 0\)</span>.</p></li>
-<li><p><strong>Information aggregation (Ramakrishnan-Thakor 1984)</strong>: A coalition of <span class="math inline">\(n\)</span> specialized screeners produces more informative collective assessments than any individual. As portfolio size grows, residual uncertainty about average loan quality vanishes — the same LLN logic that drives <span class="math inline">\(D(n) \to 0\)</span> in Diamond also drives screening imprecision to zero. More loans <span class="math inline">\(\Rightarrow\)</span> more efficient bank in both the ex ante and ex post settings.</p></li>
+<li><p><strong>Certification by signaling (Leland-Pyle 1977)</strong>: Entrepreneurs signal project quality by retaining equity, increasing in <span class="math inline">\(\theta\)</span> (single-crossing). The informed party moves first: costly equity retention is credible because it is more burdensome for low-quality projects. Banks certify portfolio quality to depositors via the same mechanism; diversification drives signaling cost to zero as <span class="math inline">\(n \to \infty\)</span>: <span class="math inline">\(\text{Var}(\bar{\varepsilon}) = \sigma^2/n \to 0\)</span>.</p></li>
+<li><p><strong>Information aggregation (Ramakrishnan-Thakor 1984)</strong>: A coalition of <span class="math inline">\(n\)</span> specialists aggregates independent noisy signals into an increasingly precise estimate of portfolio quality. As <span class="math inline">\(n \to \infty\)</span>, residual uncertainty vanishes — the bank can fund deposits near the risk-free rate. Specialization and diversification are complements in information production.</p></li>
 <li><p><strong>Relationship banking (Fama 1985)</strong>: Bank loans are “special” because repeated interaction produces private information. A bank credit line certifies borrower quality to outside investors. Screening (ex ante) and monitoring (ex post) are <strong>complements</strong> — established banking relationships reduce both adverse selection and monitoring costs, explaining why both functions co-locate in a single institution.</p></li>
 <li><p><strong>The unmonitored debt problem</strong>: Without monitoring, lenders can only enforce repayment through liquidation. Unmonitored debt with face value <span class="math inline">\(f^* = 1.3125\)</span> wastes <span class="math inline">\(S = 0.2\)</span> per borrower (the CSV liquidation cost). Monitoring is socially valuable (<span class="math inline">\(S &gt; K\)</span>) but individually prohibitive when duplicated (<span class="math inline">\(mK = 2 \gg S\)</span>).</p></li>
 <li><p><strong>Delegation solves the ex post problem</strong>: A bank monitors on behalf of <span class="math inline">\(m\)</span> depositors, eliminating duplication. Diversification across <span class="math inline">\(n\)</span> independent loans drives delegation cost <span class="math inline">\(D(n) \to 0\)</span> as <span class="math inline">\(n \to \infty\)</span>. Two-loan bank: <span class="math inline">\(K + D = 0.141 &lt; S = 0.2\)</span>. Fully diversified bank: <span class="math inline">\(K + D \to K = 0.0002\)</span>.</p></li>
