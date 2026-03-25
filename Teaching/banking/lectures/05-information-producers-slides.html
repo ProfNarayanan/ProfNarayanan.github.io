@@ -631,10 +631,10 @@ Rajesh Narayanan
 <p><strong>Proposition (Gale-Hellwig 1985): Standard Debt is Optimal</strong></p>
 </div>
 <div class="callout-content">
-<p>Monitor <strong>only in default states</strong> (when borrower cannot pay). The standard debt contract with face value <span class="math inline">\(F\)</span>:</p>
+<p>Monitor <strong>only in default states</strong> (when borrower cannot pay). The standard debt contract with face value <span class="math inline">\(f\)</span>:</p>
 <ul>
-<li><strong>Good state</strong> (<span class="math inline">\(V = H \geq F\)</span>): borrower pays <span class="math inline">\(F\)</span> voluntarily — no monitoring</li>
-<li><strong>Bad state</strong> (<span class="math inline">\(V = L &lt; F\)</span>): lender monitors, verifies <span class="math inline">\(V = L\)</span>, collects <span class="math inline">\(L\)</span></li>
+<li><strong>Good state</strong> (<span class="math inline">\(V = H \geq f\)</span>): borrower pays <span class="math inline">\(f\)</span> voluntarily — no monitoring</li>
+<li><strong>Bad state</strong> (<span class="math inline">\(V = L &lt; f\)</span>): lender monitors, verifies <span class="math inline">\(V = L\)</span>, collects <span class="math inline">\(L\)</span></li>
 </ul>
 <p>Expected monitoring cost <span class="math inline">\(= (1-P)K = 0.2 \times 0.0002 = 0.00004\)</span> (nearly zero)</p>
 </div>
@@ -680,7 +680,7 @@ Rajesh Narayanan
 <p><strong>Two benchmark contracts</strong>:</p>
 <ul>
 <li><strong>Unmonitored debt</strong> (<span class="math inline">\(f^*\)</span>): enforced by liquidation threat; no verification needed</li>
-<li><strong>Monitored debt</strong> (<span class="math inline">\(F\)</span>): CSV-optimal; monitor only in default</li>
+<li><strong>Monitored debt</strong> (<span class="math inline">\(f\)</span>): CSV-optimal; monitor only in default</li>
 </ul>
 </div>
 </section>
@@ -720,9 +720,9 @@ Rajesh Narayanan
 </div>
 </section>
 <section id="monitored-debt-f-approx-1.0625" class="slide level2" data-number="4.5">
-<h2><span class="header-section-number">4.5</span> Monitored Debt: <span class="math inline">\(F \approx 1.0625\)</span></h2>
+<h2><span class="header-section-number">4.5</span> Monitored Debt: <span class="math inline">\(f \approx 1.0625\)</span></h2>
 <p><strong>Contract</strong>: monitor in bad state; accept <span class="math inline">\(L = 1\)</span> instead of liquidating</p>
-<p><strong>Lender’s break-even</strong>: <span class="math display">\[P \cdot F + (1-P)(L - K) = r \quad \Rightarrow \quad 0.8F + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad F \approx 1.0625\]</span></p>
+<p><strong>Lender’s break-even</strong>: <span class="math display">\[P \cdot f + (1-P)(L - K) = r \quad \Rightarrow \quad 0.8f + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad f \approx 1.0625\]</span></p>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -736,7 +736,7 @@ Rajesh Narayanan
 </div><div class="column" style="width:50%;">
 <p><strong>Monitored</strong></p>
 <ul>
-<li>Face value: <span class="math inline">\(F \approx 1.0625\)</span></li>
+<li>Face value: <span class="math inline">\(f \approx 1.0625\)</span></li>
 <li>Loan rate: <strong>≈ 6.25%</strong></li>
 <li>Borrower surplus: 0.270</li>
 <li>Waste: ≈ 0</li>
@@ -837,7 +837,7 @@ Rajesh Narayanan
 <section id="the-one-loan-bank" class="slide level2" data-number="5.3">
 <h2><span class="header-section-number">5.3</span> The One-Loan Bank</h2>
 <p>Bank monitors one borrower, issues deposits to <span class="math inline">\(m = 10{,}000\)</span> investors.</p>
-<p>Bank collects <span class="math inline">\(F\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure). Depositors need 5% return:</p>
+<p>Bank collects <span class="math inline">\(f\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure). Depositors need 5% return:</p>
 <p><span class="math display">\[P \cdot B = r \quad \Rightarrow \quad 0.8B = 1.05 \quad \Rightarrow \quad B = 1.3125\]</span></p>
 <div class="fragment">
 <p><strong>Problem</strong>: in the bad state, bank collected <span class="math inline">\(L = 1\)</span> but owes <span class="math inline">\(B = 1.3125\)</span>. Bank <strong>fails</strong> whenever the borrower defaults — probability <span class="math inline">\(1-P = 0.2\)</span>.</p>
@@ -873,12 +873,12 @@ Rajesh Narayanan
 <tr class="odd">
 <td>Both succeed</td>
 <td><span class="math inline">\(0.64\)</span></td>
-<td><span class="math inline">\(2F\)</span></td>
+<td><span class="math inline">\(2f\)</span></td>
 </tr>
 <tr class="even">
 <td>One succeeds, one fails</td>
 <td><span class="math inline">\(0.32\)</span></td>
-<td><span class="math inline">\(F + 1\)</span></td>
+<td><span class="math inline">\(f + 1\)</span></td>
 </tr>
 <tr class="odd">
 <td>Both fail</td>
@@ -888,7 +888,7 @@ Rajesh Narayanan
 </tbody>
 </table>
 <div class="fragment">
-<p>Set <span class="math inline">\(F = 1.1875\)</span> so that <span class="math inline">\(F + 1 = 2.1875 \geq 2B\)</span>. Depositor break-even:</p>
+<p>Set <span class="math inline">\(f = 1.1875\)</span> so that <span class="math inline">\(f + 1 = 2.1875 \geq 2B\)</span>. Depositor break-even:</p>
 <p><span class="math display">\[0.96 \times 2B = 2(1.05) \quad \Rightarrow \quad B = 1.09375, \quad 2B = 2.1875\]</span></p>
 </div>
 <div class="fragment">
@@ -1016,8 +1016,8 @@ Rajesh Narayanan
 <tr class="odd">
 <td><strong>Bank → Borrower</strong></td>
 <td>Borrower hides <span class="math inline">\(V_j\)</span></td>
-<td>Loan at face <span class="math inline">\(F\)</span>; monitor in default</td>
-<td><span class="math inline">\(V_j &lt; F\)</span>; prob <span class="math inline">\(\approx 0.2\)</span></td>
+<td>Loan at face <span class="math inline">\(f\)</span>; monitor in default</td>
+<td><span class="math inline">\(V_j &lt; f\)</span>; prob <span class="math inline">\(\approx 0.2\)</span></td>
 </tr>
 <tr class="even">
 <td><strong>Depositor → Bank</strong></td>

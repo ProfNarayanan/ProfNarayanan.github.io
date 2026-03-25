@@ -257,7 +257,7 @@ window.Quarto = {
 <p>This chapter pivots to the <strong>asset side</strong> of the balance sheet. Even if there were no liquidity problem, banks might still exist. The reason: <strong>information asymmetry between borrowers and lenders</strong>.</p>
 <p>Two broad traditions address this asymmetry, organized around <em>when</em> the information problem arises.</p>
 <p><strong>The adverse selection view</strong> focuses on the problem that arises <em>before</em> lending: lenders cannot observe borrower quality, so credit markets may exclude good borrowers (Stiglitz and Weiss 1981) or price loans inefficiently. Two theories explain how banks solve this problem. Leland and Pyle (1977) show that entrepreneurs can signal project quality by retaining equity — skin in the game — and that a bank holding a diversified loan portfolio can perform this certification at vanishing cost as the portfolio grows. Ramakrishnan and Thakor (1984) extend this: a coalition of informed specialists aggregates independent noisy signals, so pooling information production across many loans drives residual uncertainty toward zero. In both stories, banks are <strong>information producers</strong> — they certify borrower quality to outside investors and fund themselves cheaply as a result.</p>
-<p><strong>The moral hazard view</strong> focuses on the problem that arises <em>after</em> lending: borrowers can misreport realized returns, and direct lenders cannot monitor <span class="math inline">\(m = 10{,}000\)</span> investors per project cheaply. Diamond (1984) shows that a bank can solve this by monitoring on behalf of all depositors — and that the bank’s own incentive to monitor is sustained by the threat of liquidation embedded in its <strong>fixed-rate deposit contract</strong>. The deposit structure is not arbitrary: it is the contract that minimizes delegation costs and makes the bank’s monitoring credible.</p>
+<p><strong>The moral hazard view</strong> focuses on the problem that arises <em>after</em> lending: borrowers can misreport realized returns, and direct lenders cannot monitor numerous small investors per project cheaply. Diamond (1984) shows that a bank can solve this by monitoring on behalf of all depositors — and that the bank’s own incentive to monitor is sustained by the threat of liquidation embedded in its <strong>fixed-rate deposit contract</strong>. The deposit structure is not arbitrary: it is the contract that minimizes delegation costs and makes the bank’s monitoring credible.</p>
 <p>This chapter covers both views, but the Diamond (1984) model receives the most attention. The reason is straightforward: it not only explains why banks monitor — it also endogenously generates the <strong>organizational form of the bank</strong> (monitored loans on the asset side, fixed-rate deposits on the liability side). The adverse selection models explain the asset side well, but they do not independently pin down the liability structure. Diamond does both.</p>
 <hr>
 </section>
@@ -464,6 +464,19 @@ Proposition (Stiglitz-Weiss 1981): Market Exclusion Under Adverse Selection
 <section id="signaling-leland-and-pyle-1977" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="signaling-leland-and-pyle-1977"><span class="header-section-number">5.2.2</span> Signaling: Leland and Pyle (1977)</h3>
 <p><strong>Leland and Pyle (1977)</strong> show that <strong>equity retention</strong> solves the adverse selection problem through signaling. Retaining a larger share of one’s own project is costly — the entrepreneur bears undiversified idiosyncratic risk. This cost is lower for high-quality borrowers (higher expected returns offset the risk), so low-quality borrowers cannot profitably mimic. The <strong>single-crossing property</strong> ensures a separating equilibrium: equilibrium retention <span class="math inline">\(e^*(\theta)\)</span> is strictly increasing in <span class="math inline">\(\theta\)</span>, and lenders price loans at <span class="math inline">\(f_\theta^* = r/p_\theta\)</span> upon observing <span class="math inline">\(e^*\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Single-Crossing Property
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Intuition:</strong> High-quality projects generate higher expected returns, so the entrepreneur captures more value from retention. The cost of undiversified risk (bearing <span class="math inline">\(e\)</span>) is relatively lower for the high type, making the swap “more retention for a lower rate” attractive precisely when quality is high.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="banks-as-information-producers-ramakrishnan-and-thakor-1984" class="level3" data-number="5.2.3">
@@ -494,7 +507,7 @@ Proposition (Stiglitz-Weiss 1981): Market Exclusion Under Adverse Selection
 <section id="ex-post-banks-as-delegated-monitors" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="ex-post-banks-as-delegated-monitors"><span class="header-section-number">5.3</span> Ex Post: Banks as Delegated Monitors</h2>
 <p>The previous section addressed the <em>ex ante</em> information problem: how do lenders identify good borrowers <em>before</em> lending? This section addresses the <em>ex post</em> information problem: given that lending has occurred, how does the lender verify the borrower’s realized return and enforce repayment? We follow Diamond (1984, 1996) throughout.</p>
-<p>Direct finance does not solve this problem — it merely relocates it. Any individual investor who could monitor a borrower lacks the capital to fund the project alone, while the many small investors who together have sufficient capital cannot monitor without ruinous duplication or free-riding. Banks solve this <strong>organizational problem</strong> — monitoring is socially valuable (<span class="math inline">\(S &gt; K\)</span>) but prohibitive when duplicated (<span class="math inline">\(mK \gg S\)</span>) — by consolidating monitoring into a single agent and using diversification to eliminate the cost of delegation. The organizational form of the bank (monitored loans on the asset side, fixed-rate deposits on the liability side) follows directly from this.</p>
+<p>Direct finance does not solve this problem — it merely relocates it. Any individual investor who could monitor a borrower lacks the capital to fund the project alone, while the many small investors who together have sufficient capital cannot monitor without ruinous duplication or free-riding. Banks solve this <strong>organizational problem</strong> — monitoring is socially valuable (<span class="math inline">\(S &gt; K\)</span>, where <span class="math inline">\(S\)</span> is the liquidation surplus recovered and <span class="math inline">\(K\)</span> is the per-investor monitoring cost) but prohibitive when duplicated (<span class="math inline">\(mK \gg S\)</span>, where <span class="math inline">\(m\)</span> is the number of investors) — by consolidating monitoring into a single agent and using diversification to eliminate the cost of delegation. The organizational form of the bank (monitored loans on the asset side, fixed-rate deposits on the liability side) follows directly from this.</p>
 <section id="the-environment" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="the-environment"><span class="header-section-number">5.3.1</span> The Environment</h3>
 <section id="setup-1" class="level4" data-number="5.3.1.1">
@@ -584,7 +597,7 @@ Parameter Values
 </section>
 <section id="why-equity-fails" class="level4" data-number="5.3.1.3">
 <h4 data-number="5.3.1.3" class="anchored" data-anchor-id="why-equity-fails"><span class="header-section-number">5.3.1.3</span> Why Equity Fails</h4>
-<p>A natural first candidate is an <strong>equity contract</strong>: the investor receives a fraction <span class="math inline">\(a\)</span> of reported profits <span class="math inline">\(Z\)</span>. The borrower always reports <span class="math inline">\(Z = L\)</span> (the minimum), and investors recover nothing regardless of the true outcome. Any contract based on reported profits fails — forcing truthful reporting requires either monitoring or a fixed promised payment (debt) that the borrower has an incentive to meet without monitoring.</p>
+<p>A natural first candidate is an <strong>equity contract</strong>: the investor receives a fraction <span class="math inline">\(a\)</span> of the borrower’s reported return <span class="math inline">\(\hat{V}\)</span>. Because the borrower observes the true <span class="math inline">\(V\)</span> first and the investor cannot verify it, the borrower always reports <span class="math inline">\(\hat{V} = L\)</span> (the minimum), retaining <span class="math inline">\(H - L\)</span> when <span class="math inline">\(V = H\)</span>. Investors recover nothing regardless of the true outcome. Any contract based on reported returns fails — forcing truthful reporting requires either monitoring or a fixed promised payment (debt) that the borrower has an incentive to meet without monitoring.</p>
 </section>
 </section>
 <section id="the-costly-state-verification-framework" class="level3" data-number="5.3.2">
@@ -602,9 +615,9 @@ Definition: Costly State Verification
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In the <strong>CSV problem</strong> (Townsend 1979), a borrower observes the realized project return <span class="math inline">\(\tilde{y}\)</span> but the lender does not. The lender may pay a fixed cost <span class="math inline">\(K\)</span> to <strong>verify</strong> the true return. A contract specifies:</p>
+<p>In the <strong>CSV problem</strong> (Townsend 1979), a borrower observes the realized project return <span class="math inline">\(V\)</span> but the lender does not. The lender may pay a fixed cost <span class="math inline">\(K\)</span> to <strong>verify</strong> the true return. A contract specifies:</p>
 <ol type="1">
-<li>In which states to monitor (where to pay <span class="math inline">\(K\)</span> and observe <span class="math inline">\(\tilde{y}\)</span> directly)</li>
+<li>In which states to monitor (where to pay <span class="math inline">\(K\)</span> and observe <span class="math inline">\(V\)</span> directly)</li>
 <li>What payment to require conditional on (i) the borrower’s voluntary report without monitoring, or (ii) the verified return after monitoring</li>
 </ol>
 <p>The contracting problem is to design this mapping to minimize total monitoring costs subject to incentive compatibility and the lender’s break-even constraint.</p>
@@ -637,11 +650,11 @@ Why Deterministic Monitoring Dominates Randomized Monitoring
 </section>
 <section id="optimal-contract-standard-debt-gale-and-hellwig-1985" class="level4" data-number="5.3.2.2">
 <h4 data-number="5.3.2.2" class="anchored" data-anchor-id="optimal-contract-standard-debt-gale-and-hellwig-1985"><span class="header-section-number">5.3.2.2</span> Optimal Contract: Standard Debt (Gale and Hellwig 1985)</h4>
-<p>Gale and Hellwig (1985) showed that the <strong>standard debt contract</strong> is the unique contract that implements this optimal monitoring rule. Set a fixed face value <span class="math inline">\(D\)</span>: the borrower pays <span class="math inline">\(D\)</span> in good states (voluntarily, no monitoring needed) and triggers monitoring only in bad states (when unable to pay). Any contract requiring monitoring in good states wastes <span class="math inline">\(K\)</span> unnecessarily; any contract without monitoring in bad states invites misreporting. Debt is the only contract that monitors exactly when needed.</p>
-<p>A <strong>standard debt contract</strong> with face value <span class="math inline">\(D\)</span> works as follows:</p>
+<p>Gale and Hellwig (1985) showed that the <strong>standard debt contract</strong> is the unique contract that implements this optimal monitoring rule. Set a fixed face value <span class="math inline">\(f\)</span>: the borrower pays <span class="math inline">\(f\)</span> in good states (voluntarily, no monitoring needed) and triggers monitoring only in bad states (when unable to pay). Any contract requiring monitoring in good states wastes <span class="math inline">\(K\)</span> unnecessarily; any contract without monitoring in bad states invites misreporting. Debt is the only contract that monitors exactly when needed.</p>
+<p>A <strong>standard debt contract</strong> with face value <span class="math inline">\(f\)</span> works as follows:</p>
 <ul>
-<li><strong>Good state</strong> (<span class="math inline">\(\tilde{y} = H \geq D\)</span>): The borrower pays <span class="math inline">\(D\)</span> voluntarily and keeps <span class="math inline">\(H - D &gt; 0\)</span>. No monitoring is needed — the borrower prefers paying <span class="math inline">\(D\)</span> over triggering monitoring and full extraction of <span class="math inline">\(H\)</span>.</li>
-<li><strong>Bad state</strong> (<span class="math inline">\(\tilde{y} = L &lt; D\)</span>): The borrower cannot pay <span class="math inline">\(D\)</span>. The lender <strong>monitors</strong> (cost <span class="math inline">\(K\)</span>), verifies <span class="math inline">\(\tilde{y} = L\)</span>, and collects <span class="math inline">\(L\)</span>.</li>
+<li><strong>Good state</strong> (<span class="math inline">\(V = H \geq f\)</span>): The borrower pays <span class="math inline">\(f\)</span> voluntarily and keeps <span class="math inline">\(H - f &gt; 0\)</span>. No monitoring is needed — the borrower prefers paying <span class="math inline">\(f\)</span> over triggering monitoring and full extraction of <span class="math inline">\(H\)</span>.</li>
+<li><strong>Bad state</strong> (<span class="math inline">\(V = L &lt; f\)</span>): The borrower cannot pay <span class="math inline">\(f\)</span>. The lender <strong>monitors</strong> (cost <span class="math inline">\(K\)</span>), verifies <span class="math inline">\(V = L\)</span>, and collects <span class="math inline">\(L\)</span>.</li>
 </ul>
 <p>Expected monitoring cost <span class="math inline">\(= (1-P) \times K\)</span> — monitoring occurs only in default states, not good states.</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -654,12 +667,12 @@ Proposition (Gale-Hellwig 1985): Standard Debt Minimizes Monitoring Costs
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Among all incentive-compatible contracts, the standard debt contract minimizes expected monitoring costs. The lender monitors <strong>only in default states</strong>. The face value <span class="math inline">\(D\)</span> satisfies the lender’s break-even constraint:</p>
+<p>Among all incentive-compatible contracts, the standard debt contract minimizes expected monitoring costs. The lender monitors <strong>only in default states</strong>. The face value <span class="math inline">\(f\)</span> satisfies the lender’s break-even constraint:</p>
 <p><span class="math display">\[
-P \cdot D + (1 - P)(L - K) = r
+P \cdot f + (1 - P)(L - K) = r
 \]</span></p>
 <p>With our parameters (<span class="math inline">\(P = 0.8\)</span>, <span class="math inline">\(L = 1\)</span>, <span class="math inline">\(K = 0.0002\)</span>, <span class="math inline">\(r = 1.05\)</span>):</p>
-<p><span class="math display">\[0.8D + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad D \approx 1.0625\]</span></p>
+<p><span class="math display">\[0.8f + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad f \approx 1.0625\]</span></p>
 <p>The <strong>monitored loan rate is approximately 6.25%</strong>. Expected monitoring cost per loan <span class="math inline">\(= (1-P)K = 0.2 \times 0.0002 = 0.00004\)</span> — nearly zero.</p>
 </div>
 </div>
@@ -674,7 +687,7 @@ P \cdot D + (1 - P)(L - K) = r
 <p>In Diamond’s setup:</p>
 <ul>
 <li><strong>Without monitoring</strong> (no lending relationship): If the borrower defaults, the lender <strong>liquidates</strong> the borrower’s assets. Liquidation is <strong>completely destructive</strong> — both parties receive 0. The bad-state value <span class="math inline">\(L = 1\)</span> is entirely destroyed.</li>
-<li><strong>With monitoring</strong> (lending relationship established): The lender can observe <span class="math inline">\(\tilde{y} = L = 1\)</span> and <strong>accept <span class="math inline">\(L = 1\)</span> rather than liquidating</strong>. “Monitoring” in Diamond means the ability to verify the bad-state outcome and avoid wasteful liquidation.</li>
+<li><strong>With monitoring</strong> (lending relationship established): The lender can observe <span class="math inline">\(V = L = 1\)</span> and <strong>accept <span class="math inline">\(L = 1\)</span> rather than liquidating</strong>. “Monitoring” in Diamond means the ability to verify the bad-state outcome and avoid wasteful liquidation.</li>
 </ul>
 <p>The monitoring cost <span class="math inline">\(K = 0.0002\)</span> is the cost of establishing and maintaining this observational relationship. Liquidation itself is costless to execute, but destroys real value.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -708,8 +721,8 @@ How Diamond (1996) Maps to the General CSV Framework
 </tr>
 <tr class="even">
 <td><strong>Bad state, with monitoring</strong></td>
-<td>Lender pays <span class="math inline">\(K\)</span>, verifies <span class="math inline">\(\tilde{y} = L\)</span>, collects <span class="math inline">\(L - K\)</span> net</td>
-<td>Lender pays <span class="math inline">\(K\)</span>, observes <span class="math inline">\(\tilde{y} = L\)</span>, accepts <span class="math inline">\(L = 1\)</span></td>
+<td>Lender pays <span class="math inline">\(K\)</span>, verifies <span class="math inline">\(V = L\)</span>, collects <span class="math inline">\(L - K\)</span> net</td>
+<td>Lender pays <span class="math inline">\(K\)</span>, observes <span class="math inline">\(V = L\)</span>, accepts <span class="math inline">\(L = 1\)</span></td>
 </tr>
 <tr class="odd">
 <td><strong>Social waste from not monitoring</strong></td>
@@ -723,7 +736,7 @@ How Diamond (1996) Maps to the General CSV Framework
 </tr>
 <tr class="odd">
 <td><strong>Monitored face value</strong></td>
-<td><span class="math inline">\(D \approx 1.0625\)</span></td>
+<td><span class="math inline">\(f \approx 1.0625\)</span></td>
 <td><span class="math inline">\(f \approx 1.0625\)</span> (identical formula)</td>
 </tr>
 <tr class="even">
@@ -948,7 +961,7 @@ Unmonitored Debt: Numerical Example
 </section>
 <section id="the-one-loan-bank" class="level3" data-number="5.3.7">
 <h3 data-number="5.3.7" class="anchored" data-anchor-id="the-one-loan-bank"><span class="header-section-number">5.3.7</span> The One-Loan Bank</h3>
-<p>Suppose the bank monitors <strong>one borrower</strong> on behalf of 10,000 depositors. The bank collects <span class="math inline">\(F\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure) from the borrower. For depositors to earn 5%:</p>
+<p>Suppose the bank monitors <strong>one borrower</strong> on behalf of 10,000 depositors. The bank collects <span class="math inline">\(f\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure) from the borrower. For depositors to earn 5%:</p>
 <p><span class="math display">\[P \times B = r \quad \Rightarrow \quad 0.8B = 1.05 \quad \Rightarrow \quad B = 1.3125\]</span></p>
 <p>But the bank needs to pay <span class="math inline">\(B = 1.3125\)</span> when it only collects <span class="math inline">\(1\)</span> from a defaulting borrower. Since <span class="math inline">\(1 &lt; 1.3125\)</span>, the bank is liquidated whenever the borrower defaults — <strong>with probability <span class="math inline">\(1 - P = 0.2\)</span></strong>.</p>
 <p>The one-loan bank reduces monitoring duplication but achieves <strong>zero reduction in financial distress</strong>. The bank fails just as often as if there were no intermediary. Depositors still face a bank that fails 20% of the time. Without diversification, delegation provides no efficiency gain.</p>
@@ -957,9 +970,9 @@ Unmonitored Debt: Numerical Example
 <h3 data-number="5.3.8" class="anchored" data-anchor-id="the-two-loan-bank"><span class="header-section-number">5.3.8</span> The Two-Loan Bank</h3>
 <section id="setup-2" class="level4" data-number="5.3.8.1">
 <h4 data-number="5.3.8.1" class="anchored" data-anchor-id="setup-2"><span class="header-section-number">5.3.8.1</span> Setup</h4>
-<p>The banker monitors <strong>two borrowers</strong> (<span class="math inline">\(n = 2\)</span>), raising deposits from 20,000 investors. Returns <span class="math inline">\(V_1, V_2\)</span> are i.i.d. The banker gives each borrower a monitored debt contract with face value <span class="math inline">\(F\)</span>:</p>
+<p>The banker monitors <strong>two borrowers</strong> (<span class="math inline">\(n = 2\)</span>), raising deposits from 20,000 investors. Returns <span class="math inline">\(V_1, V_2\)</span> are i.i.d. The banker gives each borrower a monitored debt contract with face value <span class="math inline">\(f\)</span>:</p>
 <ul>
-<li>If <span class="math inline">\(V_i = H = 1.4\)</span>: Borrower <span class="math inline">\(i\)</span> pays <span class="math inline">\(F\)</span> to the bank</li>
+<li>If <span class="math inline">\(V_i = H = 1.4\)</span>: Borrower <span class="math inline">\(i\)</span> pays <span class="math inline">\(f\)</span> to the bank</li>
 <li>If <span class="math inline">\(V_i = L = 1\)</span>: Bank monitors borrower <span class="math inline">\(i\)</span>, accepts 1</li>
 </ul>
 <p>The bank’s total income distribution:</p>
@@ -976,12 +989,12 @@ Unmonitored Debt: Numerical Example
 <tr class="odd">
 <td>Both succeed</td>
 <td><span class="math inline">\(P^2 = 0.64\)</span></td>
-<td><span class="math inline">\(2F\)</span></td>
+<td><span class="math inline">\(2f\)</span></td>
 </tr>
 <tr class="even">
 <td>One succeeds, one fails</td>
 <td><span class="math inline">\(2P(1-P) = 0.32\)</span></td>
-<td><span class="math inline">\(F + 1\)</span></td>
+<td><span class="math inline">\(f + 1\)</span></td>
 </tr>
 <tr class="odd">
 <td>Both fail</td>
@@ -993,7 +1006,7 @@ Unmonitored Debt: Numerical Example
 </section>
 <section id="setting-the-deposit-rate" class="level4" data-number="5.3.8.2">
 <h4 data-number="5.3.8.2" class="anchored" data-anchor-id="setting-the-deposit-rate"><span class="header-section-number">5.3.8.2</span> Setting the Deposit Rate</h4>
-<p>The bank issues total deposits with face value <span class="math inline">\(2B\)</span>. If <span class="math inline">\(F\)</span> is set large enough that <span class="math inline">\(F + 1 \geq 2B\)</span>, the bank repays depositors whenever <strong>at most one borrower defaults</strong>. The bank fails only when <strong>both fail simultaneously</strong> — probability <span class="math inline">\((1-P)^2 = 0.04\)</span>.</p>
+<p>The bank issues total deposits with face value <span class="math inline">\(2B\)</span>. If <span class="math inline">\(f\)</span> is set large enough that <span class="math inline">\(f + 1 \geq 2B\)</span>, the bank repays depositors whenever <strong>at most one borrower defaults</strong>. The bank fails only when <strong>both fail simultaneously</strong> — probability <span class="math inline">\((1-P)^2 = 0.04\)</span>.</p>
 <p>Depositor break-even:</p>
 <p><span class="math display">\[\Pr(\text{bank pays}) \times 2B = 2r\]</span> <span class="math display">\[0.96 \times 2B = 2(1.05) = 2.10\]</span> <span class="math display">\[2B = 2.1875 \quad \Rightarrow \quad B = 1.09375\]</span></p>
 <p><strong>Deposit rate = 9.375%</strong> — above the 5% risk-free rate, compensating for the 4% residual failure probability.</p>
@@ -1001,8 +1014,8 @@ Unmonitored Debt: Numerical Example
 <section id="setting-the-loan-rate" class="level4" data-number="5.3.8.3">
 <h4 data-number="5.3.8.3" class="anchored" data-anchor-id="setting-the-loan-rate"><span class="header-section-number">5.3.8.3</span> Setting the Loan Rate</h4>
 <p>For the bank to pay <span class="math inline">\(2B = 2.1875\)</span> when exactly one borrower defaults:</p>
-<p><span class="math display">\[F + 1 \geq 2B = 2.1875 \quad \Rightarrow \quad F \geq 1.1875\]</span></p>
-<p>Setting <span class="math inline">\(F = 1.1875\)</span> (minimum viable face value):</p>
+<p><span class="math display">\[f + 1 \geq 2B = 2.1875 \quad \Rightarrow \quad f \geq 1.1875\]</span></p>
+<p>Setting <span class="math inline">\(f = 1.1875\)</span> (minimum viable face value):</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1062,7 +1075,7 @@ Two-Loan Bank: Complete Numerical Example
 </table>
 <p>Depositor expected return: <span class="math inline">\(0.96 \times 2.1875 = 2.10 = 2 \times 1.05\)</span> ✓</p>
 <ul>
-<li><strong>Loan rate = 18.75%</strong> (face value <span class="math inline">\(F = 1.1875\)</span>)</li>
+<li><strong>Loan rate = 18.75%</strong> (face value <span class="math inline">\(f = 1.1875\)</span>)</li>
 <li><strong>Deposit rate = 9.375%</strong> (<span class="math inline">\(B = 1.09375\)</span>)</li>
 <li><strong>Bank failure probability = 4%</strong> (down from 20% for a one-loan bank)</li>
 </ul>
@@ -1172,9 +1185,9 @@ Two-Loan Bank: Complete Numerical Example
 <h3 data-number="5.3.10" class="anchored" data-anchor-id="the-n-loan-bank"><span class="header-section-number">5.3.10</span> The <span class="math inline">\(n\)</span>-Loan Bank</h3>
 <section id="the-law-of-large-numbers" class="level4" data-number="5.3.10.1">
 <h4 data-number="5.3.10.1" class="anchored" data-anchor-id="the-law-of-large-numbers"><span class="header-section-number">5.3.10.1</span> The Law of Large Numbers</h4>
-<p>With <span class="math inline">\(n\)</span> independent loans (each returning <span class="math inline">\(F\)</span> with prob <span class="math inline">\(P\)</span> and <span class="math inline">\(1\)</span> with prob <span class="math inline">\(1-P\)</span>), the number of successes <span class="math inline">\(S_n \sim \text{Binomial}(n, P)\)</span>. By the Law of Large Numbers:</p>
+<p>With <span class="math inline">\(n\)</span> independent loans (each returning <span class="math inline">\(f\)</span> with prob <span class="math inline">\(P\)</span> and <span class="math inline">\(1\)</span> with prob <span class="math inline">\(1-P\)</span>), the number of successes <span class="math inline">\(S_n \sim \text{Binomial}(n, P)\)</span>. By the Law of Large Numbers:</p>
 <p><span class="math display">\[\frac{S_n}{n} \xrightarrow{\text{a.s.}} P = 0.8 \quad \text{as } n \to \infty\]</span></p>
-<p>The bank’s income per loan converges to <span class="math inline">\(P \times F + (1-P) \times 1 = 0.8F + 0.2\)</span> almost surely. For <span class="math inline">\(F &gt; 1.0625\)</span>, this exceeds the deposit rate <span class="math inline">\(B\)</span>, so the bank almost always pays depositors. Bank failure probability <span class="math inline">\(\to 0\)</span>.</p>
+<p>The bank’s income per loan converges to <span class="math inline">\(P \times f + (1-P) \times 1 = 0.8f + 0.2\)</span> almost surely. For <span class="math inline">\(f &gt; 1.0625\)</span>, this exceeds the deposit rate <span class="math inline">\(B\)</span>, so the bank almost always pays depositors. Bank failure probability <span class="math inline">\(\to 0\)</span>.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1189,7 +1202,7 @@ Main Result (Diamond 1984, 1996)
 <p><span class="math display">\[D(n) \to 0, \quad K + D(n) \to K = 0.0002\]</span></p>
 <ul>
 <li><strong>Deposit rate <span class="math inline">\(\to r = 5\%\)</span></strong> (the risk-free rate)</li>
-<li><strong>Loan face value <span class="math inline">\(F \to 1.06275\)</span></strong> (solution to <span class="math inline">\(0.8F + 0.2 = 1.05 + K\)</span>)</li>
+<li><strong>Loan face value <span class="math inline">\(f \to 1.06275\)</span></strong> (solution to <span class="math inline">\(0.8f + 0.2 = 1.05 + K\)</span>)</li>
 <li><strong>Borrowers’ expected cost of capital <span class="math inline">\(\to 5.02\%\)</span></strong> (just above the risk-free rate)</li>
 </ul>
 <p>All distress costs are eliminated. The full surplus <span class="math inline">\(S - K = 0.2 - 0.0002 = 0.1998\)</span> per borrower is available to borrowers and depositors.</p>
@@ -1266,7 +1279,7 @@ Connecting General and Binary
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The binary Diamond (1996) case is the special case <span class="math inline">\(G(v) = (1-P)\cdot\mathbf{1}(v \geq L) + 1 \cdot \mathbf{1}(v \geq H)\)</span>, so that <span class="math inline">\(G(F)= \Pr(V_j &lt; F) = 1-P = 0.2\)</span> for <span class="math inline">\(L \leq F \leq H\)</span>. All formulas below reduce exactly to the numerical examples when this is substituted.</p>
+<p>The binary Diamond (1996) case is the special case <span class="math inline">\(G(v) = (1-P)\cdot\mathbf{1}(v \geq L) + 1 \cdot \mathbf{1}(v \geq H)\)</span>, so that <span class="math inline">\(G(f)= \Pr(V_j &lt; f) = 1-P = 0.2\)</span> for <span class="math inline">\(L \leq f \leq H\)</span>. All formulas below reduce exactly to the numerical examples when this is substituted.</p>
 </div>
 </div>
 <p><strong>Depositors</strong>: <span class="math inline">\(m \cdot n\)</span> depositors, each contributing <span class="math inline">\(1/m\)</span>. The bank promises each depositor a gross return of <span class="math inline">\(B\)</span> per unit deposited. Total deposit obligation = <span class="math inline">\(nB\)</span>.</p>
@@ -1274,16 +1287,16 @@ Connecting General and Binary
 </section>
 <section id="the-banks-per-loan-income" class="level4" data-number="5.3.11.2">
 <h4 data-number="5.3.11.2" class="anchored" data-anchor-id="the-banks-per-loan-income"><span class="header-section-number">5.3.11.2</span> The Bank’s Per-Loan Income</h4>
-<p>The bank holds the Gale-Hellwig optimal loan contract (face value <span class="math inline">\(F\)</span>) on each of its <span class="math inline">\(n\)</span> loans. Using the CSV framework from above:</p>
+<p>The bank holds the Gale-Hellwig optimal loan contract (face value <span class="math inline">\(f\)</span>) on each of its <span class="math inline">\(n\)</span> loans. Using the CSV framework from above:</p>
 <p><span class="math display">\[
-R_j \;=\; \underbrace{F \cdot \mathbf{1}(V_j \geq F)}_{\text{good state: borrower pays }F} + \underbrace{V_j \cdot \mathbf{1}(V_j &lt; F)}_{\text{bad state: bank monitors, collects }V_j} - \underbrace{K \cdot \mathbf{1}(V_j &lt; F)}_{\text{monitoring cost}}
+R_j \;=\; \underbrace{f \cdot \mathbf{1}(V_j \geq f)}_{\text{good state: borrower pays }f} + \underbrace{V_j \cdot \mathbf{1}(V_j &lt; f)}_{\text{bad state: bank monitors, collects }V_j} - \underbrace{K \cdot \mathbf{1}(V_j &lt; f)}_{\text{monitoring cost}}
 \]</span></p>
-<p>This can be written compactly as <span class="math inline">\(R_j = \min(V_j,\, F) - K \cdot \mathbf{1}(V_j &lt; F)\)</span>.</p>
+<p>This can be written compactly as <span class="math inline">\(R_j = \min(V_j,\, f) - K \cdot \mathbf{1}(V_j &lt; f)\)</span>.</p>
 <p><strong>Expected per-loan income</strong>:</p>
 <p><span class="math display">\[
-\rho \;\equiv\; \mathbb{E}[R_j] = \mathbb{E}[\min(V_j, F)] - K \cdot G(F)
+\rho \;\equiv\; \mathbb{E}[R_j] = \mathbb{E}[\min(V_j, f)] - K \cdot G(f)
 \]</span></p>
-<p>where <span class="math inline">\(G(F) = \Pr(V_j &lt; F)\)</span> is the default probability.</p>
+<p>where <span class="math inline">\(G(f) = \Pr(V_j &lt; f)\)</span> is the default probability.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1294,8 +1307,8 @@ Binary Special Case
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>With <span class="math inline">\(V_j \in \{L, H\}\)</span> and <span class="math inline">\(F \in (L, H)\)</span>: <span class="math inline">\(G(F) = 1 - P\)</span>, <span class="math inline">\(\mathbb{E}[\min(V_j, F)] = P \cdot F + (1-P) \cdot L\)</span>, so</p>
-<p><span class="math display">\[\rho = PF + (1-P)L - (1-P)K = PF + (1-P)(L-K)\]</span></p>
+<p>With <span class="math inline">\(V_j \in \{L, H\}\)</span> and <span class="math inline">\(f \in (L, H)\)</span>: <span class="math inline">\(G(f) = 1 - P\)</span>, <span class="math inline">\(\mathbb{E}[\min(V_j, f)] = P \cdot f + (1-P) \cdot L\)</span>, so</p>
+<p><span class="math display">\[\rho = Pf + (1-P)L - (1-P)K = Pf + (1-P)(L-K)\]</span></p>
 <p>This is exactly the formula used to set the two-loan bank’s deposit rate.</p>
 </div>
 </div>
@@ -1337,11 +1350,11 @@ Theorem (Diamond 1984): Delegation Cost Vanishes with Diversification
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Let <span class="math inline">\(R_1, R_2, \ldots\)</span> be i.i.d. loan returns with mean <span class="math inline">\(\rho\)</span> and variance <span class="math inline">\(\sigma^2 &lt; \infty\)</span>. Suppose the face value <span class="math inline">\(F\)</span> and deposit rate <span class="math inline">\(B\)</span> satisfy <span class="math inline">\(B &lt; \rho\)</span> (the bank earns strictly more per loan than it owes per deposit, leaving a positive control rent). Then the delegation cost per borrower satisfies:</p>
+<p>Let <span class="math inline">\(R_1, R_2, \ldots\)</span> be i.i.d. loan returns with mean <span class="math inline">\(\rho\)</span> and variance <span class="math inline">\(\sigma^2 &lt; \infty\)</span>. Suppose the face value <span class="math inline">\(f\)</span> and deposit rate <span class="math inline">\(B\)</span> satisfy <span class="math inline">\(B &lt; \rho\)</span> (the bank earns strictly more per loan than it owes per deposit, leaving a positive control rent). Then the delegation cost per borrower satisfies:</p>
 <p><span class="math display">\[D(n) \to 0 \quad \text{as } n \to \infty\]</span></p>
 <p>and the total intermediation cost converges to the irreducible monitoring cost:</p>
 <p><span class="math display">\[K + D(n) \to K \quad \text{as } n \to \infty\]</span></p>
-<p>In the limit: deposit rate <span class="math inline">\(B \to r\)</span>, loan face value <span class="math inline">\(F \to F^*\)</span> (the CSV-optimal value), and the full social surplus <span class="math inline">\(\mu - r - K\)</span> per project is distributed between borrowers and depositors.</p>
+<p>In the limit: deposit rate <span class="math inline">\(B \to r\)</span>, loan face value <span class="math inline">\(f \to f \approx 1.0625\)</span> (the Gale-Hellwig CSV-optimal value), and the full social surplus <span class="math inline">\(\mu - r - K\)</span> per project is distributed between borrowers and depositors.</p>
 </div>
 </div>
 <p><strong>Proof sketch via Chebyshev’s inequality</strong>. The delegation cost arises from two sources: (i) financial distress when <span class="math inline">\(W_n &lt; nB\)</span>, and (ii) the control rent required to keep <span class="math inline">\(B &lt; \rho\)</span>. For the distress component, apply Chebyshev to the sample mean:</p>
@@ -1359,7 +1372,7 @@ Binary Special Case: Chebyshev Bound
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>With <span class="math inline">\(V_j \in \{L, H\}\)</span> and the two-loan bank (<span class="math inline">\(n=2\)</span>): <span class="math inline">\(\sigma^2 = P(1-P)(F-L+K)^2\)</span>. For <span class="math inline">\(F=1.1875\)</span>, <span class="math inline">\(B = 1.09375\)</span>, <span class="math inline">\(\rho = 0.8(1.1875)+0.2(1-0.0002) = 1.15\)</span>, and <span class="math inline">\(\rho - B = 0.05625\)</span>:</p>
+<p>With <span class="math inline">\(V_j \in \{L, H\}\)</span> and the two-loan bank (<span class="math inline">\(n=2\)</span>): <span class="math inline">\(\sigma^2 = P(1-P)(f-L+K)^2\)</span>. For <span class="math inline">\(f=1.1875\)</span>, <span class="math inline">\(B = 1.09375\)</span>, <span class="math inline">\(\rho = 0.8(1.1875)+0.2(1-0.0002) = 1.15\)</span>, and <span class="math inline">\(\rho - B = 0.05625\)</span>:</p>
 <p><span class="math display">\[\Pr(\text{bank fails}) \leq \frac{\sigma^2}{2(0.05625)^2}\]</span></p>
 <p>The Chebyshev bound is conservative; the exact binomial gives <span class="math inline">\((1-P)^2 = 0.04\)</span> for <span class="math inline">\(n=2\)</span>, approaching 0 geometrically as <span class="math inline">\(n\)</span> grows.</p>
 </div>
@@ -1387,8 +1400,8 @@ Binary Special Case: Chebyshev Bound
 <tr class="odd">
 <td><strong>Bank → Borrower</strong></td>
 <td>Borrower hides <span class="math inline">\(V_j\)</span></td>
-<td>Loan at face value <span class="math inline">\(F\)</span>; monitor in default</td>
-<td>When <span class="math inline">\(V_j &lt; F\)</span>; prob <span class="math inline">\(G(F)\)</span> per loan</td>
+<td>Loan at face value <span class="math inline">\(f\)</span>; monitor in default</td>
+<td>When <span class="math inline">\(V_j &lt; f\)</span>; prob <span class="math inline">\(G(f)\)</span> per loan</td>
 </tr>
 <tr class="even">
 <td><strong>Depositor → Bank</strong></td>
@@ -1398,7 +1411,7 @@ Binary Special Case: Chebyshev Bound
 </tr>
 </tbody>
 </table>
-<p>The key asymmetry: on the asset side, each loan defaults with probability <span class="math inline">\(G(F) \approx 0.2\)</span> (the irreducible credit risk of individual loans). On the liability side, the bank fails with probability <span class="math inline">\(O(1/n)\)</span>, which the bank itself controls by diversifying. Diversification makes the liability side of the bank’s balance sheet <strong>nearly riskless</strong> even though each individual loan is risky.</p>
+<p>The key asymmetry: on the asset side, each loan defaults with probability <span class="math inline">\(G(f) \approx 0.2\)</span> (the irreducible credit risk of individual loans). On the liability side, the bank fails with probability <span class="math inline">\(O(1/n)\)</span>, which the bank itself controls by diversifying. Diversification makes the liability side of the bank’s balance sheet <strong>nearly riskless</strong> even though each individual loan is risky.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
