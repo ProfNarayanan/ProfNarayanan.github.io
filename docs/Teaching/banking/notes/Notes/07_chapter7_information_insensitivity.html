@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7&nbsp; Liquidity Creation Through Information Insensitivity – Banking</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Notes/06_chapter6_liquidity_provision.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-626149efe8f5d16e1d391ba177679bf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Notes/01_chapter1_what_is_a_bank.html">Fundamentals of Banking</a></li><li class="breadcrumb-item"><a href="../Notes/07_chapter7_information_insensitivity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Liquidity Creation Through Information Insensitivity</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Banking</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Fundamentals of Banking</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/01_chapter1_what_is_a_bank.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Economic Role of Banks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/02_chapter2_liquidity_creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Liquidity Creation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/03_chapter3_bank_runs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bank Runs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/04_chapter4_supplement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bank Runs and Failures: Supplement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/05_chapter5_information_producers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Banks as Information Producers</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/06_chapter6_liquidity_provision.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Deposit-Lending Synergy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Notes/07_chapter7_information_insensitivity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Liquidity Creation Through Information Insensitivity</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">7.1</span> Overview</a>
+  <ul class="collapse">
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">7.1.1</span> Learning Objectives</a></li>
+  </ul></li>
+  <li><a href="#sec-problem" id="toc-sec-problem" class="nav-link" data-scroll-target="#sec-problem"><span class="header-section-number">7.2</span> Part 1: The Problem — Exploiting Uninformed Investors</a>
+  <ul class="collapse">
+  <li><a href="#a-different-question-than-diamonddybvig" id="toc-a-different-question-than-diamonddybvig" class="nav-link" data-scroll-target="#a-different-question-than-diamonddybvig"><span class="header-section-number">7.2.1</span> A Different Question than Diamond–Dybvig</a></li>
+  <li><a href="#setup-and-assumptions" id="toc-setup-and-assumptions" class="nav-link" data-scroll-target="#setup-and-assumptions"><span class="header-section-number">7.2.2</span> Setup and Assumptions</a></li>
+  <li><a href="#the-full-information-benchmark" id="toc-the-full-information-benchmark" class="nav-link" data-scroll-target="#the-full-information-benchmark"><span class="header-section-number">7.2.3</span> The Full-Information Benchmark</a></li>
+  <li><a href="#the-insider-trading-equilibrium" id="toc-the-insider-trading-equilibrium" class="nav-link" data-scroll-target="#the-insider-trading-equilibrium"><span class="header-section-number">7.2.4</span> The Insider Trading Equilibrium</a></li>
+  </ul></li>
+  <li><a href="#sec-private" id="toc-sec-private" class="nav-link" data-scroll-target="#sec-private"><span class="header-section-number">7.3</span> Part 2: Private Liquidity Creation</a>
+  <ul class="collapse">
+  <li><a href="#the-intermediary-contract-splitting-cash-flows" id="toc-the-intermediary-contract-splitting-cash-flows" class="nav-link" data-scroll-target="#the-intermediary-contract-splitting-cash-flows"><span class="header-section-number">7.3.1</span> The Intermediary Contract: Splitting Cash Flows</a></li>
+  <li><a href="#breaking-the-insider-coalition" id="toc-breaking-the-insider-coalition" class="nav-link" data-scroll-target="#breaking-the-insider-coalition"><span class="header-section-number">7.3.2</span> Breaking the Insider Coalition</a></li>
+  <li><a href="#the-role-of-the-bank-a-summary" id="toc-the-role-of-the-bank-a-summary" class="nav-link" data-scroll-target="#the-role-of-the-bank-a-summary"><span class="header-section-number">7.3.3</span> The Role of the Bank: A Summary</a></li>
+  <li><a href="#corporate-debt-and-money-market-mutual-funds-as-alternatives" id="toc-corporate-debt-and-money-market-mutual-funds-as-alternatives" class="nav-link" data-scroll-target="#corporate-debt-and-money-market-mutual-funds-as-alternatives"><span class="header-section-number">7.3.4</span> Corporate Debt and Money Market Mutual Funds as Alternatives</a></li>
+  </ul></li>
+  <li><a href="#sec-government" id="toc-sec-government" class="nav-link" data-scroll-target="#sec-government"><span class="header-section-number">7.4</span> Part 3: When Private Contracting Fails — Government’s Role</a>
+  <ul class="collapse">
+  <li><a href="#the-limits-of-private-liquidity-creation" id="toc-the-limits-of-private-liquidity-creation" class="nav-link" data-scroll-target="#the-limits-of-private-liquidity-creation"><span class="header-section-number">7.4.1</span> The Limits of Private Liquidity Creation</a></li>
+  <li><a href="#deposit-insurance-government-as-risk-absorber" id="toc-deposit-insurance-government-as-risk-absorber" class="nav-link" data-scroll-target="#deposit-insurance-government-as-risk-absorber"><span class="header-section-number">7.4.2</span> Deposit Insurance: Government as Risk-Absorber</a></li>
+  <li><a href="#the-treasury-market-an-alternative-safe-asset-system" id="toc-the-treasury-market-an-alternative-safe-asset-system" class="nav-link" data-scroll-target="#the-treasury-market-an-alternative-safe-asset-system"><span class="header-section-number">7.4.3</span> The Treasury Market: An Alternative Safe-Asset System</a></li>
+  </ul></li>
+  <li><a href="#sec-insensitivity" id="toc-sec-insensitivity" class="nav-link" data-scroll-target="#sec-insensitivity"><span class="header-section-number">7.5</span> Part 4: Information Insensitivity as a General Principle</a>
+  <ul class="collapse">
+  <li><a href="#holmstrom-2015-debt-is-designed-to-be-opaque" id="toc-holmstrom-2015-debt-is-designed-to-be-opaque" class="nav-link" data-scroll-target="#holmstrom-2015-debt-is-designed-to-be-opaque"><span class="header-section-number">7.5.1</span> Holmstrom (2015): Debt Is Designed to Be Opaque</a></li>
+  <li><a href="#dang-gorton-holmstrom-and-ordonez-2017-banks-as-secret-keepers" id="toc-dang-gorton-holmstrom-and-ordonez-2017-banks-as-secret-keepers" class="nav-link" data-scroll-target="#dang-gorton-holmstrom-and-ordonez-2017-banks-as-secret-keepers"><span class="header-section-number">7.5.2</span> Dang, Gorton, Holmstrom, and Ordonez (2017): Banks as Secret Keepers</a></li>
+  <li><a href="#safe-assets-in-the-modern-economy" id="toc-safe-assets-in-the-modern-economy" class="nav-link" data-scroll-target="#safe-assets-in-the-modern-economy"><span class="header-section-number">7.5.3</span> Safe Assets in the Modern Economy</a></li>
+  <li><a href="#when-information-insensitivity-breaks-down-the-2008-crisis" id="toc-when-information-insensitivity-breaks-down-the-2008-crisis" class="nav-link" data-scroll-target="#when-information-insensitivity-breaks-down-the-2008-crisis"><span class="header-section-number">7.5.4</span> When Information Insensitivity Breaks Down: The 2008 Crisis</a></li>
+  </ul></li>
+  <li><a href="#summary-and-connections" id="toc-summary-and-connections" class="nav-link" data-scroll-target="#summary-and-connections"><span class="header-section-number">7.6</span> Summary and Connections</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.7</span> References</a>
+  <ul class="collapse">
+  <li><a href="#primary-source" id="toc-primary-source" class="nav-link" data-scroll-target="#primary-source"><span class="header-section-number">7.7.1</span> Primary Source</a></li>
+  <li><a href="#related-work" id="toc-related-work" class="nav-link" data-scroll-target="#related-work"><span class="header-section-number">7.7.2</span> Related Work</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Notes/01_chapter1_what_is_a_bank.html">Fundamentals of Banking</a></li><li class="breadcrumb-item"><a href="../Notes/07_chapter7_information_insensitivity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Liquidity Creation Through Information Insensitivity</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Liquidity Creation Through Information Insensitivity</span></h1>
+<p class="subtitle lead">The Gorton–Pennacchi Theory of Banks as Creators of Safe Securities</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">7.1</span> Overview</h2>
+<p>Chapter 6 developed the Kashyap–Rajan–Stein view of why deposit-taking and loan-commitment making belong under one roof: because both activities require costly liquidity buffers, and combining them allows sharing. The synergy in that chapter is fundamentally about <em>costs</em> — a bank that does both needs less liquidity in total than two specialized institutions.</p>
+<p>This chapter develops a complementary but distinct answer. Gorton and Pennacchi (1990) ask a more foundational question that KRS leaves unanswered: <strong>why do agents want a safe, information-insensitive security in the first place?</strong></p>
+<p>A security is <strong>information-insensitive</strong> when its value does not depend on private information that some agents know and others do not. Bank deposits are the leading example: a depositor who holds a claim promising <span class="math inline">\(\$1{,}000\)</span> receives <span class="math inline">\(\$1{,}000\)</span> regardless of what the bank’s loan portfolio turns out to be worth. An insider who knows the loans are performing badly gains nothing by trading deposits against an uninformed depositor — the payoff is fixed. This is exactly what makes deposits safe to use as a medium of exchange: you can accept them without worrying that the counterparty knows something you don’t. Treasury bills share this property (backed by the government’s taxing power, not any specific risky project); stocks do not (their value depends entirely on information about firm prospects that insiders may know before you do).</p>
+<p>GP’s answer to why agents demand such securities is rooted not in liquidity management but in the economics of asymmetric information in trading markets.</p>
+<p>The central insight is that <strong>deposits protect uninformed traders from losses to better-informed insiders</strong>. When informed agents know more about asset values than ordinary investors, they can exploit the uninformed by trading against them in risky asset markets. A bank that pools risky assets and issues riskless debt against them gives uninformed agents a safe medium for transacting — one whose value cannot be manipulated by insiders because it is insensitive to the private information that insiders hold.</p>
+<p>This logic explains several facts that the KRS framework takes as given:</p>
+<ul>
+<li>Why bank liabilities are <em>debt</em> (safe, fixed-claim) rather than equity</li>
+<li>Why the same institution holds risky loans and issues safe deposits</li>
+<li>Why bank deposits, government bonds, and high-grade corporate debt all serve as “money-like” assets</li>
+<li>Why the safety of a transactions medium depends critically on its information sensitivity</li>
+</ul>
+<p>The chapter proceeds in four parts. Parts 1 and 2 develop the Gorton–Pennacchi model — the problem, the solution, and the alternatives. Part 3 examines the role of government when private contracting fails. Part 4 connects the GP framework to the modern literature on information insensitivity and safe assets, tracing its implications through the 2008 financial crisis and recent debates about the design of liquid financial markets.</p>
+<section id="learning-objectives" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">7.1.1</span> Learning Objectives</h3>
+<p>By the end of this chapter, you should be able to:</p>
+<ol type="1">
+<li>Explain why uninformed investors face losses when trading against informed insiders in an asset market, and why this creates a demand for safe, information-insensitive securities.</li>
+<li>Describe the Gorton–Pennacchi model setup and derive the insider trading equilibrium.</li>
+<li>Explain how a bank intermediary — by splitting asset cash flows into riskless debt and risky equity — can break the insider coalition and restore efficient trade.</li>
+<li>Identify the conditions under which private bank deposits can be made riskless, and explain the role of government deposit insurance when those conditions fail.</li>
+<li>Explain what “information insensitivity” means, and connect the GP model to the broader literature on safe assets and the design of money-like securities.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="sec-problem" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sec-problem"><span class="header-section-number">7.2</span> Part 1: The Problem — Exploiting Uninformed Investors</h2>
+<section id="a-different-question-than-diamonddybvig" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="a-different-question-than-diamonddybvig"><span class="header-section-number">7.2.1</span> A Different Question than Diamond–Dybvig</h3>
+<p>The Gorton–Pennacchi starting point is superficially similar to Diamond–Dybvig (Chapter 3). There are agents with uncertain consumption preferences — some will want to consume early, some late — and there are risky assets. But the key difference is this: <strong>Gorton and Pennacchi do not rule out a stock market</strong>. Agents are free to trade equity claims on the underlying capital at any time.</p>
+<p>As Jacklin (1987) showed, when a stock market is available, equity trading weakly dominates bank deposits under full information: agents can achieve at least as good an allocation simply by trading equity claims at <span class="math inline">\(t = 1\)</span>, with no strict need for a bank. This raises a challenge for any theory of banking that relies on liquidity provision alone — if markets work well, why would anyone use a bank?</p>
+<p>GP’s answer: because a stock market, when populated by better-informed insiders, is not a safe place for ordinary investors to trade. The problem is not that markets are missing; it is that <strong>the equilibrium favors informed agents at uninformed agents’ expense</strong>. Informed agents can exploit uninformed agents who <em>must</em> trade for liquidity reasons. The bank — by issuing debt that does not expose the holder to the insiders’ information advantage — gives uninformed agents a safe alternative.</p>
+</section>
+<section id="setup-and-assumptions" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="setup-and-assumptions"><span class="header-section-number">7.2.2</span> Setup and Assumptions</h3>
+<p>The economy spans three dates <span class="math inline">\(t = 0, 1, 2\)</span> with a single consumption good.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Three Agent Types in the GP Model
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>1. Informed agents (Type I).</strong> These agents have known consumption preferences at <span class="math inline">\(t = 0\)</span>: they consume at <span class="math inline">\(t = 2\)</span>. Crucially, at <span class="math inline">\(t = 1\)</span> they observe both the return on capital (<span class="math inline">\(R_H\)</span> or <span class="math inline">\(R_L\)</span>) and the proportion of early consumers (<span class="math inline">\(\omega_h\)</span> or <span class="math inline">\(\omega_l\)</span>). They have aggregate capital endowment <span class="math inline">\(M\)</span>.</p>
+<p><strong>2. Early consumers</strong> (a subtype of liquidity traders). These agents discover at <span class="math inline">\(t = 1\)</span> that they want to consume immediately (utility <span class="math inline">\(U = C_1\)</span>). They must sell their capital for the consumption good.</p>
+<p><strong>3. Late consumers</strong> (the other subtype of liquidity traders). These agents discover at <span class="math inline">\(t = 1\)</span> that they prefer to consume at <span class="math inline">\(t = 2\)</span> (utility <span class="math inline">\(U = C_2\)</span>). They may sell their <span class="math inline">\(t = 1\)</span> endowment of the consumption good for capital, or store it.</p>
+<p>Agents of types 2 and 3 collectively form the set of <em>liquidity traders</em> (total mass <span class="math inline">\(N\)</span>, large relative to informed agents). At <span class="math inline">\(t = 0\)</span>, liquidity traders do not know which type they will be.</p>
+</div>
+</div>
+<p><strong>Endowments.</strong> Each liquidity trader receives 1 unit of the capital good at <span class="math inline">\(t = 0\)</span> and <span class="math inline">\(e_1\)</span> units of the consumption good at <span class="math inline">\(t = 1\)</span>. Informed agents receive aggregate capital <span class="math inline">\(M\)</span> at <span class="math inline">\(t = 0\)</span> and consumption good <span class="math inline">\(Me_2\)</span> at <span class="math inline">\(t = 2\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Capital Good vs.&nbsp;Consumption Good: An Intuition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Think of the <strong>capital good</strong> as an illiquid productive investment — farmland, or a share in a private firm. You commit it at <span class="math inline">\(t = 0\)</span> and it pays off at <span class="math inline">\(t = 2\)</span>, but it cannot be consumed directly in the meantime. The <strong>consumption good</strong> is cash: something spendable right now.</p>
+<p>At <span class="math inline">\(t = 1\)</span> each liquidity trader also receives a paycheck (<span class="math inline">\(e_1\)</span> units of cash). Early consumers — those with utility only over <span class="math inline">\(t = 1\)</span> consumption — wish to exchange their farmland for cash, consuming <span class="math inline">\(e_1\)</span> plus the sale proceeds <span class="math inline">\(p_{ij}\)</span>. Late consumers — those with utility only over <span class="math inline">\(t = 2\)</span> consumption — may use their paycheck to buy farmland (earning <span class="math inline">\(R_H\)</span> or <span class="math inline">\(R_L\)</span> at harvest) or simply store it. Informed agents are the insiders who already know at <span class="math inline">\(t = 1\)</span> whether the harvest will be good or bad. Liquidity traders do not.</p>
+</div>
+</div>
+<p><strong>Technology.</strong> Each unit of capital invested at <span class="math inline">\(t = 0\)</span> produces either <span class="math inline">\(R_H\)</span> or <span class="math inline">\(R_L\)</span> units of the consumption good at <span class="math inline">\(t = 2\)</span>, with equal probability <span class="math inline">\(\frac{1}{2}\)</span>, where <span class="math inline">\(R_H &gt; R_L &gt; 0\)</span>. All capital units face the same aggregate shock — they all produce <span class="math inline">\(R_H\)</span> together or <span class="math inline">\(R_L\)</span> together. Let <span class="math inline">\(\bar{R} = \frac{1}{2}(R_H + R_L)\)</span> denote the expected return.</p>
+<p>Consumption goods received at <span class="math inline">\(t = 1\)</span> can also be stored: one unit stored at <span class="math inline">\(t = 1\)</span> yields one unit at <span class="math inline">\(t = 2\)</span>.</p>
+<p><strong>Preferences over early/late consumption.</strong> The proportion of liquidity traders who are early consumers is either <span class="math inline">\(\omega_h\)</span> (high, probability <span class="math inline">\(q_h\)</span>) or <span class="math inline">\(\omega_l\)</span> (low, probability <span class="math inline">\(q_l = 1 - q_h\)</span>), with <span class="math inline">\(\omega_h &gt; \omega_l\)</span>. This is the same taste-shock structure as Diamond–Dybvig, now augmented with a productive-asset return shock observed only by informed agents.</p>
+<p><strong>The information asymmetry.</strong> At <span class="math inline">\(t = 1\)</span>:</p>
+<ul>
+<li>Informed agents observe the full state <span class="math inline">\(\{i, j\}\)</span> where <span class="math inline">\(i \in \{h, l\}\)</span> (high/low proportion of early consumers) and <span class="math inline">\(j \in \{H, L\}\)</span> (high/low capital return).</li>
+<li>Liquidity traders observe only their own type (early or late) — not the aggregate proportion of early consumers nor the return on capital.</li>
+</ul>
+<p>This is the key asymmetry. Liquidity traders <em>need</em> to trade at <span class="math inline">\(t = 1\)</span> (early consumers must sell capital; late consumers must decide whether to sell endowment or store it), but they do so without knowing the state of the world.</p>
+<p><strong>Timeline.</strong></p>
+<div style="margin: 30px 0;">
+  <svg width="640" height="170" viewbox="0 0 640 170" style="margin: 0 auto; display: block;">
+    <defs>
+      <marker id="arrow-gp" markerwidth="10" markerheight="10" refx="9" refy="3" orient="auto">
+        <path d="M0,0 L0,6 L9,3 z" fill="#333"></path>
+      </marker>
+    </defs>
+    <line x1="60" y1="80" x2="580" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow-gp)"></line>
+    <text x="590" y="84" font-size="13" fill="#333">time</text>
+    <line x1="100" y1="72" x2="100" y2="88" stroke="#333" stroke-width="2"></line>
+    <text x="100" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a5276">t = 0</text>
+    <text x="100" y="126" font-size="11" text-anchor="middle" fill="#555">Agents invest capital;</text>
+    <text x="100" y="141" font-size="11" text-anchor="middle" fill="#555">bank formed (if any);</text>
+    <text x="100" y="156" font-size="11" text-anchor="middle" fill="#555">preferences unknown</text>
+    <line x1="310" y1="72" x2="310" y2="88" stroke="#333" stroke-width="2"></line>
+    <text x="310" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a5276">t = 1</text>
+    <text x="310" y="126" font-size="11" text-anchor="middle" fill="#555">State {i,j} revealed</text>
+    <text x="310" y="141" font-size="11" text-anchor="middle" fill="#555">to informed only;</text>
+    <text x="310" y="156" font-size="11" text-anchor="middle" fill="#555">liquidity traders transact</text>
+    <line x1="520" y1="72" x2="520" y2="88" stroke="#333" stroke-width="2"></line>
+    <text x="520" y="108" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a5276">t = 2</text>
+    <text x="520" y="126" font-size="11" text-anchor="middle" fill="#555">Capital returns realized;</text>
+    <text x="520" y="141" font-size="11" text-anchor="middle" fill="#555">consumption occurs</text>
+    <text x="205" y="58" font-size="10" text-anchor="middle" fill="#7f8c8d">Informed observe {i,j} here</text>
+    <text x="415" y="58" font-size="10" text-anchor="middle" fill="#7f8c8d">R_H or R_L payoff realized</text>
+  </svg>
+</div>
+</section>
+<section id="the-full-information-benchmark" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="the-full-information-benchmark"><span class="header-section-number">7.2.3</span> The Full-Information Benchmark</h3>
+<p>Before introducing asymmetric information, let us establish the efficient benchmark where all agents observe the state <span class="math inline">\(\{i, j\}\)</span> at <span class="math inline">\(t = 1\)</span>.</p>
+<p>There are four states: <span class="math inline">\(\{l, H\}\)</span>, <span class="math inline">\(\{h, H\}\)</span>, <span class="math inline">\(\{h, L\}\)</span>, and <span class="math inline">\(\{l, L\}\)</span>. Let <span class="math inline">\(p_{ij}\)</span> denote the equilibrium price of one unit of capital in terms of consumption goods in state <span class="math inline">\(\{i, j\}\)</span>.</p>
+<p>At <span class="math inline">\(t = 1\)</span>, early consumers wish to exchange their capital endowment for the consumption good; late consumers decide whether to use their <span class="math inline">\(e_1\)</span> paycheck to buy capital or store it. Market clearing requires:</p>
+<p><span class="math display">\[N\omega_i \cdot p_{ij} \;\leq\; N(1 - \omega_i)e_1 \tag{1}\]</span></p>
+<p>The left side is the total consumption good demanded by early consumers (<span class="math inline">\(N\omega_i\)</span> of them, each selling 1 unit of capital at price <span class="math inline">\(p_{ij}\)</span>); the right side is the maximum supply from late consumers (<span class="math inline">\(N(1-\omega_i)\)</span> of them, each with cash <span class="math inline">\(e_1\)</span>).</p>
+<p>Two cases arise:</p>
+<ul>
+<li><strong>No storage</strong> (high capital return): If capital earns <span class="math inline">\(R_H\)</span>, which exceeds the storage return of 1, late consumers sell all their endowment. Equation (1) holds with equality:</li>
+</ul>
+<p><span class="math display">\[p_{ij} = \frac{e_1(1 - \omega_i)}{\omega_i} \tag{2}\]</span></p>
+<ul>
+<li><strong>Storage</strong> (low capital return): If <span class="math inline">\(R_j = R_L\)</span> falls to the storage return threshold, late consumers are indifferent between buying capital and storing, so:</li>
+</ul>
+<p><span class="math display">\[p_{ij} = R_j \tag{3}\]</span></p>
+<p>GP assume that in states where capital returns are high (<span class="math inline">\(j = H\)</span>), no storage occurs, while in states with low returns (<span class="math inline">\(j = L\)</span>), storage occurs. This requires:</p>
+<p><span class="math display">\[R_H \;\geq\; \frac{e_1(1 - \omega_l)}{\omega_l} \;&gt;\; \frac{e_1(1 - \omega_h)}{\omega_h} \;&gt;\; R_L \tag{4}\]</span></p>
+<p>The middle inequalities reflect the fact that when fewer people need cash (<span class="math inline">\(\omega_l
+&lt; \omega_h\)</span>), early consumers are scarce relative to late consumers and the no-storage price of capital is higher. The outer inequalities do the real work:</p>
+<ul>
+<li><strong>Left</strong> (<span class="math inline">\(R_H \geq e_1(1-\omega_l)/\omega_l\)</span>): Even in the state with fewest early consumers — where capital’s no-storage price is highest — the return <span class="math inline">\(R_H\)</span> still exceeds that price. So late consumers always prefer to buy capital over storing when returns are high. No storage occurs in either high-return state.</li>
+<li><strong>Right</strong> (<span class="math inline">\(e_1(1-\omega_h)/\omega_h &gt; R_L\)</span>): Even in the state with most early consumers — where capital’s no-storage price is lowest — that price still exceeds <span class="math inline">\(R_L\)</span>. So in low-return states, capital is a worse deal than storing endowment and late consumers store instead, pinning <span class="math inline">\(p_{iL} = R_L\)</span>.</li>
+</ul>
+<p><strong>Why informed agents do not trade in the full-information benchmark.</strong> In high-return states (<span class="math inline">\(j = H\)</span>), the no-storage equilibrium price satisfies <span class="math inline">\(p_{iH} = e_1(1-\omega_i)/\omega_i \leq R_H\)</span>. An informed agent who sold capital at <span class="math inline">\(p_{iH}\)</span> and stored the proceeds would earn <span class="math inline">\(p_{iH} \leq R_H\)</span> at <span class="math inline">\(t=2\)</span> — no better than simply holding capital. So informed agents have no incentive to sell. In low-return states (<span class="math inline">\(j = L\)</span>), the storage equilibrium pins <span class="math inline">\(p_{iL} = R_L\)</span>. An informed agent who sold at <span class="math inline">\(R_L\)</span> and stored would also earn <span class="math inline">\(R_L\)</span> — exactly the same as holding. They are indifferent, with no strict incentive to trade strategically. In neither case can insiders profit from their information.</p>
+<p>Both informed agents and liquidity traders achieve expected utility equal to <span class="math inline">\(\bar{R}\)</span> per unit of capital endowment. This is the efficient benchmark.</p>
+</section>
+<section id="the-insider-trading-equilibrium" class="level3" data-number="7.2.4">
+<h3 data-number="7.2.4" class="anchored" data-anchor-id="the-insider-trading-equilibrium"><span class="header-section-number">7.2.4</span> The Insider Trading Equilibrium</h3>
+<p>Now suppose informed agents observe the state <span class="math inline">\(\{i, j\}\)</span> but liquidity traders do not. Informed agents form a small group (relative to the <span class="math inline">\(N\)</span> liquidity traders) and are assumed able to collude — to form what GP call an <strong>Insider Coalition</strong>.</p>
+<p>The coalition’s strategy is to choose how much capital to supply to the market in each state. The key is that the coalition can make certain states <em>indistinguishable</em> to uninformed traders by controlling the price.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Insider Strategy: Mimicking a Good State in a Bad One
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider state <span class="math inline">\(\{l, L\}\)</span>: few early consumers, low capital return. In the full-information equilibrium, capital would trade at <span class="math inline">\(p_{lL} = R_L\)</span> (storage occurs). But informed agents know capital is worth little and want to sell.</p>
+<p>The coalition’s strategy: <strong>mimic state <span class="math inline">\(\{h, H\}\)</span></strong> — many early consumers, high return — where the equilibrium price is <span class="math inline">\(p^* = e_1(1-\omega_h)/\omega_h\)</span>.</p>
+<p>To mimic <span class="math inline">\(\{h,H\}\)</span> in state <span class="math inline">\(\{l, L\}\)</span>, the coalition supplies quantity <span class="math inline">\(M_{lL}\)</span> of capital alongside the <span class="math inline">\(N\omega_l\)</span> early consumers:</p>
+<p><span class="math display">\[N\omega_l \cdot p^* + M_{lL} \cdot p^* \;=\; N(1-\omega_l)e_1\]</span></p>
+<p>Solving for the coalition’s supply:</p>
+<p><span class="math display">\[M_{lL} \;=\; \frac{N(\omega_h - \omega_l)}{1 - \omega_h} \tag{5}\]</span></p>
+<p>Late consumers observe price <span class="math inline">\(p^*\)</span> and cannot distinguish state <span class="math inline">\(\{l, L\}\)</span> from state <span class="math inline">\(\{h, H\}\)</span>. Believing (rationally, given available information) that they may be in the good state, they sell their endowment — receiving capital worth <span class="math inline">\(R_L\)</span> at <span class="math inline">\(t = 2\)</span> when they believed they were buying something worth <span class="math inline">\(R_H\)</span>. The insiders receive good endowment in exchange for bad capital.</p>
+</div>
+</div>
+<p>GP prove this coalition strategy is <em>self-enforcing</em>: no individual member benefits from deviating. If any informed agent tries to sell additional capital beyond their coalition share, the price would move and reveal the true state — at which point late consumers refuse to trade and the coalition’s profits evaporate. The threat of discovery disciplines coalition members.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition 1 (Gorton–Pennacchi): Insider Trading Equilibrium
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Under conditions on model parameters, there exists an <strong>Imperfectly Competitive Rational Expectations Equilibrium</strong> in which:</p>
+<ul>
+<li>States <span class="math inline">\(\{l, H\}\)</span> and <span class="math inline">\(\{h, L\}\)</span> have fully revealing prices.</li>
+<li>States <span class="math inline">\(\{h, H\}\)</span> and <span class="math inline">\(\{l, L\}\)</span> share the same price <span class="math inline">\(p^* = e_1(1-\omega_h)/\omega_h\)</span>.</li>
+<li>In state <span class="math inline">\(\{l, L\}\)</span>, the insider coalition supplies <span class="math inline">\(M_{lL}\)</span> units, profiting at uninformed traders’ expense.</li>
+</ul>
+<p>The expected utility gain to informed agents is:</p>
+<p><span class="math display">\[\Delta U_{\text{informed}} \;=\; \frac{q_l}{2} \cdot w_m \cdot (p^* - R_L) \;&gt;\; 0\]</span></p>
+<p>where <span class="math inline">\(w_m = M_{lL}/M\)</span> is the fraction of informed capital sold in the bad state.</p>
+<p>The corresponding expected utility loss to liquidity traders is:</p>
+<p><span class="math display">\[\Delta U_{\text{uninformed}} \;=\; -\frac{q_l(\omega_h - \omega_l)}{2(1-\omega_h)}\left(p^* - R_L\right) \;&lt;\; 0\]</span></p>
+<p>The wedge <span class="math inline">\(p^* - R_L &gt; 0\)</span> is the unit <strong>trading loss</strong> that uninformed late consumers incur by selling endowment for overpriced capital.</p>
+</div>
+</div>
+<p><strong>Economic interpretation.</strong> Informed agents are functioning as insiders: they know capital is bad (state <span class="math inline">\(\{l,L\}\)</span>) but sell it at the good-state price. The uninformed buy capital they think is valuable. The mechanism is information concealment through strategic market supply — a formal model of the intuition behind insider-trading prohibitions.</p>
+<p>Crucially, the uninformed agents’ loss does not reflect irrationality. They are <em>optimizing</em> given their information: observing price <span class="math inline">\(p^*\)</span> and believing (with positive probability) that the state is <span class="math inline">\(\{h, H\}\)</span>, it is rational to buy capital. The problem is that this rational behavior is exploitable by agents who know with certainty that the state is <span class="math inline">\(\{l, L\}\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Connection to Akerlof’s Lemons Market
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>GP’s insider-trading result is structurally similar to Akerlof’s (1970) lemons problem, but in a secondary trading rather than a new-issue context. In Akerlof, sellers of used cars know quality while buyers do not, leading to adverse selection. In GP, informed agents know asset returns while liquidity traders do not, and exploit this by strategically supplying bad assets at good-asset prices.</p>
+<p>The connection matters for the solution: just as Akerlof suggested that warranties — credible commitments about quality — could cure the lemons problem, GP show that a credible commitment to a <em>safe</em> payoff (bank deposits) can cure the insider trading problem. The bank is a warranty on the value of the claim.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-private" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="sec-private"><span class="header-section-number">7.3</span> Part 2: Private Liquidity Creation</h2>
+<section id="the-intermediary-contract-splitting-cash-flows" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="the-intermediary-contract-splitting-cash-flows"><span class="header-section-number">7.3.1</span> The Intermediary Contract: Splitting Cash Flows</h3>
+<p>Now suppose that liquidity traders, anticipating their losses in the stock market, are allowed to contract. At <span class="math inline">\(t = 0\)</span>, they can form a bank intermediary that pools capital and issues two types of claims: <strong>deposits</strong> (safe debt) and <strong>equity</strong>.</p>
+<p>The bank collects capital from <span class="math inline">\(N_I\)</span> liquidity traders (who receive deposits) and <span class="math inline">\(M_I\)</span> units of informed-agent capital (who receive equity). Total bank capital is <span class="math inline">\(A = N_I + M_I\)</span>. The bank’s total return at <span class="math inline">\(t = 2\)</span> is <span class="math inline">\(A \cdot R_j\)</span>.</p>
+<p>The critical constraint on the contract is that <strong>deposits must be riskless</strong>:</p>
+<p><span class="math display">\[D \cdot R_D \;\leq\; A \cdot R_L \;=\; (D + E) \cdot R_L \tag{6}\]</span></p>
+<p>where <span class="math inline">\(D\)</span> is the total deposit principal and <span class="math inline">\(R_D\)</span> is the promised gross return. Constraint (6) says that even in the worst state (<span class="math inline">\(R_L\)</span>), the bank can pay depositors in full. Rearranging:</p>
+<p><span class="math display">\[\frac{E}{D} \;\geq\; \frac{R_D - R_L}{R_L} \tag{7}\]</span></p>
+<p>The equity cushion <span class="math inline">\(E/D\)</span> must be large enough that, in the low state, equity is wiped out before any loss falls on depositors. This is the classic <strong>equity-as-buffer</strong> function: equity absorbs downside risk so that deposits are safe.</p>
+<div style="margin: 30px 0;">
+  <svg width="560" height="200" viewbox="0 0 560 200" style="margin: 0 auto; display: block;">
+    <rect x="60" y="20" width="180" height="160" fill="#eaf4fb" stroke="#2980b9" stroke-width="1.5" rx="4"></rect>
+    <rect x="300" y="20" width="180" height="160" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5" rx="4"></rect>
+    <text x="150" y="46" font-size="13" text-anchor="middle" font-weight="bold" fill="#1a5276">Assets</text>
+    <line x1="78" y1="53" x2="222" y2="53" stroke="#2980b9" stroke-width="1"></line>
+    <rect x="78" y="62" width="144" height="100" fill="#d6eaf8" stroke="#2980b9" stroke-width="1" rx="3"></rect>
+    <text x="150" y="106" font-size="12" text-anchor="middle" fill="#1a5276">Risky Loans</text>
+    <text x="150" y="123" font-size="11" text-anchor="middle" fill="#555">Return: R_H or R_L</text>
+    <text x="150" y="140" font-size="11" text-anchor="middle" fill="#555">(aggregate shock)</text>
+    <text x="390" y="46" font-size="13" text-anchor="middle" font-weight="bold" fill="#7d6608">Liabilities + Equity</text>
+    <line x1="318" y1="53" x2="462" y2="53" stroke="#f39c12" stroke-width="1"></line>
+    <rect x="318" y="62" width="144" height="55" fill="#fdebd0" stroke="#e67e22" stroke-width="1" rx="3"></rect>
+    <text x="390" y="86" font-size="12" text-anchor="middle" fill="#784212">Deposits (Debt)</text>
+    <text x="390" y="103" font-size="11" text-anchor="middle" fill="#555">Safe: D·R_D ≤ A·R_L</text>
+    <rect x="318" y="125" width="144" height="45" fill="#f9ebea" stroke="#e74c3c" stroke-width="1" rx="3"></rect>
+    <text x="390" y="144" font-size="12" text-anchor="middle" fill="#7b241c">Equity</text>
+    <text x="390" y="161" font-size="11" text-anchor="middle" fill="#555">Absorbs downside risk</text>
+    <text x="280" y="118" font-size="18" text-anchor="middle" fill="#555">=</text>
+    <text x="280" y="192" font-size="11" text-anchor="middle" fill="#7f8c8d">Bank splits risky assets into safe deposits and risky equity</text>
+  </svg>
+</div>
+<p>The key economic insight concerns <strong>what a deposit holder needs to know</strong>. An agent who will receive <span class="math inline">\(D \cdot R_D\)</span> regardless of whether the capital return is <span class="math inline">\(R_H\)</span> or <span class="math inline">\(R_L\)</span> has no need to monitor or observe the capital return. The deposit is <strong>information-insensitive</strong>: its value does not depend on the private information known only to informed agents.</p>
+<p>Equity, by contrast, is information-sensitive: it pays <span class="math inline">\(A \cdot R_H - D \cdot
+R_D\)</span> in the good state and zero in the bad state. Equity holders care deeply about the realized return. This is why <strong>informed agents are the natural equity holders</strong>: they have information relevant to equity value, and they earn a return from contributing it to the bank.</p>
+</section>
+<section id="breaking-the-insider-coalition" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="breaking-the-insider-coalition"><span class="header-section-number">7.3.2</span> Breaking the Insider Coalition</h3>
+<p>The key question is whether informed agents will voluntarily become equity holders in the bank, rather than continuing to operate the Insider Coalition.</p>
+<p>GP prove that the answer is yes — under conditions on <span class="math inline">\(M/N\)</span> — through two propositions:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition 2 (Gorton–Pennacchi): Nonexistence of Stock Market Insider Equilibrium
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a small number of liquidity traders forming a bank (while most remain in the stock market initially). If the ratio of informed-to-uninformed capital <span class="math inline">\(M/N\)</span> is <em>sufficiently large</em>, there exists a deposit rate <span class="math inline">\(R_D\)</span> such that:</p>
+<ol type="1">
+<li>Deposits are riskless (condition (6) holds).</li>
+<li>Liquidity traders prefer to hold bank deposits rather than stock market equity.</li>
+<li>Individual informed agents prefer to hold bank equity rather than join the Insider Coalition.</li>
+</ol>
+<p>In other words: if informed agents have enough capital to provide the required equity cushion, the insider trading equilibrium unravels.</p>
+</div>
+</div>
+<p><strong>Why do informed agents defect from the coalition?</strong> The coalition’s profits depend on having uninformed agents to trade against. If liquidity traders leave the stock market and hold deposits instead, the stock market becomes a <strong>lemons market</strong>: the only sellers of capital in the stock market are insiders selling in bad states. Late consumers know this and will only pay a price reflecting <span class="math inline">\(R_L\)</span> for any stock market capital. With no one to exploit, the insider coalition earns nothing.</p>
+<p>Given that the coalition earns nothing once uninformed agents hold deposits, informed agents prefer bank equity — which earns a competitive return on their capital — to stock market equity with a worthless insider coalition.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition 3 (Gorton–Pennacchi): Existence of an Intermediary Equilibrium
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <span class="math inline">\(M/N\)</span> is sufficiently large, there exists an equilibrium where:</p>
+<ol type="1">
+<li>All liquidity traders hold riskless bank deposits.</li>
+<li>All informed agents contribute equity capital to the bank.</li>
+<li>The stock market Insider Coalition has no profitable strategy.</li>
+<li>All agents achieve expected utility arbitrarily close to the full-information benchmark.</li>
+</ol>
+<p>The required deposit rate satisfies <span class="math inline">\(R_D \leq \bar{R}\)</span>: depositors earn close to the expected asset return and are fully protected from downside risk.</p>
+</div>
+</div>
+<p><strong>Why is <span class="math inline">\(M/N\)</span> large enough a necessary condition?</strong> The bank’s deposits can only be riskless if informed-agent equity is sufficient to cover depositors in the worst state. From constraint (7):</p>
+<p><span class="math display">\[M_I \;\geq\; D \cdot \frac{R_D - R_L}{R_L}\]</span></p>
+<p>The more informed capital relative to the mass of liquidity traders, the more easily the bank can capitalize equity to backstop deposits. If informed agents are scarce, private deposits may not be achievable without government support (addressed in Part 3).</p>
+</section>
+<section id="the-role-of-the-bank-a-summary" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="the-role-of-the-bank-a-summary"><span class="header-section-number">7.3.3</span> The Role of the Bank: A Summary</h3>
+<p>The bank’s role in the GP model is fundamentally different from the roles identified in earlier chapters:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Earlier chapter</th>
+<th>Bank’s role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diamond–Dybvig (Ch. 3)</td>
+<td>Risk-sharing: insurance against uncertain preferences</td>
+</tr>
+<tr class="even">
+<td>Diamond (Ch. 5)</td>
+<td>Delegated monitoring: efficient agent for observing borrowers</td>
+</tr>
+<tr class="odd">
+<td>KRS (Ch. 6)</td>
+<td>Liquidity buffer sharing: shared cost of reserves</td>
+</tr>
+<tr class="even">
+<td><strong>Gorton–Pennacchi (this chapter)</strong></td>
+<td><strong>Information intermediation: creating safe securities that protect uninformed traders</strong></td>
+</tr>
+</tbody>
+</table>
+<p>In each case, the bank holds risky assets and issues safe liabilities — but the <em>reason</em> this arrangement is efficient differs. The GP reason is that the bank <strong>absorbs information risk on behalf of its depositors</strong>: by pooling capital into a bank and holding riskless deposits, liquidity traders no longer need to worry about whether someone smarter than them is on the other side of the trade.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+KRS vs.&nbsp;GP: Two Different Rationales for the Same Balance Sheet
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>KRS and GP both explain why a bank holds risky loans and issues deposits — but they identify completely different mechanisms.</p>
+<p>In KRS, the rationale is about <strong>cost</strong>: combining deposits and loan commitments under one roof reduces the total liquidity buffer required, because the two demands for cash are imperfectly correlated. You can prove the efficiency gain with a formula and measure it in dollar terms.</p>
+<p>In GP, the rationale is about <strong>information</strong>: the bank’s risky asset portfolio, when partly financed by informed-agent equity, makes it possible to issue deposits whose value does not depend on private information. This is a necessary complementarity — risky loans, equity, and riskless deposits must all coexist for the information problem to be solved — but it is not a cost saving in the KRS sense. There is no formula showing that the combined institution needs less of some input. Instead, the combined structure is what <em>enables</em> a riskless claim to exist at all.</p>
+<p><strong>Together, the two papers answer different questions about the same balance sheet.</strong> KRS: why hold loans <em>and</em> issue demandable deposits rather than specializing? GP: why issue <em>debt</em> (safe, fixed-claim) rather than equity against those loans? The answers are independent and mutually reinforcing.</p>
+</div>
+</div>
+</section>
+<section id="corporate-debt-and-money-market-mutual-funds-as-alternatives" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="corporate-debt-and-money-market-mutual-funds-as-alternatives"><span class="header-section-number">7.3.4</span> Corporate Debt and Money Market Mutual Funds as Alternatives</h3>
+<p>The GP framework does not make bank intermediation the <em>unique</em> solution. The same logic applies to any institution that can split risky cash flows into safe debt and risky equity.</p>
+<p>A firm with sufficient assets can issue <strong>riskless corporate debt</strong> — commercial paper or bonds backed by a large enough equity cushion — that serves the same transactions purpose as bank deposits. Liquidity traders can hold corporate debt instead of bank deposits and be equally protected from insider trading.</p>
+<p>GP explicitly make this point (Section IV.B of the paper): if firms can issue sufficiently safe debt, uninformed agents need never interact with the stock market. A <strong>money market mutual fund</strong> holding a diversified portfolio of such debt extends the idea further — diversification across issuers reduces the risk that any single firm’s private information contaminates the fund’s share value.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Money Market Mutual Funds as GP-Style Intermediaries
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A money market mutual fund is structured exactly as the GP model predicts:</p>
+<ul>
+<li>The fund holds a diversified portfolio of short-maturity, high-grade debt (commercial paper, Treasuries, agency debt).</li>
+<li>The fund issues shares designed to maintain a stable $1 net asset value (NAV) — a riskless claim on the portfolio.</li>
+<li>The stable NAV is informationally insensitive: a holder of MMMF shares does not need to know the credit quality of each underlying issuer, because diversification and credit quality screening have already been done.</li>
+</ul>
+<p>GP note in their conclusion that MMMFs “provide a potentially important transactions medium” and that their analysis gives “no reason to prefer bank debt over money market mutual funds.” This is a striking claim in 1990 and anticipates the debates about narrow banking that intensified after 2008.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-government" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="sec-government"><span class="header-section-number">7.4</span> Part 3: When Private Contracting Fails — Government’s Role</h2>
+<section id="the-limits-of-private-liquidity-creation" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="the-limits-of-private-liquidity-creation"><span class="header-section-number">7.4.1</span> The Limits of Private Liquidity Creation</h3>
+<p>The GP intermediary equilibrium requires <span class="math inline">\(M/N\)</span> to be large enough: informed agents must hold sufficient equity to make deposits riskless. There are natural circumstances under which the private solution is insufficient:</p>
+<ol type="1">
+<li><p><strong>Insufficient informed-agent capital.</strong> If <span class="math inline">\(M\)</span> is small relative to <span class="math inline">\(N\)</span>, informed agents cannot provide enough equity to backstop all deposits.</p></li>
+<li><p><strong>Sufficiently risky assets.</strong> Making deposits riskless requires the equity cushion to cover depositors in the <em>worst case</em> — the bad state <span class="math inline">\(R_L\)</span>. From condition (7), <span class="math inline">\(E/D \geq (R_D - R_L)/R_L\)</span>: the smaller <span class="math inline">\(R_L\)</span> is, the larger the required cushion. In this sense “risky” means a severe downside, not high variance per se — <span class="math inline">\(R_H\)</span> does not appear in the constraint at all. If <span class="math inline">\(R_L \to
+0\)</span>, the equity requirement grows without bound and private riskless deposits become infeasible.</p></li>
+<li><p><strong>Asset opacity or fraud.</strong> If uninformed depositors cannot verify that the bank holds the assets it claims to hold, they cannot be confident deposits are riskless even when formally they should be.</p></li>
+</ol>
+<p>In these cases, private bank intermediation either fails to create fully riskless deposits or is too costly to operate at scale. Government intervention can fill the gap.</p>
+</section>
+<section id="deposit-insurance-government-as-risk-absorber" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="deposit-insurance-government-as-risk-absorber"><span class="header-section-number">7.4.2</span> Deposit Insurance: Government as Risk-Absorber</h3>
+<p>Suppose deposits are <em>risky</em> — <span class="math inline">\(D \cdot R_D &gt; A \cdot R_L\)</span> — because the equity cushion is insufficient. A government deposit insurance system can replicate the allocation achieved under riskless private deposits through a <strong>tax-and-subsidy scheme</strong>:</p>
+<ul>
+<li><strong>When the bank fails</strong> (state <span class="math inline">\(R_L\)</span>): The government taxes late-consuming agents — those with income at <span class="math inline">\(t = 2\)</span>, the only agents with resources available when payoffs are realized — to cover the shortfall <span class="math inline">\(T = D \cdot R_D - A \cdot
+R_L\)</span>, paying depositors in full.</li>
+<li><strong>When the bank survives</strong> (state <span class="math inline">\(R_H\)</span>): The government collects a fair insurance premium <span class="math inline">\(\Theta\)</span> from the bank, redistributed to agents.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Proposition 4 (Gorton–Pennacchi): Deposit Insurance Replicates Riskless Deposits
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With a fair insurance premium, the government’s tax-subsidy scheme gives all agents the <strong>same expected utility</strong> as in the riskless-deposit equilibrium.</p>
+<p>A fair insurance premium equates expected premium collected with expected payout. Since the model assumes <span class="math inline">\(R_H\)</span> and <span class="math inline">\(R_L\)</span> each occur with probability <span class="math inline">\(\frac{1}{2}\)</span> (the equal-probability technology assumption from the setup), the bank fails with probability <span class="math inline">\(\frac{1}{2}\)</span> and survives with probability <span class="math inline">\(\frac{1}{2}\)</span>:</p>
+<p><span class="math display">\[\underbrace{\frac{1}{2} \cdot \Theta D}_{\text{expected premium in good state}} \;=\; \underbrace{\frac{1}{2} \cdot T}_{\text{expected payout in bad state}}\]</span></p>
+<p>The <span class="math inline">\(\frac{1}{2}\)</span>s cancel, giving:</p>
+<p><span class="math display">\[\Theta D \;=\; T \;=\; D \cdot R_D - A \cdot R_L\]</span></p>
+<p>This implies a fair premium rate per dollar of deposits:</p>
+<p><span class="math display">\[\Theta \;=\; R_D - \left(1 + \frac{E}{D}\right) R_L \tag{8}\]</span></p>
+<p>The premium equals the promised deposit rate minus the risk-adjusted recovery rate. When deposits are just barely riskless (<span class="math inline">\(D \cdot R_D = A \cdot R_L\)</span>), the fair premium is zero — no insurance is needed.</p>
+</div>
+</div>
+<p>The government’s advantage over private contracting is its ability to <strong>tax</strong>. Private parties cannot credibly commit to covering depositors from future income when the bank fails; the government can, because it has coercive taxing power. This is a genuine comparative advantage — not merely a regulatory artifact.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The GP Rationale for Deposit Insurance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>GP provide a clean positive rationale for deposit insurance distinct from the standard Diamond–Dybvig motivation (preventing runs) or the consumer-protection motivation (protecting small depositors from bank mismanagement).</p>
+<p>In the GP framework, deposit insurance serves one function: <strong>it creates a riskless transactions medium when private intermediation cannot</strong>. The government is issuing its own guarantee on top of the bank’s risky assets, converting a potentially risky deposit into a riskless one.</p>
+<p>This is a <em>supply-side</em> story: it’s not (only) that depositors are uninformed and need protection; it’s that the economy <em>needs</em> a riskless transactions asset and private parties may not be able to create enough of it.</p>
+</div>
+</div>
+</section>
+<section id="the-treasury-market-an-alternative-safe-asset-system" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="the-treasury-market-an-alternative-safe-asset-system"><span class="header-section-number">7.4.3</span> The Treasury Market: An Alternative Safe-Asset System</h3>
+<p>Government bonds can play the same role as insured bank deposits — as an <em>alternative</em> rather than a <em>supplement</em> to the banking system.</p>
+<p>If the private economy cannot supply enough riskless debt (because firms’ assets are too risky or insufficiently diversified), the government can issue claims backed by its taxing authority: <strong>Treasury securities</strong>. Unlike bank deposits, Treasuries are directly riskless without requiring any private equity cushion.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Treasury Securities as the Ultimate Information-Insensitive Asset
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the GP framework, a Treasury bond is the ultimate information-insensitive security:</p>
+<ul>
+<li>Its payoff is backed by the government’s taxing power, not by any specific risky asset.</li>
+<li>No private agent has superior information about the government’s tax base that would allow them to exploit uninformed holders.</li>
+<li>Treasuries are therefore the <em>ideal</em> transactions medium for uninformed agents — even safer than private bank deposits.</li>
+</ul>
+<p>GP note (Section V) that a government debt market “can improve uninformed agents’ welfare by providing additional riskless securities” and that this “parallels that of the provision of deposit insurance since, in both cases, the government’s role is to create a risk-free asset.”</p>
+</div>
+</div>
+<p><strong>Deposit insurance vs.&nbsp;Treasury securities: two roads to the same place.</strong> GP show that both instruments achieve the same allocation. The choice between them is a policy decision:</p>
+<ul>
+<li><p><strong>Deposit insurance</strong> keeps the banking system central: private banks originate loans (preserving their comparative advantages in monitoring and relationship lending), while government guarantees solve the information-insensitivity problem on the liability side.</p></li>
+<li><p><strong>A Treasury-based payments system</strong> could potentially replace banks as the transactions-medium provider. Agents would hold Treasuries (or MMMFs investing in Treasuries) for payment purposes and turn to private intermediaries only for loans. Deposit insurance would be unnecessary.</p></li>
+</ul>
+<p>This is the core tension in the <strong>narrow banking</strong> debate — whether commercial banks need deposit insurance to operate safely, or whether separating the payments system (safe government-backed liabilities) from credit intermediation (risky private loans) would be more efficient. GP’s framework clarifies exactly what would need to be true for such a substitution to work: the supply of information-insensitive assets must be sufficient to meet the transactions demand.</p>
+<hr>
+</section>
+</section>
+<section id="sec-insensitivity" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-insensitivity"><span class="header-section-number">7.5</span> Part 4: Information Insensitivity as a General Principle</h2>
+<p>The Gorton–Pennacchi paper was published in 1990, but its central concept — <strong>information insensitivity</strong> — became the organizing framework for a major strand of post-2008 financial crisis research. This section traces the idea forward.</p>
+<section id="holmstrom-2015-debt-is-designed-to-be-opaque" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="holmstrom-2015-debt-is-designed-to-be-opaque"><span class="header-section-number">7.5.1</span> Holmstrom (2015): Debt Is Designed to Be Opaque</h3>
+<p>Gorton and Pennacchi show that <em>banks</em> create information-insensitive securities. Bengt Holmstrom (2015) generalizes this to argue that <strong>debt itself</strong> — as a security design — is fundamentally an information-insensitivity device.</p>
+<p>The key insight: when a security pays a fixed return over a wide range of outcomes, it becomes very difficult for an informed agent to profit from trading against an uninformed holder. There is nothing to know that would help — the security pays the same amount regardless of what the insider knows.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Holmstrom (2015): The Logic of Debt as a Safe Security
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Consider a firm with assets worth <span class="math inline">\(V \in [V_{\min}, V_{\max}]\)</span>. A debt claim promises face value <span class="math inline">\(F\)</span> to the holder.</p>
+<ul>
+<li><p>If <span class="math inline">\(F \leq V_{\min}\)</span>: debt is <strong>riskless</strong>. An informed agent who knows <span class="math inline">\(V\)</span> has no advantage over an uninformed holder — debt always pays <span class="math inline">\(F\)</span> regardless. Trading in this debt is immune to the insider-trading problem.</p></li>
+<li><p>If <span class="math inline">\(F &gt; V_{\min}\)</span>: debt can default. An informed agent who knows <span class="math inline">\(V\)</span> is low can trade against uninformed holders who believe <span class="math inline">\(V\)</span> is high.</p></li>
+</ul>
+<p>This is why debt is the natural design for a liquid, transactions-purpose security: <strong>by promising a fixed payoff at or below the worst-case asset value, debt becomes information-insensitive</strong>. Equity is the opposite: its value depends entirely on realized firm value, giving insiders maximum scope to exploit uninformed holders.</p>
+<p><strong>Corollary:</strong> Equity is suited for markets where sophisticated, informed investors participate (stock exchanges with mandatory disclosure, institutional ownership). Debt is suited for transactions use by uninformed agents who trade frequently and cannot monitor continuously.</p>
+</div>
+</div>
+<p>Holmstrom’s framework explains several empirical regularities:</p>
+<ul>
+<li>Short-maturity debt is more information-insensitive than long-maturity debt (less time for private information to matter before repayment).</li>
+<li>Collateralized debt is more information-insensitive than unsecured debt (the collateral narrows the range of outcomes the holder needs to assess).</li>
+<li>Repo and other collateralized short-term lending instruments are the most liquid instruments in modern finance — exactly what information insensitivity predicts.</li>
+</ul>
+</section>
+<section id="dang-gorton-holmstrom-and-ordonez-2017-banks-as-secret-keepers" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="dang-gorton-holmstrom-and-ordonez-2017-banks-as-secret-keepers"><span class="header-section-number">7.5.2</span> Dang, Gorton, Holmstrom, and Ordonez (2017): Banks as Secret Keepers</h3>
+<p>Building on GP and Holmstrom, Dang, Gorton, Holmstrom, and Ordonez (2017) take the argument one step further: banks are not just <em>issuers</em> of information-insensitive securities; they are actively <em>suppressors of information production</em>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+DGHO (2017): The Optimality of Opacity
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The DGHO result is counterintuitive: the optimal bank design makes its assets as <em>opaque as possible</em>, consistent with keeping deposits riskless.</p>
+<p>In the strict GP model, once deposits are made riskless through the equity structure, information production by outsiders cannot undermine them — depositors’ payoffs are fixed regardless of what anyone discovers. DGHO extend this to a richer setting where deposits are not guaranteed to be fully riskless, and where outsiders can spend resources to investigate whether the equity cushion is actually sufficient.</p>
+<p><strong>The DGHO mechanism.</strong> If an outside analyst produces private information revealing that a bank’s loan portfolio is worse than believed — say, that the effective <span class="math inline">\(R_L\)</span> is lower than assumed — this can make deposits <em>appear</em> risky in secondary markets, even if the face value is nominally fixed. Agents who learn this trade against uninformed holders of deposits, recreating the kind of information asymmetry GP identified. By keeping loan-level detail opaque, the bank removes the informational raw material that would make such investigation profitable in the first place.</p>
+<p>This is the precise opposite of the transparency ideal in standard disclosure economics. For the specific purpose of creating a safe transactions medium, <strong>opacity preserves the conditions under which deposits remain information-insensitive</strong>.</p>
+</div>
+</div>
+<p>This has a striking empirical prediction: banks that disclose more about their loan portfolios should be <em>less</em> able to issue truly safe deposits, because disclosure invites information production that reintroduces the insider-trading risk. This provides a novel justification for the traditional bank practice of not disclosing individual loan details.</p>
+</section>
+<section id="safe-assets-in-the-modern-economy" class="level3" data-number="7.5.3">
+<h3 data-number="7.5.3" class="anchored" data-anchor-id="safe-assets-in-the-modern-economy"><span class="header-section-number">7.5.3</span> Safe Assets in the Modern Economy</h3>
+<p>The GP framework connects to the broader macroeconomic literature on <strong>safe assets</strong> — high-quality claims whose values are insensitive to changes in economic conditions and are therefore highly liquid and widely accepted as collateral.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Safe Asset</th>
+<th>GP Category</th>
+<th>Information Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Government bonds (Treasuries, Bunds)</td>
+<td>Government-issued, tax-backed</td>
+<td>Lowest: backed by taxing power</td>
+</tr>
+<tr class="even">
+<td>Insured bank deposits</td>
+<td>Government-backstopped bank debt</td>
+<td>Low: FDIC insurance removes default risk</td>
+</tr>
+<tr class="odd">
+<td>High-grade short-term corporate debt (CP)</td>
+<td>Private riskless debt</td>
+<td>Low but contingent: depends on issuer quality</td>
+</tr>
+<tr class="even">
+<td>MMMF shares (government-only)</td>
+<td>Diversified government debt</td>
+<td>Very low: only Treasury-backed assets</td>
+</tr>
+<tr class="odd">
+<td>MMMF shares (prime)</td>
+<td>Diversified private debt</td>
+<td>Moderate: depends on portfolio quality</td>
+</tr>
+<tr class="even">
+<td>Senior ABS tranches</td>
+<td>Structured private debt</td>
+<td>Higher: depends on model and collateral</td>
+</tr>
+</tbody>
+</table>
+<p>A major finding of post-2008 research (Gorton and Metrick 2012, Krishnamurthy and Vissing-Jorgensen 2012) is that the global demand for safe assets regularly exceeds the private supply. This “safe-asset shortage” is a macroeconomic manifestation of the GP insight: the economy’s need for information-insensitive transactions media is not automatically satisfied by private markets. The shortfall must be covered by government-issued riskless claims.</p>
+</section>
+<section id="when-information-insensitivity-breaks-down-the-2008-crisis" class="level3" data-number="7.5.4">
+<h3 data-number="7.5.4" class="anchored" data-anchor-id="when-information-insensitivity-breaks-down-the-2008-crisis"><span class="header-section-number">7.5.4</span> When Information Insensitivity Breaks Down: The 2008 Crisis</h3>
+<p>The most important application of the GP framework is the understanding it provides of the 2008 financial crisis. GP’s core prediction is that when safe securities become information-sensitive — when their value depends on private information that some agents hold and others don’t — their role as transactions media collapses.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Crisis as a Breakdown of Information Insensitivity (Gorton 2010)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before 2007, the senior tranches of mortgage-backed securities (MBS) and collateralized debt obligations (CDOs) were treated as informationally insensitive:</p>
+<ul>
+<li>They were rated AAA by rating agencies.</li>
+<li>They were widely used as collateral in repo markets — the modern equivalent of the <span class="math inline">\(t = 1\)</span> trading market in the GP model.</li>
+<li>Uninformed institutional investors (pension funds, money market funds, foreign banks) held them without detailed analysis of the underlying mortgages.</li>
+</ul>
+<p>This treatment was based on the belief that house prices would not fall simultaneously across the country — that geographic diversification made senior tranches riskless in the same way that bank diversification makes deposits riskless in the GP model.</p>
+<p>When it became clear in 2007 that this belief was wrong, the securities became <strong>information-sensitive</strong>. Holders realized they didn’t know what the securities were worth. Worse, they worried that dealers and originators <em>did</em> know, and were trying to offload the bad ones — precisely the insider-trading dynamic in GP’s model.</p>
+<p>The result: the repo market froze. Counterparties refused to accept MBS as collateral — not because the securities were certain to be bad, but because they had become information-sensitive and no one on the receiving end of a trade could rule out being on the wrong side of an insider. The loss of information insensitivity <em>is</em> the financial crisis in the GP framework.</p>
+</div>
+</div>
+<p>This reading of the crisis has direct implications for regulatory design:</p>
+<p><strong>1. The crisis was not primarily about runs on retail deposits (Diamond–Dybvig) but about the collapse of the wholesale safe-asset market.</strong> The relevant “deposits” were repo agreements, asset-backed commercial paper (ABCP), and prime MMMF shares — not retail bank accounts. The GP framework is better suited to understanding this episode than the Diamond–Dybvig framework, even though both involve a collapse of a transactions medium.</p>
+<p><strong>2. Disclosure requirements can be counterproductive for safe assets.</strong> Requiring banks and ABS issuers to disclose detailed asset information — a natural regulatory response — can paradoxically <em>destroy</em> information insensitivity by giving sophisticated analysts the raw material to acquire information advantages over uninformed holders. GP and DGHO argue for caution here.</p>
+<p><strong>3. Government guarantees are the only reliable backstop.</strong> Just as in the original GP model, private information-insensitive securities can fail; government guarantees are the only reliable source of truly riskless assets. The 2008 crisis confirmed this: the assets that maintained their safe-asset status throughout were Treasuries and insured bank deposits — the two government-guaranteed instruments in GP’s analysis.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Tri-Party Repo Market and GP
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The tri-party repo market — where financial institutions borrow overnight by pledging securities as collateral — is the modern equivalent of the <span class="math inline">\(t = 1\)</span> trading market in the GP model. Repo borrowers are the analog of early consumers (who need liquidity); repo lenders (money market funds, foreign banks) are the analog of late consumers (who have liquidity to invest).</p>
+<p>When MBS became information-sensitive in 2007–2008, repo lenders stopped accepting them as collateral — exactly as late consumers in the GP model refuse to trade if they believe insiders are on the other side.</p>
+<p>Gorton and Metrick (2012) document repo haircuts rising from near zero to 45% on structured products during the crisis — a direct measure of the increasing information-sensitivity of the collateral. A haircut is the discount demanded by the lender before accepting collateral: a 45% haircut on MBS means lenders were only willing to lend $0.55 per $1.00 of face value, because they feared the remaining $0.45 reflected insider information they couldn’t observe.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="summary-and-connections" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="summary-and-connections"><span class="header-section-number">7.6</span> Summary and Connections</h2>
+<p>This chapter has developed the Gorton–Pennacchi framework and traced its implications through the modern literature.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paper</th>
+<th>Question</th>
+<th>Answer</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gorton–Pennacchi (1990)</strong></td>
+<td>Why do banks issue safe debt against risky assets?</td>
+<td>To create information-insensitive securities that protect uninformed traders</td>
+<td>Theory: informed/uninformed trading model</td>
+</tr>
+<tr class="even">
+<td><strong>Holmstrom (2015)</strong></td>
+<td>Why is debt the natural design for liquid assets?</td>
+<td>Debt is information-insensitive by construction</td>
+<td>Mechanism design / security design</td>
+</tr>
+<tr class="odd">
+<td><strong>DGHO (2017)</strong></td>
+<td>Why are banks opaque?</td>
+<td>Opacity destroys incentives for costly information production, preserving insensitivity</td>
+<td>Extended GP model with endogenous information</td>
+</tr>
+<tr class="even">
+<td><strong>Gorton–Metrick (2012)</strong></td>
+<td>How did the 2008 crisis manifest in wholesale markets?</td>
+<td>Repo haircuts ≈ loss of information insensitivity in collateral</td>
+<td>Repo market data during crisis</td>
+</tr>
+<tr class="odd">
+<td><strong>Krishnamurthy–Vissing-Jorgensen (2012)</strong></td>
+<td>Is there a “convenience yield” on safe assets?</td>
+<td>Yes: investors pay a substantial premium for information-insensitive assets</td>
+<td>Treasury vs.&nbsp;corporate yields</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Connections to previous chapters.</strong></p>
+<ul>
+<li><p><strong>Diamond–Dybvig (Chapter 3)</strong> shows that a bank’s demand-deposit contract can insure against taste shocks — but this requires ruling out equity trading. The GP model shows <em>why</em> equity trading is problematic: it exposes liquidity traders to insiders. The two models are complementary: DD explains the insurance value of deposits; GP explains why deposits rather than equity are the right instrument for providing that insurance.</p></li>
+<li><p><strong>Diamond (Chapter 5)</strong> explains that banks monitor borrowers on behalf of depositors, justifying the fixed-rate deposit contract as a disciplining device. The GP result adds a second function for the same fixed-rate deposit: it is also informationally inert, protecting depositors from having to evaluate asset quality. Monitoring (Diamond) and information insensitivity (GP) are distinct but mutually reinforcing reasons for the same institutional arrangement.</p></li>
+<li><p><strong>KRS (Chapter 6)</strong> explains why deposit-taking and loan-commitment making coexist: they share a liquidity buffer. The GP result explains why the liability side takes the form of fixed-rate deposits rather than equity: deposits are information-insensitive, equity is not. Together, KRS and GP explain both the <em>combination</em> (deposits + loans) and the <em>form</em> (deposits = safe debt) of the standard bank balance sheet.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The GP Insight in One Sentence
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A bank creates a safe transactions medium by absorbing the information risk of its asset portfolio onto its equity holders — allowing uninformed depositors to transact without fear of exploitation by better-informed insiders.</p>
+<p>This single insight — that the bank’s balance sheet is fundamentally an <strong>information-allocation device</strong>, placing information-sensitive claims with informed equity holders and information-insensitive claims with uninformed depositors — unifies the rationale for bank deposits, deposit insurance, government bonds, and the design of liquid financial markets.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="references" class="level2 appendix" data-number="7.7">
+<h2 class="appendix anchored" data-number="7.7" data-anchor-id="references"><span class="header-section-number">7.7</span> References</h2>
+<section id="primary-source" class="level3" data-number="7.7.1">
+<h3 data-number="7.7.1" class="anchored" data-anchor-id="primary-source"><span class="header-section-number">7.7.1</span> Primary Source</h3>
+<ul>
+<li><strong>Gorton, G., and Pennacchi, G. (1990)</strong>. Financial Intermediaries and Liquidity Creation. <em>Journal of Finance</em>, 45(1), 49–71.</li>
+</ul>
+</section>
+<section id="related-work" class="level3" data-number="7.7.2">
+<h3 data-number="7.7.2" class="anchored" data-anchor-id="related-work"><span class="header-section-number">7.7.2</span> Related Work</h3>
+<ul>
+<li><p><strong>Holmstrom, B. (2015)</strong>. Understanding the Role of Debt in the Financial System. <em>BIS Working Paper No.&nbsp;479</em>.</p></li>
+<li><p><strong>Dang, T. V., Gorton, G., Holmstrom, B., and Ordonez, G. (2017)</strong>. Banks as Secret Keepers. <em>American Economic Review</em>, 107(4), 1005–1029.</p></li>
+<li><p><strong>Gorton, G., and Metrick, A. (2012)</strong>. Securitized Banking and the Run on Repo. <em>Journal of Financial Economics</em>, 104(3), 425–451.</p></li>
+<li><p><strong>Krishnamurthy, A., and Vissing-Jorgensen, A. (2012)</strong>. The Aggregate Demand for Treasury Debt. <em>Journal of Political Economy</em>, 120(2), 233–267.</p></li>
+<li><p><strong>Gorton, G. (2010)</strong>. <em>Slapped by the Invisible Hand: The Panic of 2007</em>. Oxford University Press.</p></li>
+<li><p><strong>Jacklin, C. (1987)</strong>. Demand Deposits, Trading Restrictions, and Risk Sharing. In E. D. Prescott and N. Wallace (eds.), <em>Contractual Arrangements for Intertemporal Trade</em>. University of Minnesota Press.</p></li>
+<li><p><strong>Akerlof, G. A. (1970)</strong>. The Market for Lemons: Quality Uncertainty and the Market Mechanism. <em>Quarterly Journal of Economics</em>, 84(3), 488–500.</p></li>
+<li><p><strong>Myers, S. C., and Majluf, N. S. (1984)</strong>. Corporate Financing and Investment Decisions When Firms Have Information that Investors Do Not Have. <em>Journal of Financial Economics</em>, 13(2), 187–222.</p></li>
+<li><p><strong>Diamond, D. W., and Dybvig, P. H. (1983)</strong>. Bank Runs, Deposit Insurance, and Liquidity. <em>Journal of Political Economy</em>, 91(3), 401–419. (Chapter 3 of these notes.)</p></li>
+<li><p><strong>Diamond, D. W. (1984)</strong>. Financial Intermediation and Delegated Monitoring. <em>Review of Economic Studies</em>, 51(3), 393–414. (Chapter 5 of these notes.)</p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Notes/06_chapter6_liquidity_provision.html" class="pagination-link" aria-label="The Deposit-Lending Synergy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The Deposit-Lending Synergy</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

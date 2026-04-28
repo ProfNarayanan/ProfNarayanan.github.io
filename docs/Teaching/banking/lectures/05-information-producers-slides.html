@@ -6,8 +6,8 @@
 <script src="05_chapter5_information_producers_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="05_chapter5_information_producers_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="05_chapter5_information_producers_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="05_chapter5_information_producers_files/libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.21">
+<link href="05_chapter5_information_producers_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Rajesh Narayanan">
   <title>Lecture 5: Banks as Information Producers</title>
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="05_chapter5_information_producers_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="05_chapter5_information_producers_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
   <link href="05_chapter5_information_producers_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="05_chapter5_information_producers_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="05_chapter5_information_producers_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -160,6 +160,7 @@ Rajesh Narayanan
 <section id="learning-objectives" class="slide level2 scrollable" data-number="1.1">
 <h2><span class="header-section-number">1.1</span> Learning Objectives</h2>
 <p>By the end of this lecture, you should be able to:</p>
+<div>
 <ol type="1">
 <li class="fragment">Explain the two information problems in lending (ex ante and ex post) and why they generate market failures</li>
 <li class="fragment">Describe how Stiglitz-Weiss (1981) leads to market exclusion of good borrowers</li>
@@ -168,6 +169,7 @@ Rajesh Narayanan
 <li class="fragment">Explain why diversification drives delegation costs to zero (Diamond 1984) and how it unifies the ex ante and ex post solutions</li>
 <li class="fragment">Describe the organizational form of the bank as a consequence of these information problems</li>
 </ol>
+</div>
 </section>
 <section id="roadmap" class="slide level2 smaller" data-number="1.2">
 <h2><span class="header-section-number">1.2</span> Roadmap</h2>
@@ -177,7 +179,7 @@ Rajesh Narayanan
 </ul>
 <p><strong>Part 2: Ex Ante — Banks as Information Producers</strong></p>
 <ul>
-<li>Stiglitz-Weiss: market exclusion; Leland-Pyle: signaling/certification; Ramakrishnan-Thakor: information aggregation; Fama: relationship banking</li>
+<li>Stiglitz-Weiss: market exclusion; Leland-Pyle: signaling; Ramakrishnan-Thakor: information production; Fama: certification</li>
 </ul>
 <p><strong>Part 3: Ex Post — Banks as Delegated Monitors</strong></p>
 <ul>
@@ -486,8 +488,8 @@ Rajesh Narayanan
 </div>
 <p>At <span class="math inline">\(f = y_G\)</span>: <span class="math inline">\(\Pi\)</span> drops from <span class="math inline">\(0.99\)</span> to <span class="math inline">\(0.66\)</span> — a 33% fall. Both segments lie <strong>below</strong> break-even in the pooling range.</p>
 </section>
-<section id="banks-as-certifiers-leland-pyle-1977" class="slide level2" data-number="3.4">
-<h2><span class="header-section-number">3.4</span> Banks as Certifiers: Leland-Pyle (1977)</h2>
+<section id="signaling-leland-pyle-1977" class="slide level2" data-number="3.4">
+<h2><span class="header-section-number">3.4</span> Signaling: Leland-Pyle (1977)</h2>
 <p><strong>Idea</strong>: Can high-quality borrowers credibly signal their type?</p>
 <p><strong>Signal</strong>: entrepreneur retains equity fraction <span class="math inline">\(e\)</span> in their own project</p>
 <div class="fragment">
@@ -509,48 +511,20 @@ Rajesh Narayanan
 </div>
 <div class="callout-content">
 <p>In the separating equilibrium, <span class="math inline">\(e^*(\theta)\)</span> is strictly <strong>increasing</strong> in <span class="math inline">\(\theta\)</span>. Market infers type from retention; lenders offer <span class="math inline">\(f_\theta^* = r/p_\theta\)</span>. Adverse selection is eliminated for borrowers who can credibly signal.</p>
+<p><strong>Note</strong>: LP applies to individual entrepreneurs. The information originates with the <em>borrower</em>, not the bank.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="banks-reduce-signaling-costs" class="slide level2" data-number="3.5">
-<h2><span class="header-section-number">3.5</span> Banks Reduce Signaling Costs</h2>
-<p><strong>Individual entrepreneur</strong>: retains fraction <span class="math inline">\(e^*\)</span> of a single risky project</p>
-<ul>
-<li>Signaling cost = <span class="math inline">\(\frac{A}{2}(e^*)^2 \sigma^2\)</span> — full idiosyncratic risk</li>
-</ul>
-<div class="fragment">
-<p><strong>Bank</strong>: retains <span class="math inline">\(e^*\)</span> in a diversified portfolio of <span class="math inline">\(n\)</span> loans</p>
-<ul>
-<li>Portfolio noise: <span class="math inline">\(\bar{\varepsilon} = \frac{1}{n}\sum_{j=1}^n \varepsilon_j\)</span></li>
-</ul>
-<p><span class="math display">\[\text{Var}(\bar{\varepsilon}) = \frac{\sigma^2}{n} \to 0 \quad \text{as } n \to \infty\]</span></p>
-<ul>
-<li>Signaling cost <span class="math inline">\(= \frac{A}{2}(e^*)^2 \cdot \frac{\sigma^2}{n} \to 0\)</span></li>
-</ul>
-</div>
-<div class="fragment">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Intuition</strong></p>
-</div>
-<div class="callout-content">
-<p>A bank can certify portfolio quality at <strong>vanishing cost</strong> as <span class="math inline">\(n\)</span> grows. Individual entrepreneurs always bear full idiosyncratic risk. This is the ex ante case for diversification.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="banks-as-information-aggregators-ramakrishnan-thakor-1984" class="slide level2" data-number="3.6">
-<h2><span class="header-section-number">3.6</span> Banks as Information Aggregators: Ramakrishnan-Thakor (1984)</h2>
-<p><strong>Idea</strong>: pool the independent noisy signals of <span class="math inline">\(n\)</span> specialists</p>
+<section id="banks-as-information-producers-ramakrishnan-thakor-1984" class="slide level2" data-number="3.5">
+<h2><span class="header-section-number">3.5</span> Banks as Information Producers: Ramakrishnan-Thakor (1984)</h2>
+<p><strong>LP applies to individual borrowers</strong>. RT formalize the bank-centric extension: the bank <em>actively produces</em> information by pooling signals from <span class="math inline">\(n\)</span> specialists.</p>
 <p>Each screener observes <span class="math inline">\(s_j = \theta_j + \varepsilon_j\)</span> (independent noise). The portfolio average:</p>
 <p><span class="math display">\[\bar{s} = \frac{1}{n}\sum_j s_j \quad \Rightarrow \quad \text{estimation error} = \bar{\varepsilon} \sim N\!\left(0, \frac{\sigma^2_\varepsilon}{n}\right) \to 0\]</span></p>
+<div class="fragment">
+<p>Signaling cost of portfolio quality <span class="math inline">\(\bar{\theta}\)</span> also vanishes: <span class="math inline">\(\frac{A}{2}(e^*)^2 \cdot \frac{\sigma^2}{n} \to 0\)</span></p>
+</div>
 <div class="fragment">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
@@ -561,14 +535,14 @@ Rajesh Narayanan
 <p><strong>Result (Ramakrishnan-Thakor 1984)</strong></p>
 </div>
 <div class="callout-content">
-<p>Coalition of <span class="math inline">\(n\)</span> screeners certifies portfolio quality with precision <span class="math inline">\(\to 1\)</span> as <span class="math inline">\(n \to \infty\)</span>. Residual uncertainty vanishes — bank can fund deposits near risk-free rate. Specialization and diversification are <strong>complements</strong> in information production.</p>
+<p>Coalition of <span class="math inline">\(n\)</span> screeners signals portfolio quality with precision <span class="math inline">\(\to 1\)</span> as <span class="math inline">\(n \to \infty\)</span>. Residual uncertainty vanishes — bank funds deposits near risk-free rate. Specialization (lower <span class="math inline">\(K\)</span> per loan) and diversification (higher precision) are <strong>complements</strong>.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="relationship-banking-fama-1985" class="slide level2" data-number="3.7">
-<h2><span class="header-section-number">3.7</span> Relationship Banking: Fama (1985)</h2>
+<section id="banks-as-certifiers-fama-1985" class="slide level2" data-number="3.6">
+<h2><span class="header-section-number">3.6</span> Banks as Certifiers: Fama (1985)</h2>
 <p><strong>Observation</strong>: Firms pay a premium for bank loans over bonds — yet value banking relationships</p>
 <p><strong>Why?</strong> Banks produce <strong>private information</strong> through the banking relationship:</p>
 <ul>
@@ -637,6 +611,17 @@ Rajesh Narayanan
 <p><strong>CSV framework</strong>: lender can pay cost <span class="math inline">\(K\)</span> to verify the true return</p>
 <p><strong>Contract design problem</strong>: which states to monitor?</p>
 <div class="fragment">
+<p><strong>Townsend’s key result</strong>: the optimal rule is <strong>deterministic</strong> — monitor in some states with certainty, not others at all. Randomized monitoring (<span class="math inline">\(K\)</span> with probability <span class="math inline">\(\pi &lt; 1\)</span>) is dominated:</p>
+<ul>
+<li>Requires <em>larger</em> penalties to deter misreporting (since <span class="math inline">\(\pi &lt; 1\)</span> means lower detection probability)</li>
+<li>Imposes needless risk on risk-neutral parties</li>
+<li>Never strictly helps — any randomized contract can be matched by a deterministic one at weakly lower cost</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Which states?</strong> Only where the borrower <em>cannot</em> pay voluntarily — this delivers Gale-Hellwig.</p>
+</div>
+<div class="fragment">
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -646,10 +631,10 @@ Rajesh Narayanan
 <p><strong>Proposition (Gale-Hellwig 1985): Standard Debt is Optimal</strong></p>
 </div>
 <div class="callout-content">
-<p>Monitor <strong>only in default states</strong> (when borrower cannot pay). The standard debt contract with face value <span class="math inline">\(F\)</span>:</p>
+<p>Monitor <strong>only in default states</strong> (when borrower cannot pay). The standard debt contract with face value <span class="math inline">\(f\)</span>:</p>
 <ul>
-<li><strong>Good state</strong> (<span class="math inline">\(V = H \geq F\)</span>): borrower pays <span class="math inline">\(F\)</span> voluntarily — no monitoring</li>
-<li><strong>Bad state</strong> (<span class="math inline">\(V = L &lt; F\)</span>): lender monitors, verifies <span class="math inline">\(V = L\)</span>, collects <span class="math inline">\(L\)</span></li>
+<li><strong>Good state</strong> (<span class="math inline">\(V = H \geq f\)</span>): borrower pays <span class="math inline">\(f\)</span> voluntarily — no monitoring</li>
+<li><strong>Bad state</strong> (<span class="math inline">\(V = L &lt; f\)</span>): lender monitors, verifies <span class="math inline">\(V = L\)</span>, collects <span class="math inline">\(L\)</span></li>
 </ul>
 <p>Expected monitoring cost <span class="math inline">\(= (1-P)K = 0.2 \times 0.0002 = 0.00004\)</span> (nearly zero)</p>
 </div>
@@ -695,7 +680,7 @@ Rajesh Narayanan
 <p><strong>Two benchmark contracts</strong>:</p>
 <ul>
 <li><strong>Unmonitored debt</strong> (<span class="math inline">\(f^*\)</span>): enforced by liquidation threat; no verification needed</li>
-<li><strong>Monitored debt</strong> (<span class="math inline">\(F\)</span>): CSV-optimal; monitor only in default</li>
+<li><strong>Monitored debt</strong> (<span class="math inline">\(f\)</span>): CSV-optimal; monitor only in default</li>
 </ul>
 </div>
 </section>
@@ -735,9 +720,9 @@ Rajesh Narayanan
 </div>
 </section>
 <section id="monitored-debt-f-approx-1.0625" class="slide level2" data-number="4.5">
-<h2><span class="header-section-number">4.5</span> Monitored Debt: <span class="math inline">\(F \approx 1.0625\)</span></h2>
+<h2><span class="header-section-number">4.5</span> Monitored Debt: <span class="math inline">\(f \approx 1.0625\)</span></h2>
 <p><strong>Contract</strong>: monitor in bad state; accept <span class="math inline">\(L = 1\)</span> instead of liquidating</p>
-<p><strong>Lender’s break-even</strong>: <span class="math display">\[P \cdot F + (1-P)(L - K) = r \quad \Rightarrow \quad 0.8F + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad F \approx 1.0625\]</span></p>
+<p><strong>Lender’s break-even</strong>: <span class="math display">\[P \cdot f + (1-P)(L - K) = r \quad \Rightarrow \quad 0.8f + 0.2(1 - 0.0002) = 1.05 \quad \Rightarrow \quad f \approx 1.0625\]</span></p>
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -751,7 +736,7 @@ Rajesh Narayanan
 </div><div class="column" style="width:50%;">
 <p><strong>Monitored</strong></p>
 <ul>
-<li>Face value: <span class="math inline">\(F \approx 1.0625\)</span></li>
+<li>Face value: <span class="math inline">\(f \approx 1.0625\)</span></li>
 <li>Loan rate: <strong>≈ 6.25%</strong></li>
 <li>Borrower surplus: 0.270</li>
 <li>Waste: ≈ 0</li>
@@ -852,7 +837,7 @@ Rajesh Narayanan
 <section id="the-one-loan-bank" class="slide level2" data-number="5.3">
 <h2><span class="header-section-number">5.3</span> The One-Loan Bank</h2>
 <p>Bank monitors one borrower, issues deposits to <span class="math inline">\(m = 10{,}000\)</span> investors.</p>
-<p>Bank collects <span class="math inline">\(F\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure). Depositors need 5% return:</p>
+<p>Bank collects <span class="math inline">\(f\)</span> (success) or <span class="math inline">\(1\)</span> (monitored failure). Depositors need 5% return:</p>
 <p><span class="math display">\[P \cdot B = r \quad \Rightarrow \quad 0.8B = 1.05 \quad \Rightarrow \quad B = 1.3125\]</span></p>
 <div class="fragment">
 <p><strong>Problem</strong>: in the bad state, bank collected <span class="math inline">\(L = 1\)</span> but owes <span class="math inline">\(B = 1.3125\)</span>. Bank <strong>fails</strong> whenever the borrower defaults — probability <span class="math inline">\(1-P = 0.2\)</span>.</p>
@@ -888,12 +873,12 @@ Rajesh Narayanan
 <tr class="odd">
 <td>Both succeed</td>
 <td><span class="math inline">\(0.64\)</span></td>
-<td><span class="math inline">\(2F\)</span></td>
+<td><span class="math inline">\(2f\)</span></td>
 </tr>
 <tr class="even">
 <td>One succeeds, one fails</td>
 <td><span class="math inline">\(0.32\)</span></td>
-<td><span class="math inline">\(F + 1\)</span></td>
+<td><span class="math inline">\(f + 1\)</span></td>
 </tr>
 <tr class="odd">
 <td>Both fail</td>
@@ -903,7 +888,7 @@ Rajesh Narayanan
 </tbody>
 </table>
 <div class="fragment">
-<p>Set <span class="math inline">\(F = 1.1875\)</span> so that <span class="math inline">\(F + 1 = 2.1875 \geq 2B\)</span>. Depositor break-even:</p>
+<p>Set <span class="math inline">\(f = 1.1875\)</span> so that <span class="math inline">\(f + 1 = 2.1875 \geq 2B\)</span>. Depositor break-even:</p>
 <p><span class="math display">\[0.96 \times 2B = 2(1.05) \quad \Rightarrow \quad B = 1.09375, \quad 2B = 2.1875\]</span></p>
 </div>
 <div class="fragment">
@@ -1031,8 +1016,8 @@ Rajesh Narayanan
 <tr class="odd">
 <td><strong>Bank → Borrower</strong></td>
 <td>Borrower hides <span class="math inline">\(V_j\)</span></td>
-<td>Loan at face <span class="math inline">\(F\)</span>; monitor in default</td>
-<td><span class="math inline">\(V_j &lt; F\)</span>; prob <span class="math inline">\(\approx 0.2\)</span></td>
+<td>Loan at face <span class="math inline">\(f\)</span>; monitor in default</td>
+<td><span class="math inline">\(V_j &lt; f\)</span>; prob <span class="math inline">\(\approx 0.2\)</span></td>
 </tr>
 <tr class="even">
 <td><strong>Depositor → Bank</strong></td>
@@ -1282,6 +1267,7 @@ Rajesh Narayanan
 </section>
 <section id="key-takeaways" class="slide level2 scrollable" data-number="7.5">
 <h2><span class="header-section-number">7.5</span> Key Takeaways</h2>
+<div>
 <ol type="1">
 <li class="fragment"><p><strong>Two information problems</strong>: ex ante (adverse selection, type unknown) and ex post (moral hazard, return unverifiable) — both generate market failures without intermediation</p></li>
 <li class="fragment"><p><strong>Market exclusion</strong> (Stiglitz-Weiss): pooling rate exceeds good-borrower participation constraint → good borrowers excluded despite positive NPV</p></li>
@@ -1290,6 +1276,7 @@ Rajesh Narayanan
 <li class="fragment"><p><strong>Unifying principle</strong>: the Law of Large Numbers makes banks efficient information producers in <em>both</em> the ex ante and ex post dimensions — more loans → lower information cost per loan → cheaper deposits</p></li>
 <li class="fragment"><p><strong>Debt is optimal on both sides</strong>: Gale-Hellwig applies to bank-borrower relationship (loans) and depositor-bank relationship (deposits) — same logic, same contract form</p></li>
 </ol>
+</div>
 </section>
 <section id="references" class="slide level2 smaller" data-number="7.6">
 <h2><span class="header-section-number">7.6</span> References</h2>
@@ -1501,7 +1488,7 @@ Rajesh Narayanan
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1528,172 +1515,190 @@ Rajesh Narayanan
       });
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
-      window.document.addEventListener("DOMContentLoaded", function (event) {
-        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-        tabsets.forEach(function(tabset) {
-          const tabby = new Tabby('#' + tabset.id);
-        });
-        const isCodeAnnotation = (el) => {
-          for (const clz of el.classList) {
-            if (clz.startsWith('code-annotation-')) {                     
-              return true;
-            }
-          }
-          return false;
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
         }
-        const onCopySuccess = function(e) {
-          // button target
-          const button = e.trigger;
-          // don't keep focus
-          button.blur();
-          // flash "checked"
-          button.classList.add('code-copy-button-checked');
-          var currentTitle = button.getAttribute("title");
-          button.setAttribute("title", "Copied!");
-          let tooltip;
-          if (window.bootstrap) {
-            button.setAttribute("data-bs-toggle", "tooltip");
-            button.setAttribute("data-bs-placement", "left");
-            button.setAttribute("data-bs-title", "Copied!");
-            tooltip = new bootstrap.Tooltip(button, 
-              { trigger: "manual", 
-                customClass: "code-copy-button-tooltip",
-                offset: [0, -8]});
-            tooltip.show();    
-          }
-          setTimeout(function() {
-            if (tooltip) {
-              tooltip.hide();
-              button.removeAttribute("data-bs-title");
-              button.removeAttribute("data-bs-toggle");
-              button.removeAttribute("data-bs-placement");
-            }
-            button.setAttribute("title", currentTitle);
-            button.classList.remove('code-copy-button-checked');
-          }, 1000);
-          // clear code selection
-          e.clearSelection();
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
         }
-        const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
-            }
-            return codeEl.innerText;
-        }
-        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-          text: getTextToCopy
-        });
-        clipboard.on('success', onCopySuccess);
-        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-            text: getTextToCopy,
-            container: window.document.getElementById('quarto-embedded-source-code-modal')
-          });
-          clipboardModal.on('success', onCopySuccess);
-        }
-          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-          var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
-          var isInternal = (href) => {
-              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-          }
-          // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-          for (var i=0; i<links.length; i++) {
-            const link = links[i];
-            if (!isInternal(link.href)) {
-              // undo the damage that might have been done by quarto-nav.js in the case of
-              // links that we want to consider external
-              if (link.dataset.originalHref !== undefined) {
-                link.href = link.dataset.originalHref;
-              }
-            }
-          }
-        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-          const config = {
-            allowHTML: true,
-            maxWidth: 500,
-            delay: 100,
-            arrow: false,
-            appendTo: function(el) {
-                return el.closest('section.slide') || el.parentElement;
-            },
-            interactive: true,
-            interactiveBorder: 10,
-            theme: 'light-border',
-            placement: 'bottom-start',
-          };
-          if (contentFn) {
-            config.content = contentFn;
-          }
-          if (onTriggerFn) {
-            config.onTrigger = onTriggerFn;
-          }
-          if (onUntriggerFn) {
-            config.onUntrigger = onUntriggerFn;
-          }
-            config['offset'] = [0,0];
-            config['maxWidth'] = 700;
-          window.tippy(el, config); 
-        }
-        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-        for (var i=0; i<noterefs.length; i++) {
-          const ref = noterefs[i];
-          tippyHover(ref, function() {
-            // use id or data attribute instead here
-            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-            try { href = new URL(href).hash; } catch {}
-            const id = href.replace(/^#\/?/, "");
-            const note = window.document.getElementById(id);
-            if (note) {
-              return note.innerHTML;
-            } else {
-              return "";
-            }
-          });
-        }
-        const findCites = (el) => {
-          const parentEl = el.parentElement;
-          if (parentEl) {
-            const cites = parentEl.dataset.cites;
-            if (cites) {
-              return {
-                el,
-                cites: cites.split(' ')
-              };
-            } else {
-              return findCites(el.parentElement)
-            }
-          } else {
-            return undefined;
-          }
-        };
-        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-        for (var i=0; i<bibliorefs.length; i++) {
-          const ref = bibliorefs[i];
-          const citeInfo = findCites(ref);
-          if (citeInfo) {
-            tippyHover(citeInfo.el, function() {
-              var popup = window.document.createElement('div');
-              citeInfo.cites.forEach(function(cite) {
-                var citeDiv = window.document.createElement('div');
-                citeDiv.classList.add('hanging-indent');
-                citeDiv.classList.add('csl-entry');
-                var biblioDiv = window.document.getElementById('ref-' + cite);
-                if (biblioDiv) {
-                  citeDiv.innerHTML = biblioDiv.innerHTML;
-                }
-                popup.appendChild(citeDiv);
-              });
-              return popup.innerHTML;
-            });
-          }
-        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
       });
-      </script>
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
     
 
 </body></html>
