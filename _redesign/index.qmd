@@ -1,0 +1,68 @@
+---
+title: ""
+page-layout: article
+---
+
+::: {.hero-row}
+::: {.hero-photo}
+![](img/my_image.jpg){fig-alt="Rajesh Narayanan"}
+:::
+
+::: {.hero-text}
+Hermann Moyse Jr./Louisiana Bankers Association Professor of Finance<br>
+Department of Finance<br><br>
+E. J. Ourso College of Business<br>
+Louisiana State University
+:::
+
+::: {.hero-logo}
+![](img/logo.png){fig-alt="LSU Department of Finance"}
+:::
+:::
+
+::: {.accent-bar}
+[Doctoral Course: Banking — Theory and Evidence →](Teaching/index.qmd)
+:::
+
+<br>
+
+I teach banking theory and evidence to Ph.D. students in the E. J. Ourso College of
+Business, and I have taught corporate finance, financial institutions, and derivatives
+across the undergraduate, MBA, and executive programs at LSU. I have delivered lectures
+and conducted seminars for executives and technocrats in Brazil, China, the Czech
+Republic, India, Malaysia, and South Africa.
+
+My research focuses broadly on banking and financial markets, and has been published in
+leading academic journals including the *Journal of Financial Economics*, the *Review of
+Financial Studies*, and the *Journal of Money, Credit and Banking*. My interviews and
+commentary have been featured in the *Wall Street Journal*, CNN/Money, Bloomberg, and
+*Fortune*, as well as in regional outlets including the *Times-Picayune*, *The Advocate*,
+the *Baton Rouge Business Report*, WBRZ-TV, and WWL-Radio.
+
+I have mentored doctoral students, many of whom hold tenured faculty positions; organized
+and led international consulting projects for MBA and MS students; and directed
+undergraduate honors students who have won national thesis awards. Recently I have been
+working on deposit stability, the information sensitivity of safe securities, appraisal
+accuracy and loan collateral, and the financial economics of slavery.
+
+<br>
+
+::: {.card-row}
+::: {.site-card}
+### [Research](Research/index.qmd) {.unnumbered}
+
+Working papers, journal publications, and book chapters.
+:::
+
+::: {.site-card}
+### [Teaching](Teaching/index.qmd) {.unnumbered}
+
+Doctoral banking course — course notes and lecture slides.
+:::
+
+::: {.site-card}
+### [Curriculum Vitae](cv/index.qmd) {.unnumbered}
+
+The full academic record, viewable and downloadable as a PDF.
+:::
+:::
