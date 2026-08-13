@@ -11,13 +11,9 @@ format:
 
 ## Working Papers {.unnumbered}
 
-1. ["What links Scaling Laws, CES Utilty and Technology Adoption"]( https://ssrn.com/abstract=4906726) with Kelley Pace, 2024
+1. ["What links Scaling Laws, CES Utilty and Technology Adoption"]( https://ssrn.com/abstract=4906726) with Kelley Pace, 2026
 
-1. ["Depositor Characteristics and Deposit Stability"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4839754) with Dimuthu Ratnadiwakara, 2024
-
-1.  ["The Paradox of Slave Collateral"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4768207) with Jonathan Pritchett, 2024
-
-    -   Presented at EHA 2022, Tulane, LSU, University of Michigan.
+1. ["Depositor Characteristics and Deposit Stability"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4839754) with Dimuthu Ratnadiwakara, 2025
 
 1.  ["Information Sensitivity and Information Production Dynamics of Safe Securities"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4040319) with Meredith Rhodes, 2024
 
@@ -38,6 +34,13 @@ format:
     -   Presented at ASSA 2023
 
 ## Publications {.unnumbered}
+
+1. ["The Decline of Branch Banking"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5105791) with Phil Strahan and Dimuthu Ratnadiwakara\
+   forthcoming in the Journal of Financial Economics, 2026
+
+
+1. ["The Paradox of Slave Collateral"](https://doi.org/10.1016/j.eeh.2025.101670) with Jonathan Pritchett\
+   Explorations in Economic History, Vol. 97
 
 1.  ["Valuation when disaster risks increase at an increasing rate"](https://doi.org/10.1016/j.econlet.2023.111013) with Ravi Joshi and Kelley Pace\
     Economics Letters, 2023 Vol.224
